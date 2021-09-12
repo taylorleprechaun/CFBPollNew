@@ -16,43 +16,43 @@ Made for fun.  I want to get this added to the Massey Composite for the ~~2020~~
 	* Re-written to be better
 	* Nearly identical ratings as old version (the ten-thousandths place is where the decimals start changing)
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
+* 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 
-### Rankings (Updated 9/6/2021)
+### Rankings (Updated 9/12/2021)
 
-**Week 1 Rankings**
+**Week 3 Rankings** (yes I accidentally said Week 1 last week)
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | USC | 1.0000 | 1-0
-2 | Alabama | 0.9966 | 1-0
-3 | Ohio State | 0.9670 | 1-0
-4 | San Jose State | 0.9633 | 1-1
-5 | Cincinnati | 0.9298 | 1-0
-6 | Brigham Young | 0.9225 | 1-0
-7 | Texas A&M | 0.9198 | 1-0
-8 | Oklahoma | 0.9168 | 1-0
-9 | Georgia | 0.9024 | 1-0
-10 | Notre Dame | 0.9000 | 1-0
-11 | Texas | 0.8857 | 1-0
-12 | UTSA | 0.8754 | 1-0
-13 | Oregon | 0.8657 | 1-0
-14 | Army | 0.8638 | 1-0
-15 | Iowa | 0.8619 | 1-0
-16 | Florida | 0.8590 | 1-0
-17 | UCLA | 0.8544 | 2-0
-18 | Nevada | 0.8452 | 1-0
-19 | Appalachian State | 0.8446 | 1-0
-20 | North Carolina State | 0.8435 | 1-0
-21 | Marshall | 0.8365 | 1-0
-22 | Auburn | 0.8336 | 1-0
-23 | Hawaii | 0.8198 | 1-1
-24 | Pittsburgh | 0.8172 | 1-0
-25 | Central Florida | 0.8157 | 1-0
+1 | Alabama | 1.0000 | 2-0
+2 | Oklahoma | 0.9852 | 2-0
+3 | Texas A&M | 0.9747 | 2-0
+4 | Georgia | 0.9706 | 2-0
+5 | Coastal Carolina | 0.9621 | 2-0
+6 | Liberty | 0.9416 | 2-0
+7 | Iowa | 0.9355 | 2-0
+8 | Memphis | 0.9097 | 2-0
+9 | SMU | 0.9093 | 2-0
+10 | Brigham Young | 0.9030 | 2-0
+11 | Clemson | 0.8984 | 1-1
+12 | Mississippi | 0.8859 | 2-0
+13 | Notre Dame | 0.8818 | 2-0
+14 | Iowa State | 0.8777 | 1-1
+15 | Wake Forest | 0.8774 | 2-0
+16 | Oregon | 0.8700 | 2-0
+17 | Central Florida | 0.8682 | 2-0
+18 | Northwestern | 0.8655 | 1-1
+19 | Maryland | 0.8638 | 2-0
+20 | Indiana | 0.8521 | 1-1
+21 | Ball State | 0.8482 | 1-1
+22 | Ohio State | 0.8471 | 1-1
+23 | Michigan State | 0.8466 | 2-0
+24 | Penn State | 0.8464 | 2-0
+25 | Colorado | 0.8444 | 1-1
 
-#### Observations and Notes (Updated 9/6/2021)
+#### Observations and Notes (Updated 9/12/2021)
 
-* My method to improve early season ratings does work but there are still some flaws with it.  The biggest example that can be pointed out is San Jose State at #4 because of how high they finished the previous season.  This will likely smooth out over the next couple weeks (as my poll usually does, I just avoided publishing it until the real weird stuff was gone in the past)
-* Yes, I know there is one more game tonight.  I don't care.
+* Poll is looking better, slightly smoothed out.  There are still some funky ratings in here though.
 
 ### TODO List (Updated 9/26/2020)
 

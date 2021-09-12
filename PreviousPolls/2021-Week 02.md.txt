@@ -1,0 +1,32 @@
+Rank | Team | Score | Record
+---|---|---|---
+1 | USC | 1.0000 | 1-0
+2 | Alabama | 0.9966 | 1-0
+3 | Ohio State | 0.9670 | 1-0
+4 | San Jose State | 0.9633 | 1-1
+5 | Cincinnati | 0.9298 | 1-0
+6 | Brigham Young | 0.9225 | 1-0
+7 | Texas A&M | 0.9198 | 1-0
+8 | Oklahoma | 0.9168 | 1-0
+9 | Georgia | 0.9024 | 1-0
+10 | Notre Dame | 0.9000 | 1-0
+11 | Texas | 0.8857 | 1-0
+12 | UTSA | 0.8754 | 1-0
+13 | Oregon | 0.8657 | 1-0
+14 | Army | 0.8638 | 1-0
+15 | Iowa | 0.8619 | 1-0
+16 | Florida | 0.8590 | 1-0
+17 | UCLA | 0.8544 | 2-0
+18 | Nevada | 0.8452 | 1-0
+19 | Appalachian State | 0.8446 | 1-0
+20 | North Carolina State | 0.8435 | 1-0
+21 | Marshall | 0.8365 | 1-0
+22 | Auburn | 0.8336 | 1-0
+23 | Hawaii | 0.8198 | 1-1
+24 | Pittsburgh | 0.8172 | 1-0
+25 | Central Florida | 0.8157 | 1-0
+
+#### Observations and Notes (Updated 9/6/2021)
+
+* My method to improve early season ratings does work but there are still some flaws with it.  The biggest example that can be pointed out is San Jose State at #4 because of how high they finished the previous season.  This will likely smooth out over the next couple weeks (as my poll usually does, I just avoided publishing it until the real weird stuff was gone in the past)
+* Yes, I know there is one more game tonight.  I don't care.

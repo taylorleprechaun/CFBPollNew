@@ -9,7 +9,8 @@ namespace CFBPollNew
 {
     class Printer
     {
-        private static readonly string filePath = ConfigurationManager.AppSettings["PollOutputPath"];
+        private static readonly string csvFilePath = ConfigurationManager.AppSettings["PollOutputPath_csv"];
+        private static readonly string txtFilePath = ConfigurationManager.AppSettings["PollOutputPath_txt"];
 
         /// <summary>
         /// Prints out the each Team's name, record, and schedule
@@ -74,9 +75,9 @@ namespace CFBPollNew
         public static void PrintPollDetails(Dictionary<string, Team> teamDictionary)
         {
             //Delete output csv if it exists
-            if (File.Exists(filePath))
+            if (File.Exists(csvFilePath))
             {
-                File.Delete(filePath);
+                File.Delete(csvFilePath);
             }
 
             //Some setup
@@ -117,14 +118,14 @@ namespace CFBPollNew
                 csv.Append(nextLine);
 
                 //Write to output
-                File.WriteAllText(filePath, csv.ToString());
+                File.WriteAllText(csvFilePath, csv.ToString());
 
                 //Increment rank
                 rank++;
             }
 
             //Open the file
-            System.Diagnostics.Process.Start(filePath);
+            System.Diagnostics.Process.Start(csvFilePath);
         }
 
         /// <summary>
@@ -134,19 +135,40 @@ namespace CFBPollNew
         /// <param name="teamDictionary">Dictionary of the teams to print</param>
         public static void PrintPollTable(int numTeams, Dictionary<string, Team> teamDictionary)
         {
+            //Delete output csv if it exists
+            if (File.Exists(txtFilePath))
+            {
+                File.Delete(txtFilePath);
+            }
+
             //Setup
             List<Team> teamList = new List<Team>(teamDictionary.Values);
             teamList = teamList.OrderByDescending(t => t.Rating).ToList();
             double topRating = teamList[0].Rating;
             int rank = 1;
+            var txt = new StringBuilder();
 
             //Table header
-            Console.WriteLine("Rank | Team | Score | Record\n---|---|---|---");
+            txt.AppendLine("Rank | Team | Score | Record\n---|---|---|---");
             
             //Loop through teams
             foreach (Team team in teamList)
             {
-                Console.WriteLine(rank + " | " + team.Name + " | " + (team.Rating/topRating).ToString("0.0000") + " | " + team.Schedule.Wins + "-" + team.Schedule.Losses);
+                //Add info
+                string nextLine = "";
+                nextLine += rank + " | ";
+                nextLine += team.Name + " | ";
+                nextLine += (team.Rating / topRating).ToString("0.0000") + " | ";
+                nextLine += team.Schedule.Wins + "-" + team.Schedule.Losses;
+                nextLine += "\n";
+
+                //Append to csv output
+                txt.Append(nextLine);
+
+                //Write to output
+                File.WriteAllText(txtFilePath, txt.ToString());
+
+                //Increment rank
                 rank++;
 
                 //Only print numTeams number of teams
@@ -155,6 +177,9 @@ namespace CFBPollNew
                     break;
                 }
             }
+
+            //Open the file
+            System.Diagnostics.Process.Start(txtFilePath);
         }
     }
 }
