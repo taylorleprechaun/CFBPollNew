@@ -131,9 +131,8 @@ namespace CFBPollNew
         /// <summary>
         /// Prints the poll with formatting
         /// </summary>
-        /// <param name="numTeams">Number of teams to print</param>
         /// <param name="teamDictionary">Dictionary of the teams to print</param>
-        public static void PrintPollTable(int numTeams, Dictionary<string, Team> teamDictionary)
+        public static void PrintPollTable(Dictionary<string, Team> teamDictionary)
         {
             //Delete output csv if it exists
             if (File.Exists(txtFilePath))
@@ -170,12 +169,6 @@ namespace CFBPollNew
 
                 //Increment rank
                 rank++;
-
-                //Only print numTeams number of teams
-                if (rank > numTeams)
-                {
-                    break;
-                }
             }
 
             //Open the file

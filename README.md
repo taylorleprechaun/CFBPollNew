@@ -50,6 +50,8 @@ Rank | Team | Score | Record
 24 | Penn State | 0.8464 | 2-0
 25 | Colorado | 0.8444 | 1-1
 
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2003.md)
+
 #### Observations and Notes (Updated 9/12/2021)
 
 * Poll is looking better, slightly smoothed out.  There are still some funky ratings in here though.
@@ -70,7 +72,7 @@ Rank | Team | Score | Record
 
 My poll, as of this update, has been run across every season from 2000 through 2019 (that's because sports-reference only goes back to the year 2000) (using my new rating formula, meaning the ratings from all previous posts aren't totally accurate to what you'll see here, but the formula is way better now, trust me)
 
-Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them (here: https://github.com/taylorleprechaun/CFBPoll/blob/master/rsc/teams/BOAT%20and%20WOAT.xlsx )
+Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them (here: https://github.com/taylorleprechaun/CFBPollNew/blob/master/rsc/teams/BOAT%20and%20WOAT.xlsx )
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
 

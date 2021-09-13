@@ -39,7 +39,7 @@ namespace CFBPollNew
             }
 
 
-            Printer.PrintPollTable(25, weightedSeason);
+            Printer.PrintPollTable(weightedSeason);
             Printer.PrintPollDetails(weightedSeason);
             //Printer.PrintSchedules(teamDictionary);
             //Printer.PrintTeam(teamDictionary["Ohio State"]);
