@@ -18,43 +18,43 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 
-### Rankings (Updated 9/19/2021)
+### Rankings (Updated 9/26/2021)
 
-**Week 4 Rankings**
+**Week 5 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Alabama | 1.0000 | 3-0
-2 | Georgia | 0.9899 | 3-0
-3 | Texas A&M | 0.9407 | 3-0
-4 | Oregon | 0.9387 | 3-0
-5 | Liberty | 0.9376 | 3-0
-6 | Cincinnati | 0.9270 | 3-0
-7 | Oklahoma | 0.9240 | 3-0
-8 | Iowa | 0.9175 | 3-0
-9 | Mississippi | 0.9155 | 3-0
-10 | Kansas State | 0.9109 | 3-0
-11 | Kentucky | 0.9103 | 3-0
-12 | Brigham Young | 0.9047 | 3-0
-13 | Coastal Carolina | 0.8918 | 3-0
-14 | Penn State | 0.8859 | 3-0
-15 | Memphis | 0.8808 | 3-0
-16 | Notre Dame | 0.8634 | 3-0
-17 | Clemson | 0.8617 | 2-1
-18 | Texas Christian | 0.8591 | 2-0
-19 | SMU | 0.8548 | 3-0
-20 | Ohio State | 0.8526 | 2-1
-21 | Maryland | 0.8520 | 3-0
-22 | West Virginia | 0.8516 | 2-1
-23 | Texas Tech | 0.8416 | 3-0
-24 | Rutgers | 0.8372 | 3-0
-25 | Nevada | 0.8351 | 2-1
+1 | Alabama | 1.0000 | 4-0
+2 | Georgia | 0.9551 | 4-0
+3 | Oklahoma State | 0.9493 | 4-0
+4 | Michigan | 0.9406 | 4-0
+5 | Kentucky | 0.9399 | 4-0
+6 | Oklahoma | 0.9375 | 4-0
+7 | Cincinnati | 0.9288 | 3-0
+8 | Oregon | 0.9220 | 4-0
+9 | Mississippi | 0.9215 | 3-0
+10 | Brigham Young | 0.9075 | 4-0
+11 | Arkansas | 0.9005 | 4-0
+12 | Penn State | 0.8981 | 4-0
+13 | Iowa | 0.8969 | 4-0
+14 | Notre Dame | 0.8943 | 4-0
+15 | SMU | 0.8860 | 4-0
+16 | Texas | 0.8858 | 3-1
+17 | Michigan State | 0.8818 | 4-0
+18 | Boston College | 0.8696 | 4-0
+19 | Rutgers | 0.8631 | 3-1
+20 | Coastal Carolina | 0.8539 | 4-0
+21 | Maryland | 0.8516 | 4-0
+22 | UTSA | 0.8487 | 4-0
+23 | Kansas State | 0.8472 | 3-1
+24 | Miami FL | 0.8471 | 2-2
+25 | Ohio State | 0.8439 | 3-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2004.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2005.md)
 
-#### Observations and Notes (Updated 9/19/2021)
+#### Observations and Notes (Updated 9/26/2021)
 
-* Looks pretty solid this week.  The only really questionable one is the Liberty ranking which is inflated by their previous season rating.  My changes to the poll a few weeks ago I added a system to weight teams and it does it over the first five weeks of the season gradually transitioning to only using the current season to weight teams.  The reason I chose five weeks is because historically my poll "balances" out around Week 6.  I will probably revisit this in the offseason since the formula I used to weigh is very basic and I'd like to make it more advanced.
+* Nothing really to say this week.  Thanks for looking at my poll 🙂
 
 ### TODO List (Updated 9/6/2021)
 
