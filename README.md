@@ -18,39 +18,39 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 
-### Rankings (Updated 9/26/2021)
+### Rankings (Updated 10/3/2021)
 
-**Week 5 Rankings**
+**Week 6 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Alabama | 1.0000 | 4-0
-2 | Georgia | 0.9551 | 4-0
-3 | Oklahoma State | 0.9493 | 4-0
-4 | Michigan | 0.9406 | 4-0
-5 | Kentucky | 0.9399 | 4-0
-6 | Oklahoma | 0.9375 | 4-0
-7 | Cincinnati | 0.9288 | 3-0
-8 | Oregon | 0.9220 | 4-0
-9 | Mississippi | 0.9215 | 3-0
-10 | Brigham Young | 0.9075 | 4-0
-11 | Arkansas | 0.9005 | 4-0
-12 | Penn State | 0.8981 | 4-0
-13 | Iowa | 0.8969 | 4-0
-14 | Notre Dame | 0.8943 | 4-0
-15 | SMU | 0.8860 | 4-0
-16 | Texas | 0.8858 | 3-1
-17 | Michigan State | 0.8818 | 4-0
-18 | Boston College | 0.8696 | 4-0
-19 | Rutgers | 0.8631 | 3-1
-20 | Coastal Carolina | 0.8539 | 4-0
-21 | Maryland | 0.8516 | 4-0
-22 | UTSA | 0.8487 | 4-0
-23 | Kansas State | 0.8472 | 3-1
-24 | Miami FL | 0.8471 | 2-2
-25 | Ohio State | 0.8439 | 3-1
+1 | Georgia | 1.0000 | 5-0
+2 | Michigan | 0.9893 | 5-0
+3 | Kentucky | 0.9663 | 5-0
+4 | Penn State | 0.9623 | 5-0
+5 | Oklahoma State | 0.9542 | 5-0
+6 | Cincinnati | 0.9527 | 4-0
+7 | Iowa | 0.9517 | 5-0
+8 | Alabama | 0.9508 | 5-0
+9 | Oklahoma | 0.9374 | 5-0
+10 | Brigham Young | 0.9127 | 5-0
+11 | Texas | 0.9110 | 4-1
+12 | Michigan State | 0.9058 | 5-0
+13 | Wake Forest | 0.9053 | 5-0
+14 | Arkansas | 0.8960 | 4-1
+15 | SMU | 0.8627 | 5-0
+16 | Wyoming | 0.8583 | 4-0
+17 | Kansas State | 0.8563 | 3-2
+18 | Mississippi | 0.8547 | 3-1
+19 | Western Michigan | 0.8533 | 4-1
+20 | Maryland | 0.8495 | 4-1
+21 | Texas Tech | 0.8484 | 4-1
+22 | Oregon | 0.8443 | 4-1
+23 | UTSA | 0.8382 | 5-0
+24 | Baylor | 0.8364 | 4-1
+25 | Auburn | 0.8320 | 4-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2005.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2006.md)
 
 #### Observations and Notes (Updated 9/26/2021)
 
