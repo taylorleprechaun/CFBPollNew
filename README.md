@@ -18,43 +18,43 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 
-### Rankings (Updated 10/3/2021)
+### Rankings (Updated 10/10/2021)
 
-**Week 6 Rankings**
+**Week 7 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 5-0
-2 | Michigan | 0.9893 | 5-0
-3 | Kentucky | 0.9663 | 5-0
-4 | Penn State | 0.9623 | 5-0
-5 | Oklahoma State | 0.9542 | 5-0
-6 | Cincinnati | 0.9527 | 4-0
-7 | Iowa | 0.9517 | 5-0
-8 | Alabama | 0.9508 | 5-0
-9 | Oklahoma | 0.9374 | 5-0
-10 | Brigham Young | 0.9127 | 5-0
-11 | Texas | 0.9110 | 4-1
-12 | Michigan State | 0.9058 | 5-0
-13 | Wake Forest | 0.9053 | 5-0
-14 | Arkansas | 0.8960 | 4-1
-15 | SMU | 0.8627 | 5-0
-16 | Wyoming | 0.8583 | 4-0
-17 | Kansas State | 0.8563 | 3-2
-18 | Mississippi | 0.8547 | 3-1
-19 | Western Michigan | 0.8533 | 4-1
-20 | Maryland | 0.8495 | 4-1
-21 | Texas Tech | 0.8484 | 4-1
-22 | Oregon | 0.8443 | 4-1
-23 | UTSA | 0.8382 | 5-0
-24 | Baylor | 0.8364 | 4-1
-25 | Auburn | 0.8320 | 4-1
+1 | Georgia | 1.0000 | 6-0
+2 | Iowa | 0.9986 | 6-0
+3 | Oklahoma State | 0.9960 | 5-0
+4 | Michigan | 0.9778 | 6-0
+5 | Kentucky | 0.9668 | 6-0
+6 | Cincinnati | 0.9632 | 5-0
+7 | Oklahoma | 0.9493 | 6-0
+8 | Penn State | 0.9289 | 5-1
+9 | Michigan State | 0.9245 | 6-0
+10 | Wake Forest | 0.9238 | 6-0
+11 | Alabama | 0.8851 | 5-1
+12 | Mississippi | 0.8781 | 4-1
+13 | Ohio State | 0.8775 | 5-1
+14 | Baylor | 0.8743 | 5-1
+15 | SMU | 0.8659 | 6-0
+16 | Kansas State | 0.8601 | 3-2
+17 | Notre Dame | 0.8594 | 5-1
+18 | Texas | 0.8529 | 4-2
+19 | Oregon | 0.8497 | 4-1
+20 | Brigham Young | 0.8492 | 5-1
+21 | Clemson | 0.8455 | 3-2
+22 | Pittsburgh | 0.8454 | 4-1
+23 | North Carolina State | 0.8413 | 4-1
+24 | Air Force | 0.8408 | 5-1
+25 | Arizona State | 0.8383 | 5-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2006.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2007.md)
 
-#### Observations and Notes (Updated 9/26/2021)
+#### Observations and Notes (Updated 10/10/2021)
 
-* Nothing really to say this week.  Thanks for looking at my poll 🙂
+* And at Week 6 my poll is only using current season data to rate and rank the teams.  I'd say overall that my weighting method did the job it was designed for but it can definitely be improved.  I'm not actively working on improvements to it but I have some ideas for it that I've got scribbled down to work on when I ~~feel like it~~ get the chance
 
 ### TODO List (Updated 9/6/2021)
 
