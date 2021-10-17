@@ -1,16 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 
-/* TODO:
- * 
- * Implement Rating formula
- * Previous seasons data during first weeks of season weighted by week
- * 4 year recruiting rankings
- * Returning production data
- * 
- */
-
-
 namespace CFBPollNew
 {
     class Program
@@ -38,14 +28,36 @@ namespace CFBPollNew
                 Rating.WeightSeason(weightedSeason, previousSeason, week);
             }
 
+            //What are we running?
+            //1 = Print Poll
+            //2 = Prediction
+            var runType = UserInputReader.GetRunType();
+            if (runType.Equals("1"))
+            {
+                //Print the poll to markdown table formatted text file
+                Printer.PrintPollTable(weightedSeason);
+                //Print the poll to Excel file with stats and stuff
+                Printer.PrintPollDetails(weightedSeason);
+                
+                //Print the schedule of each team
+                //Printer.PrintSchedules(teamDictionary);
+                //Print some info about a specific team
+                //Printer.PrintTeam(teamDictionary["Ohio State"]);
 
-            Printer.PrintPollTable(weightedSeason);
-            Printer.PrintPollDetails(weightedSeason);
-            //Printer.PrintSchedules(teamDictionary);
-            //Printer.PrintTeam(teamDictionary["Ohio State"]);
-
-            System.Threading.Thread.Sleep(5000000);
-
+                //This is still here because I want to leave the program open after it finishes running just in case
+                //some weird message pops up on console since it closes automatically once it finishes
+                System.Threading.Thread.Sleep(5000000);
+            }
+            else if (runType.Equals("2"))
+            {
+                //Predict until the user doesn't want to anymore
+                bool predictAgain = true;
+                while (predictAgain)
+                {
+                    Predictor.Predict(weightedSeason);
+                    predictAgain = UserInputReader.PredictAgain();
+                }
+            }
         }
 
         /// <summary>

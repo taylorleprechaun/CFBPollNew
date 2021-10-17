@@ -11,6 +11,27 @@ namespace CFBPollNew
     class UserInputReader
     {
         /// <summary>
+        /// Gets the user input for what we're running
+        /// </summary>
+        /// <returns></returns>
+        public static string GetRunType()
+        {
+            while (true)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Please enter the number for what you would like to run:");
+                Console.WriteLine("1 - Run Poll");
+                Console.WriteLine("2 - Prediction Mode");
+                var input = GetInput();
+
+                if (!input.Equals("1") && !input.Equals("2"))
+                    Console.WriteLine("Invalid input");
+                else
+                    return input;
+            }
+        }
+
+        /// <summary>
         /// Gets the user input for the season to run the poll on
         /// </summary>
         /// <returns>A string containing the year</returns>
@@ -51,6 +72,38 @@ namespace CFBPollNew
             GetWeeksAvailable(season);
             Console.WriteLine();
             return GetInput();
+        }
+
+        /// <summary>
+        /// Gets the user input for the team to use in the prediction
+        /// </summary>
+        /// <param name="prompt">Passed in as Home/Away</param>
+        /// <returns></returns>
+        public static string GetTeam(string prompt)
+        {
+            Console.WriteLine();
+            Console.WriteLine("Enter the " + prompt + " team");
+            return GetInput();
+        }
+
+        /// <summary>
+        /// Get the user input for if they want to run another prediction
+        /// </summary>
+        /// <returns>True if yes, False if no</returns>
+        public static bool PredictAgain()
+        {
+            while (true)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Predict Again? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", StringComparison.OrdinalIgnoreCase))
+                    return true;
+                else if (input.Equals("N", StringComparison.OrdinalIgnoreCase))
+                    return false;
+                else
+                    Console.WriteLine("Invalid input");
+            }
         }
 
         /// <summary>

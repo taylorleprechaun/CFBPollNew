@@ -17,54 +17,57 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 	* Nearly identical ratings as old version (the ten-thousandths place is where the decimals start changing)
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
+* 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
 
-### Rankings (Updated 10/10/2021)
+### Rankings (Updated 10/17/2021)
 
-**Week 7 Rankings**
+**Week 8 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 6-0
-2 | Iowa | 0.9986 | 6-0
-3 | Oklahoma State | 0.9960 | 5-0
-4 | Michigan | 0.9778 | 6-0
-5 | Kentucky | 0.9668 | 6-0
-6 | Cincinnati | 0.9632 | 5-0
-7 | Oklahoma | 0.9493 | 6-0
-8 | Penn State | 0.9289 | 5-1
-9 | Michigan State | 0.9245 | 6-0
-10 | Wake Forest | 0.9238 | 6-0
-11 | Alabama | 0.8851 | 5-1
-12 | Mississippi | 0.8781 | 4-1
-13 | Ohio State | 0.8775 | 5-1
-14 | Baylor | 0.8743 | 5-1
-15 | SMU | 0.8659 | 6-0
-16 | Kansas State | 0.8601 | 3-2
-17 | Notre Dame | 0.8594 | 5-1
-18 | Texas | 0.8529 | 4-2
-19 | Oregon | 0.8497 | 4-1
-20 | Brigham Young | 0.8492 | 5-1
-21 | Clemson | 0.8455 | 3-2
-22 | Pittsburgh | 0.8454 | 4-1
-23 | North Carolina State | 0.8413 | 4-1
-24 | Air Force | 0.8408 | 5-1
-25 | Arizona State | 0.8383 | 5-1
+1 | Georgia | 1.0000 | 7-0
+2 | Oklahoma State | 0.9761 | 6-0
+3 | Michigan | 0.9530 | 6-0
+4 | Cincinnati | 0.9368 | 6-0
+5 | Oklahoma | 0.9217 | 7-0
+6 | Penn State | 0.9105 | 5-1
+7 | Kentucky | 0.9075 | 6-1
+8 | Wake Forest | 0.8975 | 6-0
+9 | Michigan State | 0.8960 | 7-0
+10 | Iowa | 0.8957 | 6-1
+11 | Baylor | 0.8811 | 6-1
+12 | Mississippi | 0.8746 | 5-1
+13 | Alabama | 0.8712 | 6-1
+14 | Ohio State | 0.8566 | 5-1
+15 | Notre Dame | 0.8541 | 5-1
+16 | Pittsburgh | 0.8484 | 5-1
+17 | North Carolina State | 0.8414 | 5-1
+18 | Clemson | 0.8337 | 4-2
+19 | Auburn | 0.8313 | 5-2
+20 | San Diego State | 0.8298 | 6-0
+21 | Air Force | 0.8272 | 6-1
+22 | UTSA | 0.8194 | 7-0
+23 | SMU | 0.8175 | 6-0
+24 | Utah | 0.8150 | 4-2
+25 | Oregon | 0.8091 | 5-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2007.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2008.md)
 
-#### Observations and Notes (Updated 10/10/2021)
+#### Observations and Notes (Updated 10/17/2021)
 
-* And at Week 6 my poll is only using current season data to rate and rank the teams.  I'd say overall that my weighting method did the job it was designed for but it can definitely be improved.  I'm not actively working on improvements to it but I have some ideas for it that I've got scribbled down to work on when I ~~feel like it~~ get the chance
+* Nothing special of note this week.  Fire Todd Grantham.
 
-### TODO List (Updated 9/6/2021)
+### TODO List (Updated 10/17/2021)
 
-1. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it and then start including some "picks of the week" type segment to this project.
 
-2. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
+2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+
+3. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
 	
-3. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
+4. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
 
-4. ????
+5. ????
 
 ### Misc.
 

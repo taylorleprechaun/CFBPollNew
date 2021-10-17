@@ -17,17 +17,17 @@ Bowling Green|MAC|East
 Brigham Young|Indep| 
 Buffalo|MAC|East
 California|Pac-12|North
-Central Florida|AAC|East
+Central Florida|AAC| 
 Central Michigan|MAC|West
 Charlotte|CUSA|East
-Cincinnati|AAC|East
+Cincinnati|AAC| 
 Clemson|ACC|Atlantic
 Coastal Carolina|Sun Belt|East
 Colorado|Pac-12|South
 Colorado State|MWC|Mountain
 Connecticut|Indep| 
 Duke|ACC|Coastal
-East Carolina|AAC|East
+East Carolina|AAC| 
 Eastern Michigan|MAC|West
 Florida|SEC|East
 Florida Atlantic|CUSA|East
@@ -39,7 +39,7 @@ Georgia Southern|Sun Belt|East
 Georgia State|Sun Belt|East
 Georgia Tech|ACC|Coastal
 Hawaii|MWC|West
-Houston|AAC|West
+Houston|AAC| 
 Illinois|Big 10|West
 Indiana|Big 10|East
 Iowa|Big 10|West
@@ -57,7 +57,7 @@ Louisiana State|SEC|West
 Marshall|CUSA|East
 Maryland|Big 10|East
 Massachusetts|Indep| 
-Memphis|AAC|West
+Memphis|AAC| 
 Miami FL|ACC|Coastal
 Miami OH|MAC|East
 Michigan|Big 10|East
@@ -67,7 +67,7 @@ Minnesota|Big 10|West
 Mississippi|SEC|West
 Mississippi State|SEC|West
 Missouri|SEC|East
-Navy|AAC|West
+Navy|AAC| 
 Nebraska|Big 10|West
 Nevada|MWC|West
 New Mexico|MWC|Mountain
@@ -92,14 +92,14 @@ Rice|CUSA|West
 Rutgers|Big 10|East
 San Diego State|MWC|West
 San Jose State|MWC|West
-SMU|AAC|West
+SMU|AAC| 
 South Alabama|Sun Belt|West
 South Carolina|SEC|East
-South Florida|AAC|East
+South Florida|AAC| 
 Southern Miss|CUSA|West
 Stanford|Pac-12|North
 Syracuse|ACC|Atlantic
-Temple|AAC|East
+Temple|AAC| 
 Tennessee|SEC|East
 Texas|Big 12| 
 Texas A&M|SEC|West
@@ -108,8 +108,8 @@ Texas State|Sun Belt|West
 Texas Tech|Big 12| 
 Toledo|MAC|West
 Troy|Sun Belt|East
-Tulane|AAC|West
-Tulsa|AAC|West
+Tulane|AAC| 
+Tulsa|AAC| 
 UCLA|Pac-12|South
 UNLV|MWC|West
 USC|Pac-12|South

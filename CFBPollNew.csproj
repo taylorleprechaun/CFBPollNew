@@ -67,6 +67,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Predictor.cs" />
     <Compile Include="StrengthOfSchedule.cs" />
     <Compile Include="UserInputReader.cs" />
     <Compile Include="NameCorrection.cs" />
