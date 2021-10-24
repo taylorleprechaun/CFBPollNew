@@ -19,47 +19,60 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 * 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
 
-### Rankings (Updated 10/17/2021)
+### Rankings (Updated 10/24/2021)
 
-**Week 8 Rankings**
+**Week 9 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
 1 | Georgia | 1.0000 | 7-0
-2 | Oklahoma State | 0.9761 | 6-0
-3 | Michigan | 0.9530 | 6-0
-4 | Cincinnati | 0.9368 | 6-0
-5 | Oklahoma | 0.9217 | 7-0
-6 | Penn State | 0.9105 | 5-1
-7 | Kentucky | 0.9075 | 6-1
-8 | Wake Forest | 0.8975 | 6-0
-9 | Michigan State | 0.8960 | 7-0
-10 | Iowa | 0.8957 | 6-1
-11 | Baylor | 0.8811 | 6-1
-12 | Mississippi | 0.8746 | 5-1
-13 | Alabama | 0.8712 | 6-1
-14 | Ohio State | 0.8566 | 5-1
-15 | Notre Dame | 0.8541 | 5-1
-16 | Pittsburgh | 0.8484 | 5-1
-17 | North Carolina State | 0.8414 | 5-1
-18 | Clemson | 0.8337 | 4-2
-19 | Auburn | 0.8313 | 5-2
-20 | San Diego State | 0.8298 | 6-0
-21 | Air Force | 0.8272 | 6-1
-22 | UTSA | 0.8194 | 7-0
-23 | SMU | 0.8175 | 6-0
-24 | Utah | 0.8150 | 4-2
-25 | Oregon | 0.8091 | 5-1
+2 | Michigan | 0.9706 | 7-0
+3 | Wake Forest | 0.9529 | 7-0
+4 | Cincinnati | 0.9311 | 7-0
+5 | Oklahoma State | 0.9290 | 6-1
+6 | Michigan State | 0.9220 | 7-0
+7 | Oklahoma | 0.9219 | 8-0
+8 | Mississippi | 0.9162 | 6-1
+9 | Alabama | 0.9160 | 7-1
+10 | Kentucky | 0.9145 | 6-1
+11 | Baylor | 0.8976 | 6-1
+12 | Iowa | 0.8969 | 6-1
+13 | Ohio State | 0.8824 | 6-1
+14 | San Diego State | 0.8800 | 7-0
+15 | Notre Dame | 0.8799 | 6-1
+16 | Pittsburgh | 0.8631 | 6-1
+17 | Oregon | 0.8626 | 6-1
+18 | UTSA | 0.8527 | 8-0
+19 | Virginia | 0.8349 | 6-2
+20 | Iowa State | 0.8349 | 5-2
+21 | Auburn | 0.8333 | 5-2
+22 | Penn State | 0.8311 | 5-2
+23 | SMU | 0.8283 | 7-0
+24 | Arkansas | 0.8262 | 5-3
+25 | Texas A&M | 0.8206 | 6-2
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2008.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2009.md)
 
-#### Observations and Notes (Updated 10/17/2021)
+#### Observations and Notes (Updated 10/24/2021)
 
-* Nothing special of note this week.  Fire Todd Grantham.
+* Nothing special of note this week.  Still fire Todd Grantham.
 
-### TODO List (Updated 10/17/2021)
+#### Predictions (Updated 10/24/2021)
 
-1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it and then start including some "picks of the week" type segment to this project.
+Some predictions from my system for Week 9.  The way it predicts is still a work in progress but let's see anyway how the current algorithm performs
+
+Away | Score | Score | Home
+---|---|---|---
+Georgia  | 33 | 15 | Florida 
+Michigan | 31 | 25 | Michigan State
+Texas  | 34 | 41 | Baylor
+Ole Miss | 33 | 37 | Auburn
+Penn State | 21 | 42 | Ohio State
+SMU | 30 | 32 | Houston
+
+### TODO List (Updated 10/24/2021)
+
+1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it ~~and then start including some "picks of the week" type segment to this project~~.
 
 2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
 
