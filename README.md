@@ -19,56 +19,78 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 * 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
 
-### Rankings (Updated 10/24/2021)
+### Rankings (Updated 10/31/2021)
 
-**Week 9 Rankings**
+**Week 10 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 7-0
-2 | Michigan | 0.9706 | 7-0
-3 | Wake Forest | 0.9529 | 7-0
-4 | Cincinnati | 0.9311 | 7-0
-5 | Oklahoma State | 0.9290 | 6-1
-6 | Michigan State | 0.9220 | 7-0
-7 | Oklahoma | 0.9219 | 8-0
-8 | Mississippi | 0.9162 | 6-1
-9 | Alabama | 0.9160 | 7-1
-10 | Kentucky | 0.9145 | 6-1
-11 | Baylor | 0.8976 | 6-1
-12 | Iowa | 0.8969 | 6-1
-13 | Ohio State | 0.8824 | 6-1
-14 | San Diego State | 0.8800 | 7-0
-15 | Notre Dame | 0.8799 | 6-1
-16 | Pittsburgh | 0.8631 | 6-1
-17 | Oregon | 0.8626 | 6-1
-18 | UTSA | 0.8527 | 8-0
-19 | Virginia | 0.8349 | 6-2
-20 | Iowa State | 0.8349 | 5-2
-21 | Auburn | 0.8333 | 5-2
-22 | Penn State | 0.8311 | 5-2
-23 | SMU | 0.8283 | 7-0
-24 | Arkansas | 0.8262 | 5-3
-25 | Texas A&M | 0.8206 | 6-2
+1 | Georgia | 1.0000 | 8-0
+2 | Michigan State | 0.9620 | 8-0
+3 | Wake Forest | 0.9483 | 8-0
+4 | Michigan | 0.9350 | 7-1
+5 | Oklahoma | 0.9313 | 9-0
+6 | Cincinnati | 0.9301 | 8-0
+7 | Alabama | 0.9202 | 7-1
+8 | Baylor | 0.9156 | 7-1
+9 | Oklahoma State | 0.9120 | 7-1
+10 | Ohio State | 0.9113 | 7-1
+11 | Notre Dame | 0.9003 | 7-1
+12 | Auburn | 0.8710 | 6-2
+13 | Mississippi | 0.8671 | 6-2
+14 | Oregon | 0.8668 | 7-1
+15 | Kentucky | 0.8575 | 6-2
+16 | UTSA | 0.8535 | 8-0
+17 | San Diego State | 0.8506 | 7-1
+18 | Houston | 0.8434 | 7-1
+19 | Iowa | 0.8390 | 6-2
+20 | Brigham Young | 0.8372 | 7-2
+21 | Air Force | 0.8318 | 6-2
+22 | Appalachian State | 0.8313 | 6-2
+23 | Texas A&M | 0.8300 | 6-2
+24 | Wisconsin | 0.8203 | 5-3
+25 | Arkansas | 0.8169 | 5-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2009.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2010.md)
 
 #### Observations and Notes (Updated 10/24/2021)
 
 * Nothing special of note this week.  Still fire Todd Grantham.
 
-#### Predictions (Updated 10/24/2021)
+#### Predictions (Updated 10/31/2021)
 
-Some predictions from my system for Week 9.  The way it predicts is still a work in progress but let's see anyway how the current algorithm performs
+Some predictions from my system for Week 10.  The way it predicts is still a work in progress but let's see anyway how the current algorithm performs
 
-Away | Score | Score | Home
----|---|---|---
-Georgia  | 33 | 15 | Florida 
-Michigan | 31 | 25 | Michigan State
-Texas  | 34 | 41 | Baylor
-Ole Miss | 33 | 37 | Auburn
-Penn State | 21 | 42 | Ohio State
-SMU | 30 | 32 | Houston
+Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
+---|---|---|---|---|---|---|---
+Auburn - Texas A&M | 24 - 25 (24.1 - 24.7)❗ |  | Texas A&M |  |  |  |  |
+Texas - Iowa State | 33 - 36 |  | Iowa State |  |  |  |  |
+Wake Forest - North Carolina | 44 - 35 |  | Wake Forest |  |  |  |  |
+Michigan State - Purdue | 26 - 20 |  | Michigan State |  |  |  |  |
+Penn State - Maryland | 31 - 24 |  | Penn State |  |  |  |  |
+Tennessee - Kentucky | 30 - 27 |  | Tennessee |  |  |  |  |
+Oregon - Washington | 28 - 21 |  | Oregon |  |  |  |  |
+Oklahoma State - West Virginia | 23 - 24 (22.9 - 23.5)❗ |  | West Virginia |  |  |  |  |
+Liberty - Ole Miss | 34 - 34 (33.88-33.91)❗❗❗ |  | Ole Miss |  |  |  |  |
+
+Some of these margins are pretty crazy.  I'm torn on if I want to update this section mid-week with my predictions or just do it next week using closing odds when I update this like I did this week.  No one is using this to make bets (and I strongly advise against it if you are thinking about it) but betting information can be inferred just by looking at the predicted scores so there's no real advantage to updating it mid-week.  Leaning towards just updating it every Sunday when I update my poll.
+
+As for last week, let's see how we did:
+
+Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
+---|---|---|---|---|---|---|---
+Georgia - Florida  | 33 - 15 | 34 - 7 | Georgia ✔ | Georgia -14 | Georgia ✔ | 51 | Under ✔
+Michigan - Michigan State | 31 - 25 | 33 - 37 | Michigan ❌ | Michigan -4 | Michigan ❌ | 51 | Over ✔
+Texas - Baylor  | 34 - 41 | 24 - 31 | Baylor ✔ | Baylor -2 | Baylor ✔ | 61 | Over ❌
+Ole Miss - Auburn | 33 - 37 | 20 - 31 | Auburn ✔ | Auburn -3 | Auburn ✔ | 68 | Over ❌
+Penn State - Ohio State | 21 - 42 | 24 - 33 | Ohio State ✔ | Ohio State -18.5 | Ohio State ❌ | 61 | Over ❌
+SMU - Houston | 30 - 32 | 37 - 44 | Houston ✔ | SMU -1 | Houston ✔ | 62 | Push ➖
+
+* 5-1 on outright picks
+* 4-2 against the spread
+* 1-4 on the O/U
+
+Not bad
 
 ### TODO List (Updated 10/24/2021)
 
