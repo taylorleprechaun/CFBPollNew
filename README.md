@@ -19,85 +19,85 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 * 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
 
-### Rankings (Updated 11/7/2021)
+### Rankings (Updated 11/14/2021)
 
-**Week 11 Rankings**
+**Week 12 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 9-0
-2 | Oklahoma | 0.9337 | 9-0
-3 | Alabama | 0.9330 | 8-1
-4 | Oklahoma State | 0.9203 | 8-1
-5 | Cincinnati | 0.9196 | 9-0
-6 | Michigan | 0.9177 | 8-1
-7 | Michigan State | 0.9123 | 8-1
-8 | Ohio State | 0.9043 | 8-1
-9 | Notre Dame | 0.9028 | 8-1
-10 | Wake Forest | 0.8948 | 8-1
-11 | Mississippi | 0.8901 | 7-2
-12 | UTSA | 0.8862 | 9-0
-13 | Oregon | 0.8788 | 8-1
-14 | Texas A&M | 0.8706 | 7-2
-15 | Baylor | 0.8654 | 7-2
-16 | Brigham Young | 0.8649 | 8-2
-17 | Wisconsin | 0.8614 | 6-3
-18 | Iowa | 0.8609 | 7-2
-19 | San Diego State | 0.8499 | 8-1
-20 | Auburn | 0.8423 | 6-3
-21 | Houston | 0.8400 | 8-1
-22 | Arkansas | 0.8360 | 6-3
-23 | Penn State | 0.8341 | 6-3
-24 | Appalachian State | 0.8308 | 7-2
-25 | North Carolina State | 0.8263 | 7-2
+1 | Georgia | 1.0000 | 10-0
+2 | Michigan | 0.9278 | 9-1
+3 | Oklahoma State | 0.9191 | 9-1
+4 | Notre Dame | 0.9149 | 9-1
+5 | Wake Forest | 0.9117 | 9-1
+6 | Michigan State | 0.9104 | 9-1
+7 | Ohio State | 0.9097 | 9-1
+8 | Alabama | 0.9086 | 9-1
+9 | Cincinnati | 0.9064 | 10-0
+10 | Mississippi | 0.9000 | 8-2
+11 | Oklahoma | 0.8905 | 9-1
+12 | Oregon | 0.8852 | 9-1
+13 | Baylor | 0.8796 | 8-2
+14 | UTSA | 0.8716 | 10-0
+15 | Brigham Young | 0.8657 | 8-2
+16 | San Diego State | 0.8617 | 9-1
+17 | Wisconsin | 0.8595 | 7-3
+18 | Iowa | 0.8542 | 8-2
+19 | Houston | 0.8457 | 9-1
+20 | Arkansas | 0.8375 | 7-3
+21 | Pittsburgh | 0.8299 | 8-2
+22 | Appalachian State | 0.8298 | 8-2
+23 | Texas A&M | 0.8284 | 7-3
+24 | Louisiana-Lafayette | 0.8255 | 9-1
+25 | Kansas State | 0.8210 | 7-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2011.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2012.md)
 
-#### Observations and Notes (Updated 11/7/2021)
+#### Observations and Notes (Updated 11/14/2021)
 
 * Nothing special of note this week.  Fire Dan Mullen.
 
-#### Predictions (Updated 11/7/2021)
+#### Predictions (Updated 11/14/2021)
 
-Some predictions from my system for Week 11.  The way it predicts is still a work in progress but let's see anyway how the current algorithm performs
+Some predictions from my system for Week 12.  The way it predicts is still a work in progress but let's see anyway how the current algorithm performs
 
 Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
 ---|---|---|---|---|---|---|---
-Minnesota - Iowa | 17 - 21 |  | Iowa |  |  |  | 
-Georgia - Tennessee | 38 - 21 |  | Georgia |  |  |  | 
-Oklahoma - Baylor | 34 - 35 |  | Baylor |  |  |  | 
-Michigan - Penn State | 28 - 21 |  | Michigan |  |  |  | 
-Mississippi State - Auburn | 21 - 33 |  | Auburn |  |  |  | 
-Purdue - Ohio State | 20 - 40 |  | Ohio State |  |  |  | 
-Texas A&M - Ole Miss | 26 - 28 |  | Ole Miss |  |  |  | 
-NC State - Wake Forest | 30 - 35 |  | Wake Forest |  |  |  | 
-Nevada - San Diego State | 27 - 29 |  | San Diego State |  |  |  | 
- 
-Decided against updating mid-week.  Like I said last week, anyone could just use the predicted margins and some mental math to make their bets (I strongly advise against this).
+Illinois - Iowa | 9 - 23 |  | Iowa |  |  |  | 
+Arkansas - Alabama | 22 - 41 |  | Alabama |  |  |  | 
+Oregon - Utah | 32 - 35 |  | Utah |  |  |  | 
+SMU - Cincinnati | 30 - 39 |  | Cincinnati |  |  |  | 
+Iowa State - Oklahoma | 29 - 34 |  | Oklahoma |  |  |  | 
+Oklahoma State - Texas Tech | 36 - 24 |  | Oklahoma State |  |  |  | 
+Michigan State - Ohio State | 29 - 45 |  | Ohio State |  |  |  | 
+Wake Forest - Clemson | 31 - 29 |  | Wake Forest |  |  |  | 
+Nebraska - Wisconsin | 18 - 25 |  | Wisconsin |  |  |  | 
+Auburn - South Carolina | 29 - 22 |  | Auburn |  |  |  | 
+Baylor - Kansas State | 27 - 23 |  | Baylor |  |  |  | 
 
 As for last week, let's see how we did:
 
 Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
 ---|---|---|---|---|---|---|---
-Auburn - Texas A&M | 24 - 25 (24.1 - 24.7)❗ | 3 - 20 | Texas A&M ✔ | Texas A&M -4.5 | Auburn ❌ | 50 | Under ✔
-Texas - Iowa State | 33 - 36 | 7 - 30 | Iowa State ✔ | Iowa State -6 | Texas ❌ | 60 | Over ❌
-Wake Forest - North Carolina | 44 - 35 | 55 - 58 | Wake Forest ❌ | UNC -2.5 | Wake Forest ❌ | 78 | Over ✔
-Michigan State - Purdue | 26 - 20 | 29 - 40 | Michigan State ❌ | Michigan State -2.5 | Michigan State ❌ | 54 | Under ❌
-Penn State - Maryland | 31 - 24 | 31 - 14 | Penn State ✔ | Penn State -10 | Maryland ❌ | 57 | Under ✔
-Tennessee - Kentucky | 30 - 27 | 45 - 42 | Tennessee ✔ | Tennessee -1 | Tennessee ✔ | 58 | Under ❌
-Oregon - Washington | 28 - 21 | 26 - 16 | Oregon ✔ | Oregon -7 | Push ➖ | 48 | Over ❌
-Oklahoma State - West Virginia | 23 - 24 (22.9 - 23.5)❗ | 24 - 3 | West Virginia ❌ | Oklahoma State -2.5 | West Virginia ❌ | 49 | Under ✔
-Liberty - Ole Miss | 34 - 34 (33.88-33.91)❗❗❗ | 14 - 27 | Ole Miss ✔ | Ole Miss -7.5 | Liberty ❌ | 67 | Over ❌
+Minnesota - Iowa | 17 - 21 | 22 - 27 | Iowa ✔ | Iowa -4 | Push ➖ | 37 | Over ✔
+Georgia - Tennessee | 38 - 21 | 41 - 17 | Georgia ✔ | Georgia -19.5 | Tennessee ❌ | 56 |  Over ✔
+Oklahoma - Baylor | 34 - 35 | 14 - 27 | Baylor ✔ | Oklahoma -4 | Baylor ✔ | 63 | Over ❌
+Michigan - Penn State | 28 - 21 | 21 - 17 | Michigan ✔ | Michigan -2.5 | Michigan ✔ | 48 | Over ❌
+Mississippi State - Auburn | 21 - 33 | 43 - 34 | Auburn ❌ | Auburn -5.5 | Auburn ❌ | 51 | Over ✔
+Purdue - Ohio State | 20 - 40 | 31 - 59 | Ohio State ✔ | Ohio State -19 | Ohio State ✔ | 65 | Under ❌
+Texas A&M - Ole Miss | 26 - 28 | 19 - 29 | Ole Miss ✔ | Texas A&M -1.5 | Ole Miss ✔ | 58 | Under ✔
+NC State - Wake Forest | 30 - 35 | 42 - 45 | Wake Forest ✔ | Wake Forst -1 | Wake Forest ✔ | 65 | Push ➖
+Nevada - San Diego State | 27 - 29 | 21 - 23 | San Diego State ✔ | San Diego State -2.5 | Nevada ✔ | 45 | Over ❌
 
-* 6-3 on outright picks
-* 1-7 against the spread (ouch)
-* 4-5 on the O/U
+* 8-1 on outright picks
+* 6-2 against the spread
+* 4-4 on the O/U
 
 This puts the overall total to:
 
-* 11-4 on outright picks
-* 5-9 against the spread
-* 6-8 on the O/U
+* 19-5 on outright picks
+* 11-11 against the spread
+* 10-12 on the O/U
 
 
 ### TODO List (Updated 10/24/2021)
