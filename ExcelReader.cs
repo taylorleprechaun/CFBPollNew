@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 
 namespace CFBPollNew
 {
@@ -128,7 +129,8 @@ namespace CFBPollNew
         //Gets the excel table object from the Excel file
         private static IXLTable GetTableFromExcelFile(string filePath)
         {
-            var excelFile = new XLWorkbook(filePath);
+            var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var excelFile = new XLWorkbook(fileStream);
             var excelSheet = excelFile.Worksheets.Worksheet("Sheet2");
             return excelSheet.Table(0);
         }
