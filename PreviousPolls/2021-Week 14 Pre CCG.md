@@ -1,135 +1,135 @@
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 11-0
-2 | Alabama | 0.9312 | 10-1
-3 | Oklahoma State | 0.9236 | 10-1
-4 | Ohio State | 0.9236 | 10-1
-5 | Cincinnati | 0.9206 | 11-0
-6 | Michigan | 0.9199 | 10-1
-7 | Notre Dame | 0.9110 | 10-1
-8 | Oklahoma | 0.8960 | 10-1
-9 | Mississippi | 0.8912 | 9-2
-10 | Baylor | 0.8903 | 9-2
-11 | Wake Forest | 0.8795 | 9-2
-12 | UTSA | 0.8776 | 11-0
-13 | Michigan State | 0.8759 | 9-2
-14 | Wisconsin | 0.8592 | 8-3
-15 | Brigham Young | 0.8553 | 9-2
-16 | Oregon | 0.8551 | 9-2
-17 | Iowa | 0.8551 | 9-2
-18 | San Diego State | 0.8536 | 10-1
-19 | Texas A&M | 0.8504 | 8-3
-20 | Houston | 0.8483 | 10-1
-21 | Pittsburgh | 0.8444 | 9-2
-22 | Clemson | 0.8385 | 8-3
-23 | Utah | 0.8376 | 8-3
-24 | Appalachian State | 0.8365 | 9-2
-25 | Louisiana-Lafayette | 0.8339 | 10-1
-26 | North Carolina State | 0.8250 | 8-3
-27 | Arkansas | 0.8138 | 7-4
-28 | Air Force | 0.8070 | 8-3
-29 | Penn State | 0.8060 | 7-4
-30 | Kentucky | 0.7972 | 8-3
-31 | Boise State | 0.7960 | 7-4
-32 | Purdue | 0.7936 | 7-4
-33 | Kansas State | 0.7911 | 7-4
-34 | Mississippi State | 0.7908 | 7-4
-35 | Fresno State | 0.7902 | 8-3
-36 | Army | 0.7820 | 7-3
-37 | Tennessee | 0.7763 | 6-5
-38 | SMU | 0.7759 | 8-3
-39 | Utah State | 0.7684 | 8-3
-40 | Miami FL | 0.7673 | 6-5
-41 | Auburn | 0.7669 | 6-5
-42 | Coastal Carolina | 0.7541 | 9-2
-43 | Louisville | 0.7525 | 6-5
-44 | Iowa State | 0.7496 | 6-5
-45 | Nevada | 0.7480 | 7-4
-46 | Virginia | 0.7478 | 6-5
-47 | Arizona State | 0.7472 | 7-4
-48 | Northern Illinois | 0.7465 | 8-3
-49 | South Carolina | 0.7442 | 6-5
-50 | Minnesota | 0.7429 | 7-4
-51 | UCLA | 0.7412 | 7-4
-52 | Missouri | 0.7375 | 6-5
-53 | Oregon State | 0.7363 | 7-4
-54 | North Carolina | 0.7360 | 6-5
-55 | Central Florida | 0.7333 | 7-4
-56 | East Carolina | 0.7324 | 7-4
-57 | Liberty | 0.7320 | 7-4
-58 | Alabama-Birmingham | 0.7246 | 7-4
-59 | Washington State | 0.7236 | 6-5
-60 | Texas Tech | 0.7189 | 6-5
-61 | Louisiana State | 0.7148 | 5-6
-62 | Western Kentucky | 0.7141 | 7-4
-63 | Maryland | 0.7082 | 5-6
-64 | West Virginia | 0.7049 | 5-6
-65 | Marshall | 0.6989 | 7-4
-66 | Florida State | 0.6982 | 5-6
-67 | Texas Christian | 0.6946 | 5-6
-68 | Central Michigan | 0.6913 | 7-4
-69 | Wyoming | 0.6856 | 6-5
-70 | Boston College | 0.6838 | 6-5
-71 | Rutgers | 0.6827 | 5-6
-72 | Florida | 0.6825 | 5-6
-73 | Syracuse | 0.6780 | 5-6
-74 | Georgia State | 0.6775 | 6-5
-75 | Eastern Michigan | 0.6767 | 7-4
-76 | UTEP | 0.6728 | 7-4
-77 | Western Michigan | 0.6679 | 6-5
-78 | Virginia Tech | 0.6613 | 5-6
-79 | Memphis | 0.6595 | 5-6
-80 | Kent State | 0.6557 | 6-5
-81 | Miami OH | 0.6533 | 6-5
-82 | Texas | 0.6525 | 4-7
-83 | Toledo | 0.6521 | 6-5
-84 | Illinois | 0.6490 | 4-7
-85 | Tulsa | 0.6465 | 5-6
-86 | Ball State | 0.6325 | 5-6
-87 | Troy | 0.6280 | 5-6
-88 | USC | 0.6252 | 4-6
-89 | Nebraska | 0.6250 | 3-8
-90 | San Jose State | 0.6111 | 5-6
-91 | Florida Atlantic | 0.6095 | 5-6
-92 | Old Dominion | 0.6059 | 5-6
-93 | California | 0.6046 | 4-6
-94 | Colorado | 0.6041 | 4-7
-95 | Hawaii | 0.5993 | 5-7
-96 | North Texas | 0.5973 | 5-6
-97 | Georgia Tech | 0.5967 | 3-8
-98 | Indiana | 0.5954 | 2-9
-99 | MTSU | 0.5943 | 5-6
-100 | South Alabama | 0.5876 | 5-6
-101 | Washington | 0.5874 | 4-7
-102 | Navy | 0.5843 | 2-8
-103 | Northwestern | 0.5798 | 3-8
-104 | Louisiana-Monroe | 0.5773 | 4-7
-105 | Tulane | 0.5650 | 2-9
-106 | Charlotte | 0.5614 | 5-6
-107 | Stanford | 0.5539 | 3-8
-108 | Louisiana Tech | 0.5515 | 3-8
-109 | New Mexico | 0.5502 | 3-8
-110 | Kansas | 0.5486 | 2-9
-111 | Rice | 0.5476 | 3-8
-112 | Colorado State | 0.5461 | 3-8
-113 | Temple | 0.5382 | 3-8
-114 | Duke | 0.5342 | 3-8
-115 | UNLV | 0.5340 | 2-9
-116 | Buffalo | 0.5333 | 4-7
-117 | Georgia Southern | 0.5311 | 3-8
-118 | South Florida | 0.5298 | 2-9
-119 | Texas State | 0.5213 | 3-8
-120 | Bowling Green | 0.5066 | 3-8
-121 | Vanderbilt | 0.5054 | 2-9
-122 | Ohio U. | 0.5009 | 3-8
-123 | Southern Miss | 0.4807 | 2-9
-124 | Arizona | 0.4787 | 1-10
-125 | Arkansas State | 0.4778 | 2-9
-126 | New Mexico State | 0.4670 | 1-10
-127 | Massachusetts | 0.4467 | 1-10
-128 | Akron | 0.4398 | 2-9
-129 | Connecticut | 0.4307 | 1-10
-130 | Florida Int'l | 0.4028 | 1-10
+1 | Georgia | 1.0000 | 12-0
+2 | Alabama | 0.9534 | 11-1
+3 | Oklahoma State | 0.9489 | 11-1
+4 | Michigan | 0.9388 | 11-1
+5 | Cincinnati | 0.9334 | 12-0
+6 | Notre Dame | 0.9110 | 11-1
+7 | Ohio State | 0.9085 | 10-2
+8 | Baylor | 0.9071 | 10-2
+9 | Mississippi | 0.9058 | 10-2
+10 | Michigan State | 0.8958 | 10-2
+11 | Wake Forest | 0.8902 | 10-2
+12 | San Diego State | 0.8849 | 11-1
+13 | Oklahoma | 0.8805 | 10-2
+14 | Oregon | 0.8748 | 10-2
+15 | Iowa | 0.8656 | 10-2
+16 | Brigham Young | 0.8648 | 10-2
+17 | Pittsburgh | 0.8602 | 10-2
+18 | Clemson | 0.8542 | 9-3
+19 | UTSA | 0.8522 | 11-1
+20 | Utah | 0.8515 | 9-3
+21 | Houston | 0.8471 | 11-1
+22 | Louisiana-Lafayette | 0.8432 | 11-1
+23 | Appalachian State | 0.8398 | 10-2
+24 | Arkansas | 0.8383 | 8-4
+25 | North Carolina State | 0.8365 | 9-3
+26 | Wisconsin | 0.8315 | 8-4
+27 | Kentucky | 0.8230 | 9-3
+28 | Texas A&M | 0.8196 | 8-4
+29 | Air Force | 0.8135 | 9-3
+30 | Army | 0.8103 | 8-3
+31 | Fresno State | 0.8102 | 9-3
+32 | Purdue | 0.8030 | 8-4
+33 | Penn State | 0.7913 | 7-5
+34 | Tennessee | 0.7867 | 7-5
+35 | Boise State | 0.7841 | 7-5
+36 | Utah State | 0.7832 | 9-3
+37 | Mississippi State | 0.7819 | 7-5
+38 | Miami FL | 0.7784 | 7-5
+39 | Minnesota | 0.7758 | 8-4
+40 | Iowa State | 0.7711 | 7-5
+41 | Coastal Carolina | 0.7680 | 10-2
+42 | UCLA | 0.7649 | 8-4
+43 | Nevada | 0.7642 | 8-4
+44 | Kansas State | 0.7621 | 7-5
+45 | Auburn | 0.7584 | 6-6
+46 | Louisiana State | 0.7561 | 6-6
+47 | SMU | 0.7534 | 8-4
+48 | Arizona State | 0.7529 | 8-4
+49 | Alabama-Birmingham | 0.7473 | 8-4
+50 | Western Kentucky | 0.7449 | 8-4
+51 | Washington State | 0.7429 | 7-5
+52 | Central Florida | 0.7389 | 8-4
+53 | Maryland | 0.7362 | 6-6
+54 | Louisville | 0.7343 | 6-6
+55 | Oregon State | 0.7306 | 7-5
+56 | Northern Illinois | 0.7302 | 8-4
+57 | East Carolina | 0.7286 | 7-5
+58 | South Carolina | 0.7266 | 6-6
+59 | North Carolina | 0.7262 | 6-6
+60 | Missouri | 0.7252 | 6-6
+61 | Virginia | 0.7242 | 6-6
+62 | Liberty | 0.7233 | 7-5
+63 | Central Michigan | 0.7198 | 8-4
+64 | West Virginia | 0.7195 | 6-6
+65 | Texas Tech | 0.7114 | 6-6
+66 | Florida | 0.7071 | 6-6
+67 | Western Michigan | 0.7058 | 7-5
+68 | Georgia State | 0.7006 | 7-5
+69 | Virginia Tech | 0.6932 | 6-6
+70 | Marshall | 0.6901 | 7-5
+71 | Texas | 0.6898 | 5-7
+72 | Kent State | 0.6824 | 7-5
+73 | Tulsa | 0.6815 | 6-6
+74 | Florida State | 0.6746 | 5-7
+75 | Boston College | 0.6739 | 6-6
+76 | Texas Christian | 0.6735 | 5-7
+77 | Memphis | 0.6719 | 6-6
+78 | Syracuse | 0.6680 | 5-7
+79 | UTEP | 0.6641 | 7-5
+80 | Toledo | 0.6638 | 7-5
+81 | Illinois | 0.6634 | 5-7
+82 | Eastern Michigan | 0.6631 | 7-5
+83 | Wyoming | 0.6620 | 6-6
+84 | Rutgers | 0.6560 | 5-7
+85 | Ball State | 0.6499 | 6-6
+86 | North Texas | 0.6437 | 6-6
+87 | Miami OH | 0.6434 | 6-6
+88 | Hawaii | 0.6380 | 6-7
+89 | Old Dominion | 0.6269 | 6-6
+90 | USC | 0.6258 | 4-7
+91 | MTSU | 0.6235 | 6-6
+92 | Nebraska | 0.6203 | 3-9
+93 | Troy | 0.6153 | 5-7
+94 | San Jose State | 0.6145 | 5-7
+95 | Navy | 0.6110 | 3-8
+96 | Georgia Tech | 0.6029 | 3-9
+97 | Colorado | 0.6005 | 4-8
+98 | Florida Atlantic | 0.5958 | 5-7
+99 | California | 0.5945 | 4-7
+100 | Indiana | 0.5920 | 2-10
+101 | South Alabama | 0.5908 | 5-7
+102 | Louisiana-Monroe | 0.5850 | 4-8
+103 | Rice | 0.5789 | 4-8
+104 | Washington | 0.5762 | 4-8
+105 | Northwestern | 0.5605 | 3-9
+106 | Stanford | 0.5585 | 3-9
+107 | Charlotte | 0.5520 | 5-7
+108 | Tulane | 0.5514 | 2-10
+109 | New Mexico | 0.5444 | 3-9
+110 | Texas State | 0.5419 | 4-8
+111 | Colorado State | 0.5404 | 3-9
+112 | Georgia Southern | 0.5396 | 3-9
+113 | UNLV | 0.5391 | 2-10
+114 | Kansas | 0.5376 | 2-10
+115 | Louisiana Tech | 0.5338 | 3-9
+116 | Bowling Green | 0.5312 | 4-8
+117 | South Florida | 0.5272 | 2-10
+118 | Buffalo | 0.5255 | 4-8
+119 | Duke | 0.5248 | 3-9
+120 | Temple | 0.5209 | 3-9
+121 | Southern Miss | 0.5035 | 3-9
+122 | Vanderbilt | 0.5029 | 2-10
+123 | New Mexico State | 0.4995 | 2-10
+124 | Ohio U. | 0.4829 | 3-9
+125 | Arizona | 0.4822 | 1-11
+126 | Arkansas State | 0.4695 | 2-10
+127 | Connecticut | 0.4492 | 1-11
+128 | Akron | 0.4368 | 2-10
+129 | Massachusetts | 0.4260 | 1-11
+130 | Florida Int'l | 0.3962 | 1-11
 
 #### Observations and Notes (Updated 11/28/2021)
 
