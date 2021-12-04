@@ -9,8 +9,10 @@ namespace CFBPollNew
 {
     class Printer
     {
-        private static readonly string csvFilePath = ConfigurationManager.AppSettings["PollOutputPath_csv"];
-        private static readonly string txtFilePath = ConfigurationManager.AppSettings["PollOutputPath_txt"];
+        private static readonly string csvPollFilePath = ConfigurationManager.AppSettings["PollOutputPath_csv"];
+        private static readonly string txtPollFilePath = ConfigurationManager.AppSettings["PollOutputPath_txt"];
+        private static readonly string csvPredictionsFilePath = ConfigurationManager.AppSettings["PollPredictionsPath_csv"];
+        private static readonly string txtPredictionsFilePath = ConfigurationManager.AppSettings["PollPredictionsPath_txt"];
 
         /// <summary>
         /// Prints out the each Team's name, record, and schedule
@@ -21,9 +23,9 @@ namespace CFBPollNew
             foreach (Team team in teamDictionary.Values)
             {
                 Console.Write(team.Name + ": ");
-                team.Schedule.PrintRecord();
+                team.PastSchedule.PrintRecord();
                 Console.WriteLine();
-                team.Schedule.PrintSchedule();
+                team.PastSchedule.PrintSchedule();
                 Console.WriteLine();
             }
         }
@@ -36,12 +38,12 @@ namespace CFBPollNew
         {
             Console.WriteLine();
             Console.Write(team.Name + " ");
-            team.Schedule.PrintRecord();
+            team.PastSchedule.PrintRecord();
             Console.WriteLine();
             Console.WriteLine(team.Conference + " " + team.Division);
-            Console.WriteLine(team.Schedule.Strength + " " + team.Schedule.OpponentStrength);
+            Console.WriteLine(team.PastSchedule.Strength + " " + team.PastSchedule.OpponentStrength);
             Console.WriteLine("===========================================");
-            team.Schedule.PrintSchedule();
+            team.PastSchedule.PrintSchedule();
             //print other stats, rank, conf, division, etc
             Console.WriteLine();
             Console.WriteLine();
@@ -75,9 +77,9 @@ namespace CFBPollNew
         public static void PrintPollDetails(Dictionary<string, Team> teamDictionary)
         {
             //Delete output csv if it exists
-            if (File.Exists(csvFilePath))
+            if (File.Exists(csvPollFilePath))
             {
-                File.Delete(csvFilePath);
+                File.Delete(csvPollFilePath);
             }
 
             //Some setup
@@ -99,11 +101,11 @@ namespace CFBPollNew
                 nextLine += team.Name + ",";
                 nextLine += team.Rating.ToString("0.0000") + ",";
                 nextLine += (team.Rating/topRating).ToString("0.0000") + ",";
-                nextLine += team.Schedule.Wins + ",";
-                nextLine += team.Schedule.Losses + ",";
-                nextLine += (team.Schedule.Wins/team.Schedule.GamesPlayed).ToString("0.0000") + ",";
-                nextLine += team.Schedule.Strength.ToString("0.0000") + ",";
-                nextLine += team.Schedule.WeightedStrength.ToString("0.0000") + ",";
+                nextLine += team.PastSchedule.Wins + ",";
+                nextLine += team.PastSchedule.Losses + ",";
+                nextLine += (team.PastSchedule.Wins/team.PastSchedule.Games).ToString("0.0000") + ",";
+                nextLine += team.PastSchedule.Strength.ToString("0.0000") + ",";
+                nextLine += team.PastSchedule.WeightedStrength.ToString("0.0000") + ",";
                 nextLine += team.Conference + ",";
                 nextLine += team.Division + ",";
                 nextLine += (team.OffenseStats.Points - team.DefenseStats.Points) + ",";
@@ -118,14 +120,14 @@ namespace CFBPollNew
                 csv.Append(nextLine);
 
                 //Write to output
-                File.WriteAllText(csvFilePath, csv.ToString());
+                File.WriteAllText(csvPollFilePath, csv.ToString());
 
                 //Increment rank
                 rank++;
             }
 
             //Open the file
-            System.Diagnostics.Process.Start(csvFilePath);
+            System.Diagnostics.Process.Start(csvPollFilePath);
         }
 
         /// <summary>
@@ -135,9 +137,9 @@ namespace CFBPollNew
         public static void PrintPollTable(Dictionary<string, Team> teamDictionary)
         {
             //Delete output csv if it exists
-            if (File.Exists(txtFilePath))
+            if (File.Exists(txtPollFilePath))
             {
-                File.Delete(txtFilePath);
+                File.Delete(txtPollFilePath);
             }
 
             //Setup
@@ -158,21 +160,192 @@ namespace CFBPollNew
                 nextLine += rank + " | ";
                 nextLine += team.Name + " | ";
                 nextLine += (team.Rating / topRating).ToString("0.0000") + " | ";
-                nextLine += team.Schedule.Wins + "-" + team.Schedule.Losses;
+                nextLine += team.PastSchedule.Wins + "-" + team.PastSchedule.Losses;
                 nextLine += "\n";
 
                 //Append to csv output
                 txt.Append(nextLine);
 
                 //Write to output
-                File.WriteAllText(txtFilePath, txt.ToString());
+                File.WriteAllText(txtPollFilePath, txt.ToString());
 
                 //Increment rank
                 rank++;
             }
 
             //Open the file
-            System.Diagnostics.Process.Start(txtFilePath);
+            System.Diagnostics.Process.Start(txtPollFilePath);
+        }
+
+        /// <summary>
+        /// Print the predictions for all games of the coming week markdown formatted to txt file
+        /// </summary>
+        /// <param name="teamDictionary">Dictionary of the teams to print</param>
+        public static void PrintPredictionsTable(Dictionary<string, Team> teamDictionary)
+        {
+            //Delete output csv if it exists
+            if (File.Exists(txtPredictionsFilePath))
+            {
+                File.Delete(txtPredictionsFilePath);
+            }
+
+            //Setup
+            List<Team> teamList = new List<Team>(teamDictionary.Values);
+            var txt = new StringBuilder();
+            int weekToPredict = 100;
+
+            //Table header
+            txt.AppendLine("Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick\n---| ---| ---| ---| ---| ---| ---| ---");
+
+            //Get the next week of the season that we need to make predictions for
+            //Start at 100 set it to the minimum possible from any team's future schedule list
+            foreach (Team team in teamList)
+            {
+                int week = team.FutureSchedule.Games > 0 ? team.FutureSchedule.Schedule[0].Week : 100;
+                if (week < weekToPredict)
+                {
+                    weekToPredict = week;
+                }
+            }
+
+            //List of teams we've already predicted the outcome of
+            List<string> predictedTeams = new List<string>();
+
+            //Loop through teams
+            foreach (Team team in teamList)
+            {
+                //Get the first game for the current team's future schedule of the week to predict
+                var game = team.FutureSchedule.Schedule.FirstOrDefault(g => g.Week.Equals(weekToPredict));
+                //If they have no such game add them to the list of predicted teams and skip
+                if (game == null) 
+                { 
+                    predictedTeams.Add(team.Name); 
+                    continue; 
+                }
+                //Get the opponent
+                var opponent = game.Opponent;
+
+                //If we've already predicted these teams then skip
+                if (predictedTeams.Contains(team.Name) || predictedTeams.Contains(opponent.Name)) continue;
+
+                //Add the teams to the predicted teams list
+                predictedTeams.Add(team.Name);
+                predictedTeams.Add(opponent.Name);
+
+                //Predict the winner
+                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, true);
+                var teamScore = prediction[0];
+                var opponentScore = prediction[1];
+                var winner = double.Parse(teamScore) > double.Parse(opponentScore);
+
+                //Add info
+                string nextLine = "";
+                nextLine += game.Location.Equals(LocationEnum.Road) ? team.Name + " - " + opponent.Name + " | " : opponent.Name + " - " + team.Name + " | ";
+                nextLine += game.Location.Equals(LocationEnum.Road) ? teamScore + " - " + opponentScore + " | " : opponentScore + " - " + teamScore + " | ";
+                nextLine += " | ";
+                nextLine += winner ? team.Name + " | " : opponent.Name + " | ";
+                nextLine += " | ";
+                nextLine += " | ";
+                nextLine += " | ";
+                nextLine += "\n";
+
+                //Append to csv output
+                txt.Append(nextLine);
+
+                //Write to output
+                File.WriteAllText(txtPredictionsFilePath, txt.ToString());
+            }
+
+            //Open the file
+            System.Diagnostics.Process.Start(txtPredictionsFilePath);
+        }
+
+        /// <summary>
+        /// Print the predictions for all games of the coming week to a csv file
+        /// </summary>
+        /// <param name="teamDictionary">Dictionary of the teams to print</param>
+        public static void PrintPredictionsDetails(Dictionary<string, Team> teamDictionary)
+        {
+            //Delete output csv if it exists
+            if (File.Exists(csvPredictionsFilePath))
+            {
+                File.Delete(csvPredictionsFilePath);
+            }
+
+            //Setup
+            List<Team> teamList = new List<Team>(teamDictionary.Values);
+            var csv = new StringBuilder();
+            int weekToPredict = 100;
+
+            //Table header
+            csv.AppendLine("Away,Location,Home,Away Score,HomeScore,Pick,Spread,O/U");
+
+            //Get the next week of the season that we need to make predictions for
+            //Start at 100 set it to the minimum possible from any team's future schedule list
+            foreach (Team team in teamList)
+            {
+                int week = team.FutureSchedule.Games > 0 ? team.FutureSchedule.Schedule[0].Week : 100;
+                if (week < weekToPredict)
+                {
+                    weekToPredict = week;
+                }
+            }
+
+            //List of teams we've already predicted the outcome of
+            List<string> predictedTeams = new List<string>();
+
+            //Loop through teams
+            foreach (Team team in teamList)
+            {
+                //Get the first game for the current team's future schedule of the week to predict
+                var game = team.FutureSchedule.Schedule.FirstOrDefault(g => g.Week.Equals(weekToPredict));
+                //If they have no such game add them to the list of predicted teams and skip
+                if (game == null)
+                {
+                    predictedTeams.Add(team.Name);
+                    continue;
+                }
+                //Get the opponent
+                var opponent = game.Opponent;
+
+                //If we've already predicted these teams then skip
+                if (predictedTeams.Contains(team.Name) || predictedTeams.Contains(opponent.Name)) continue;
+
+                //Add the teams to the predicted teams list
+                predictedTeams.Add(team.Name);
+                predictedTeams.Add(opponent.Name);
+
+                //Predict the winner
+                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, false);
+                var teamScore = prediction[0];
+                var opponentScore = prediction[1];
+                var winner = double.Parse(teamScore) > double.Parse(opponentScore);
+                var total = double.Parse(teamScore) + double.Parse(opponentScore);
+
+                //Add info
+                string nextLine = "";
+                nextLine += game.Location.Equals(LocationEnum.Road)
+                    ? team.Name + "," + game.Location + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
+                    : game.Location.Equals(LocationEnum.Home)
+                        ? opponent.Name + "," + game.Location + "," + team.Name + "," + opponentScore + "," + teamScore + ","
+                        : game.Location.Equals(LocationEnum.Neutral)
+                            ? team.Name + "," + LocationEnum.Neutral + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
+                            : ",,,,,";
+                nextLine += winner
+                    ? team.Name + "," + team.Name + " " + (double.Parse(teamScore) - double.Parse(opponentScore)).ToString("0.00") + ","
+                    : opponent.Name + "," + opponent.Name + " " + (double.Parse(teamScore) - double.Parse(opponentScore)).ToString("0.00") + ",";
+                nextLine += total;
+                nextLine += "\n";
+
+                //Append to csv output
+                csv.Append(nextLine);
+
+                //Write to output
+                File.WriteAllText(csvPredictionsFilePath, csv.ToString());
+            }
+
+            //Open the file
+            System.Diagnostics.Process.Start(csvPredictionsFilePath);
         }
     }
 }

@@ -15,10 +15,10 @@ namespace CFBPollNew
             foreach (var team in teamDictionary.Values)
             {
                 double[] opponentStrength = CalculateStrengthOfSchedule(team, teamDictionary, 3);
-                team.Schedule.OpponentStrength = opponentStrength[1] / opponentStrength[0];
+                team.PastSchedule.OpponentStrength = opponentStrength[1] / opponentStrength[0];
 
                 double[] scheduleStrength = CalculateStrengthOfSchedule(team, teamDictionary, 2);
-                team.Schedule.Strength = scheduleStrength[1] / scheduleStrength[0];
+                team.PastSchedule.Strength = scheduleStrength[1] / scheduleStrength[0];
             }
         }
 
@@ -39,7 +39,7 @@ namespace CFBPollNew
             double wins = 0;
 
             //For each game in the schedule
-            foreach (Game game in team.Schedule.Schedule)
+            foreach (Game game in team.PastSchedule.Schedule)
             {
                 string opponentName = game.Opponent.Name;
                 //If the depth is > 0 then we want to go deeper
@@ -59,7 +59,7 @@ namespace CFBPollNew
                 else
                 {
                     games++;
-                    if (game.Result)
+                    if (game.Result.Equals(ResultEnum.Win))
                     {
                         wins++;
                     }

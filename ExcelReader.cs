@@ -80,49 +80,80 @@ namespace CFBPollNew
 
             foreach (var row in scoresTable.Rows())
             {
-                Team winningTeam, losingTeam;
+                Team team1, team2;
 
                 //Get the team names
-                var winningTeamName = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(row.Cell(5).Value.ToString()));
-                var losingTeamName = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(row.Cell(8).Value.ToString()));
+                var team1Name = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(row.Cell(5).Value.ToString()));
+                var team2Name = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(row.Cell(8).Value.ToString()));
                 
                 //If the team names are Winner and Loser then skip because this is the header row
-                if (winningTeamName.Equals("Winner") && losingTeamName.Equals("Loser"))
+                if (team1Name.Equals("Winner") && team2Name.Equals("Loser"))
                 {
                     continue;
                 }
 
+                //Get the week
+                int gameWeek = int.Parse(row.Cell(2).Value.ToString());
+
+                //Get the location
+                LocationEnum team1Location, team2Location;
+                var locationValue = row.Cell(7).Value.ToString();
+                if (locationValue.Equals("@"))
+                {
+                    team1Location = LocationEnum.Road;
+                    team2Location = LocationEnum.Home;
+                }
+                else if (locationValue.Equals("N"))
+                {
+                    team1Location = LocationEnum.Neutral;
+                    team2Location = LocationEnum.Neutral;
+                }
+                else
+                {
+                    team1Location = LocationEnum.Home;
+                    team2Location = LocationEnum.Road;
+                }
+
                 //Get scores
-                var winningTeamScore = int.Parse(row.Cell(6).Value.ToString());
-                var losingTeamScore = int.Parse(row.Cell(9).Value.ToString());
+                int team1Score, team2Score;
+                int.TryParse(row.Cell(6).Value.ToString(), out team1Score);
+                int.TryParse(row.Cell(9).Value.ToString(), out team2Score);
 
                 //If the team exists then initialize it, otherwise make it an FCS filler team
-                if (teamDictionary.ContainsKey(winningTeamName))
+                if (teamDictionary.ContainsKey(team1Name))
                 {
-                    winningTeam = teamDictionary[winningTeamName];
+                    team1 = teamDictionary[team1Name];
                 }
                 else
                 {
-                    winningTeam = new Team("FCS-" + winningTeamName);
-                }
-                
+                    team1 = new Team("FCS-" + team1Name);
+                }               
                 //Same deal here
-                if (teamDictionary.ContainsKey(losingTeamName))
+                if (teamDictionary.ContainsKey(team2Name))
                 {
-                    losingTeam = teamDictionary[losingTeamName];
+                    team2 = teamDictionary[team2Name];
                 }
                 else
                 {
-                    losingTeam = new Team("FCS-" + losingTeamName);
+                    team2 = new Team("FCS-" + team2Name);
                 }
 
                 //Create the games for the winning and losing teams to add to their Schedule
-                Game winningTeamGame = new Game(winningTeam, losingTeam, winningTeamScore, losingTeamScore);
-                Game losingTeamGame = new Game(losingTeam, winningTeam, losingTeamScore, winningTeamScore);
+                Game team1Game = new Game(team1, team2, team1Score, team2Score, gameWeek, team1Location);
+                Game team2Game = new Game(team2, team1, team2Score, team1Score, gameWeek, team2Location);
 
-                //Add the Game to the both teams' Schedules
-                winningTeam.Schedule.Add(winningTeamGame);
-                losingTeam.Schedule.Add(losingTeamGame);
+                //If the score is 0 - 0 add the game to the future schedule
+                if (team1Score == 0 && team2Score == 0)
+                {
+                    team1.FutureSchedule.Add(team1Game);
+                    team2.FutureSchedule.Add(team2Game);
+                }
+                //If the score isn't 0 - 0 add the game to the past schedule
+                else
+                {
+                    team1.PastSchedule.Add(team1Game);
+                    team2.PastSchedule.Add(team2Game);
+                }
             }
         }
 

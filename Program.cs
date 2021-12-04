@@ -39,6 +39,13 @@ namespace CFBPollNew
                 //Print the poll to Excel file with stats and stuff
                 Printer.PrintPollDetails(weightedSeason);
                 
+                //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
+                //Print predictions to markdown table formatted text file
+                Printer.PrintPredictionsTable(weightedSeason);
+                //Print predictions to Excel file
+                Printer.PrintPredictionsDetails(weightedSeason);
+
+
                 //Print the schedule of each team
                 //Printer.PrintSchedules(teamDictionary);
                 //Print some info about a specific team

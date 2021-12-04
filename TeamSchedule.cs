@@ -8,7 +8,7 @@ namespace CFBPollNew
         public List<Game> Schedule { get; set; }
         public double Wins { get; set; }
         public double Losses { get; set; }
-        public double GamesPlayed { get; set; }
+        public double Games { get; set; }
         public double Strength { get; set; }
         public double OpponentStrength { get; set; }
         public double WeightedStrength { get; set; }
@@ -18,20 +18,20 @@ namespace CFBPollNew
             Schedule = new List<Game>();
             Wins = 0;
             Losses = 0;
-            GamesPlayed = 0;
+            Games = 0;
         }
 
         public void Add(Game game)
         {
             Schedule.Add(game);
             
-            GamesPlayed++;
+            Games++;
             
-            if (game.Result)
+            if (game.Result.Equals(ResultEnum.Win))
             {
                 Wins++;
             }
-            else
+            else if (game.Result.Equals(ResultEnum.Loss))
             {
                 Losses++;
             }

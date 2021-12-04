@@ -5,7 +5,8 @@
 		public string Name { get; set; }
 		public string Conference { get; set; }
 		public string Division { get; set; }
-		public TeamSchedule Schedule { get; set; }
+		public TeamSchedule PastSchedule { get; set; }
+		public TeamSchedule FutureSchedule { get; set; }
 		public Stats OffenseStats { get; set; }
 		public Stats DefenseStats { get; set; }
 		public double Rating { get; set; }
@@ -24,7 +25,8 @@
 				Division = "FCS";
 				OffenseStats = new Stats("blank");
 				DefenseStats = new Stats("blank");
-				Schedule = new TeamSchedule();
+				PastSchedule = new TeamSchedule();
+				FutureSchedule = new TeamSchedule();
 			}
 		}
 
@@ -33,7 +35,8 @@
 			Name = name;
 			Conference = conference;
 			Division = division;
-			Schedule = new TeamSchedule();
-        }
-    }
+			PastSchedule = new TeamSchedule();
+			FutureSchedule = new TeamSchedule();
+		}
+	}
 }
