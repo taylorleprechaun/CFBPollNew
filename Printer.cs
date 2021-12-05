@@ -208,6 +208,9 @@ namespace CFBPollNew
                 }
             }
 
+            //No predictions to be made
+            if (weekToPredict == 100) return;
+
             //List of teams we've already predicted the outcome of
             List<string> predictedTeams = new List<string>();
 
@@ -290,6 +293,9 @@ namespace CFBPollNew
                     weekToPredict = week;
                 }
             }
+
+            //No predictions to be made
+            if (weekToPredict == 100) return;
 
             //List of teams we've already predicted the outcome of
             List<string> predictedTeams = new List<string>();
