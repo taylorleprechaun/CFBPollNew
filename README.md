@@ -18,6 +18,7 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
 * 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
 * 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
+* 12/4/2021: Automated generating weekly predictions
 
 ### Rankings (Updated 12/5/2021)
 
@@ -97,15 +98,17 @@ I noticed a couple weeks ago my algorithm picks the Over a lot... like way too m
 
 ### TODO List (Updated 10/24/2021)
 
-1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it ~~and then start including some "picks of the week" type segment to this project~~.
+1. Automate results of weekly predictions
 
-2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+2. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it.  I have some ideas for tweaks but for this season it's good enough.
 
-3. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
+3. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+
+4. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
 	
-4. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
+5. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
 
-5. ????
+6. ????
 
 ### Misc.
 
