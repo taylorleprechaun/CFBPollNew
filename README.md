@@ -52,37 +52,35 @@ Rank | Team | Score | Record
 24 | Houston | 0.8536 | 11-2
 25 | Wisconsin | 0.8521 | 8-4
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021-Week%2015%20Post%20CCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/2021-Week%2015%20Post%20CCG.md)
 
 #### Observations and Notes (Updated 12/5/2021)
 
 * My poll is picking the playoff as Alabama, Georgia, Michigan, and Cincinnati.  There's a pretty large drop in rating from Cincinnati to Baylor/Oklahoma State.
 * Last week I used my computer to predict the top 6 after putting in the poll's predicted scores into the matchups (and swapping them around).  The real-life result was Michigan-Baylor-Alabama-Cincinnati and the real life result checked against the 16 scenarios results in the same predicted top 6.  So yeah I'm pretty cracked.
 
-#### Predictions (Updated 12/5/2021)
+#### Predictions (Updated 12/14/2021)
 
 The way my system predicts is still a work in progress.  I plan to make bowl predictions when all those games are decided but for now we'll wait until those are announced.
 
-As for last week, let's see how we did:
+Moved predictions to a new location.  I'll put some interesting picks here with the full in it's own location.
 
-Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
----|---|---|---|---|---|---|---
-Western Kentucky - UTSA | 37 - 39 | 41 - 49 | UTSA ✔ | Western Kentucky -3 | UTSA ✔ | 74.5 | Over ✔
-Oregon - Utah | 28 - 32 | 10 - 38 | Utah ✔ | Utah -3 | Utah ✔ | 57.5 | Over ❌
-Baylor - Oklahoma State | 21 - 23 | 21 - 16 | Oklahoma State ❌ | Oklahoma State -7 | Baylor ✔ | 45 | Under ✔
-Kent State - Northern Illinois | 38 - 41 | 23 - 41 | Northern Illinois ✔ | Kent State -3.5 | Northern Illinois ✔ | 75.5 | Over ❌
-Utah State - San Diego State | 23 - 31 | 46 - 13 | San Diego State ❌ | San Diego State -6.5 | San Diego State ❌ | 49.5 | Over ✔
-Appalachian State - Louisiana | 28 - 25 | 16 - 24 | Appalachian State ❌ | Appalachian State -2.5 | Appalachian State ❌ | 52 | Over ❌
-Georgia - Alabama | 32 - 23 | 24 - 41 | Georgia ❌ | Georgia -6 | Georgia ❌ | 49 | Over ✔
-Houston - Cincinnati | 25 - 35 | 20 - 35 | Cincinnati ✔ | Cincinnati -10.5 | Houston ❌ | 52.5 | Over ✔
-Michigan - Iowa | 29 - 17 | 42 - 3 | Michigan ✔ | Michigan -12 | Push ➖ | 44 | Over ✔
-Pittsburgh - Wake Forest | 42 - 38 | 45 - 21 | Pittsburgh ✔ | Pittsburgh -3.5 | Pittsburgh ✔ | 72.5 | Over ❌
+Bowl predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/Predictions/2021-Week%2016%20Bowls.md)
 
-* 6-4 on outright picks
-* 5-4 against the spread
-* 6-4 on the O/U
+Away - Home (ignore H/A lol) | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
+---| ---| ---| ---| ---| ---| ---| ---
+Cincinnati - Alabama | 30 - 32 |  | Alabama |  |  |  | 
+Michigan - Georgia | 21 - 29 |  | Georgia |  |  |  | 
+Utah - Ohio State | 30 - 40 |  | Ohio State |  |  |  | 
+Oklahoma State - Notre Dame | 21 - 25 |  | Notre Dame |  |  |  | 
+Mississippi - Baylor | 28 - 29 |  | Baylor |  |  |  | 
+Pittsburgh - Michigan State | 39 - 28 |  | Pittsburgh |  |  |  | 
+Oregon - Oklahoma | 30 - 35 |  | Oklahoma |  |  |  | 
+Kentucky - Iowa | 25 - 20 |  | Kentucky |  |  |  | 
+Wake Forest - Texas A&M | 30 - 31 |  | Texas A&M |  |  |  | 
+Penn State - Arkansas | 23 - 22 |  | Penn State |  |  |  | 
 
-This puts the overall total to:
+Overall 2021:
 
 * 41-16 on outright picks
 * 26-25 against the spread

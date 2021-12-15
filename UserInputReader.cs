@@ -21,10 +21,11 @@ namespace CFBPollNew
                 Console.WriteLine();
                 Console.WriteLine("Please enter the number for what you would like to run:");
                 Console.WriteLine("1 - Run Poll");
-                Console.WriteLine("2 - Prediction Mode");
+                Console.WriteLine("2 - Run Predictions");
+                Console.WriteLine("3 - Predict Individual Games");
                 var input = GetInput();
 
-                if (!input.Equals("1") && !input.Equals("2"))
+                if (!input.Equals("1") && !input.Equals("2") && !input.Equals("3"))
                     Console.WriteLine("Invalid input");
                 else
                     return input;
@@ -105,6 +106,27 @@ namespace CFBPollNew
                     Console.WriteLine("Invalid input");
             }
         }
+
+        /// <summary>
+        /// Does the user want to exit
+        /// </summary>
+        /// <returns>True if yes, False if no</returns>
+        public static bool Exit()
+        {
+            while (true)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Do you want to exit? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", StringComparison.OrdinalIgnoreCase))
+                    return true;
+                else if (input.Equals("N", StringComparison.OrdinalIgnoreCase))
+                    return false;
+                else
+                    Console.WriteLine("Invalid input");
+            }
+        }
+
 
         /// <summary>
         /// Gets the available weeks from the given season and calls a method to print them out

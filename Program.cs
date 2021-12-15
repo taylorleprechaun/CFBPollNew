@@ -38,24 +38,21 @@ namespace CFBPollNew
                 Printer.PrintPollTable(weightedSeason);
                 //Print the poll to Excel file with stats and stuff
                 Printer.PrintPollDetails(weightedSeason);
-                
-                //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
-                //Print predictions to markdown table formatted text file
-                Printer.PrintPredictionsTable(weightedSeason);
-                //Print predictions to Excel file
-                Printer.PrintPredictionsDetails(weightedSeason);
-
 
                 //Print the schedule of each team
                 //Printer.PrintSchedules(teamDictionary);
                 //Print some info about a specific team
                 //Printer.PrintTeam(teamDictionary["Ohio State"]);
-
-                //This is still here because I want to leave the program open after it finishes running just in case
-                //some weird message pops up on console since it closes automatically once it finishes
-                System.Threading.Thread.Sleep(5000000);
             }
             else if (runType.Equals("2"))
+            {
+                //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
+                //Print predictions to markdown table formatted text file
+                Printer.PrintPredictionsTable(weightedSeason);
+                //Print predictions to Excel file
+                Printer.PrintPredictionsDetails(weightedSeason);
+            }
+            else if (runType.Equals ("3"))
             {
                 //Predict until the user doesn't want to anymore
                 bool predictAgain = true;
@@ -65,6 +62,10 @@ namespace CFBPollNew
                     predictAgain = UserInputReader.PredictAgain();
                 }
             }
+
+            //Leave the window open until the user says they want to exit
+            //Doesn't matter what they enter it exits for both Y and N for now
+            UserInputReader.Exit();
         }
 
         /// <summary>
