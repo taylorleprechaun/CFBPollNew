@@ -35,13 +35,13 @@ Oklahoma State - Notre Dame | 21 - 25 | 37 - 35 | Notre Dame ❌ | Oklahoma Stat
 Utah - Ohio State | 30 - 40 | 45 - 48 | Ohio State ✔ | Ohio State -4 | Ohio State ❌ | 64.5 | Over ✔
 Mississippi - Baylor | 28 - 29 | 7 - 21 | Baylor ✔ | Mississippi -1 | Baylor ✔ | 60 | Under ✔
 Louisiana State - Kansas State | 21 - 22 | 20 - 42 | Kansas State ✔ | Kansas State -10 | Louisiana State ❌ | 47 | Under ❌
-Georgia - Alabama | 30 - 24 |  | Georgia |  |  |  | 
+Georgia - Alabama | 30 - 24 | 33 - 18 | Georgia ✔ | Georgia -2.5 | Georgia ✔ | 53 | Over ❌
 
 Bowl Season:
 
-* 19-16 on outright picks
-* 13-20 against the spread
-* 19-15 on the O/U
+* 20-16 on outright picks
+* 14-20 against the spread
+* 19-16 on the O/U
 
 I didn't notice Marshall-Louisiana-Lafayette predicted at 25-25.  I re-ran the predictor with more decimal places and it had Marshall winning by 0.1.  Crazy
 
@@ -72,6 +72,6 @@ Washington State - Miami FL | 28 - 31 |  | Miami FL |  |  |  |
 
 Overall:
 
-* 60-32 on outright picks
-* 39-45 against the spread
-* 42-45 on the O/U
+* 61-32 on outright picks
+* 40-45 against the spread
+* 42-46 on the O/U

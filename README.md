@@ -20,79 +20,55 @@ Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020
 * 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
 * 12/4/2021: Automated generating weekly predictions
 
-### Rankings (Updated 1/5/2022)
+### Rankings (Updated 1/11/2022)
 
-**Pre NCG Rankings**
+**Final 2021 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 13-1
-2 | Alabama | 0.9950 | 13-1
-3 | Oklahoma State | 0.9564 | 12-2
-4 | Baylor | 0.9549 | 12-2
-5 | Cincinnati | 0.9436 | 13-1
-6 | Michigan | 0.9394 | 12-2
-7 | Ohio State | 0.9334 | 11-2
-8 | Michigan State | 0.9241 | 11-2
-9 | Oklahoma | 0.9131 | 11-2
-10 | Notre Dame | 0.8929 | 11-2
-11 | San Diego State | 0.8906 | 12-2
-12 | Mississippi | 0.8897 | 10-3
-13 | Louisiana-Lafayette | 0.8796 | 13-1
-14 | Clemson | 0.8733 | 10-3
-15 | Wake Forest | 0.8700 | 11-3
-16 | Pittsburgh | 0.8692 | 11-3
-17 | UTSA | 0.8565 | 12-2
-18 | Houston | 0.8555 | 12-2
-19 | Arkansas | 0.8534 | 9-4
-20 | Utah | 0.8471 | 10-4
-21 | Wisconsin | 0.8458 | 9-4
-22 | Brigham Young | 0.8449 | 10-3
-23 | Kentucky | 0.8445 | 10-3
-24 | North Carolina State | 0.8390 | 9-3
-25 | Air Force | 0.8387 | 10-3
+1 | Georgia | 1.0000 | 14-1
+2 | Alabama | 0.9619 | 13-2
+3 | Oklahoma State | 0.9431 | 12-2
+4 | Baylor | 0.9415 | 12-2
+5 | Cincinnati | 0.9296 | 13-1
+6 | Michigan | 0.9280 | 12-2
+7 | Ohio State | 0.9204 | 11-2
+8 | Michigan State | 0.9112 | 11-2
+9 | Oklahoma | 0.9004 | 11-2
+10 | Notre Dame | 0.8804 | 11-2
+11 | San Diego State | 0.8781 | 12-2
+12 | Mississippi | 0.8760 | 10-3
+13 | Louisiana-Lafayette | 0.8674 | 13-1
+14 | Clemson | 0.8634 | 10-3
+15 | Wake Forest | 0.8580 | 11-3
+16 | Pittsburgh | 0.8572 | 11-3
+17 | UTSA | 0.8445 | 12-2
+18 | Houston | 0.8434 | 12-2
+19 | Arkansas | 0.8420 | 9-4
+20 | Utah | 0.8353 | 10-4
+21 | Kentucky | 0.8348 | 10-3
+22 | Wisconsin | 0.8340 | 9-4
+23 | Brigham Young | 0.8332 | 10-3
+24 | North Carolina State | 0.8272 | 9-3
+25 | Air Force | 0.8270 | 10-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/2021-Week%2016%20Pre%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/2021-Week%2017%20Post%20NCG.md)
 
-#### Observations and Notes (Updated 1/5/2022)
+#### Observations and Notes (Updated 1/11/2022)
 
-* Decided to do an interim poll post-bowls/pre-NCG and Georgia is now #1 (and favored to win 30 - 24).  Roll Tide (for one week only)
+* RIP 1980 jokes 😢
 
-#### Predictions (Updated 1/5/2022)
+#### Predictions (Updated 1/11/2022)
 
 The way my system predicts is still a work in progress
 
-Bowl predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/Predictions/2021-Week%2016%20Bowls.md)
-
-Away - Home | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick
----| ---| ---| ---| ---| ---| ---| ---
-Georgia - Alabama | 30 - 24 |  | Georgia |  |  |  | 
-Cincinnati - Alabama | 30 - 32 | 6 - 27 | Alabama ✔ | Alabama -13 | Cincinnati ❌ | 57.5 | Over ❌
-Michigan - Georgia | 21 - 29 | 11 - 34 | Georgia ✔ | Georgia -7.5 | Georgia ✔ | 46 | Over ❌
-Utah - Ohio State | 30 - 40 | 45 - 48 | Ohio State ✔ | Ohio State -4 | Ohio State ❌ | 64.5 | Over ✔
-Oklahoma State - Notre Dame | 21 - 25 | 37 - 35 | Notre Dame ❌ | Oklahoma State -1 | Notre Dame ❌ | 45 | Over ✔
-Mississippi - Baylor | 28 - 29 | 7 - 21 | Baylor ✔ | Mississippi -1 | Baylor ✔ | 60 | Under ✔
-Pittsburgh - Michigan State | 39 - 28 | 21 - 31 | Pittsburgh ❌ | Michigan State -3.5 | Pittsburgh ❌ | 55 | Over ✔
-Oregon - Oklahoma | 30 - 35 | 32 - 47 | Oklahoma ✔ | Oklahoma -7 | Oregon ❌ | 64 | Over ✔
-Kentucky - Iowa | 25 - 20 | 20 - 17 | Kentucky ✔ | Kentucky -3 | Kentucky ❌ | 44 | Over ❌
-Wake Forest - Texas A&M | 30 - 31 | Canceled | Texas A&M |  |  |  | 
-Penn State - Arkansas | 23 - 22 | 10 - 24 | Penn State ❌ | Arkansas -3.5 | Penn State ❌ | 51 | Under ✔
-
-Bowl Season:
-
-* 19-16 on outright picks
-* 13-20 against the spread
-* 19-15 on the O/U
-
-I don't take too much stock in bowl game prediction results.  Many teams with no coach, players opting out, etc. are things my algorithm can't account for that massively influence the results.
-
-Also, I was on vacation so I couldn't predict the results of the rescheduled games so those aren't included in the overall record.  I did predict them afterward and those results are included in the full bowl predictions.
+Predictions this season: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/Predictions/)
 
 Overall (2021 + Bowls):
 
-* 60-32 on outright picks
-* 39-45 against the spread
-* 42-45 on the O/U
+* 61-32 on outright picks
+* 40-45 against the spread
+* 42-46 on the O/U
 
 ### TODO List (Updated 10/24/2021)
 
@@ -112,16 +88,16 @@ Overall (2021 + Bowls):
 
 **The Best and Worst of all Time!**
 
-My poll, as of this update, has been run across every season from 2000 through 2020 (that's because sports-reference only goes back to the year 2000) (using my new rating formula, meaning the ratings from all previous posts aren't totally accurate to what you'll see here, but the formula is way better now, trust me)
+My poll, as of this update, has been run across every season from 2000 through 2021 (that's because sports-reference only goes back to the year 2000) (using my new rating formula, meaning the ratings from all previous posts aren't totally accurate to what you'll see here, but the formula is way better now, trust me)
 
 Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them (here: https://github.com/taylorleprechaun/CFBPollNew/blob/master/rsc/teams/BOAT%20and%20WOAT.xlsx )
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
 
-*New additions for the 2020 season!*
+*New additions for the 2021 season!*
 
-* This year Alabama clocks in with a 40.866 in my poll, placing them at #6 in the Playoff Era
-* Vanderbilt, Bowling Green, and FIU clock in with 15.040, 15.610, and 15.790, respectively.  This puts them all outside of the all-time bottom 5, but it puts Vanderbilt at #3 worst of the Playoff Era.
+* This year Georgia clocks in with a 40.359 in my poll, placing them at #8 in the Playoff Era
+* No teams had a rating less than 16.  So no new additions.  The worst team of the season was FIU with a rating of 16.036
 
 **The top 5 Best of all Time (pre-CFP era)**
 
