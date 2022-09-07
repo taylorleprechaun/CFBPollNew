@@ -93,7 +93,11 @@ namespace CFBPollNew
                 }
 
                 //Get the week
-                int gameWeek = int.Parse(row.Cell(2).Value.ToString());
+                int gameWeek;
+                if (int.TryParse(row.Cell(2).Value.ToString(), out var wk))
+                    gameWeek = wk;
+                else
+                    continue;
 
                 //Get the location
                 LocationEnum team1Location, team2Location;

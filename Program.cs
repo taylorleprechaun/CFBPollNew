@@ -48,9 +48,9 @@ namespace CFBPollNew
             {
                 //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
                 //Print predictions to markdown table formatted text file
-                Printer.PrintPredictionsTable(weightedSeason);
+                Printer.PrintPredictionsTable(weightedSeason, previousSeason);
                 //Print predictions to Excel file
-                Printer.PrintPredictionsDetails(weightedSeason);
+                Printer.PrintPredictionsDetails(weightedSeason, previousSeason);
             }
             else if (runType.Equals ("3"))
             {
@@ -58,7 +58,7 @@ namespace CFBPollNew
                 bool predictAgain = true;
                 while (predictAgain)
                 {
-                    Predictor.Predict(weightedSeason);
+                    Predictor.Predict(weightedSeason, previousSeason);
                     predictAgain = UserInputReader.PredictAgain();
                 }
             }

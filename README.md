@@ -8,67 +8,56 @@ Poll pulls some data about teams and uses it to rank them.  Data used includes g
 
 In the poll, a team's "Score" is in relation to the #1 team.  The formula gives points to teams using the data it has.  Once all the teams are ranked it measures against the highest score given out.  So, if Clemson is #1 and they earned 123 points from the poll, then every team's points will be divided by 123 to get their final score.
 
-Made for fun.  ~~I want to get this added to the Massey Composite for the ~~2020~~ 2021 season and beyond.~~  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
+Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 
 ### Recent changes
 
-* 9/6/2021: Initial commit of re-write of original poll
-	* Re-written to be better
-	* Nearly identical ratings as old version (the ten-thousandths place is where the decimals start changing)
-	* Way to weight previous vs. current season during the early weeks to help avoid (but doesn't totally eliminate) weird ratings
-* 9/12/2021: Changed how stuff gets outputted to help me do the poll-running process better
-* 10/17/2021: Added a very basic prediction algorithm (though that may be too fancy a word for it actually is) and rewrote some of the program to support selecting a "mode" to run the program in (Poll mode or Predictor mode).  Just like the Rating class, the Predictor class is also excluded from the project
-* 12/4/2021: Automated generating weekly predictions
+* 9/6/2022: Updates to score prediction algorithm to smooth out early season data (the file that does this is excluded from the repo but I did make changes to it)
 
-### Rankings (Updated 1/11/2022)
+### Rankings (Updated 9/6/2022)
 
-**Final 2021 Rankings**
+**Week 2 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 14-1
-2 | Alabama | 0.9619 | 13-2
-3 | Oklahoma State | 0.9431 | 12-2
-4 | Baylor | 0.9415 | 12-2
-5 | Cincinnati | 0.9296 | 13-1
-6 | Michigan | 0.9280 | 12-2
-7 | Ohio State | 0.9204 | 11-2
-8 | Michigan State | 0.9112 | 11-2
-9 | Oklahoma | 0.9004 | 11-2
-10 | Notre Dame | 0.8804 | 11-2
-11 | San Diego State | 0.8781 | 12-2
-12 | Mississippi | 0.8760 | 10-3
-13 | Louisiana-Lafayette | 0.8674 | 13-1
-14 | Clemson | 0.8634 | 10-3
-15 | Wake Forest | 0.8580 | 11-3
-16 | Pittsburgh | 0.8572 | 11-3
-17 | UTSA | 0.8445 | 12-2
-18 | Houston | 0.8434 | 12-2
-19 | Arkansas | 0.8420 | 9-4
-20 | Utah | 0.8353 | 10-4
-21 | Kentucky | 0.8348 | 10-3
-22 | Wisconsin | 0.8340 | 9-4
-23 | Brigham Young | 0.8332 | 10-3
-24 | North Carolina State | 0.8272 | 9-3
-25 | Air Force | 0.8270 | 10-3
+1 | Alabama | 1.0000 | 1-0
+2 | Georgia | 0.9469 | 1-0
+3 | Michigan | 0.9051 | 1-0
+4 | Oklahoma State | 0.9028 | 1-0
+5 | Ohio State | 0.8911 | 1-0
+6 | Michigan State | 0.8878 | 1-0
+7 | Mississippi | 0.8645 | 1-0
+8 | Clemson | 0.8615 | 1-0
+9 | Pittsburgh | 0.8558 | 1-0
+10 | Arkansas | 0.8474 | 1-0
+11 | Oklahoma | 0.8470 | 1-0
+12 | Kentucky | 0.8441 | 1-0
+13 | Brigham Young | 0.8383 | 1-0
+14 | Houston | 0.8364 | 1-0
+15 | SMU | 0.8357 | 1-0
+16 | North Carolina State | 0.8355 | 1-0
+17 | Minnesota | 0.8259 | 1-0
+18 | James Madison | 0.8216 | 1-0
+19 | Tennessee | 0.8125 | 1-0
+20 | Northwestern | 0.8081 | 1-0
+21 | UCLA | 0.8022 | 1-0
+22 | Coastal Carolina | 0.8013 | 1-0
+23 | Penn State | 0.7998 | 1-0
+24 | Utah State | 0.7954 | 1-1
+25 | Mississippi State | 0.7939 | 1-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/2021-Week%2017%20Post%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2002.md)
 
-#### Observations and Notes (Updated 1/11/2022)
+#### Observations and Notes (Updated 9/6/2022)
 
-* RIP 1980 jokes 😢
+* Football is back! Go Gata!
+* I use the previous season results for the first few weeks of the season so the rankings at first are less chaotic. Seems like it's working pretty well so far this year. James Madison obviously doesn't have a previous year to use so they're a bit of an outlier but I'm sure will normalize over time
 
-#### Predictions (Updated 1/11/2022)
+#### Predictions (Updated 9/6/2022)
 
-The way my system predicts is still a work in progress
+Week 2 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2002.md)
 
-Predictions this season: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2021/Predictions/)
-
-Overall (2021 + Bowls):
-
-* 61-32 on outright picks
-* 40-45 against the spread
-* 42-46 on the O/U
+When I ran this this week I realized my predictions algorithm was *horribly* flawed and was causing some hilarious results (like Arkansas State beating Ohio State 55-13 lol). I spent like an hour modifying it similar-ish-ly to how I adjust the rating algorithm in the early weeks of the season.
 
 ### TODO List (Updated 10/24/2021)
 

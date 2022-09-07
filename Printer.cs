@@ -181,7 +181,8 @@ namespace CFBPollNew
         /// Print the predictions for all games of the coming week markdown formatted to txt file
         /// </summary>
         /// <param name="teamDictionary">Dictionary of the teams to print</param>
-        public static void PrintPredictionsTable(Dictionary<string, Team> teamDictionary)
+        /// <param name="previousSeasonTeamDictionary">Dictionary of previous season team data</param>
+        public static void PrintPredictionsTable(Dictionary<string, Team> teamDictionary, Dictionary<string, Team> previousSeasonTeamDictionary)
         {
             //Delete output csv if it exists
             if (File.Exists(txtPredictionsFilePath))
@@ -236,10 +237,14 @@ namespace CFBPollNew
                 predictedTeams.Add(opponent.Name);
 
                 //Predict the winner
-                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, true);
-                var teamScore = prediction[0];
-                var opponentScore = prediction[1];
-                var winner = double.Parse(teamScore) > double.Parse(opponentScore);
+                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, true, previousSeasonTeamDictionary);
+                double.TryParse(prediction[0], out var teamScore);
+                double.TryParse(prediction[1], out var opponentScore);
+
+                //This comes up for FBS vs FCS
+                if (double.IsNaN(teamScore) || double.IsNaN(opponentScore)) continue;
+                
+                var winner = teamScore > opponentScore;
 
                 //Add info
                 string nextLine = "";
@@ -267,7 +272,8 @@ namespace CFBPollNew
         /// Print the predictions for all games of the coming week to a csv file
         /// </summary>
         /// <param name="teamDictionary">Dictionary of the teams to print</param>
-        public static void PrintPredictionsDetails(Dictionary<string, Team> teamDictionary)
+        /// <param name="previousSeasonTeamDictionary">Dictionary of previous season team data</param>
+        public static void PrintPredictionsDetails(Dictionary<string, Team> teamDictionary, Dictionary<string, Team> previousSeasonTeamDictionary)
         {
             //Delete output csv if it exists
             if (File.Exists(csvPredictionsFilePath))
@@ -322,11 +328,15 @@ namespace CFBPollNew
                 predictedTeams.Add(opponent.Name);
 
                 //Predict the winner
-                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, false);
-                var teamScore = prediction[0];
-                var opponentScore = prediction[1];
-                var winner = double.Parse(teamScore) > double.Parse(opponentScore);
-                var total = double.Parse(teamScore) + double.Parse(opponentScore);
+                var prediction = Predictor.PredictGame(team, game.Opponent, game.Location, false, previousSeasonTeamDictionary);
+                double.TryParse(prediction[0], out var teamScore);
+                double.TryParse(prediction[1], out var opponentScore);
+
+                //This comes up for FBS vs FCS
+                if (double.IsNaN(teamScore) || double.IsNaN(opponentScore)) continue;
+
+                var winner = teamScore > opponentScore;
+                var total = teamScore + opponentScore;
 
                 //Add info
                 string nextLine = "";
@@ -338,8 +348,8 @@ namespace CFBPollNew
                             ? team.Name + "," + LocationEnum.Neutral + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
                             : ",,,,,";
                 nextLine += winner
-                    ? team.Name + "," + team.Name + " " + (double.Parse(teamScore) - double.Parse(opponentScore)).ToString("0.00") + ","
-                    : opponent.Name + "," + opponent.Name + " " + (double.Parse(teamScore) - double.Parse(opponentScore)).ToString("0.00") + ",";
+                    ? team.Name + "," + team.Name + " " + (teamScore - opponentScore).ToString("0.00") + ","
+                    : opponent.Name + "," + opponent.Name + " " + (teamScore - opponentScore).ToString("0.00") + ",";
                 nextLine += total;
                 nextLine += "\n";
 
