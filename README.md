@@ -14,51 +14,58 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 
 * 9/6/2022: Updates to score prediction algorithm to smooth out early season data (the file that does this is excluded from the repo but I did make changes to it)
 
-### Rankings (Updated 9/6/2022)
+### Rankings (Updated 9/12/2022)
 
-**Week 2 Rankings**
+**Week 3 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Alabama | 1.0000 | 1-0
-2 | Georgia | 0.9469 | 1-0
-3 | Michigan | 0.9051 | 1-0
-4 | Oklahoma State | 0.9028 | 1-0
-5 | Ohio State | 0.8911 | 1-0
-6 | Michigan State | 0.8878 | 1-0
-7 | Mississippi | 0.8645 | 1-0
-8 | Clemson | 0.8615 | 1-0
-9 | Pittsburgh | 0.8558 | 1-0
-10 | Arkansas | 0.8474 | 1-0
-11 | Oklahoma | 0.8470 | 1-0
-12 | Kentucky | 0.8441 | 1-0
-13 | Brigham Young | 0.8383 | 1-0
-14 | Houston | 0.8364 | 1-0
-15 | SMU | 0.8357 | 1-0
-16 | North Carolina State | 0.8355 | 1-0
-17 | Minnesota | 0.8259 | 1-0
-18 | James Madison | 0.8216 | 1-0
-19 | Tennessee | 0.8125 | 1-0
-20 | Northwestern | 0.8081 | 1-0
-21 | UCLA | 0.8022 | 1-0
-22 | Coastal Carolina | 0.8013 | 1-0
-23 | Penn State | 0.7998 | 1-0
-24 | Utah State | 0.7954 | 1-1
-25 | Mississippi State | 0.7939 | 1-0
+1 | Georgia | 1.0000 | 2-0
+2 | Mississippi | 0.9446 | 2-0
+3 | Clemson | 0.9335 | 2-0
+4 | Louisiana-Lafayette | 0.9211 | 2-0
+5 | Michigan State | 0.9137 | 2-0
+6 | Brigham Young | 0.9098 | 2-0
+7 | Alabama | 0.9031 | 2-0
+8 | Wake Forest | 0.9009 | 2-0
+9 | Kentucky | 0.8984 | 2-0
+10 | Oklahoma State | 0.8962 | 2-0
+11 | Baylor | 0.8901 | 1-1
+12 | Ohio State | 0.8895 | 2-0
+13 | Iowa State | 0.8883 | 2-0
+14 | North Carolina State | 0.8881 | 2-0
+15 | James Madison | 0.8851 | 2-0
+16 | Arkansas | 0.8807 | 2-0
+17 | Auburn | 0.8777 | 2-0
+18 | Cincinnati | 0.8754 | 1-1
+19 | Penn State | 0.8718 | 2-0
+20 | SMU | 0.8711 | 2-0
+21 | Kansas State | 0.8694 | 2-0
+22 | Washington State | 0.8655 | 2-0
+23 | Florida State | 0.8500 | 2-0
+24 | Texas Tech | 0.8460 | 2-0
+25 | Oregon State | 0.8458 | 2-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2002.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2003.md)
 
-#### Observations and Notes (Updated 9/6/2022)
+#### Observations and Notes (Updated 9/12/2022)
 
-* Football is back! Go Gata!
-* I use the previous season results for the first few weeks of the season so the rankings at first are less chaotic. Seems like it's working pretty well so far this year. James Madison obviously doesn't have a previous year to use so they're a bit of an outlier but I'm sure will normalize over time
+* This week is kind of funky. I've been really busy with a huge project at work the last couple months so I don't have a ton of time to look at the data that's driving this rankings. I'll need to revisit this when I have more time to see what's going on because it seems like my early season adjustments in the rating formula aren't applying as I'd expect
 
-#### Predictions (Updated 9/6/2022)
+#### Predictions (Updated 9/12/2022)
 
-Week 2 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2002.md)
+Week 3 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2003.md)
 
-When I ran this this week I realized my predictions algorithm was *horribly* flawed and was causing some hilarious results (like Arkansas State beating Ohio State 55-13 lol). I spent like an hour modifying it similar-ish-ly to how I adjust the rating algorithm in the early weeks of the season.
+Week 2 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2002.md) (I really need to automate this btw this took me like 2 hours to fill in the results manually lol):
+* Winner: 33 - 16
+* ATS: 26 - 23
+* O/U: 25 - 24
 
+Season Results:
+* Winner: 33 - 16
+* ATS: 26 - 23
+* O/U: 25 - 24
+ 
 ### TODO List (Updated 10/24/2021)
 
 1. Automate results of weekly predictions
