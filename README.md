@@ -14,57 +14,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 
 * 9/6/2022: Updates to score prediction algorithm to smooth out early season data (the file that does this is excluded from the repo but I did make changes to it)
 
-### Rankings (Updated 9/12/2022)
+### Rankings (Updated 9/18/2022)
 
-**Week 3 Rankings**
+**Week 4 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 2-0
-2 | Mississippi | 0.9446 | 2-0
-3 | Clemson | 0.9335 | 2-0
-4 | Louisiana-Lafayette | 0.9211 | 2-0
-5 | Michigan State | 0.9137 | 2-0
-6 | Brigham Young | 0.9098 | 2-0
-7 | Alabama | 0.9031 | 2-0
-8 | Wake Forest | 0.9009 | 2-0
-9 | Kentucky | 0.8984 | 2-0
-10 | Oklahoma State | 0.8962 | 2-0
-11 | Baylor | 0.8901 | 1-1
-12 | Ohio State | 0.8895 | 2-0
-13 | Iowa State | 0.8883 | 2-0
-14 | North Carolina State | 0.8881 | 2-0
-15 | James Madison | 0.8851 | 2-0
-16 | Arkansas | 0.8807 | 2-0
-17 | Auburn | 0.8777 | 2-0
-18 | Cincinnati | 0.8754 | 1-1
-19 | Penn State | 0.8718 | 2-0
-20 | SMU | 0.8711 | 2-0
-21 | Kansas State | 0.8694 | 2-0
-22 | Washington State | 0.8655 | 2-0
-23 | Florida State | 0.8500 | 2-0
-24 | Texas Tech | 0.8460 | 2-0
-25 | Oregon State | 0.8458 | 2-0
+1 | Georgia | 1.0000 | 3-0
+2 | Wake Forest | 0.9926 | 3-0
+3 | North Carolina State | 0.9814 | 3-0
+4 | James Madison | 0.9711 | 2-0
+5 | Ohio State | 0.9539 | 3-0
+6 | Alabama | 0.9431 | 3-0
+7 | Kentucky | 0.9324 | 3-0
+8 | Oregon State | 0.9287 | 3-0
+9 | Oklahoma State | 0.9287 | 3-0
+10 | Mississippi | 0.9276 | 3-0
+11 | Arkansas | 0.9230 | 3-0
+12 | Clemson | 0.9215 | 3-0
+13 | Iowa State | 0.9178 | 3-0
+14 | Penn State | 0.9171 | 3-0
+15 | UCLA | 0.9135 | 3-0
+16 | USC | 0.9013 | 3-0
+17 | Indiana | 0.9002 | 3-0
+18 | Florida State | 0.9000 | 3-0
+19 | Tennessee | 0.8872 | 3-0
+20 | Oregon | 0.8849 | 2-1
+21 | Michigan | 0.8819 | 3-0
+22 | Cincinnati | 0.8786 | 2-1
+23 | Oklahoma | 0.8736 | 3-0
+24 | Kansas State | 0.8720 | 2-1
+25 | Louisiana State | 0.8704 | 2-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2003.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2004.md)
 
-#### Observations and Notes (Updated 9/12/2022)
+#### Observations and Notes (Updated 9/18/2022)
 
-* This week is kind of funky. I've been really busy with a huge project at work the last couple months so I don't have a ton of time to look at the data that's driving this rankings. I'll need to revisit this when I have more time to see what's going on because it seems like my early season adjustments in the rating formula aren't applying as I'd expect
+* Still got some early season funk in there but it's smoothing out as these things usually do. Once we're out of the early weeks of the season I'm going to tweak how the early season adjustments work because I'm not very happy with it atm.
 
-#### Predictions (Updated 9/12/2022)
+#### Predictions (Updated 9/18/2022)
 
-Week 3 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2003.md)
+Week 4 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2004.md)
 
-Week 2 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2002.md) (I really need to automate this btw this took me like 2 hours to fill in the results manually lol):
-* Winner: 33 - 16
-* ATS: 26 - 23
-* O/U: 25 - 24
+Week 3 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2003.md):
+* Winner: 32 - 18
+* ATS: 19 - 31
+* O/U: 29 - 20
 
 Season Results:
-* Winner: 33 - 16
-* ATS: 26 - 23
-* O/U: 25 - 24
+* Winner: 65 - 34
+* ATS: 45 - 54
+* O/U: 54 - 44
  
 ### TODO List (Updated 10/24/2021)
 
