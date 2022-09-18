@@ -47,7 +47,7 @@ namespace CFBPollNew
 
         public void PrintRecord()
         {
-            Console.Write("(" + Wins + " - " + Losses + ")");
+            Console.Write("(" + Wins + " - " + Losses + ")\n");
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CFBPollNew
 {
@@ -9,6 +10,8 @@ namespace CFBPollNew
         private static string season;
         static void Main(string[] args)
         {
+            //var teams = LoadData();
+
             GetPollInfo();
             //Run the poll for current season
             Dictionary<string, Team> currentSeason = GetData(week, season, false);
@@ -66,6 +69,19 @@ namespace CFBPollNew
             //Leave the window open until the user says they want to exit
             //Doesn't matter what they enter it exits for both Y and N for now
             UserInputReader.Exit();
+        }
+
+        /// <summary>
+        /// Loads all-time team data
+        /// </summary>
+        /// <returns>An enumerable of Season objects containing all team data in those seasons</returns>
+        private static IEnumerable<Season> LoadData()
+        {
+            var seasons = TeamReader.LoadSeasons();
+            ExcelReader.LoadTeamScores(seasons);
+            ExcelReader.LoadTeamStats(seasons);
+
+            return seasons;
         }
 
         /// <summary>

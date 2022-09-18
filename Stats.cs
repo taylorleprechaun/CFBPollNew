@@ -40,7 +40,7 @@ namespace CFBPollNew
             PassCompletions = double.Parse(statRow.Cell(5).Value.ToString());
             PassAttempts = double.Parse(statRow.Cell(6).Value.ToString());
             PassPercent = double.Parse(statRow.Cell(7).Value.ToString());
-            PassYards = double.Parse(statRow.Cell(18).Value.ToString());
+            PassYards = double.Parse(statRow.Cell(8).Value.ToString());
             PassTD = double.Parse(statRow.Cell(9).Value.ToString());
             RushAttempts = double.Parse(statRow.Cell(10).Value.ToString());
             RushYards = double.Parse(statRow.Cell(11).Value.ToString());

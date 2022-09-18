@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.IO;
+using System.Linq;
 
 namespace CFBPollNew
 {
@@ -28,7 +30,6 @@ namespace CFBPollNew
             //Assign Stat objects to the teams in the dictionary
             CreateStats(offenseTable, "offense", teamDictionary);
             CreateStats(defenseTable, "defense", teamDictionary);
-
         }
 
         /// <summary>
@@ -168,6 +169,167 @@ namespace CFBPollNew
             var excelFile = new XLWorkbook(fileStream);
             var excelSheet = excelFile.Worksheets.Worksheet("Sheet2");
             return excelSheet.Table(0);
+        }
+
+        /// <summary>
+        /// Load team scores into seasons list
+        /// </summary>
+        /// <param name="seasons">The list of seasons to load the data into</param>
+        /// <returns>The provided list of seasons with scores data loaded</returns>
+        public static void LoadTeamScores(IEnumerable<Season> seasons)
+        {
+            //Get array of files containing team score information
+            var basePath = ConfigurationManager.AppSettings["ScoresPath"];
+            var scoresDirectories = Directory.GetDirectories(basePath);
+
+            //Loop through each season of scores information
+            foreach (var scoresFolder in scoresDirectories)
+            {
+                var scoresFiles = Directory.GetFiles(scoresFolder);
+                
+                //Sort by descending and get the first file name to get the newest one
+                var scoresFile = scoresFiles.OrderByDescending(f => f).FirstOrDefault();
+
+                //Get the season number
+                int season = int.Parse(scoresFile.Split('\\').LastOrDefault().Substring(0,4));
+
+                //Get the scores table from excel
+                var scoresTable = GetTableFromExcelFile(scoresFile);
+                
+                //Loop through the score rows
+                foreach (var row in scoresTable.Rows())
+                {
+                    //Create games from score row
+                    GetGamesFromScoreRow(row, out var game1, out var game2);
+                    
+                    //Update team schedules
+                    seasons.Where(s => s.Year == season)?.FirstOrDefault()?.
+                        Teams?.Where(t => t.Name.Equals(game1?.TeamName, StringComparison.OrdinalIgnoreCase))?.FirstOrDefault()?.
+                            Schedule?.Add(game1);
+                    seasons.Where(s => s.Year == season)?.FirstOrDefault()?.
+                        Teams?.Where(t => t.Name.Equals(game2?.TeamName, StringComparison.OrdinalIgnoreCase))?.FirstOrDefault()?.
+                            Schedule?.Add(game2);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Gets game from the provided Excel row containing score information
+        /// </summary>
+        /// <param name="scoreRow">The Excel row containg score information</param>
+        /// <param name="game1">Output variable containing the Game to assign to the first team</param>
+        /// <param name="game2">Output variable containing the Game to assign to the second team</param>
+        private static void GetGamesFromScoreRow(IXLRangeRow scoreRow, out Game game1, out Game game2)
+        {
+            //Initialize return game variables
+            game1 = null;
+            game2 = null;
+
+            //Get the team names
+            var team1Name = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(scoreRow.Cell(5).Value.ToString()));
+            var team2Name = NameCorrection.NameCorrector(NameCorrection.NameCorrectorScores(scoreRow.Cell(8).Value.ToString()));
+
+            //If the team names are Winner/Loser then this is row 1 and we skip it
+            if (team1Name.Equals("Winner") && team2Name.Equals("Loser"))
+                return; 
+
+            //Get the week
+            var gameWeek = int.Parse(scoreRow.Cell(2).Value.ToString());
+
+            //Get the location
+            LocationEnum team1Location, team2Location;
+            var locationValue = scoreRow.Cell(7).Value.ToString();
+            if (locationValue.Equals("@"))
+            {
+                team1Location = LocationEnum.Road;
+                team2Location = LocationEnum.Home;
+            }
+            else if (locationValue.Equals("N"))
+            {
+                team1Location = LocationEnum.Neutral;
+                team2Location = LocationEnum.Neutral;
+            }
+            else
+            {
+                team1Location = LocationEnum.Home;
+                team2Location = LocationEnum.Road;
+            }
+
+            //Parse the scores
+            int.TryParse(scoreRow.Cell(6).Value.ToString(), out int team1Score);
+            int.TryParse(scoreRow.Cell(9).Value.ToString(), out int team2Score);
+
+            //Create the games using the names, scores, week, and location
+            //These are output parameters which will get used in the calling method
+            game1 = new Game(team1Name, team2Name, team1Score, team2Score, gameWeek, team1Location);
+            game2 = new Game(team2Name, team1Name, team2Score, team1Score, gameWeek, team2Location);
+        }
+
+        public static void LoadTeamStats(IEnumerable<Season> seasons)
+        {
+            //Create the file paths for the stat xlsx files
+            string basePath = ConfigurationManager.AppSettings["StatsPath"];
+            var statsDirectories = Directory.GetDirectories(basePath);
+
+            //Loop through each season of scores information
+            foreach (var statsFolder in statsDirectories)
+            {
+                //Get the season number
+                int season = int.Parse(statsFolder.Split('\\').LastOrDefault().Substring(0, 4));
+
+                //Loop through all the stats files
+                var statsFiles = Directory.GetFiles(statsFolder);
+                foreach (var statsFile in statsFiles)
+                {
+                    var week = statsFile.Split('\\').LastOrDefault().Split('.').FirstOrDefault().Split('-').LastOrDefault().Trim();
+
+                    //If the file name contains TeamD then it is defensive stats
+                    if (statsFile.Contains("TeamD"))
+                    {
+                        var defenseTable = GetTableFromExcelFile(statsFile);
+                        CreateStats(defenseTable, "defense", season, week, seasons);
+                    }
+                    //If the file name contains TeamO then it is offensive stats
+                    else
+                    {
+                        var offenseTable = GetTableFromExcelFile(statsFile);
+                        CreateStats(offenseTable, "offense", season, week, seasons);
+                    }
+                }    
+            }
+        }
+
+        /// <summary>
+        /// Assigns the stat object the teams in the dictionary
+        /// </summary>
+        /// <param name="statTable">The table with the offensive/defensive stats</param>
+        /// <param name="type">Holds whether the statTable is offense or defense</param>
+        /// <param name="season">The season the stats belong to</param>
+        /// <param name="week">The week of the stats</param>
+        /// <param name="seasons">All of the seasons</param>
+        private static void CreateStats(IXLTable statTable, string type, int season, string week, IEnumerable<Season> seasons)
+        {
+            //For reach row in the stat table
+            foreach (var row in statTable.Rows())
+            {
+                //Check if the team name in the row is "School" (first row of the table) or null/empty
+                var teamName = NameCorrection.NameCorrector(row.Cell(2).Value.ToString());
+                if (teamName.Equals("School") || string.IsNullOrEmpty(teamName)) continue;
+
+                //Add offense/defense stats to the teams
+                if (type.Equals("offense", StringComparison.OrdinalIgnoreCase))
+                {
+                    seasons.Where(s => s.Year == season)?.FirstOrDefault()?.
+                        Teams?.Where(t => t.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase))?.FirstOrDefault()?.
+                            OffStats.Add(week, new Stats(row));
+                }
+                else if (type.Equals("defense", StringComparison.OrdinalIgnoreCase))
+                {
+                    seasons.Where(s => s.Year == season)?.FirstOrDefault()?.
+                        Teams?.Where(t => t.Name.Equals(teamName, StringComparison.OrdinalIgnoreCase))?.FirstOrDefault()?.
+                            DefStats.Add(week, new Stats(row));
+                }
+            }
         }
     }
 }
