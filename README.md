@@ -49,7 +49,7 @@ Rank | Team | Score | Record
 24 | Auburn | 0.8716 | 3-1
 25 | Texas Tech | 0.8712 | 3-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/CFBPoll/blob/master/PreviousPolls/2022/2022-Week%2005.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2005.md)
 
 #### Observations and Notes (Updated 9/25/2022)
 
@@ -58,9 +58,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/CFBPoll/blo
 
 #### Predictions (Updated 9/25/2022)
 
-Week 5 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/CFBPoll/blob/master/PreviousPolls/2022/Predictions/2022-Week%2005.md)
+Week 5 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/CFBPoll/master/PreviousPolls/2022/Predictions/2022-Week%2005.md)
 
-Week 4 Results [here](https://github.com/taylorleprechaun/CFBPollNew/CFBPoll/blob/master/PreviousPolls/2022/Predictions/2022-Week%2004.md):
+Week 4 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2004.md):
 * Winner: 43 - 17
 * ATS: 29 - 30
 * O/U: 37 - 23
@@ -90,7 +90,7 @@ Season Results:
 
 My poll, as of this update, has been run across every season from 2000 through 2021 (that's because sports-reference only goes back to the year 2000) (using my new rating formula, meaning the ratings from all previous posts aren't totally accurate to what you'll see here, but the formula is way better now, trust me)
 
-Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them (here: https://github.com/taylorleprechaun/CFBPollNew/CFBPoll/blob/master/rsc/BOAT%20and%20WOAT.xlsx )
+Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them (here: https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/rsc/BOAT%20and%20WOAT.xlsx )
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
 
