@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Configuration;
+using CFBPollNew.Models;
+using CFBPollNew.Calculations;
 
-namespace CFBPollNew
+namespace CFBPollNew.Utilities
 {
     class Printer
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace CFBPollNew
+namespace CFBPollNew.Models
 {
     class Season
     {

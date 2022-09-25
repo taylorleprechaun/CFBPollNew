@@ -1,11 +1,12 @@
-﻿using DocumentFormat.OpenXml.Bibliography;
+﻿using CFBPollNew.Models;
+using DocumentFormat.OpenXml.Bibliography;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
 
-namespace CFBPollNew
+namespace CFBPollNew.Utilities
 {
     class TeamReader
     {

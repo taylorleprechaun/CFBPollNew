@@ -1,7 +1,8 @@
-﻿using System;
+﻿using CFBPollNew.Models;
+using System;
 using System.Collections.Generic;
 
-namespace CFBPollNew
+namespace CFBPollNew.Calculations
 {
     class StrengthOfSchedule
     {
