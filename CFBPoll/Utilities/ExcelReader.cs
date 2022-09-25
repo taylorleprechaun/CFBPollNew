@@ -1,4 +1,4 @@
-﻿using CFBPollNew.Models;
+﻿using CFBPoll.Models;
 using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 
-namespace CFBPollNew.Utilities
+namespace CFBPoll.Utilities
 {
     class ExcelReader
     {

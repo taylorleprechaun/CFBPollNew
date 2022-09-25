@@ -1,6 +1,6 @@
 ﻿using ClosedXML.Excel;
 
-namespace CFBPollNew.Models
+namespace CFBPoll.Models
 {
     class Stats
     {

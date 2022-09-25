@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CFBPollNew.Models
+namespace CFBPoll.Models
 {
     class TeamSchedule
     {

@@ -1,8 +1,8 @@
 Rating.cs
 Predictor.cs
-rsc/RankHistory
-obj/
-bin/
+CFBPoll/rsc/RankHistory
+CFBPoll/obj/
+CFBPoll/bin/
 .vs/
 packages/
-PollOutput/
+CFBPoll/PollOutput/

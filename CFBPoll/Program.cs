@@ -1,11 +1,9 @@
-﻿using CFBPollNew.Calculations;
-using CFBPollNew.Models;
-using CFBPollNew.Utilities;
-using System;
+﻿using CFBPoll.Calculations;
+using CFBPoll.Models;
+using CFBPoll.Utilities;
 using System.Collections.Generic;
-using System.Linq;
 
-namespace CFBPollNew
+namespace CFBPoll
 {
     class Program
     {

@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CFBPollNew.Utilities
+namespace CFBPoll.Utilities
 {
     class UserInputReader
     {

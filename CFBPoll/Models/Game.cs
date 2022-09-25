@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CFBPollNew.Models
+namespace CFBPoll.Models
 {
     class Game
     {
