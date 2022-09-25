@@ -17,57 +17,58 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
     * Seasons/Team/Game data only exists for the season the poll is being run on but I want to be able to use more than just current season data in the rating/prediction algorithms in various circumstances (i.e. early season rating/predictions adjustments due to limited current season data points)
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 
-### Rankings (Updated 9/18/2022)
+### Rankings (Updated 9/25/2022)
 
-**Week 4 Rankings**
+**Week 5 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 3-0
-2 | Wake Forest | 0.9926 | 3-0
-3 | North Carolina State | 0.9814 | 3-0
-4 | James Madison | 0.9711 | 2-0
-5 | Ohio State | 0.9539 | 3-0
-6 | Alabama | 0.9431 | 3-0
-7 | Kentucky | 0.9324 | 3-0
-8 | Oregon State | 0.9287 | 3-0
-9 | Oklahoma State | 0.9287 | 3-0
-10 | Mississippi | 0.9276 | 3-0
-11 | Arkansas | 0.9230 | 3-0
-12 | Clemson | 0.9215 | 3-0
-13 | Iowa State | 0.9178 | 3-0
-14 | Penn State | 0.9171 | 3-0
-15 | UCLA | 0.9135 | 3-0
-16 | USC | 0.9013 | 3-0
-17 | Indiana | 0.9002 | 3-0
-18 | Florida State | 0.9000 | 3-0
-19 | Tennessee | 0.8872 | 3-0
-20 | Oregon | 0.8849 | 2-1
-21 | Michigan | 0.8819 | 3-0
-22 | Cincinnati | 0.8786 | 2-1
-23 | Oklahoma | 0.8736 | 3-0
-24 | Kansas State | 0.8720 | 2-1
-25 | Louisiana State | 0.8704 | 2-1
+1 | Georgia | 1.0000 | 4-0
+2 | Alabama | 0.9599 | 4-0
+3 | Penn State | 0.9587 | 4-0
+4 | Clemson | 0.9507 | 4-0
+5 | Ohio State | 0.9493 | 4-0
+6 | North Carolina State | 0.9445 | 4-0
+7 | Mississippi | 0.9390 | 4-0
+8 | Oregon | 0.9370 | 3-1
+9 | Florida State | 0.9297 | 4-0
+10 | USC | 0.9277 | 4-0
+11 | Cincinnati | 0.9211 | 3-1
+12 | Wake Forest | 0.9204 | 3-1
+13 | Kentucky | 0.9187 | 4-0
+14 | Kansas | 0.9181 | 4-0
+15 | Tennessee | 0.9154 | 4-0
+16 | Baylor | 0.9146 | 3-1
+17 | Oklahoma State | 0.8999 | 3-0
+18 | Syracuse | 0.8956 | 4-0
+19 | Louisiana State | 0.8941 | 3-1
+20 | Michigan | 0.8887 | 4-0
+21 | Iowa State | 0.8870 | 3-1
+22 | UCLA | 0.8837 | 4-0
+23 | Arkansas | 0.8824 | 3-1
+24 | Auburn | 0.8716 | 3-1
+25 | Texas Tech | 0.8712 | 3-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2004.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/2022-Week%2005.md)
 
-#### Observations and Notes (Updated 9/18/2022)
+#### Observations and Notes (Updated 9/25/2022)
 
 * Still got some early season funk in there but it's smoothing out as these things usually do. Once we're out of the early weeks of the season I'm going to tweak how the early season adjustments work because I'm not very happy with it atm.
+* James Madison was near the top last week and now they've just dropped out of the top 25 which is odd. I'm wondering if some of the junk in my rating code handling early season adjustments was having trouble with them not having existed in my poll before this season. I'm in progress on some changes to how the code functions (which aren't in place yet, just laying the foundation to switch to them and then nuke some old code) so I'll probably look into this a bit when I get further along there.
 
-#### Predictions (Updated 9/18/2022)
+#### Predictions (Updated 9/25/2022)
 
-Week 4 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2004.md)
+Week 5 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2005.md)
 
-Week 3 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2003.md):
-* Winner: 32 - 18
-* ATS: 19 - 31
-* O/U: 29 - 20
+Week 4 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/PreviousPolls/2022/Predictions/2022-Week%2004.md):
+* Winner: 43 - 17
+* ATS: 29 - 30
+* O/U: 37 - 23
 
 Season Results:
-* Winner: 65 - 34
-* ATS: 45 - 54
-* O/U: 54 - 44
+* Winner: 108 - 44
+* ATS: 74 - 82
+* O/U: 91 - 65
  
 ### TODO List (Updated 10/24/2021)
 

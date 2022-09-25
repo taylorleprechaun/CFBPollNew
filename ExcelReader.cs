@@ -23,6 +23,13 @@ namespace CFBPollNew
             string filePathOffense = statsPath + season + "\\TeamO" + " - " + season + " - " + week + ".xlsx";
             string filePathDefense = statsPath + season + "\\TeamD" + " - " + season + " - " + week + ".xlsx";
 
+            if (week.Equals("NCG", StringComparison.OrdinalIgnoreCase))
+            {
+                var files = Directory.GetFiles(statsPath + season);
+                filePathOffense = files.LastOrDefault(f => f.Contains("NCG") && f.Contains("TeamO"));
+                filePathDefense = files.LastOrDefault(f => f.Contains("NCG") && f.Contains("TeamD"));
+            }
+
             //Get the tables from the excel file 
             var offenseTable = GetTableFromExcelFile(filePathOffense);
             var defenseTable = GetTableFromExcelFile(filePathDefense);
@@ -76,6 +83,12 @@ namespace CFBPollNew
         {
             string scoresPath = ConfigurationManager.AppSettings["ScoresPath"];
             string filePathScores = scoresPath + season + "\\" + season + " - " + week + ".xlsx";
+
+            if (week.Equals("NCG", StringComparison.OrdinalIgnoreCase))
+            {
+                var files = Directory.GetFiles(scoresPath + season);
+                filePathScores = files.LastOrDefault(f => f.Contains("NCG"));
+            }
 
             var scoresTable = GetTableFromExcelFile(filePathScores);
 
