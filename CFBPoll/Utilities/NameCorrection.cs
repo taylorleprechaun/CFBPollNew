@@ -87,8 +87,12 @@ namespace CFBPoll.Utilities
 			{
 				name = "UTSA";
 			}
+            if (name.Equals("TCU"))
+            {
+                name = "Texas Christian";
+            }
 
-			return name;
+            return name;
 		}
 
 		/// <summary>

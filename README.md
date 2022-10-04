@@ -39,16 +39,16 @@ Rank | Team | Score | Record
 13 | Louisiana State | 0.9095 | 4-1
 14 | Penn State | 0.9046 | 5-0
 15 | Tennessee | 0.9012 | 4-0
-16 | Michigan | 0.8870 | 5-0
-17 | Oklahoma State | 0.8845 | 4-0
-18 | Florida State | 0.8804 | 4-1
-19 | Mississippi State | 0.8767 | 4-1
-20 | North Carolina State | 0.8721 | 4-1
-21 | Kansas State | 0.8702 | 4-1
-22 | Washington | 0.8448 | 4-1
-23 | Illinois | 0.8339 | 4-1
-24 | Kentucky | 0.8315 | 4-1
-25 | Duke | 0.8312 | 4-1
+16 | Texas Christian | 0.8890 | 4-0
+17 | Michigan | 0.8870 | 5-0
+18 | Oklahoma State | 0.8845 | 4-0
+19 | Florida State | 0.8804 | 4-1
+20 | Mississippi State | 0.8767 | 4-1
+21 | North Carolina State | 0.8721 | 4-1
+22 | Kansas State | 0.8702 | 4-1
+23 | Washington | 0.8448 | 4-1
+24 | Illinois | 0.8339 | 4-1
+25 | Kentucky | 0.8315 | 4-1
 
 Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2006.md)
 
