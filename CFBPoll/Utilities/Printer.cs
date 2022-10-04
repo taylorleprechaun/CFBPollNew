@@ -261,10 +261,10 @@ namespace CFBPoll.Utilities
 
                 //Append to csv output
                 txt.Append(nextLine);
-
-                //Write to output
-                File.WriteAllText(txtPredictionsFilePath, txt.ToString());
             }
+
+            //Write to output
+            File.WriteAllText(txtPredictionsFilePath, txt.ToString());
 
             //Open the file
             System.Diagnostics.Process.Start(txtPredictionsFilePath);
@@ -357,10 +357,10 @@ namespace CFBPoll.Utilities
 
                 //Append to csv output
                 csv.Append(nextLine);
-
-                //Write to output
-                File.WriteAllText(csvPredictionsFilePath, csv.ToString());
             }
+
+            //Write to output
+            File.WriteAllText(csvPredictionsFilePath, csv.ToString());
 
             //Open the file
             System.Diagnostics.Process.Start(csvPredictionsFilePath);
