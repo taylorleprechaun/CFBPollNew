@@ -18,58 +18,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 * 9/25/2022: Some code re-organization and file path updates in preparation for bigger future changes
 
-### Rankings (Updated 10/3/2022)
+### Rankings (Updated 10/9/2022)
 
-**Week 6 Rankings**
+**Week 7 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Clemson | 1.0000 | 5-0
-2 | Mississippi | 0.9685 | 5-0
-3 | Georgia | 0.9640 | 5-0
-4 | Kansas | 0.9549 | 5-0
-5 | Wake Forest | 0.9525 | 4-1
-6 | UCLA | 0.9365 | 5-0
-7 | Ohio State | 0.9356 | 5-0
-8 | Alabama | 0.9294 | 5-0
-9 | Oregon | 0.9204 | 4-1
-10 | James Madison | 0.9171 | 4-0
-11 | Syracuse | 0.9170 | 5-0
-12 | USC | 0.9112 | 5-0
-13 | Louisiana State | 0.9095 | 4-1
-14 | Penn State | 0.9046 | 5-0
-15 | Tennessee | 0.9012 | 4-0
-16 | Texas Christian | 0.8890 | 4-0
-17 | Michigan | 0.8870 | 5-0
-18 | Oklahoma State | 0.8845 | 4-0
-19 | Florida State | 0.8804 | 4-1
-20 | Mississippi State | 0.8767 | 4-1
-21 | North Carolina State | 0.8721 | 4-1
-22 | Kansas State | 0.8702 | 4-1
-23 | Washington | 0.8448 | 4-1
-24 | Illinois | 0.8339 | 4-1
-25 | Kentucky | 0.8315 | 4-1
+1 | Clemson | 1.0000 | 6-0
+2 | Georgia | 0.9698 | 6-0
+3 | Mississippi | 0.9689 | 6-0
+4 | USC | 0.9461 | 6-0
+5 | Tennessee | 0.9451 | 5-0
+6 | Syracuse | 0.9424 | 5-0
+7 | UCLA | 0.9417 | 6-0
+8 | Alabama | 0.9403 | 6-0
+9 | Texas Christian | 0.9368 | 5-0
+10 | Ohio State | 0.9345 | 6-0
+11 | Wake Forest | 0.9245 | 5-1
+12 | Oklahoma State | 0.9171 | 5-0
+13 | North Carolina State | 0.9103 | 5-1
+14 | Oregon | 0.9074 | 5-1
+15 | Penn State | 0.9071 | 5-0
+16 | Michigan | 0.9058 | 6-0
+17 | James Madison | 0.8946 | 5-0
+18 | Kansas | 0.8946 | 5-1
+19 | Kansas State | 0.8756 | 5-1
+20 | Mississippi State | 0.8669 | 5-1
+21 | Illinois | 0.8515 | 5-1
+22 | Coastal Carolina | 0.8513 | 6-0
+23 | Purdue | 0.8368 | 4-2
+24 | Louisiana State | 0.8354 | 4-2
+25 | San Jose State | 0.8283 | 4-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2006.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2007.md)
 
-#### Observations and Notes (Updated 10/3/2022)
+#### Observations and Notes (Updated 10/9/2022)
 
-* We've reached the point in the season where my ratings are mostly based on current season information (early season is adjusted using the previous season with less influence week to week). Things look okay here. My poll has always favored winning your games as one of the top things it cares about so it makes sense seeing some teams where they are
-* I'm a bit surprised Clemson is #1 by as much as they are but looking into the rating factors on the back-end it makes some sense. I'm even more surprised to see Wake Forest so high up given the fact that they have a loss (even if it's to Clemson). Their overall adjusted strength of schedule is crazy high though (3rd highest of all the teams so far; Stanford, Georgia Tech) which is definitely pushing them up higher
+* No notes for this week :)
 
-#### Predictions (Updated 10/3/2022)
+#### Predictions (Updated 10/9/2022)
 
-Week 6 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/CFBPoll/master/PreviousPolls/2022/Predictions/2022-Week%2006.md)
+Week 7 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2007.md)
 
-Week 5 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2004.md):
-* Winner: 35 - 22
-* ATS: 29 - 28
-* O/U: 24 - 33
+Week 6 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2006.md):
+* Winner: 38 - 19
+* ATS: 26 - 31
+* O/U: 28 - 29
 
 Season Results:
-* Winner: 143 - 66
-* ATS: 103 - 110
-* O/U: 115 - 98
+* Winner: 181 - 92
+* ATS: 129 - 143
+* O/U: 143 - 129
  
 ### TODO List (Updated 10/24/2021)
 
