@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CFBPoll.Enums;
+using System;
 
 namespace CFBPoll.Models
 {
@@ -10,16 +11,16 @@ namespace CFBPoll.Models
         public string OpponentName { get; set; }
         public int PointsFor { get; set; }
         public int PointsAgainst { get; set; }
-        public LocationEnum Location { get; set; }
+        public Location Location { get; set; }
         public int Week { get; set; }
-        public ResultEnum Result { get; set; }
+        public Result Result { get; set; }
         public bool FutureGame { get; set; }
 
         public Game()
         {
         }
 
-        public Game(Team team, Team opponent, int pointsFor, int pointsAgainst, int week, LocationEnum location)
+        public Game(Team team, Team opponent, int pointsFor, int pointsAgainst, int week, Location location)
         {
             Team = team;
             Opponent = opponent;
@@ -32,15 +33,15 @@ namespace CFBPoll.Models
             if (PointsFor == 0 && PointsAgainst == 0)
             {
                 FutureGame = true;
-                Result = ResultEnum.Future;
+                Result = Result.Future;
             }
             else
             {
-                Result = PointsFor > PointsAgainst ? ResultEnum.Win : ResultEnum.Loss;
+                Result = PointsFor > PointsAgainst ? Result.Win : Result.Loss;
             }
         }
 
-        public Game(string teamName, string opponentName, int pointsFor, int pointsAgainst, int week, LocationEnum location)
+        public Game(string teamName, string opponentName, int pointsFor, int pointsAgainst, int week, Location location)
         {
             TeamName = teamName;
             OpponentName = opponentName;
@@ -53,11 +54,11 @@ namespace CFBPoll.Models
             if (PointsFor == 0 && PointsAgainst == 0)
             {
                 FutureGame = true;
-                Result = ResultEnum.Future;
+                Result = Result.Future;
             }
             else
             {
-                Result = PointsFor > PointsAgainst ? ResultEnum.Win : ResultEnum.Loss;
+                Result = PointsFor > PointsAgainst ? Result.Win : Result.Loss;
             }
         }
 
@@ -67,19 +68,5 @@ namespace CFBPoll.Models
             Console.Write((Team != null ? Team.Name : TeamName) + ": " + PointsFor + " - " + PointsAgainst + " :" + (Opponent != null ? Opponent.Name : OpponentName));
             Console.WriteLine();
         }
-    }
-
-    public enum ResultEnum
-    {
-        Win,
-        Loss,
-        Future
-    }
-
-    public enum LocationEnum
-    {
-        Home,
-        Road,
-        Neutral
     }
 }

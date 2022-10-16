@@ -1,4 +1,5 @@
-﻿using CFBPoll.Models;
+﻿using CFBPoll.Enums;
+using CFBPoll.Models;
 using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
@@ -115,22 +116,22 @@ namespace CFBPoll.Utilities
                     continue;
 
                 //Get the location
-                LocationEnum team1Location, team2Location;
+                Location team1Location, team2Location;
                 var locationValue = row.Cell(7).Value.ToString();
                 if (locationValue.Equals("@"))
                 {
-                    team1Location = LocationEnum.Road;
-                    team2Location = LocationEnum.Home;
+                    team1Location = Location.Road;
+                    team2Location = Location.Home;
                 }
                 else if (locationValue.Equals("N"))
                 {
-                    team1Location = LocationEnum.Neutral;
-                    team2Location = LocationEnum.Neutral;
+                    team1Location = Location.Neutral;
+                    team2Location = Location.Neutral;
                 }
                 else
                 {
-                    team1Location = LocationEnum.Home;
-                    team2Location = LocationEnum.Road;
+                    team1Location = Location.Home;
+                    team2Location = Location.Road;
                 }
 
                 //Get scores
@@ -251,22 +252,22 @@ namespace CFBPoll.Utilities
             var gameWeek = int.Parse(scoreRow.Cell(2).Value.ToString());
 
             //Get the location
-            LocationEnum team1Location, team2Location;
+            Location team1Location, team2Location;
             var locationValue = scoreRow.Cell(7).Value.ToString();
             if (locationValue.Equals("@"))
             {
-                team1Location = LocationEnum.Road;
-                team2Location = LocationEnum.Home;
+                team1Location = Location.Road;
+                team2Location = Location.Home;
             }
             else if (locationValue.Equals("N"))
             {
-                team1Location = LocationEnum.Neutral;
-                team2Location = LocationEnum.Neutral;
+                team1Location = Location.Neutral;
+                team2Location = Location.Neutral;
             }
             else
             {
-                team1Location = LocationEnum.Home;
-                team2Location = LocationEnum.Road;
+                team1Location = Location.Home;
+                team2Location = Location.Road;
             }
 
             //Parse the scores

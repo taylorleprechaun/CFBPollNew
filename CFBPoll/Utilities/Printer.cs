@@ -6,6 +6,7 @@ using System.Text;
 using System.Configuration;
 using CFBPoll.Models;
 using CFBPoll.Calculations;
+using CFBPoll.Enums;
 
 namespace CFBPoll.Utilities
 {
@@ -250,8 +251,8 @@ namespace CFBPoll.Utilities
 
                 //Add info
                 string nextLine = "";
-                nextLine += game.Location.Equals(LocationEnum.Road) ? team.Name + " - " + opponent.Name + " | " : opponent.Name + " - " + team.Name + " | ";
-                nextLine += game.Location.Equals(LocationEnum.Road) ? teamScore + " - " + opponentScore + " | " : opponentScore + " - " + teamScore + " | ";
+                nextLine += game.Location.Equals(Location.Road) ? team.Name + " - " + opponent.Name + " | " : opponent.Name + " - " + team.Name + " | ";
+                nextLine += game.Location.Equals(Location.Road) ? teamScore + " - " + opponentScore + " | " : opponentScore + " - " + teamScore + " | ";
                 nextLine += " | ";
                 nextLine += winner ? team.Name + " | " : opponent.Name + " | ";
                 nextLine += " | ";
@@ -342,12 +343,12 @@ namespace CFBPoll.Utilities
 
                 //Add info
                 string nextLine = "";
-                nextLine += game.Location.Equals(LocationEnum.Road)
+                nextLine += game.Location.Equals(Location.Road)
                     ? team.Name + "," + game.Location + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
-                    : game.Location.Equals(LocationEnum.Home)
+                    : game.Location.Equals(Location.Home)
                         ? opponent.Name + "," + game.Location + "," + team.Name + "," + opponentScore + "," + teamScore + ","
-                        : game.Location.Equals(LocationEnum.Neutral)
-                            ? team.Name + "," + LocationEnum.Neutral + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
+                        : game.Location.Equals(Location.Neutral)
+                            ? team.Name + "," + Location.Neutral + "," + opponent.Name + "," + teamScore + "," + opponentScore + ","
                             : ",,,,,";
                 nextLine += winner
                     ? team.Name + "," + team.Name + " " + (teamScore - opponentScore).ToString("0.00") + ","

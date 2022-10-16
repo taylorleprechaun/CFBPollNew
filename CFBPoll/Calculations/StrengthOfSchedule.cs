@@ -1,4 +1,5 @@
-﻿using CFBPoll.Models;
+﻿using CFBPoll.Enums;
+using CFBPoll.Models;
 using System;
 using System.Collections.Generic;
 
@@ -60,7 +61,7 @@ namespace CFBPoll.Calculations
                 else
                 {
                     games++;
-                    if (game.Result.Equals(ResultEnum.Win))
+                    if (game.Result.Equals(Result.Win))
                     {
                         wins++;
                     }

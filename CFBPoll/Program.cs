@@ -32,44 +32,46 @@ namespace CFBPoll
                 Rating.WeightSeason(weightedSeason, previousSeason, week);
             }
 
-            //What are we running?
-            //1 = Print Poll
-            //2 = Prediction
-            var runType = UserInputReader.GetRunType();
-            if (runType.Equals("1"))
+            while (true)
             {
-                //Print the poll to markdown table formatted text file
-                Printer.PrintPollTable(weightedSeason);
-                //Print the poll to Excel file with stats and stuff
-                Printer.PrintPollDetails(weightedSeason);
-
-                //Print the schedule of each team
-                //Printer.PrintSchedules(teamDictionary);
-                //Print some info about a specific team
-                //Printer.PrintTeam(teamDictionary["Ohio State"]);
-            }
-            else if (runType.Equals("2"))
-            {
-                //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
-                //Print predictions to markdown table formatted text file
-                Printer.PrintPredictionsTable(weightedSeason, previousSeason);
-                //Print predictions to Excel file
-                Printer.PrintPredictionsDetails(weightedSeason, previousSeason);
-            }
-            else if (runType.Equals ("3"))
-            {
-                //Predict until the user doesn't want to anymore
-                bool predictAgain = true;
-                while (predictAgain)
+                //What are we running?
+                //1 = Print Poll
+                //2 = Prediction
+                var runType = UserInputReader.GetRunType();
+                if (runType.Equals("1"))
                 {
-                    Predictor.Predict(weightedSeason, previousSeason);
-                    predictAgain = UserInputReader.PredictAgain();
-                }
-            }
+                    //Print the poll to markdown table formatted text file
+                    Printer.PrintPollTable(weightedSeason);
+                    //Print the poll to Excel file with stats and stuff
+                    Printer.PrintPollDetails(weightedSeason);
 
-            //Leave the window open until the user says they want to exit
-            //Doesn't matter what they enter it exits for both Y and N for now
-            UserInputReader.Exit();
+                    //Print the schedule of each team
+                    //Printer.PrintSchedules(teamDictionary);
+                    //Print some info about a specific team
+                    //Printer.PrintTeam(teamDictionary["Ohio State"]);
+                }
+                else if (runType.Equals("2"))
+                {
+                    //This part might shit itself if it tries to predict an FCS game... I'll deal with that later
+                    //Print predictions to markdown table formatted text file
+                    Printer.PrintPredictionsTable(weightedSeason, previousSeason);
+                    //Print predictions to Excel file
+                    Printer.PrintPredictionsDetails(weightedSeason, previousSeason);
+                }
+                else if (runType.Equals("3"))
+                {
+                    //Predict until the user doesn't want to anymore
+                    bool predictAgain = true;
+                    while (predictAgain)
+                    {
+                        Predictor.Predict(weightedSeason, previousSeason);
+                        predictAgain = UserInputReader.PredictAgain();
+                    }
+                }
+                
+                //Leave the window open until the user says they want to exit
+                if (UserInputReader.Exit()) break;
+            }
         }
 
         /// <summary>
