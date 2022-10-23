@@ -18,57 +18,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 * 9/25/2022: Some code re-organization and file path updates in preparation for bigger future changes
 
-### Rankings (Updated 10/16/2022)
+### Rankings (Updated 10/23/2022)
 
-**Week 8 Rankings**
+**Week 9 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Clemson | 1.0000 | 7-0
-2 | Texas Christian | 0.9935 | 6-0
-3 | Mississippi | 0.9905 | 7-0
-4 | UCLA | 0.9895 | 6-0
-5 | Tennessee | 0.9869 | 6-0
-6 | Syracuse | 0.9808 | 6-0
-7 | Georgia | 0.9705 | 7-0
-8 | Wake Forest | 0.9443 | 5-1
-9 | Michigan | 0.9415 | 7-0
-10 | Ohio State | 0.9349 | 6-0
-11 | Alabama | 0.9107 | 6-1
-12 | Oregon | 0.8976 | 5-1
-13 | Kansas State | 0.8898 | 5-1
-14 | USC | 0.8878 | 6-1
-15 | North Carolina State | 0.8792 | 5-2
-16 | Oklahoma State | 0.8776 | 5-1
-17 | Illinois | 0.8764 | 6-1
-18 | Penn State | 0.8763 | 5-1
-19 | Utah | 0.8693 | 5-2
-20 | Purdue | 0.8595 | 5-2
-21 | Louisiana State | 0.8452 | 5-2
-22 | Kansas | 0.8392 | 5-2
-23 | North Carolina | 0.8365 | 6-1
-24 | Kentucky | 0.8350 | 5-2
-25 | Tulane | 0.8301 | 6-1
+1 | Clemson | 1.0000 | 8-0
+2 | Texas Christian | 0.9889 | 7-0
+3 | Tennessee | 0.9777 | 7-0
+4 | Georgia | 0.9737 | 7-0
+5 | Ohio State | 0.9409 | 7-0
+6 | Syracuse | 0.9385 | 6-1
+7 | Oregon | 0.9370 | 6-1
+8 | Michigan | 0.9332 | 7-0
+9 | Wake Forest | 0.9256 | 6-1
+10 | UCLA | 0.9225 | 6-1
+11 | Mississippi | 0.9206 | 7-1
+12 | USC | 0.9071 | 6-1
+13 | Alabama | 0.8986 | 7-1
+14 | Oklahoma State | 0.8932 | 6-1
+15 | North Carolina State | 0.8817 | 5-2
+16 | Louisiana State | 0.8768 | 6-2
+17 | Penn State | 0.8739 | 6-1
+18 | Illinois | 0.8734 | 6-1
+19 | Utah | 0.8713 | 5-2
+20 | Kansas State | 0.8644 | 5-2
+21 | Tulane | 0.8508 | 7-1
+22 | Oregon State | 0.8401 | 6-2
+23 | North Carolina | 0.8351 | 6-1
+24 | Liberty | 0.8342 | 7-1
+25 | Troy | 0.8213 | 6-2
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2008.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/2022-Week%2009.md)
 
-#### Observations and Notes (Updated 10/16/2022)
+#### Observations and Notes (Updated 10/23/2022)
 
-* Wow the top of the poll is tight. In the Best/Worst of All Time section of this page I mention that typically the best teams end up with a rating over 40 (which you see in the rating score as percentages of the top team). This week each of the top seven teams all have a rating over 40. This will definitely change as the season goes on and teams win/lose more games but it's kinda cool.
+* Nothing really worth noting this week
 
-#### Predictions (Updated 10/16/2022)
+#### Predictions (Updated 10/23/2022)
 
-Week 8 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2008.md)
+Week 9 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2009.md)
 
-Week 7 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2007.md):
-* Winner: 31 - 20
-* ATS: 24 - 27
-* O/U: 26 - 25
+Week 8 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/master/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2008.md):
+* Winner: 33 - 19
+* ATS: 26 - 26
+* O/U: 34 - 18
 
 Season Results:
-* Winner: 212 - 112
-* ATS: 153 - 170
-* O/U: 169 - 154
+* Winner: 245 - 131
+* ATS: 179 - 196
+* O/U: 203 - 172
  
 ### TODO List (Updated 10/24/2021)
 
