@@ -162,7 +162,7 @@ namespace CFBPoll.Utilities
                 string nextLine = "";
                 nextLine += rank + " | ";
                 nextLine += team.Name + " | ";
-                nextLine += (team.Rating / topRating).ToString("0.0000") + " | ";
+                nextLine += string.Format("{0:0.0000}", Math.Truncate((team.Rating / topRating) * 10000)/10000) + " | ";
                 nextLine += team.PastSchedule.Wins + "-" + team.PastSchedule.Losses;
                 nextLine += "\n";
 
