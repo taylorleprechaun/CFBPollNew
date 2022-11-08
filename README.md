@@ -35,7 +35,7 @@ Rank | Team | Score | Record
 9 | Mississippi | 0.9120 | 8-1
 10 | USC | 0.9074 | 8-1
 11 | Louisiana State | 0.9054 | 7-2
-12 | Utah | 0.8908 | 7-2
+12 | Utah | 0.8909 | 7-2
 13 | North Carolina State | 0.8833 | 7-2
 14 | North Carolina | 0.8818 | 8-1
 15 | Alabama | 0.8702 | 7-2
@@ -47,14 +47,15 @@ Rank | Team | Score | Record
 21 | Florida State | 0.8356 | 6-3
 22 | Liberty | 0.8353 | 8-1
 23 | Illinois | 0.8335 | 7-2
-24 | Troy | 0.8325 | 7-2
+24 | Troy | 0.8334 | 7-2
 25 | Washington | 0.8270 | 7-2
 
 Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2011.md)
 
-#### Observations and Notes (Updated 11/6/2022)
+#### Observations and Notes (Updated 11/7/2022)
 
 * Something I noticed when I was running this for this week was that my data source has the wrong score for Oregon State-Washington from this week. I don't know what other scores they potentially have wrong. I fixed that one in my data and skimmed a handful of games from this week but I can't be totally sure. I'm going to re-run this tomorrow and if there are any differences re-publish the poll
+* The data did slightly change. None of the team orders did, just a few ratings changed by a couple digits
 
 #### Predictions (Updated 11/6/2022)
 
