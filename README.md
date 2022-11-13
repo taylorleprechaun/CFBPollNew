@@ -18,58 +18,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 * 9/25/2022: Some code re-organization and file path updates in preparation for bigger future changes
 
-### Rankings (Updated 11/6/2022)
+### Rankings (Updated 11/13/2022)
 
-**Week 11 Rankings**
+**Week 12 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 9-0
-2 | Texas Christian | 0.9743 | 9-0
-3 | Ohio State | 0.9685 | 9-0
-4 | Tennessee | 0.9677 | 8-1
-5 | Michigan | 0.9438 | 9-0
-6 | UCLA | 0.9348 | 8-1
-7 | Clemson | 0.9330 | 8-1
-8 | Oregon | 0.9158 | 8-1
-9 | Mississippi | 0.9120 | 8-1
-10 | USC | 0.9074 | 8-1
-11 | Louisiana State | 0.9054 | 7-2
-12 | Utah | 0.8909 | 7-2
-13 | North Carolina State | 0.8833 | 7-2
-14 | North Carolina | 0.8818 | 8-1
-15 | Alabama | 0.8702 | 7-2
-16 | Penn State | 0.8608 | 7-2
-17 | Tulane | 0.8475 | 8-1
-18 | Kansas State | 0.8467 | 6-3
-19 | Coastal Carolina | 0.8454 | 8-1
-20 | Syracuse | 0.8369 | 6-3
-21 | Florida State | 0.8356 | 6-3
-22 | Liberty | 0.8353 | 8-1
-23 | Illinois | 0.8335 | 7-2
-24 | Troy | 0.8334 | 7-2
-25 | Washington | 0.8270 | 7-2
+1 | Georgia | 1.0000 | 10-0
+2 | Texas Christian | 0.9789 | 10-0
+3 | Ohio State | 0.9662 | 10-0
+4 | Tennessee | 0.9615 | 9-1
+5 | Michigan | 0.9356 | 10-0
+6 | Clemson | 0.9286 | 9-1
+7 | Louisiana State | 0.9105 | 8-2
+8 | USC | 0.8968 | 9-1
+9 | Utah | 0.8928 | 8-2
+10 | North Carolina | 0.8913 | 9-1
+11 | Alabama | 0.8909 | 8-2
+12 | Penn State | 0.8811 | 8-2
+13 | Oregon | 0.8734 | 8-2
+14 | Mississippi | 0.8696 | 8-2
+15 | UCLA | 0.8671 | 8-2
+16 | Washington | 0.8544 | 8-2
+17 | Kansas State | 0.8513 | 7-3
+18 | Florida State | 0.8488 | 7-3
+19 | Central Florida | 0.8480 | 8-2
+20 | Coastal Carolina | 0.8397 | 9-1
+21 | Troy | 0.8324 | 8-2
+22 | Oklahoma State | 0.8225 | 7-3
+23 | Oregon State | 0.8218 | 7-3
+24 | North Carolina State | 0.8204 | 7-3
+25 | Notre Dame | 0.8131 | 7-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2011.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2012.md)
 
-#### Observations and Notes (Updated 11/7/2022)
+#### Observations and Notes (Updated 11/13/2022)
 
-* Something I noticed when I was running this for this week was that my data source has the wrong score for Oregon State-Washington from this week. I don't know what other scores they potentially have wrong. I fixed that one in my data and skimmed a handful of games from this week but I can't be totally sure. I'm going to re-run this tomorrow and if there are any differences re-publish the poll
-* The data did slightly change. None of the team orders did, just a few ratings changed by a couple digits
+* I'm kind of surprised at this point that the top four isn't the last four unbeaten teams. Michiagn's strength of schedule is just atrocious. They have the 113th ranked SOS per my formula for it
 
-#### Predictions (Updated 11/6/2022)
+#### Predictions (Updated 11/13/2022)
 
-Week 11 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2011.md)
+Week 12 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2012.md)
 
-Week 10 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2010.md):
-* Winner: 40 - 20
-* ATS: 24 - 36
-* O/U: 36 - 24
+Week 11 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2011.md):
+* Winner: 45 - 19
+* ATS: 38 - 26
+* O/U: 25 - 39
 
 Season Results:
-* Winner: 318 - 165
-* ATS: 221 - 261
-* O/U: 267 - 215
+* Winner: 363 - 184
+* ATS: 259 - 287
+* O/U: 292 - 254
  
 ### TODO List (Updated 10/24/2021)
 
