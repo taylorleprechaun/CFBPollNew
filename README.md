@@ -18,57 +18,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 * 9/25/2022: Some code re-organization and file path updates in preparation for bigger future changes
 
-### Rankings (Updated 11/13/2022)
+### Rankings (Updated 11/20/2022)
 
-**Week 12 Rankings**
+**Week 13 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 10-0
-2 | Texas Christian | 0.9789 | 10-0
-3 | Ohio State | 0.9662 | 10-0
-4 | Tennessee | 0.9615 | 9-1
-5 | Michigan | 0.9356 | 10-0
-6 | Clemson | 0.9286 | 9-1
-7 | Louisiana State | 0.9105 | 8-2
-8 | USC | 0.8968 | 9-1
-9 | Utah | 0.8928 | 8-2
-10 | North Carolina | 0.8913 | 9-1
-11 | Alabama | 0.8909 | 8-2
-12 | Penn State | 0.8811 | 8-2
-13 | Oregon | 0.8734 | 8-2
-14 | Mississippi | 0.8696 | 8-2
-15 | UCLA | 0.8671 | 8-2
-16 | Washington | 0.8544 | 8-2
-17 | Kansas State | 0.8513 | 7-3
-18 | Florida State | 0.8488 | 7-3
-19 | Central Florida | 0.8480 | 8-2
-20 | Coastal Carolina | 0.8397 | 9-1
-21 | Troy | 0.8324 | 8-2
-22 | Oklahoma State | 0.8225 | 7-3
-23 | Oregon State | 0.8218 | 7-3
-24 | North Carolina State | 0.8204 | 7-3
-25 | Notre Dame | 0.8131 | 7-3
+1 | Georgia | 1.0000 | 11-0
+2 | Texas Christian | 0.9698 | 11-0
+3 | Ohio State | 0.9592 | 11-0
+4 | Michigan | 0.9359 | 11-0
+5 | Clemson | 0.9246 | 10-1
+6 | Tennessee | 0.9114 | 9-2
+7 | Louisiana State | 0.9075 | 9-2
+8 | USC | 0.9058 | 10-1
+9 | Alabama | 0.9049 | 9-2
+10 | Oregon | 0.8872 | 9-2
+11 | Penn State | 0.8796 | 9-2
+12 | Florida State | 0.8528 | 8-3
+13 | Kansas State | 0.8525 | 8-3
+14 | Utah | 0.8518 | 8-3
+15 | North Carolina | 0.8466 | 9-2
+16 | Mississippi | 0.8395 | 8-3
+17 | Washington | 0.8355 | 9-2
+18 | Coastal Carolina | 0.8327 | 9-1
+19 | UCLA | 0.8322 | 8-3
+20 | Troy | 0.8297 | 9-2
+21 | Oregon State | 0.8222 | 8-3
+22 | Tulane | 0.8193 | 9-2
+23 | Notre Dame | 0.8132 | 8-3
+24 | Texas | 0.8102 | 7-4
+25 | Mississippi State | 0.8082 | 7-4
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2012.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2013.md)
 
-#### Observations and Notes (Updated 11/13/2022)
+#### Observations and Notes (Updated 11/20/2022)
 
-* I'm kind of surprised at this point that the top four isn't the last four unbeaten teams. Michiagn's strength of schedule is just atrocious. They have the 113th ranked SOS per my formula for it
+* Coming into the final couple weeks of the season it's going to be interesting to see how everything plays out.
 
-#### Predictions (Updated 11/13/2022)
+#### Predictions (Updated 11/20/2022)
 
-Week 12 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2012.md)
+Week 13 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2013.md)
 
-Week 11 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2011.md):
-* Winner: 45 - 19
-* ATS: 38 - 26
-* O/U: 25 - 39
+Week 12 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2012.md):
+* Winner: 41 - 20
+* ATS: 25 - 36
+* O/U: 30 - 31
 
 Season Results:
-* Winner: 363 - 184
-* ATS: 259 - 287
-* O/U: 292 - 254
+* Winner: 404 - 204
+* ATS: 284 - 323
+* O/U: 322 - 285
  
 ### TODO List (Updated 10/24/2021)
 
