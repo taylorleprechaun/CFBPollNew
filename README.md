@@ -18,57 +18,69 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 	* Cleaning up the above will allow me to rewrite parts of the rating/predictions algorithms a lot more cleanly since at the moment there's a lot of jank going on to get it working despite some of my design issues
 * 9/25/2022: Some code re-organization and file path updates in preparation for bigger future changes
 
-### Rankings (Updated 11/20/2022)
+### Rankings (Updated 11/27/2022)
 
-**Week 13 Rankings**
+**Week 14 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 11-0
-2 | Texas Christian | 0.9698 | 11-0
-3 | Ohio State | 0.9592 | 11-0
-4 | Michigan | 0.9359 | 11-0
-5 | Clemson | 0.9246 | 10-1
-6 | Tennessee | 0.9114 | 9-2
-7 | Louisiana State | 0.9075 | 9-2
-8 | USC | 0.9058 | 10-1
-9 | Alabama | 0.9049 | 9-2
-10 | Oregon | 0.8872 | 9-2
-11 | Penn State | 0.8796 | 9-2
-12 | Florida State | 0.8528 | 8-3
-13 | Kansas State | 0.8525 | 8-3
-14 | Utah | 0.8518 | 8-3
-15 | North Carolina | 0.8466 | 9-2
-16 | Mississippi | 0.8395 | 8-3
-17 | Washington | 0.8355 | 9-2
-18 | Coastal Carolina | 0.8327 | 9-1
-19 | UCLA | 0.8322 | 8-3
-20 | Troy | 0.8297 | 9-2
-21 | Oregon State | 0.8222 | 8-3
-22 | Tulane | 0.8193 | 9-2
-23 | Notre Dame | 0.8132 | 8-3
-24 | Texas | 0.8102 | 7-4
-25 | Mississippi State | 0.8082 | 7-4
+1 | Georgia | 1.0000 | 12-0
+2 | Texas Christian | 0.9639 | 12-0
+3 | Michigan | 0.9553 | 12-0
+4 | Ohio State | 0.9201 | 11-1
+5 | Tennessee | 0.9185 | 10-2
+6 | USC | 0.9169 | 11-1
+7 | Alabama | 0.9030 | 10-2
+8 | Penn State | 0.8840 | 10-2
+9 | Clemson | 0.8796 | 10-2
+10 | Kansas State | 0.8637 | 9-3
+11 | Oregon | 0.8596 | 9-3
+12 | Louisiana State | 0.8549 | 9-3
+13 | Florida State | 0.8517 | 9-3
+14 | Washington | 0.8481 | 10-2
+15 | Oregon State | 0.8432 | 9-3
+16 | Tulane | 0.8424 | 10-2
+17 | Utah | 0.8399 | 9-3
+18 | UCLA | 0.8335 | 9-3
+19 | Troy | 0.8252 | 10-2
+20 | Mississippi State | 0.8232 | 8-4
+21 | Texas | 0.8200 | 8-4
+22 | North Carolina | 0.8119 | 9-3
+23 | Mississippi | 0.8103 | 8-4
+24 | UTSA | 0.8097 | 10-2
+25 | North Carolina State | 0.8026 | 8-4
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2013.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2014.md)
 
-#### Observations and Notes (Updated 11/20/2022)
+#### Observations and Notes (Updated 11/27/2022)
 
-* Coming into the final couple weeks of the season it's going to be interesting to see how everything plays out.
+* I put in some dummy scores using my predicted scores (see below) and based on those predictions my system is predicting Georgia, TCU, Michigan, and Ohio State as the top 4
+* I also messed around with the combinations of wins/losses for each team.  The way I messed with the combinations was really basic (just flip the predicted scores around) and depending on the actual outcomes of the games the results could be a little off.  I also found that the ACC championship didn't change the results of the top 4 so I didn't include those combinations.  For the full output refer to: [combinations](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2014%20Scenarios.xlsx)
 
-#### Predictions (Updated 11/20/2022)
+Team | In | Out | Notes
+---|---|---|---
+Georgia | 16 | 0 | Always in
+Texas Christian | 16 | 0 | Always in
+Michigan | 16 | 0 | Always In
+USC | 8 | 8 | Win and In
+Ohio State | 4 | 12 | Michigan Win and USC Lose
+Tennessee | 4 | 12 | Michigan Lose and USC Lose
+Alabama | 0 | 16 | Peaks at #6
+Clemson | 0 | 16 | Peaks at #7
 
-Week 13 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2013.md)
+#### Predictions (Updated 11/27/2022)
 
-Week 12 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2012.md):
-* Winner: 41 - 20
-* ATS: 25 - 36
-* O/U: 30 - 31
+Week 14 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2014.md)
+
+Week 13 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2013.md):
+* Winner: 47 - 16
+* ATS: 29 - 34
+* O/U: 26 - 37
 
 Season Results:
-* Winner: 404 - 204
-* ATS: 284 - 323
-* O/U: 322 - 285
+* Winner: 451 - 220
+* ATS: 313 - 357
+* O/U: 348 - 322
  
 ### TODO List (Updated 10/24/2021)
 
