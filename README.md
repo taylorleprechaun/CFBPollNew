@@ -57,9 +57,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 * Last week I "simulated" the results from this week and put them into a little chart showing the top 6 teams in each scenario to predict the playoff teams. Now that we've got the actual results my poll has the playoff teams as: Georgia, Michigan, TCU, and Ohio State for the top four with Tennessee and Alabama just outside. This matches the simulated results. Now we just gotta wait for what the committee says
 * Go team "anyone but Georgia"
 
-#### Predictions (Updated 12/4/2022)
+#### Predictions (Updated 12/6/2022)
 
-Week 15 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2015%20Post%20CCG.md)
+Week 15 Predictions (updated with bowl game predictions): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2015%20Post%20CCG.md)
 
 Week 14 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2014%20Pre%20CCG.md):
 * Winner: 9 - 2
