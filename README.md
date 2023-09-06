@@ -12,64 +12,31 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 
 ### Recent changes
 
-* Nothing recently but soon ™ 👀
+* Nothing new
 
-### Rankings (Updated 1/10/2023)
+### Rankings (Updated 9/6/2023)
 
-**Week 17 Rankings**
+**Week 2 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 15-0
-2 | Michigan | 0.9105 | 13-1
-3 | Tennessee | 0.9087 | 11-2
-4 | Texas Christian | 0.8984 | 13-2
-5 | Alabama | 0.8926 | 11-2
-6 | Ohio State | 0.8898 | 11-2
-7 | Penn State | 0.8757 | 11-2
-8 | Oregon | 0.8538 | 10-3
-9 | Tulane | 0.8498 | 12-2
-10 | Clemson | 0.8473 | 11-3
-11 | USC | 0.8409 | 11-3
-12 | Washington | 0.8383 | 11-2
-13 | Louisiana State | 0.8369 | 10-4
-14 | Troy | 0.8352 | 12-2
-15 | Kansas State | 0.8329 | 10-4
-16 | Florida State | 0.8302 | 10-3
-17 | Oregon State | 0.8299 | 10-3
-18 | Mississippi State | 0.8168 | 9-4
-19 | Utah | 0.8119 | 10-4
-20 | UTSA | 0.7821 | 11-3
-21 | UCLA | 0.7818 | 9-4
-22 | Pittsburgh | 0.7764 | 9-4
-23 | Notre Dame | 0.7730 | 9-4
-24 | Texas | 0.7710 | 8-5
-25 | Mississippi | 0.7669 | 8-5
+1 | Come back next week | 1.0000 | 0-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/2022-Week%2017%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2002.md)
 
-#### Observations and Notes (Updated 1/10/2023)
+#### Observations and Notes (Updated 9/6/2023)
 
-* 😢 Go Gators
-* With another season in the books I want to thank anyone who's looked at this page for more 
-than a couple minutes. At the start I didn't make this program with any purpose other than to see if I could and now it's something I spend a lot of time on and really am proud of. I have some big plans in store for it that I hopefully can get done. Sometimes being a software engineer for a living can suck the enjoyment out of personal projects like these but I've learned a lot in the last couple years that I'm excited to try out here.
+* I had a lot of plans for the offseason to improve this but it just never came together. I've been a lot busier with work and my hobbies that I just haven't had the time (haven't I been saying this for like 3 offseasons now?).
+* It uhhhhh needs some more time to cook. I put the actual full rankings in the link above but this but they're rough. Should be better next week with some more data.
 
-#### Predictions (Updated 1/10/2023)
+#### Predictions (Updated 9/6/2023)
 
-Week 16 Results (championship game) [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2022/Predictions/2022-Week%2016%20NCG.md):
-* Winner: 1 - 0
-* ATS: 0 - 1
-* O/U: 0 - 1
+Nothing this week
 
-Season Results:
+2022 Season Results:
 * Winner: 485 - 240 (66.9%)
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
-
-Retrospective:
-* This was my first season running the predictions for every game (instead of a select few) and on the whole I'm happy with it. There are a number of things I want to tweak with it though over the offseason. I've had a handful of ideas of ways I can adjust how it predicts and I'm looking forward to trying them. The biggest issue I have is ATS predictions. 47% is terrible and I'm hoping my ideas will improve everything, including ATS. I have a lot of ideas for the program as a whole that I wasn't going to make mid season because I was really busy with work and didn't have the time to commit to making big changes.
-* I really need to automate the results portion of this. Every Sunday morning spent filling in results was tedious at times. It was kind of relaxing but man I can't keep that up forever.
-* As part of the previous point I need a way to pull betting data from somewhere. At the moment I just get it from the ESPN game summary page (i.e. on the bottom left of [this page](https://www.espn.com/college-football/game/_/gameId/401442010) is the Line and Over/Under) and type everything in myself and then do some quick mental math to check results.
  
 ### TODO List (Updated 1/10/2023)
 
