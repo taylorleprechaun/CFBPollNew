@@ -31,7 +31,7 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 #### Predictions (Updated 9/6/2023)
 
-Nothing this week
+Week 02 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2002.md)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
