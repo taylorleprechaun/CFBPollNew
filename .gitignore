@@ -1,8 +1,10 @@
-Rating.cs
-Predictor.cs
-CFBPoll/Resources/RankHistory
-CFBPoll/obj/
-CFBPoll/bin/
+CFBPoll_old
 .vs/
 packages/
+CFBPoll/bin/
+CFBPoll/Calculations/
+CFBPoll/obj/
 CFBPoll/PollOutput/
+CFBPoll/Resources/RankHistory
+CFBPollDTOs/obj/
+CFBPollDTOs/bin/

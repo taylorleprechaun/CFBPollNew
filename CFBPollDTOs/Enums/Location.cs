@@ -1,4 +1,4 @@
-﻿namespace CFBPoll.Enums
+﻿namespace CFBPollDTOs.Enums
 {
     public enum Location
     {
