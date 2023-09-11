@@ -2,7 +2,8 @@ CFBPoll_old
 .vs/
 packages/
 CFBPoll/bin/
-CFBPoll/Calculations/
+CFBPoll/Calculations/Modules/PredictionModule.cs
+CFBPoll/Calculations/Modules/RatingModule.cs
 CFBPoll/obj/
 CFBPoll/PollOutput/
 CFBPoll/Resources/RankHistory

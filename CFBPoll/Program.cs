@@ -1,4 +1,4 @@
-﻿using CFBPoll.Calculations;
+﻿using CFBPoll.Calculations.Factories;
 using CFBPoll.Data.Console;
 using CFBPoll.Data.Excel;
 using CFBPoll.Data.Text;
@@ -25,15 +25,15 @@ var week = consoleDataModule.GetWeek(season);
 var teamBuilder = new TeamBuilder(config, season, week);
 var teams = teamBuilder.BuildTeams();
 
-//Initialize the rater and predictor
-var rater = new Rater(season, week);
-var predictor = new Predictor(season, teams);
+//Initialize the rating and prediction modules
+var rater = new RatingFactory().GetRatingModule(season, week);
+var predictor = new PredictionFactory().GetPredictionModule(season, teams);
 
-//Mode
-while (true)
+//Running the program
+do
 {
     var mode = consoleDataModule.GetRunType();
-    switch(mode)
+    switch (mode)
     {
         case "1":
             //Print Ratings
@@ -49,27 +49,20 @@ while (true)
             break;
         case "3":
             //Specific Predictions
-            while (true)
+            do
             {
                 //Get user input for a game to predict and predict it
                 var gameToPredict = consoleDataModule.GetGameToPredict(teams, season);
                 var predictedGame = predictor.PredictSpecificGame(gameToPredict);
                 consoleDataModule.PrintGame(predictedGame);
-                //Go again?
-                if (!consoleDataModule.PredictAgain())
-                    break;
             }
+            while (consoleDataModule.PredictAgain());
             break;
         default:
             break;
     }
-
-    //Go again?
-    if (consoleDataModule.DoExit())
-        break;
-    else
-        continue;
 }
+while (!consoleDataModule.DoExit());
 
 
 

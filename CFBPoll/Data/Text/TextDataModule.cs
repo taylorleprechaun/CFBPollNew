@@ -116,7 +116,7 @@ namespace CFBPoll.Data.Text
 
             //Table header
             var txt = new StringBuilder();
-            txt.AppendLine("Home - Away | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick\n---| ---| ---| ---| ---| ---| ---| ---");
+            txt.AppendLine("Home - Away | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick\n--- | --- | --- | --- | --- | --- | --- | ---");
 
             foreach (var prediction in predictions)
             {

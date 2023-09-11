@@ -12,26 +12,59 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS) !!!!!!!!!!!
 
 ### Recent changes
 
-* Nothing new
+* 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 
-### Rankings (Updated 9/6/2023)
+### Rankings (Updated 9/11/2023)
 
-**Week 2 Rankings**
+**Week 3 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Come back next week | 1.0000 | 0-0
+1 | Georgia | 1.0000 | 2-0
+2 | Tennessee | 0.9395 | 2-0
+3 | Michigan | 0.9359 | 2-0
+4 | Ohio State | 0.9294 | 2-0
+5 | Penn State | 0.9254 | 2-0
+6 | Oregon | 0.9188 | 2-0
+7 | USC | 0.9029 | 3-0
+8 | Kansas State | 0.9019 | 2-0
+9 | Oregon State | 0.9007 | 2-0
+10 | Florida State | 0.8976 | 2-0
+11 | Mississippi State | 0.8964 | 2-0
+12 | Washington | 0.8960 | 2-0
+13 | Utah | 0.8790 | 2-0
+14 | Mississippi | 0.8700 | 2-0
+15 | Texas | 0.8697 | 2-0
+16 | UCLA | 0.8683 | 2-0
+17 | Notre Dame | 0.8609 | 3-0
+18 | Louisville | 0.8568 | 2-0
+19 | Wake Forest | 0.8555 | 2-0
+20 | Cincinnati | 0.8488 | 2-0
+21 | Syracuse | 0.8471 | 2-0
+22 | North Carolina | 0.8470 | 2-0
+23 | Arkansas | 0.8462 | 2-0
+24 | Maryland | 0.8398 | 2-0
+25 | Central Florida | 0.8395 | 2-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2002.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2003.md)
 
-#### Observations and Notes (Updated 9/6/2023)
+#### Observations and Notes (Updated 9/11/2023)
 
-* I had a lot of plans for the offseason to improve this but it just never came together. I've been a lot busier with work and my hobbies that I just haven't had the time (haven't I been saying this for like 3 offseasons now?).
-* It uhhhhh needs some more time to cook. I put the actual full rankings in the link above but this but they're rough. Should be better next week with some more data.
+* Okay that's much better than last week's attempt. I think there was a bug in how the poll adjusts early season ranks using previous season results but we should be good now. Kind of wish I never published last week's poll knowing that now.
 
-#### Predictions (Updated 9/6/2023)
+#### Predictions (Updated 9/11/2023)
 
-Week 02 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2002.md)
+Week 03 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2003.md)
+
+Week 02 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2002.md):
+* Winner: 31 - 15
+* ATS: 20 - 26
+* O/U: 29 - 17
+
+Season Results:
+* Winner: 31 - 15 (67.4%)
+* ATS: 20 - 26 (43.5%)
+* O/U: 29 - 17 (63.0%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
