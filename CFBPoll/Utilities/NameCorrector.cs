@@ -60,6 +60,50 @@ namespace CFBPoll.Utilities
         }
 
         /// <summary>
+		/// Corrects names from our system to match what is expected by the CFBData API
+		/// </summary>
+		/// <param name="nameToFix">The name that needs correcting</param>
+        public string FixNameForCFBDataAPI(string nameToFix)
+        {
+            if (nameToFix.Equals("Alabama-Birmingham", _scoic))
+                nameToFix = "UAB";
+            if (nameToFix.Equals("Brigham Young", _scoic))
+                nameToFix = "BYU";
+            if (nameToFix.Equals("Louisiana-Lafayette", _scoic))
+                nameToFix = "Louisiana";
+            if (nameToFix.Equals("Central Florida", _scoic))
+                nameToFix = "UCF";
+            if (nameToFix.Equals("Florida Int'l", _scoic))
+                nameToFix = "Florida International";
+            if (nameToFix.Equals("Hawaii", _scoic))
+                nameToFix = "Hawai'i";
+            if (nameToFix.Equals("Louisiana State", _scoic))
+                nameToFix = "LSU";
+            if (nameToFix.Equals("Massachusetts", _scoic))
+                nameToFix = "UMass"; 
+            if (nameToFix.Equals("Miami FL", _scoic))
+                nameToFix = "Miami"; 
+            if (nameToFix.Equals("MTSU", _scoic))
+                nameToFix = "Middle Tennessee"; 
+            if (nameToFix.Equals("Mississippi", _scoic))
+                nameToFix = "Ole Miss"; 
+            if (nameToFix.Equals("North Carolina State", _scoic))
+                nameToFix = "NC State"; 
+            if (nameToFix.Equals("Ohio U.", _scoic))
+                nameToFix = "Ohio"; 
+            if (nameToFix.Equals("San Jose State", _scoic))
+                nameToFix = "San José State";
+            if (nameToFix.Equals("Southern Miss", _scoic))
+                nameToFix = "Southern Mississippi";
+            if (nameToFix.Equals("Texas Christian", _scoic))
+                nameToFix = "TCU";
+            if (nameToFix.Equals("UTSA", _scoic))
+                nameToFix = "UT San Antonio";
+
+            return nameToFix;
+        }
+
+        /// <summary>
 		/// Corrects names coming from the score file (name starts with rank)
 		/// </summary>
 		/// <param name="nameToFix">The name that needs correcting</param>

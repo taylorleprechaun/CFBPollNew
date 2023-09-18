@@ -1,6 +1,7 @@
 CFBPoll_old
 .vs/
 packages/
+CFBPoll/appsettings-private.json
 CFBPoll/bin/
 CFBPoll/Calculations/Modules/PredictionModule.cs
 CFBPoll/Calculations/Modules/RatingModule.cs

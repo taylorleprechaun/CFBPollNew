@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 using System.Text;
 
-namespace CFBPoll.Data.Excel
+namespace CFBPoll.Data.Modules
 {
     public class ExcelDataModule
     {
@@ -195,12 +195,16 @@ namespace CFBPoll.Data.Excel
 
             //Table header
             var csv = new StringBuilder();
-            csv.AppendLine("Home,HomeScore,Location,Away Score,Away,Pick,Spread,O/U");
+            csv.AppendLine("Home,HomeScore,Location,Away Score,Away,Pick,Spread,O/U,,Actual Line,Actual O/U");
 
             foreach (var prediction in predictions)
             {
                 //Determine the winner
                 var winner = prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam;
+
+                var bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.Provider.Equals("Bovada", _scoic));
+                if (bettingInfoToPrint == null)
+                    bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.IsValid());
 
                 //Add info
                 string nextLine = ""
@@ -208,8 +212,11 @@ namespace CFBPoll.Data.Excel
                     + $"{(prediction.NeutralSite ? $"VS" : $"")},"
                     + $"{Math.Round(prediction.AwayPoints, 2)},{prediction.AwayTeam},"
                     + $"{winner},"
-                    + $"{Math.Round(prediction.HomePoints - prediction.AwayPoints, 2)},"
+                    + $"{Math.Round(prediction.AwayPoints - prediction.HomePoints, 2)},"
                     + $"{Math.Round(prediction.HomePoints + prediction.AwayPoints, 2)},"
+                    + $","
+                    + $"{bettingInfoToPrint?.Spread ?? -1.0},"
+                    + $"{bettingInfoToPrint?.OverUnder ?? -1.0},"
                     + $"\n";
 
                 //Append to csv output
@@ -304,7 +311,7 @@ namespace CFBPoll.Data.Excel
             }
             catch (Exception)
             {
-                System.Console.WriteLine($"Failed to open file: {filePath}.");
+                Console.WriteLine($"Failed to open file: {filePath}.");
             }
         }
 

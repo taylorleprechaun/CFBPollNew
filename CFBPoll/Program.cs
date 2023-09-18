@@ -1,12 +1,12 @@
 ﻿using CFBPoll.Calculations.Factories;
-using CFBPoll.Data.Console;
-using CFBPoll.Data.Excel;
-using CFBPoll.Data.Text;
+using CFBPoll.Data.Modules;
 using CFBPoll.Utilities;
 using Microsoft.Extensions.Configuration;
 
 //Set up application settings config
-var configurationBuilder = new ConfigurationBuilder().AddJsonFile($"appsettings.json");
+var configurationBuilder = new ConfigurationBuilder();
+configurationBuilder.AddJsonFile($"appsettings.json");
+configurationBuilder.AddJsonFile($"appsettings-private.json");
 var config = configurationBuilder.Build();
 
 //Initialize name corrector

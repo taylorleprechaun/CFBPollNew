@@ -1,7 +1,7 @@
 ﻿using CFBPollDTOs;
 using Microsoft.Extensions.Configuration;
 
-namespace CFBPoll.Data.Console
+namespace CFBPoll.Data.Modules
 {
     public class ConsoleDataModule
     {
@@ -23,15 +23,15 @@ namespace CFBPoll.Data.Console
         {
             while (true)
             {
-                System.Console.WriteLine();
-                System.Console.WriteLine("Do you want to exit? (Y/N)");
+                Console.WriteLine();
+                Console.WriteLine("Do you want to exit? (Y/N)");
                 var input = GetInput();
                 if (input.Equals("Y", StringComparison.OrdinalIgnoreCase))
                     return true;
                 else if (input.Equals("N", StringComparison.OrdinalIgnoreCase))
                     return false;
                 else
-                    System.Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input");
             }
         }
 
@@ -41,7 +41,7 @@ namespace CFBPoll.Data.Console
             string awayTeamName = GetTeam("Road");
             while (!teams.ContainsKey(awayTeamName))
             {
-                System.Console.WriteLine("Invalid team name");
+                Console.WriteLine("Invalid team name");
                 awayTeamName = GetTeam("Road");
             }
 
@@ -49,7 +49,7 @@ namespace CFBPoll.Data.Console
             string homeTeamName = GetTeam("Home");
             while (!teams.ContainsKey(homeTeamName))
             {
-                System.Console.WriteLine("Invalid team name");
+                Console.WriteLine("Invalid team name");
                 homeTeamName = GetTeam("Home");
             }
 
@@ -65,15 +65,15 @@ namespace CFBPoll.Data.Console
         {
             while (true)
             {
-                System.Console.WriteLine();
-                System.Console.WriteLine("Please enter the number for what you would like to run:");
-                System.Console.WriteLine("1 - Run Poll");
-                System.Console.WriteLine("2 - Run Predictions");
-                System.Console.WriteLine("3 - Predict Individual Games");
+                Console.WriteLine();
+                Console.WriteLine("Please enter the number for what you would like to run:");
+                Console.WriteLine("1 - Run Poll");
+                Console.WriteLine("2 - Run Predictions");
+                Console.WriteLine("3 - Predict Individual Games");
                 var input = GetInput();
 
                 if (!input.Equals("1") && !input.Equals("2") && !input.Equals("3"))
-                    System.Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input");
                 else
                     return input;
             }
@@ -85,9 +85,9 @@ namespace CFBPoll.Data.Console
         /// <returns>The string year entered by the user</returns>
         public int GetSeason()
         {
-            System.Console.WriteLine("Select a season:");
+            Console.WriteLine("Select a season:");
             DisplayAvailableSeasons();
-            System.Console.WriteLine();
+            Console.WriteLine();
             if (int.TryParse(GetInput(), out var season))
                 return season;
             else
@@ -101,8 +101,8 @@ namespace CFBPoll.Data.Console
         /// <returns>The user input</returns>
         private string GetTeam(string roadHome)
         {
-            System.Console.WriteLine();
-            System.Console.WriteLine("Enter the " + roadHome + " team");
+            Console.WriteLine();
+            Console.WriteLine("Enter the " + roadHome + " team");
             return GetInput();
         }
 
@@ -112,10 +112,10 @@ namespace CFBPoll.Data.Console
         /// <returns>The string week entered by the user</returns>
         public string GetWeek(int season)
         {
-            System.Console.WriteLine();
-            System.Console.WriteLine("Select a Week:");
+            Console.WriteLine();
+            Console.WriteLine("Select a Week:");
             DisplayAvailableWeeks(season);
-            System.Console.WriteLine();
+            Console.WriteLine();
             return GetInput();
         }
 
@@ -127,19 +127,19 @@ namespace CFBPoll.Data.Console
         {
             while (true)
             {
-                System.Console.WriteLine();
-                System.Console.WriteLine("Predict Again? (Y/N)");
+                Console.WriteLine();
+                Console.WriteLine("Predict Again? (Y/N)");
                 var input = GetInput();
                 if (input.Equals("Y", _scoic))
                     return true;
                 else if (input.Equals("N", _scoic))
                     return false;
                 else
-                    System.Console.WriteLine("Invalid input");
+                    Console.WriteLine("Invalid input");
             }
         }
 
-        
+
 
         /// <summary>
         /// Prints the result of a specific game
@@ -148,12 +148,12 @@ namespace CFBPoll.Data.Console
         public void PrintGame(Game game)
         {
             //Print result
-            System.Console.WriteLine("\nResult:");
-            System.Console.WriteLine($"{game.AwayTeam} - {Math.Round(game.AwayPoints, 2)}");
-            System.Console.WriteLine($"{game.HomeTeam} - {Math.Round(game.HomePoints, 2)}");
+            Console.WriteLine("\nResult:");
+            Console.WriteLine($"{game.AwayTeam} - {Math.Round(game.AwayPoints, 2)}");
+            Console.WriteLine($"{game.HomeTeam} - {Math.Round(game.HomePoints, 2)}");
         }
 
-        
+
 
         /// <summary>
         /// Prints an enumerable of options for the user formatted in lines of 7 items with a tab character between each
@@ -164,16 +164,16 @@ namespace CFBPoll.Data.Console
             int printNum = 0;
             foreach (var option in options)
             {
-                System.Console.Write(option + "\t");
+                Console.Write(option + "\t");
                 printNum++;
 
                 //7 items per line
                 if (printNum % 7 == 0)
                 {
-                    System.Console.WriteLine();
+                    Console.WriteLine();
                 }
             }
-            System.Console.WriteLine();
+            Console.WriteLine();
         }
 
         #endregion
@@ -220,8 +220,8 @@ namespace CFBPoll.Data.Console
         /// <returns>A string containing the user input</returns>
         private string GetInput()
         {
-            System.Console.Write("> ");
-            return System.Console.ReadLine();
+            Console.Write("> ");
+            return Console.ReadLine();
         }
 
         #endregion

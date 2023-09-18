@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 using System.Text;
 
-namespace CFBPoll.Data.Text
+namespace CFBPoll.Data.Modules
 {
     public class TextDataModule
     {

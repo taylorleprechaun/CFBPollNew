@@ -1,6 +1,4 @@
-﻿using CFBPollDTOs.Enums;
-
-namespace CFBPollDTOs
+﻿namespace CFBPollDTOs
 {
     public class Game
     {
@@ -9,6 +7,7 @@ namespace CFBPollDTOs
         public bool FutureGame { get; set; }
         public double HomePoints { get; set; }
         public string HomeTeam { get; set; }
+        public IEnumerable<Lines> Lines { get; set; }
         public bool NeutralSite { get; set; }
         public int Season { get; set; }
         public int Week { get; set; }
@@ -20,6 +19,7 @@ namespace CFBPollDTOs
             FutureGame = game.FutureGame;
             HomePoints = game.HomePoints;
             HomeTeam = game.HomeTeam;
+            Lines = game.Lines;
             NeutralSite = game.NeutralSite;
             Season = game.Season;
             Week = game.Week;
@@ -32,6 +32,7 @@ namespace CFBPollDTOs
             FutureGame = futureGame;
             HomePoints = homePoints;
             HomeTeam = homeTeam;
+            Lines = new List<Lines>();
             NeutralSite = neutralSite;
             Season = season;
             Week = week;
