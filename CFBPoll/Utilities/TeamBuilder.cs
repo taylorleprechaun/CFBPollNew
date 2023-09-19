@@ -13,9 +13,9 @@ namespace CFBPoll.Utilities
         private readonly StringComparison _scoic = StringComparison.OrdinalIgnoreCase; 
         private readonly int _season;
         private readonly TextDataModule _textReader;
-        private readonly string _week;
+        private readonly int _week;
 
-        public TeamBuilder(IConfiguration config, int season, string week)
+        public TeamBuilder(IConfiguration config, int season, int week)
         {
             _cfbDataAPI = new CFBDataAPIDataModule(config, season);
             _nameCorrector = new NameCorrector();
@@ -40,9 +40,9 @@ namespace CFBPoll.Utilities
             var currentSeasonDefenseStats = _excelReader.GetStatistics("defense", _season, _week);
 
             //Previous Season
-            var previousSeasonGames = _excelReader.GetGames(_season-1, "NCG");
-            var previousSeasonOffenseStats = _excelReader.GetStatistics("offense", _season-1, "NCG");
-            var previousSeasonDefenseStats = _excelReader.GetStatistics("defense", _season-1, "NCG");
+            var previousSeasonGames = _excelReader.GetGames(_season-1, null);
+            var previousSeasonOffenseStats = _excelReader.GetStatistics("offense", _season-1, null);
+            var previousSeasonDefenseStats = _excelReader.GetStatistics("defense", _season-1, null);
 
             //Merge the two datasets
             var allGames = currentSeasonGames.Concat(previousSeasonGames);

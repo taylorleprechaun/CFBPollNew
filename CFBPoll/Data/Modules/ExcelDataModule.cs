@@ -34,19 +34,19 @@ namespace CFBPoll.Data.Modules
         /// <param name="season">The season</param>
         /// <param name="week">The week</param>
         /// <returns>A list of Game objects</returns>
-        public IEnumerable<Game> GetGames(int season, string week)
+        public IEnumerable<Game> GetGames(int season, int? week)
         {
             var allGames = new List<Game>();
+            var files = Directory.GetFiles($"{_scoresPath}{season}");
+            var filePath = string.Empty;
+            if (week == null)
+                filePath = files.OrderBy(f => f).LastOrDefault();
+            else
+                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00"));
 
-            string newPath = $"{_scoresPath}{season}\\{season} - {week}.xlsx";
+            if (string.IsNullOrEmpty(filePath)) return allGames;
 
-            if (week.Equals("NCG", StringComparison.OrdinalIgnoreCase))
-            {
-                var files = Directory.GetFiles($"{_scoresPath}{season}");
-                newPath = files.LastOrDefault(f => f.Contains("NCG"));
-            }
-
-            var scoresTable = GetTableFromExcelFile(newPath);
+            var scoresTable = GetTableFromExcelFile(filePath);
 
             foreach (var scoreRow in scoresTable.Rows())
             {
@@ -88,9 +88,9 @@ namespace CFBPoll.Data.Modules
                 int.TryParse(scoreRow.Cell(9).Value.ToString(), out int team2Score);
 
                 if (team1Location.Equals(Location.Home))
-                    allGames.Add(new Game(team1Name, team2Name, team1Score, team2Score, season, gameWeek, false, team1Score == 0 && team2Score == 0));
+                    allGames.Add(new Game(team1Name, team2Name, team1Score, team2Score, season, gameWeek, false, team1Score == 0 && team2Score == 0, new List<Lines>()));
                 else
-                    allGames.Add(new Game(team2Name, team1Name, team2Score, team1Score, season, gameWeek, team1Location.Equals(Location.Neutral), team1Score == 0 && team2Score == 0));
+                    allGames.Add(new Game(team2Name, team1Name, team2Score, team1Score, season, gameWeek, team1Location.Equals(Location.Neutral), team1Score == 0 && team2Score == 0, new List<Lines>()));
             }
 
             return allGames;
@@ -103,19 +103,21 @@ namespace CFBPoll.Data.Modules
         /// <param name="season">The season</param>
         /// <param name="week">The week</param>
         /// <returns>A dictionary of team statistics</returns>
-        public IDictionary<string, Statistics> GetStatistics(string type, int season, string week)
+        public IDictionary<string, Statistics> GetStatistics(string type, int season, int? week)
         {
             var typeString = type.ToLower().Equals("offense", _scoic) ? "O" : type.ToLower().Equals("defense") ? "D" : null;
             if (string.IsNullOrEmpty(typeString)) return new Dictionary<string, Statistics>();
 
-            var newPath = $"{_statsPath}{season}\\Team{typeString} - {season} - {week}.xlsx";
-            if (week.Equals("NCG", _scoic))
-            {
-                var files = Directory.GetFiles($"{_statsPath}{season}");
-                newPath = files.LastOrDefault(f => f.Contains("NCG") && f.Contains($"Team{typeString}"));
-            }
+            var files = Directory.GetFiles($"{_statsPath}{season}");
+            var filePath = string.Empty;
+            if (week == null)
+                filePath = files.OrderBy(f => f).LastOrDefault();
+            else
+                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00") && f.Contains($"Team{typeString}"));
 
-            var statsTable = GetTableFromExcelFile(newPath);
+            if (string.IsNullOrEmpty(filePath)) return new Dictionary<string, Statistics>();
+
+            var statsTable = GetTableFromExcelFile(filePath);
             return BuildStats(statsTable);
         }
 
@@ -195,7 +197,7 @@ namespace CFBPoll.Data.Modules
 
             //Table header
             var csv = new StringBuilder();
-            csv.AppendLine("Home,HomeScore,Location,Away Score,Away,Pick,Spread,O/U,,Actual Line,Actual O/U");
+            csv.AppendLine("Home,HomeScore,Location,Away Score,Away,Pick,Actual Spread,Prediction Spread,Actual O/U,Prediction O/U");
 
             foreach (var prediction in predictions)
             {
@@ -212,11 +214,10 @@ namespace CFBPoll.Data.Modules
                     + $"{(prediction.NeutralSite ? $"VS" : $"")},"
                     + $"{Math.Round(prediction.AwayPoints, 2)},{prediction.AwayTeam},"
                     + $"{winner},"
-                    + $"{Math.Round(prediction.AwayPoints - prediction.HomePoints, 2)},"
-                    + $"{Math.Round(prediction.HomePoints + prediction.AwayPoints, 2)},"
-                    + $","
                     + $"{bettingInfoToPrint?.Spread ?? -1.0},"
+                    + $"{Math.Round(prediction.AwayPoints - prediction.HomePoints, 2)},"
                     + $"{bettingInfoToPrint?.OverUnder ?? -1.0},"
+                    + $"{Math.Round(prediction.HomePoints + prediction.AwayPoints, 2)},"
                     + $"\n";
 
                 //Append to csv output

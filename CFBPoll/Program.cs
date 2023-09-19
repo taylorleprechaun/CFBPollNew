@@ -1,6 +1,7 @@
 ﻿using CFBPoll.Calculations.Factories;
 using CFBPoll.Data.Modules;
 using CFBPoll.Utilities;
+using CFBPollDTOs;
 using Microsoft.Extensions.Configuration;
 
 //Set up application settings config
@@ -48,6 +49,15 @@ do
             excelDataModule.PrintPredictionDetails(predictions);
             break;
         case "3":
+            //Calculate Prediction Results
+            var predictionSeason = consoleDataModule.GetSeason();
+            var predictionWeek = consoleDataModule.GetWeek(predictionSeason);
+            //TODO: This part
+            //Load previous prediction info from file
+            //Use API to get betting info from the games and compare
+            //Output to file
+            break;
+        case "4":
             //Specific Predictions
             do
             {

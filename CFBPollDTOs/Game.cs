@@ -25,14 +25,14 @@
             Week = game.Week;
         }
 
-        public Game(string homeTeam, string awayTeam, double homePoints, double awayPoints, int season, int week, bool neutralSite, bool futureGame)
+        public Game(string homeTeam, string awayTeam, double homePoints, double awayPoints, int season, int week, bool neutralSite, bool futureGame, IEnumerable<Lines> lines)
         {
             AwayPoints = awayPoints;
             AwayTeam = awayTeam;
             FutureGame = futureGame;
             HomePoints = homePoints;
             HomeTeam = homeTeam;
-            Lines = new List<Lines>();
+            Lines = lines;
             NeutralSite = neutralSite;
             Season = season;
             Week = week;

@@ -23,8 +23,7 @@ namespace CFBPoll.Data.Modules
         {
             while (true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Do you want to exit? (Y/N)");
+                Console.WriteLine("\nDo you want to exit? (Y/N)");
                 var input = GetInput();
                 if (input.Equals("Y", StringComparison.OrdinalIgnoreCase))
                     return true;
@@ -54,7 +53,7 @@ namespace CFBPoll.Data.Modules
             }
 
             //Create an empty game to predict
-            return new Game(homeTeamName, awayTeamName, 0, 0, season, 0, false, false);
+            return new Game(homeTeamName, awayTeamName, 0, 0, season, 0, false, false, new List<Lines>());
         }
 
         /// <summary>
@@ -65,14 +64,14 @@ namespace CFBPoll.Data.Modules
         {
             while (true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Please enter the number for what you would like to run:");
+                Console.WriteLine("\nPlease enter the number for what you would like to run:");
                 Console.WriteLine("1 - Run Poll");
                 Console.WriteLine("2 - Run Predictions");
-                Console.WriteLine("3 - Predict Individual Games");
+                Console.WriteLine("3 - Calculate Prediction Results");
+                Console.WriteLine("4 - Predict Individual Games");
                 var input = GetInput();
 
-                if (!input.Equals("1") && !input.Equals("2") && !input.Equals("3"))
+                if (!input.Equals("1") && !input.Equals("2") && !input.Equals("3") && !input.Equals("4"))
                     Console.WriteLine("Invalid input");
                 else
                     return input;
@@ -101,22 +100,20 @@ namespace CFBPoll.Data.Modules
         /// <returns>The user input</returns>
         private string GetTeam(string roadHome)
         {
-            Console.WriteLine();
-            Console.WriteLine("Enter the " + roadHome + " team");
+            Console.WriteLine("\nEnter the " + roadHome + " team");
             return GetInput();
         }
 
         /// <summary>
         /// Gets the user input for the week of the season to run the program
         /// </summary>
-        /// <returns>The string week entered by the user</returns>
-        public string GetWeek(int season)
+        /// <returns>The week entered by the user</returns>
+        public int GetWeek(int season)
         {
-            Console.WriteLine();
-            Console.WriteLine("Select a Week:");
+            Console.WriteLine("\nSelect a Week:");
             DisplayAvailableWeeks(season);
             Console.WriteLine();
-            return GetInput();
+            return int.TryParse(GetInput(), out var week) ? week : 0;
         }
 
         /// <summary>
@@ -127,8 +124,7 @@ namespace CFBPoll.Data.Modules
         {
             while (true)
             {
-                Console.WriteLine();
-                Console.WriteLine("Predict Again? (Y/N)");
+                Console.WriteLine("\nPredict Again? (Y/N)");
                 var input = GetInput();
                 if (input.Equals("Y", _scoic))
                     return true;
@@ -208,7 +204,7 @@ namespace CFBPoll.Data.Modules
             foreach (var dir in dirs)
             {
                 //Get rid of the file path in the string, substring off part of the file name to the end of it, then get rid of the file extension
-                weeks.Add(dir.Replace(newFilePath, "")[7..].Replace(".xlsx", ""));
+                weeks.Add(dir.Replace(newFilePath, "").Substring(7,2));
             }
             //Print the options
             PrintUserOptions(weeks);

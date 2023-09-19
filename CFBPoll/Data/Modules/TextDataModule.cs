@@ -1,5 +1,6 @@
 ﻿using CFBPoll.Utilities;
 using CFBPollDTOs;
+using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
 using System.Text;
@@ -9,6 +10,7 @@ namespace CFBPoll.Data.Modules
     public class TextDataModule
     {
         private readonly NameCorrector _nameCorrector;
+        private readonly StringComparison _scoic = StringComparison.OrdinalIgnoreCase;
         private readonly string _teamsPath;
         private readonly string _txtPollFilePath;
         private readonly string _txtPredictionsFilePath;
@@ -108,11 +110,16 @@ namespace CFBPoll.Data.Modules
         /// Prints the predictions to a txt file with table formatting
         /// </summary>
         /// <param name="predictions">The predictions to print</param>
-        public void PrintPredictionsTable(IEnumerable<Game> predictions)
+        /// <param name="filePath">Optional parameter for the file path to print the predictions in</param>
+        public void PrintPredictionsTable(IEnumerable<Game> predictions, string filePath = "")
         {
+            //If the file path for printing the table isn't provided then use the default location
+            if (string.IsNullOrEmpty(filePath))
+                filePath = _txtPredictionsFilePath;
+
             //Delete output file if it exists
-            if (File.Exists(_txtPredictionsFilePath))
-                File.Delete(_txtPredictionsFilePath);
+            if (File.Exists(filePath))
+                File.Delete(filePath);
 
             //Table header
             var txt = new StringBuilder();
