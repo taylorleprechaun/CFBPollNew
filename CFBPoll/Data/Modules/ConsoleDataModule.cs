@@ -67,7 +67,7 @@ namespace CFBPoll.Data.Modules
                 Console.WriteLine("\nPlease enter the number for what you would like to run:");
                 Console.WriteLine("1 - Run Poll");
                 Console.WriteLine("2 - Run Predictions");
-                Console.WriteLine("3 - Calculate Prediction Results");
+                Console.WriteLine("3 - Run Previous Week Prediction Results");
                 Console.WriteLine("4 - Predict Individual Games");
                 var input = GetInput();
 

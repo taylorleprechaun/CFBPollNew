@@ -13,6 +13,7 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 ### Recent changes
 
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
+* 9/23/2023: Automate game prediction results
 
 ### Rankings (Updated 9/17/2023)
 
@@ -72,19 +73,17 @@ Season Results:
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
  
-### TODO List (Updated 1/10/2023)
+### TODO List (Updated 9/23/2023)
 
-1. Automate results of weekly predictions (this is even more important now that I've done a full season of updating this manually lol). This step includes getting betting data from some source online
+1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. After the 2022 season (where I ran it for every game for the first time) I noticed some trends/patterns in the predictions which has given me some ideas to improve it.
 
-2. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. After the 2022 season (where I ran it for every game for the first time) I noticed some trends/patterns in the predictions which has given me some ideas to improve it.
+2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
 
-3. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
-
-4. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
+3. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
 	
-5. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
+4. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
 
-6. ????
+5. ????
 
 ### Misc.
 

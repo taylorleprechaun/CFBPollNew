@@ -49,13 +49,9 @@ do
             excelDataModule.PrintPredictionDetails(predictions);
             break;
         case "3":
-            //Calculate Prediction Results
-            var predictionSeason = consoleDataModule.GetSeason();
-            var predictionWeek = consoleDataModule.GetWeek(predictionSeason);
-            //TODO: This part
-            //Load previous prediction info from file
-            //Use API to get betting info from the games and compare
-            //Output to file
+            //Get the predictions we made the previous week and print them
+            var predictedGames = textDataModule.GetPredictions(season, week - 1);
+            textDataModule.PrintPredictionsResultsTable(predictedGames, teams, season);
             break;
         case "4":
             //Specific Predictions
