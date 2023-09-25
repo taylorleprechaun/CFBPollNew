@@ -50,7 +50,7 @@ do
             break;
         case "3":
             //Get the predictions we made the previous week and print them
-            var predictedGames = textDataModule.GetPredictions(season, week - 1);
+            var predictedGames = textDataModule.GetPredictions(season, week);
             textDataModule.PrintPredictionsResultsTable(predictedGames, teams, season);
             break;
         case "4":
