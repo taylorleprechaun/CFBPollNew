@@ -77,12 +77,16 @@ namespace CFBPoll.Utilities
                 nameToFix = "Florida International";
             if (nameToFix.Equals("Hawaii", _scoic))
                 nameToFix = "Hawai'i";
+            if (nameToFix.Equals("Louisiana-Monroe", _scoic))
+                nameToFix = "Louisiana Monroe"; 
             if (nameToFix.Equals("Louisiana State", _scoic))
                 nameToFix = "LSU";
             if (nameToFix.Equals("Massachusetts", _scoic))
                 nameToFix = "UMass"; 
             if (nameToFix.Equals("Miami FL", _scoic))
-                nameToFix = "Miami"; 
+                nameToFix = "Miami";
+            if (nameToFix.Equals("Miami OH", _scoic))
+                nameToFix = "Miami (OH)";
             if (nameToFix.Equals("MTSU", _scoic))
                 nameToFix = "Middle Tennessee"; 
             if (nameToFix.Equals("Mississippi", _scoic))
