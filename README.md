@@ -15,58 +15,61 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 10/08/2023)
+### Rankings (Updated 10/15/2023)
 
-**Week 7 Rankings**
+**Week 8 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Ohio State | 1.0000 | 5-0
-2 | Penn State | 0.9721 | 5-0
-3 | Louisville | 0.9629 | 6-0
-4 | Oklahoma | 0.9627 | 6-0
-5 | Michigan | 0.9254 | 6-0
-6 | Texas | 0.9239 | 5-1
-7 | North Carolina | 0.9173 | 5-0
-8 | Washington | 0.9126 | 5-0
-9 | Georgia | 0.9093 | 6-0
-10 | Florida State | 0.9054 | 5-0
-11 | Oregon | 0.8973 | 5-0
-12 | Washington State | 0.8925 | 4-1
-13 | Mississippi | 0.8905 | 5-1
-14 | UCLA | 0.8811 | 4-1
-15 | James Madison | 0.8740 | 5-0
-16 | Utah | 0.8735 | 4-1
-17 | Alabama | 0.8711 | 5-1
-18 | Wyoming | 0.8635 | 5-1
-19 | Oregon State | 0.8561 | 5-1
-20 | Notre Dame | 0.8492 | 5-2
-21 | USC | 0.8395 | 6-0
-22 | Wisconsin | 0.8383 | 4-1
-23 | Miami FL | 0.8354 | 4-1
-24 | Duke | 0.8349 | 4-1
-25 | Iowa | 0.8333 | 5-1
+1 | Oklahoma | 1.0000 | 6-0
+2 | Ohio State | 0.9929 | 6-0
+3 | Penn State | 0.9666 | 6-0
+4 | Florida State | 0.9663 | 6-0
+5 | Washington | 0.9650 | 6-0
+6 | Michigan | 0.9637 | 7-0
+7 | North Carolina | 0.9624 | 6-0
+8 | Texas | 0.9473 | 5-1
+9 | Mississippi | 0.9299 | 5-1
+10 | James Madison | 0.9272 | 6-0
+11 | Utah | 0.9140 | 5-1
+12 | Oregon State | 0.9104 | 6-1
+13 | Air Force | 0.9015 | 6-0
+14 | Georgia | 0.9009 | 7-0
+15 | Duke | 0.8991 | 5-1
+16 | Notre Dame | 0.8976 | 6-2
+17 | Missouri | 0.8968 | 6-1
+18 | Louisville | 0.8956 | 6-1
+19 | Alabama | 0.8864 | 6-1
+20 | Iowa | 0.8805 | 6-1
+21 | Oregon | 0.8700 | 5-1
+22 | Louisiana State | 0.8674 | 5-2
+23 | Liberty | 0.8645 | 6-0
+24 | UCLA | 0.8551 | 4-2
+25 | Tulane | 0.8507 | 5-1
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2007.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2008.md)
 
-#### Observations and Notes (Updated 9/17/2023)
+#### Observations and Notes (Updated 10/15/2023)
 
-* Things are slowly coming together nicely
-* Go Gata!
+* Something I decided when making the rating algorithm for this computer poll was the importance of winning your games. Not every team has a premier schedule but they should at least be rewarded for winning the games they play. I stand by that decision but I always kind of disliked looking at the results and seeing some teams ranked so highly just because they're X-0/X-1. James Madison is 10th but they probably shouldn't be (sorry to any fans of them reading this). Just another something for me to think about in the offseason to adjust for the next season.
+* I'm surprised Georgia is as low as they are. Early in the season they were being supported by previous season adjustments but those diminish linearly over the first half of the season and after Week 5 (where they were 1st) they've dropped off pretty hard and fast. Looking at some of the metrics used in the rating algorithm and a couple of things stand out.
+    1) Their strength of schedule is abysmal (Raw #127, Weighted #124) which is definitely holding them back.
+	2) The top seven teams are all rated really, really highly... It's kind of weird. In the BOAT and WOAT section of this page I mention that the rating of elite teams is around 40+ and wouldn't you know all of the top seven teams are rated 40+. It's early in the season still so that's super unlikely to persist but that's another thing pushing them down.
+* The Louisville-Notre Dame-Duke chain is kind of funny to look at since it's *backwards* in this poll vs the real-life results. I've mentioned a few times long ago how I wanted to use head-to-head more in the rating algorithm but that was difficult with the way everything else in here is set up. Not likely to consider changing this going forward but it's just amusing to look at since this happens year after year.
 
-#### Predictions (Updated 10/08/2023)
+#### Predictions (Updated 10/15/2023)
 
-Week 07 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2007.md)
+Week 08 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2008.md)
 
-Week 06 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2006.md):
-* Winner: 30 - 19
-* ATS: 27 - 22
-* O/U: 20 - 29
+Week 07 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2007.md):
+* Winner: 30 - 25
+* ATS: 18 - 37 (yikes)
+* O/U: 29 - 26
 
 Season Results:
-* Winner: 194 - 74 (72.4%)
-* ATS: 138 - 130 (51.5%)
-* O/U: 136 - 132 (50.8%)
+* Winner: 224 - 99 (69.4%)
+* ATS: 156 - 167 (48.3%)
+* O/U: 165 - 158 (51.1%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
