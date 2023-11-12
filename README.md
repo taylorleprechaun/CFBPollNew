@@ -15,57 +15,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 11/05/2023)
+### Rankings (Updated 11/12/2023)
 
-**Week 11 Rankings**
+**Week 12 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Ohio State | 1.0000 | 9-0
-2 | Texas | 0.9573 | 8-1
-3 | Florida State | 0.9565 | 9-0
-4 | Michigan | 0.9553 | 9-0
-5 | Washington | 0.9539 | 9-0
-6 | Georgia | 0.9485 | 9-0
-7 | Mississippi | 0.9437 | 8-1
-8 | Penn State | 0.9436 | 8-1
-9 | Alabama | 0.9401 | 8-1
-10 | James Madison | 0.9344 | 9-0
-11 | Louisville | 0.9268 | 8-1
-12 | Oregon | 0.9093 | 8-1
-13 | Liberty | 0.8868 | 9-0
-14 | Oklahoma | 0.8816 | 7-2
-15 | Kansas | 0.8760 | 7-2
-16 | Missouri | 0.8733 | 7-2
-17 | Utah | 0.8665 | 7-2
-18 | Oklahoma State | 0.8616 | 7-2
-19 | Troy | 0.8559 | 7-2
-20 | Tulane | 0.8533 | 8-1
-21 | Louisiana State | 0.8527 | 6-3
-22 | Oregon State | 0.8475 | 7-2
-23 | Notre Dame | 0.8442 | 7-3
-24 | Tennessee | 0.8407 | 7-2
+1 | Ohio State | 1.0000 | 10-0
+2 | Michigan | 0.9906 | 10-0
+3 | Washington | 0.9887 | 10-0
+4 | Georgia | 0.9887 | 10-0
+5 | Florida State | 0.9866 | 10-0
+6 | Alabama | 0.9647 | 9-1
+7 | Texas | 0.9607 | 9-1
+8 | Oregon | 0.9441 | 9-1
+9 | Penn State | 0.9349 | 8-2
+10 | James Madison | 0.9306 | 10-0
+11 | Mississippi | 0.9304 | 8-2
+12 | Louisville | 0.9239 | 9-1
+13 | Missouri | 0.9167 | 8-2
+14 | Oklahoma | 0.9112 | 8-2
+15 | Liberty | 0.9061 | 10-0
+16 | Louisiana State | 0.8820 | 7-3
+17 | Tulane | 0.8718 | 9-1
+18 | Iowa | 0.8664 | 8-2
+19 | Oregon State | 0.8623 | 8-2
+20 | Utah | 0.8587 | 7-3
+21 | Kansas State | 0.8582 | 7-3
+22 | Troy | 0.8573 | 8-2
+23 | North Carolina | 0.8561 | 8-2
+24 | Notre Dame | 0.8546 | 7-3
+25 | Kansas | 0.8444 | 7-3
 
-
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2011.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2012.md)
 
 #### Observations and Notes (Updated 10/30/2023)
 
 * Go Gata!
 
-#### Predictions (Updated 11/05/2023)
+#### Predictions (Updated 11/12/2023)
 
-Week 11 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2011.md)
+Week 12 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2012.md)
 
-Week 10 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2010.md):
-* Winner: 40 - 22 (64.5%)
-* ATS: 31 - 31 (50.0%)
-* O/U: 26 - 36 (41.9%)
+Week 11 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2011.md):
+* Winner: 45 - 19 (70.3%)
+* ATS: 28 - 36 (43.8%)
+* O/U: 34 - 30 (53.1%)
 
 Season Results:
-* Winner: 336 - 157 (68.2%)
-* ATS: 245 - 248 (49.7%)
-* O/U: 235 - 258 (47.7%)
+* Winner: 381 - 176 (68.4)
+* ATS: 273 - 284 (49.0%)
+* O/U: 269 - 288 (48.3%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
