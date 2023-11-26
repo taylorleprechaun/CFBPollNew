@@ -1,7 +1,6 @@
 ﻿using CFBPoll.Calculations.Factories;
 using CFBPoll.Data.Modules;
 using CFBPoll.Utilities;
-using CFBPollDTOs;
 using Microsoft.Extensions.Configuration;
 
 //Set up application settings config

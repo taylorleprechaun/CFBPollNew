@@ -15,57 +15,68 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 11/19/2023)
+### Rankings (Updated 11/26/2023)
 
-**Week 13 Rankings**
+**Week 14 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Georgia | 1.0000 | 11-0
-2 | Ohio State | 0.9975 | 11-0
-3 | Washington | 0.9961 | 11-0
-4 | Michigan | 0.9849 | 11-0
-5 | Florida State | 0.9814 | 11-0
-6 | Alabama | 0.9801 | 10-1
-7 | Texas | 0.9671 | 10-1
-8 | Penn State | 0.9424 | 9-2
-9 | Oregon | 0.9351 | 10-1
-10 | Louisville | 0.9325 | 10-1
-11 | Mississippi | 0.9317 | 9-2
-12 | Missouri | 0.9254 | 9-2
-13 | Oklahoma | 0.9134 | 9-2
-14 | Liberty | 0.9052 | 11-0
-15 | Louisiana State | 0.9012 | 8-3
-16 | James Madison | 0.8865 | 10-1
-17 | Kansas State | 0.8792 | 8-3
-18 | Tulane | 0.8742 | 10-1
-19 | Iowa | 0.8687 | 9-2
-20 | Troy | 0.8605 | 9-2
-21 | Notre Dame | 0.8601 | 8-3
-22 | Oregon State | 0.8501 | 8-3
-23 | Toledo | 0.8438 | 10-1
-24 | Arizona | 0.8407 | 8-3
-25 | UNLV | 0.8364 | 9-2
+1 | Michigan | 1.0000 | 12-0
+2 | Washington | 0.9980 | 12-0
+3 | Georgia | 0.9979 | 12-0
+4 | Florida State | 0.9853 | 12-0
+5 | Alabama | 0.9841 | 11-1
+6 | Texas | 0.9736 | 11-1
+7 | Ohio State | 0.9730 | 11-1
+8 | Oregon | 0.9511 | 11-1
+9 | Penn State | 0.9396 | 10-2
+10 | Mississippi | 0.9282 | 10-2
+11 | Oklahoma | 0.9244 | 10-2
+12 | Missouri | 0.9229 | 10-2
+13 | Louisiana State | 0.9087 | 9-3
+14 | James Madison | 0.9037 | 11-1
+15 | Liberty | 0.9028 | 12-0
+16 | Louisville | 0.8939 | 10-2
+17 | Tulane | 0.8924 | 11-1
+18 | Iowa | 0.8784 | 10-2
+19 | North Carolina State | 0.8608 | 9-3
+20 | Troy | 0.8550 | 10-2
+21 | Notre Dame | 0.8549 | 9-3
+22 | Toledo | 0.8491 | 11-1
+23 | Kansas State | 0.8464 | 8-4
+24 | Oklahoma State | 0.8449 | 9-3
+25 | Arizona | 0.8387 | 9-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2013.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014.md)
 
-#### Observations and Notes (Updated 10/30/2023)
+#### Observations and Notes (Updated 11/26/2023)
 
-* Go Gata!
+* As with previous years I ran some CCG scenarios by plugging in some dummy scores and simulating all the combinations of power conference championship game winners (since those were the only results that affected the top of the poll). You can see a table of the results below. The gist of it is that 5 teams control their own destiny (Georgia, Washington, Michigan, Florida State, Alabama) and 3 need help (Texas, Ohio State, Oregon). For the full output refer to: [combinations](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014%20Scenarios.xlsx)
 
-#### Predictions (Updated 11/19/2023)
+Team | In | Out
+---|---|---
+Georgia | 24 | 8
+Washington | 20 | 12
+Michigan | 17 | 15
+Florida State | 16 | 16
+Alabama | 16 | 16
+Texas | 14 | 18
+Ohio State | 13 | 19
+Oregon | 8 | 24
 
-Week 13 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2013.md)
+#### Predictions (Updated 11/26/2023)
 
-Week 12 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2012.md):
-* Winner: 49 - 15 (76.6%)
-* ATS: 32 - 32 (50.0%)
-* O/U: 34 - 30 (53.1%)
+Week 14 Predictions (plus Army-Navy, minus MWC CCG): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
+
+Week 13 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2013.md):
+* Winner: 51 - 14 (78.5%)
+* ATS: 33 - 32 (50.8%)
+* O/U: 32 - 33 (49.2%)
 
 Season Results:
-* Winner: 430 - 191 (69.2%)
-* ATS: 305 - 316 (49.1%)
-* O/U: 303 - 318 (48.8%)
+* Winner: 481 - 205 (70.1%)
+* ATS: 338 - 348 (49.3%)
+* O/U: 335 - 351 (48.8%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
