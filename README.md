@@ -64,9 +64,9 @@ Texas | 14 | 18
 Ohio State | 13 | 19
 Oregon | 8 | 24
 
-#### Predictions (Updated 11/26/2023)
+#### Predictions (Updated 11/27/2023)
 
-Week 14 Predictions (plus Army-Navy, minus MWC CCG): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
+Week 14 Predictions (updated for MWC) (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
 
 Week 13 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2013.md):
 * Winner: 51 - 14 (78.5%)
