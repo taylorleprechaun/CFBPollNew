@@ -15,68 +15,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 11/26/2023)
+### Rankings (Updated 12/23/2023)
 
-**Week 14 Rankings**
+**Week 15 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Michigan | 1.0000 | 12-0
-2 | Washington | 0.9980 | 12-0
-3 | Georgia | 0.9979 | 12-0
-4 | Florida State | 0.9853 | 12-0
-5 | Alabama | 0.9841 | 11-1
-6 | Texas | 0.9736 | 11-1
-7 | Ohio State | 0.9730 | 11-1
-8 | Oregon | 0.9511 | 11-1
-9 | Penn State | 0.9396 | 10-2
-10 | Mississippi | 0.9282 | 10-2
-11 | Oklahoma | 0.9244 | 10-2
-12 | Missouri | 0.9229 | 10-2
-13 | Louisiana State | 0.9087 | 9-3
-14 | James Madison | 0.9037 | 11-1
-15 | Liberty | 0.9028 | 12-0
-16 | Louisville | 0.8939 | 10-2
-17 | Tulane | 0.8924 | 11-1
-18 | Iowa | 0.8784 | 10-2
-19 | North Carolina State | 0.8608 | 9-3
-20 | Troy | 0.8550 | 10-2
-21 | Notre Dame | 0.8549 | 9-3
-22 | Toledo | 0.8491 | 11-1
-23 | Kansas State | 0.8464 | 8-4
-24 | Oklahoma State | 0.8449 | 9-3
-25 | Arizona | 0.8387 | 9-3
+1 | Washington | 1.0000 | 13-0
+2 | Michigan | 0.9972 | 13-0
+3 | Alabama | 0.9926 | 12-1
+4 | Florida State | 0.9860 | 13-0
+5 | Texas | 0.9742 | 12-1
+6 | Ohio State | 0.9632 | 11-1
+7 | Georgia | 0.9605 | 12-1
+8 | Penn State | 0.9288 | 10-2
+9 | Oregon | 0.9225 | 11-2
+10 | Mississippi | 0.9165 | 10-2
+11 | Oklahoma | 0.9162 | 10-2
+12 | Missouri | 0.9103 | 10-2
+13 | Liberty | 0.9032 | 13-0
+14 | Louisiana State | 0.9020 | 9-3
+15 | James Madison | 0.8930 | 11-1
+16 | Louisville | 0.8673 | 10-3
+17 | Tulane | 0.8581 | 11-2
+18 | Troy | 0.8565 | 11-2
+19 | Iowa | 0.8504 | 10-3
+20 | North Carolina State | 0.8490 | 9-3
+21 | Notre Dame | 0.8436 | 9-3
+22 | SMU | 0.8434 | 11-2
+23 | Kansas State | 0.8383 | 8-4
+24 | Arizona | 0.8308 | 9-3
+25 | Clemson | 0.8273 | 8-4
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2015%20CCG.md)
 
-#### Observations and Notes (Updated 11/26/2023)
+#### Observations and Notes (Updated 12/3/2023)
 
-* As with previous years I ran some CCG scenarios by plugging in some dummy scores and simulating all the combinations of power conference championship game winners (since those were the only results that affected the top of the poll). You can see a table of the results below. The gist of it is that 5 teams control their own destiny (Georgia, Washington, Michigan, Florida State, Alabama) and 3 need help (Texas, Ohio State, Oregon). For the full output refer to: [combinations](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014%20Scenarios.xlsx)
+* Just I previewed in the [scenarios](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014%20Scenarios.xlsx) from last week, with the teams that won the top four shakes out to be: Washington, Michigan, Alabama, and Florida State. Looking at the rating calculations the reason mostly comes down to strength of schedule. Alabama's raw SOS is 8th and weighted SOS is 5th, Texas' are 29th and 21st, and no one else in the top 10 is in the top 30 for either metric. For my own personal rankings, I went with Michigan, Washington, Texas, and Florida State. Even as a certified hater I can't leave out an undefeated Power conference team from the playoff despite them playing like dog water without their starting QB.
 
-Team | In | Out
----|---|---
-Georgia | 24 | 8
-Washington | 20 | 12
-Michigan | 17 | 15
-Florida State | 16 | 16
-Alabama | 16 | 16
-Texas | 14 | 18
-Ohio State | 13 | 19
-Oregon | 8 | 24
+#### Predictions (Updated 12/3/2023)
 
-#### Predictions (Updated 11/27/2023)
+Week 14 Predictions (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
 
-Week 14 Predictions (updated for MWC) (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
-
-Week 13 Results [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2013.md):
-* Winner: 51 - 14 (78.5%)
-* ATS: 33 - 32 (50.8%)
-* O/U: 32 - 33 (49.2%)
+Week 14 Results (minus Army-Navy) [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md):
+* Winner: 6 - 4 (60.0%)
+* ATS: 7 - 3 (70.0%)
+* O/U: 3 - 7 (30.0%)
 
 Season Results:
-* Winner: 481 - 205 (70.1%)
-* ATS: 338 - 348 (49.3%)
-* O/U: 335 - 351 (48.8%)
+* Winner: 487 - 209 (70.0%)
+* ATS: 345 - 351 (49.6%)
+* O/U: 338 - 358 (48.6%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
