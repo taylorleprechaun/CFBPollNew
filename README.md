@@ -15,7 +15,7 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 12/23/2023)
+### Rankings (Updated 12/3/2023)
 
 **Week 15 Rankings**
 
@@ -53,11 +53,11 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * Just I previewed in the [scenarios](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014%20Scenarios.xlsx) from last week, with the teams that won the top four shakes out to be: Washington, Michigan, Alabama, and Florida State. Looking at the rating calculations the reason mostly comes down to strength of schedule. Alabama's raw SOS is 8th and weighted SOS is 5th, Texas' are 29th and 21st, and no one else in the top 10 is in the top 30 for either metric. For my own personal rankings, I went with Michigan, Washington, Texas, and Florida State. Even as a certified hater I can't leave out an undefeated Power conference team from the playoff despite them playing like dog water without their starting QB.
 
-#### Predictions (Updated 12/3/2023)
+#### Predictions (Updated 12/5/2023)
 
-Week 14 Predictions (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md)
+Bowl Predictions (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2015%20Bowls.md)
 
-Week 14 Results (minus Army-Navy) [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014.md):
+Week 14 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014%20CCG.md):
 * Winner: 6 - 4 (60.0%)
 * ATS: 7 - 3 (70.0%)
 * O/U: 3 - 7 (30.0%)

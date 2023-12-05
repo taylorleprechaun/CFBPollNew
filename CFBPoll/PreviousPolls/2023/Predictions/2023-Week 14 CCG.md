@@ -2,7 +2,6 @@ Home - Away | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | 
 --- | --- | --- | --- | --- | --- | --- | ---
 Alabama - Georgia | 24 - 27 | 27 - 24 | Georgia ❌ | Georgia -5.5 | Alabama ✔ | 52.5 | Under ✔
 Troy - Appalachian State | 31 - 24 | 49 - 23 | Troy ✔ | Troy -5.5 | Troy ✔ | 53 | Over ✔
-Navy - Army | 15 - 17 |  | Army |  |  |  | 
 UNLV - Boise State | 33 - 29 | 20 - 44 | UNLV ❌ | Boise State -2.5 | UNLV ❌ | 62 | Push ❌
 Florida State - Louisville | 29 - 23 | 16 - 6 | Florida State ✔ | Louisville -1.5 | Florida State ✔ | 45.5 | Over ❌
 Iowa - Michigan | 9 - 26 | 0 - 26 | Michigan ✔ | Michigan -21 | Iowa ❌ | 36 | Under ✔
