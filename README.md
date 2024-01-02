@@ -15,66 +15,66 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 12/3/2023)
+### Rankings (Updated 1/2/2024)
 
-**Week 15 Rankings**
+**Week 16 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Washington | 1.0000 | 13-0
-2 | Michigan | 0.9972 | 13-0
-3 | Alabama | 0.9926 | 12-1
-4 | Florida State | 0.9860 | 13-0
-5 | Texas | 0.9742 | 12-1
-6 | Ohio State | 0.9632 | 11-1
-7 | Georgia | 0.9605 | 12-1
-8 | Penn State | 0.9288 | 10-2
-9 | Oregon | 0.9225 | 11-2
-10 | Mississippi | 0.9165 | 10-2
-11 | Oklahoma | 0.9162 | 10-2
-12 | Missouri | 0.9103 | 10-2
-13 | Liberty | 0.9032 | 13-0
-14 | Louisiana State | 0.9020 | 9-3
-15 | James Madison | 0.8930 | 11-1
-16 | Louisville | 0.8673 | 10-3
-17 | Tulane | 0.8581 | 11-2
-18 | Troy | 0.8565 | 11-2
-19 | Iowa | 0.8504 | 10-3
-20 | North Carolina State | 0.8490 | 9-3
-21 | Notre Dame | 0.8436 | 9-3
-22 | SMU | 0.8434 | 11-2
-23 | Kansas State | 0.8383 | 8-4
-24 | Arizona | 0.8308 | 9-3
-25 | Clemson | 0.8273 | 8-4
+1 | Washington | 1.0000 | 14-0
+2 | Michigan | 0.9942 | 14-0
+3 | Georgia | 0.9703 | 13-1
+4 | Alabama | 0.9576 | 12-2
+5 | Florida State | 0.9494 | 13-1
+6 | Texas | 0.9401 | 12-2
+7 | Oregon | 0.9331 | 12-2
+8 | Ohio State | 0.9268 | 11-2
+9 | Missouri | 0.9251 | 11-2
+10 | Mississippi | 0.9187 | 11-2
+11 | Penn State | 0.8935 | 10-3
+12 | Louisiana State | 0.8929 | 10-3
+13 | Oklahoma | 0.8690 | 10-3
+14 | Liberty | 0.8639 | 13-1
+15 | Arizona | 0.8471 | 10-3
+16 | James Madison | 0.8460 | 11-2
+17 | Notre Dame | 0.8453 | 10-3
+18 | Kansas State | 0.8443 | 9-4
+19 | Louisville | 0.8271 | 10-4
+20 | Tennessee | 0.8271 | 9-4
+21 | Clemson | 0.8247 | 9-4
+22 | Troy | 0.8210 | 11-3
+23 | Oklahoma State | 0.8194 | 10-4
+24 | Memphis | 0.8170 | 10-3
+25 | Tulane | 0.8157 | 11-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2015%20CCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2016%20Bowls.md)
 
-#### Observations and Notes (Updated 12/3/2023)
+#### Observations and Notes (Updated 1/2/2024)
 
-* Just I previewed in the [scenarios](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2014%20Scenarios.xlsx) from last week, with the teams that won the top four shakes out to be: Washington, Michigan, Alabama, and Florida State. Looking at the rating calculations the reason mostly comes down to strength of schedule. Alabama's raw SOS is 8th and weighted SOS is 5th, Texas' are 29th and 21st, and no one else in the top 10 is in the top 30 for either metric. For my own personal rankings, I went with Michigan, Washington, Texas, and Florida State. Even as a certified hater I can't leave out an undefeated Power conference team from the playoff despite them playing like dog water without their starting QB.
+* Hoping for a good championship game
 
-#### Predictions (Updated 12/5/2023)
+#### Predictions (Updated 1/2/2024)
 
-Bowl Predictions (plus Army-Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2015%20Bowls.md)
+National Championship Prediction: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2016%20NCG.md)
 
-Week 14 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2014%20CCG.md):
-* Winner: 6 - 4 (60.0%)
-* ATS: 7 - 3 (70.0%)
-* O/U: 3 - 7 (30.0%)
+Bowl Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2015%20Bowls.md):
+* Winner: 19 - 23 (45.2%)
+* ATS: 19 - 23 (45.2%)
+* O/U: 27 - 15 (64.3%)
 
 Season Results:
-* Winner: 487 - 209 (70.0%)
-* ATS: 345 - 351 (49.6%)
-* O/U: 338 - 358 (48.6%)
+* Winner: 506 - 232 (68.6%)
+* ATS: 364 - 374 (49.3%)
+* O/U: 365 - 373 (49.5%)
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
  
-### TODO List (Updated 9/23/2023)
+### TODO List (Updated 12/5/2023)
 
-1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. After the 2022 season (where I ran it for every game for the first time) I noticed some trends/patterns in the predictions which has given me some ideas to improve it.
+1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. I found a [site](https://www.thepredictiontracker.com/ncaaresults.php) posted on r/CFB with the results of a bunch of predictive algorithms so I'll definitely use this as some benchmarks when updating my algorithm. As of writing this my outright picks are on the low end, my ATS picks are middle of the pack, and my RMSE is really really bad lol.
 
 2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
 
