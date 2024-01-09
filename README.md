@@ -15,63 +15,71 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
 * 9/23/2023: Automate game prediction results
 
-### Rankings (Updated 1/2/2024)
+### Rankings (Updated 1/9/2024)
 
-**Week 16 Rankings**
+**Week 17 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Washington | 1.0000 | 14-0
-2 | Michigan | 0.9942 | 14-0
-3 | Georgia | 0.9703 | 13-1
-4 | Alabama | 0.9576 | 12-2
-5 | Florida State | 0.9494 | 13-1
-6 | Texas | 0.9401 | 12-2
-7 | Oregon | 0.9331 | 12-2
-8 | Ohio State | 0.9268 | 11-2
-9 | Missouri | 0.9251 | 11-2
-10 | Mississippi | 0.9187 | 11-2
-11 | Penn State | 0.8935 | 10-3
-12 | Louisiana State | 0.8929 | 10-3
-13 | Oklahoma | 0.8690 | 10-3
-14 | Liberty | 0.8639 | 13-1
-15 | Arizona | 0.8471 | 10-3
-16 | James Madison | 0.8460 | 11-2
-17 | Notre Dame | 0.8453 | 10-3
-18 | Kansas State | 0.8443 | 9-4
-19 | Louisville | 0.8271 | 10-4
-20 | Tennessee | 0.8271 | 9-4
-21 | Clemson | 0.8247 | 9-4
-22 | Troy | 0.8210 | 11-3
-23 | Oklahoma State | 0.8194 | 10-4
-24 | Memphis | 0.8170 | 10-3
-25 | Tulane | 0.8157 | 11-3
+1 | Michigan | 1.0000 | 15-0
+2 | Washington | 0.9663 | 14-1
+3 | Georgia | 0.9595 | 13-1
+4 | Alabama | 0.9486 | 12-2
+5 | Florida State | 0.9388 | 13-1
+6 | Texas | 0.9287 | 12-2
+7 | Oregon | 0.9203 | 12-2
+8 | Ohio State | 0.9188 | 11-2
+9 | Missouri | 0.9148 | 11-2
+10 | Mississippi | 0.9085 | 11-2
+11 | Penn State | 0.8859 | 10-3
+12 | Louisiana State | 0.8830 | 10-3
+13 | Oklahoma | 0.8590 | 10-3
+14 | Liberty | 0.8541 | 13-1
+15 | James Madison | 0.8365 | 11-2
+16 | Arizona | 0.8362 | 10-3
+17 | Notre Dame | 0.8357 | 10-3
+18 | Kansas State | 0.8348 | 9-4
+19 | Tennessee | 0.8179 | 9-4
+20 | Louisville | 0.8178 | 10-4
+21 | Clemson | 0.8155 | 9-4
+22 | Troy | 0.8118 | 11-3
+23 | Oklahoma State | 0.8101 | 10-4
+24 | Memphis | 0.8078 | 10-3
+25 | Tulane | 0.8065 | 11-3
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2016%20Bowls.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2017%20NCG.md)
 
-#### Observations and Notes (Updated 1/2/2024)
+#### Observations and Notes (Updated 1/9/2024)
 
-* Hoping for a good championship game
+* Another season in the wraps has given me a number of things I want to update in both the rating and prediction algorithms. I have some good ideas for both I'm excited to try out (if I can ever get a good chunk of free time to mess with)
 
-#### Predictions (Updated 1/2/2024)
+#### Predictions (Updated 1/9/2024)
 
-National Championship Prediction: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2016%20NCG.md)
-
-Bowl Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2015%20Bowls.md):
-* Winner: 19 - 23 (45.2%)
-* ATS: 19 - 23 (45.2%)
-* O/U: 27 - 15 (64.3%)
+National Championship Result: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2016%20NCG.md):
+* Winner: 1 - 0 (100.0%)
+* ATS: 1 - 0 (100.0%)
+* O/U: 1 - 0 (100.0%)
 
 Season Results:
-* Winner: 506 - 232 (68.6%)
-* ATS: 364 - 374 (49.3%)
-* O/U: 365 - 373 (49.5%)
+* Winner: 507 - 232 (68.6%)
+* ATS: 365 - 374 (49.4%)
+* O/U: 366 - 373 (49.5%)
+
+Retrospective:
+* Two seasons in the books on my predictions algorithm running for the full season. In between the 2022 and 2023 seasons I made some very very very minor changes to the algorithm but nothing that I would expect to produce meaningful differences in the results. I've identified a number of changes I want to make in it which I hope to get done before next season
+* What went well?
+    * It's automated now (except for the bowl games for some reason) which is fantastic.
+    * Not something that can be seen but the code that runs this is just so much easier to understand than it used to be. The way it was written before was really weird and impossible to understand without some of the giant summary blocks in the code (which is excluded from this repo) and now it's actually super straight forward.
+* What didn't go well?
+    * Even though on the surface the results look fine (68% picks, 49% spread and o/u) the way the results look up close is way off. The score predictions are usually way off the mark giving huge error margins compared to actual results. This is something I have plans to address.
+* Takeaways
+    * A heck of a lot man.
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
- 
+
 ### TODO List (Updated 12/5/2023)
 
 1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. I found a [site](https://www.thepredictiontracker.com/ncaaresults.php) posted on r/CFB with the results of a bunch of predictive algorithms so I'll definitely use this as some benchmarks when updating my algorithm. As of writing this my outright picks are on the low end, my ATS picks are middle of the pack, and my RMSE is really really bad lol.
@@ -93,11 +101,12 @@ My poll, as of this update, has been run across every season from 2000 through 2
 Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them [here]( https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/Resources/BOAT%20and%20WOAT.xlsx).
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
+I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me
 
-*New additions for the 2022 season!*
+*New additions for the 2023 season!*
 
-* This year Georgia clocks in with a 42.124 in my poll, placing them at #3 in the Playoff Era
-* No teams had a rating less than 16.  So no new additions.  The worst team of the season was Massachusetts with a rating of 17.236
+* This year Michigan clocks in with a 42.244 in my poll, placing them at #3 in the Playoff Era
+* This year Kent State clocks in with a 15.812 in my poll, placing them at 11th worst in the Playoff Era
 
 **The top 5 Best of all Time (pre-CFP era)**
 
@@ -115,9 +124,9 @@ Rank | Year | Team | Rating | Record
 ---|---|---|---|---
 1 | 2018 | Clemson | 42.445 | 15-0
 2 | 2019 | LSU | 42.374 | 15-0
-3 | 2022 | Georgia | 42.124 | 15-0
-4 | 2015 | Alabama | 41.615 | 14-1
-5 | 2016 | Alabama | 41.061 | 14-1
+3 | 2022 | Michigan | 42.244 | 15-0
+4 | 2022 | Georgia | 42.124 | 15-0
+5 | 2015 | Alabama | 41.615 | 14-1
 
 **The bottom 5 Worst of all Time**
 
