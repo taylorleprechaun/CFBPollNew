@@ -1,0 +1,11 @@
+﻿@model CFBPollUI.ViewModels.Poll.CFBPollViewModel
+@{
+    ViewData["Title"] = "Poll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var request = Context.Request;
+    var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
+}
+
+<div id="selectionsPartial">
+    @await Html.PartialAsync("_Selections", Model.Selections)
+</div>

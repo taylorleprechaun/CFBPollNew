@@ -1,0 +1,40 @@
+﻿@{
+    var request = Context.Request;
+    var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CFB Poll</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/shared/layout.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CFBPollUI.styles.css" asp-append-version="true" />
+    <script src="@(baseUrl)/js/commonfunctions/ajaxfunctions.js"></script>
+</head>
+<body>
+    @Html.Hidden("BaseURL", baseUrl)
+
+    <header id="headerContainer">
+        @await Html.PartialAsync("_Header")
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footerContainer" class="border-top footer text-muted">
+        @await Html.PartialAsync("_Footer")
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

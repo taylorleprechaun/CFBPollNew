@@ -5,12 +5,12 @@ namespace CFBPoll.Data.Modules
 {
     public class ConsoleDataModule
     {
-        private readonly string _filesPath;
+        private readonly FileSystemDataModule _fileSystemDataModule;
         private readonly StringComparison _scoic = StringComparison.OrdinalIgnoreCase;
 
         public ConsoleDataModule(IConfiguration config)
         {
-            _filesPath = config.GetSection("AppSettings:FilesPath").Value ?? string.Empty;
+            _fileSystemDataModule = new FileSystemDataModule(config);
         }
 
         #region public methods
@@ -155,7 +155,7 @@ namespace CFBPoll.Data.Modules
         /// Prints an enumerable of options for the user formatted in lines of 7 items with a tab character between each
         /// </summary>
         /// <param name="options">The options to print</param>
-        public void PrintUserOptions(IEnumerable<string> options)
+        public void PrintUserOptions(IEnumerable<int> options)
         {
             int printNum = 0;
             foreach (var option in options)
@@ -181,13 +181,7 @@ namespace CFBPoll.Data.Modules
         /// </summary>
         private void DisplayAvailableSeasons()
         {
-            var seasons = new List<string>();
-            string[] dirs = Directory.GetDirectories(_filesPath);
-            foreach (var dir in dirs)
-            {
-                //The add the last 4 characters (the year) of the path to a List
-                seasons.Add(dir[^4..]);
-            }
+            var seasons = _fileSystemDataModule.GetSeasons();
             //Print the options
             PrintUserOptions(seasons);
         }
@@ -198,14 +192,7 @@ namespace CFBPoll.Data.Modules
         /// <param name="season">The season to display the available weeks for</param>
         private void DisplayAvailableWeeks(int season)
         {
-            var weeks = new List<string>();
-            var newFilePath = $"{_filesPath}{season}\\";
-            var dirs = Directory.GetFiles(newFilePath);
-            foreach (var dir in dirs)
-            {
-                //Get rid of the file path in the string, substring off part of the file name to the end of it, then get rid of the file extension
-                weeks.Add(dir.Replace(newFilePath, "").Substring(7,2));
-            }
+            var weeks = _fileSystemDataModule.GetWeeks(season);
             //Print the options
             PrintUserOptions(weeks);
         }

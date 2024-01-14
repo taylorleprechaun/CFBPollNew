@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var request = Context.Request;
+    var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
+}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="~/css/home/socialmedia.css" asp-append-version="true" />
+        <!--Add icon library-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Taylor's College Football Rankings</h1>
+            <p class="lead">Hi I'm Taylor and this is the home for my college football rankings. Both my personal and computer rankings can be found from the header menu.</p>
+            <!--<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>-->
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Me</h2>
+                <p>
+                    If you'd like to learn more about me or follow me on social media please use the links below!
+                </p>
+                <p>
+                    <a class="fa fa-linkedin" href="https://www.linkedin.com/in/taylor-steinberg-a86994111/" target="_blank"></a>
+                    <a class="fa fa-twitter" href="https://twitter.com/TaylorLeprechau" target="_blank"></a>
+                    <a class="fa fa-instagram" href="https://www.instagram.com/taylorleprechaun/" target="_blank"></a>
+                    <a class="fa fa-reddit" href="https://old.reddit.com/user/TaylorLeprechaun/overview" target="_blank"></a>
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h2>Source Code</h2>
+                <p>
+                    Nearly all of the source code for this project can be found on my GitHub page. The rating and prediction algorithms used are secret but the bones for everything else can be found here.
+                </p>
+                <p><a class="socialmediaicons2 fa fa-github" href="https://github.com/taylorleprechaun/CFBPollNew" target="_blank"></a></p>
+            </div>
+        </div>
+    </body>
+</html>

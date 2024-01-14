@@ -1,0 +1,36 @@
+﻿@model CFBPollUI.ViewModels.Poll.SelectionsViewModel
+@{
+    var request = Context.Request;
+    var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
+}
+
+<html>
+    <head>
+        <script src="@(baseUrl)/js/pollfunctions/selections.js"></script>
+        <link rel="stylesheet" href="~/css/poll/selections.css" asp-append-version="true" />
+    </head>
+    <body>
+        <div class="text-left">
+            <div id="selections">
+                <table>
+                    <tr>
+                        <td>
+                            @Html.Label("Season:")
+                        </td>
+                        <td>
+                            @Html.DropDownListFor(s => s.SelectedSeason, Model.Seasons, "Select Season", new { id = "ddlSeasons", onchange = "FillWeeks(this)", @class="selectDropdown" })
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            @Html.Label("Week:")
+                        </td>
+                        <td>
+                            @Html.DropDownListFor(w => w.SelectedWeek, Model.Weeks, "Select Week", new { id = "ddlWeeks", @class="selectDropdown" })
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

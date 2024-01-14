@@ -1,6 +1,7 @@
 CFBPoll_old
 .vs/
 packages/
+
 CFBPoll/appsettings-private.json
 CFBPoll/bin/
 CFBPoll/Calculations/Modules/PredictionModule.cs
@@ -8,5 +9,11 @@ CFBPoll/Calculations/Modules/RatingModule.cs
 CFBPoll/obj/
 CFBPoll/PollOutput/
 CFBPoll/Resources/RankHistory
-CFBPollDTOs/obj/
+
 CFBPollDTOs/bin/
+CFBPollDTOs/obj/
+
+CFBPollUI/bin
+CFBPollUI/obj
+CFBPollUI/wwwroot/lib
+CFBPollUI/appsettings-private.json
