@@ -2,26 +2,25 @@
 {
     public class Season
     {
-        public Statistics DefenseStatistics { get; set; }
         public IEnumerable<Game> Games { get; set; }
-        public Statistics OffenseStatistics { get; set; }
-        public double OpponentStrength { get; set; }
-        public double Rating { get; set; }
-        public double StrengthOfSchedule { get; set; }
-        public double WeightedStrengthOfSchedule { get; set; }
+        public RatingDetails RatingDetails { get; set; }
         public int Year { get; set; }
 
         public Season() { }
 
-        public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double opponentStrength, double rating, double strengthOfSchedule, double weightedStrengthOfSchedule, int year)
+        public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double opponentStrength, double rating, double strengthOfSchedule, string teamName, double weightedStrengthOfSchedule, int year)
         {
-            DefenseStatistics = defenseStats;
             Games = games;
-            OffenseStatistics = offenseStats;
-            OpponentStrength = opponentStrength;
-            Rating = rating;
-            StrengthOfSchedule = strengthOfSchedule;
-            WeightedStrengthOfSchedule = weightedStrengthOfSchedule;
+            RatingDetails = new RatingDetails()
+            {
+                DefenseStatistics = defenseStats,
+                OffenseStatistics = offenseStats,
+                OpponentStrength = opponentStrength,
+                Rating = rating,
+                StrengthOfSchedule = strengthOfSchedule,
+                TeamName = teamName,
+                WeightedStrengthOfSchedule = weightedStrengthOfSchedule
+            };
             Year = year;
         }
 
