@@ -114,8 +114,12 @@ namespace CFBPoll.Utilities
                 //Add the current season records
                 team.Seasons.Add(_season, new Season()
                 {
-                    OffenseStatistics = offenseStats[_season][teamName],
-                    DefenseStatistics = defenseStats[_season][teamName],
+                    RatingDetails = new RatingDetails()
+                    {
+                        OffenseStatistics = offenseStats[_season][teamName],
+                        DefenseStatistics = defenseStats[_season][teamName],
+                        TeamName = teamName,
+                    },
                     Games = games.Where(g => (g.HomeTeam.Equals(teamName, _scoic) || g.AwayTeam.Equals(teamName, _scoic)) && g.Season.Equals(_season)),
                     Year = _season
                 });
@@ -125,8 +129,12 @@ namespace CFBPoll.Utilities
                 {
                     team.Seasons.Add(_season - 1, new Season()
                     {
-                        OffenseStatistics = offenseStats[_season - 1][teamName],
-                        DefenseStatistics = defenseStats[_season - 1][teamName],
+                        RatingDetails = new RatingDetails()
+                        {
+                            OffenseStatistics = offenseStats[_season - 1][teamName],
+                            DefenseStatistics = defenseStats[_season - 1][teamName],
+                            TeamName = teamName,
+                        },
                         Games = games.Where(g => (g.HomeTeam.Equals(teamName, _scoic) || g.AwayTeam.Equals(teamName, _scoic)) && g.Season.Equals(_season - 1)),
                         Year = _season - 1
                     });

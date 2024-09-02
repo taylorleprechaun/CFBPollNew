@@ -21,7 +21,7 @@ namespace CFBPollUI.Controllers
         protected IActionResult HandleError(Exception ex)
         {
             var errorViewModel = new ErrorViewModel(ex.Message, this.ControllerContext);
-            return PartialView("_Error", errorViewModel);
+            return PartialView("_ErrorPartial", errorViewModel);
         }
     }
 }
