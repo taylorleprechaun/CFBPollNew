@@ -6,6 +6,17 @@
     var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
 }
 
-<div id="selectionsPartial">
-    @await Html.PartialAsync("_Selections", Model.Selections)
-</div>
+<html>
+    <head>
+        <script src="@(baseUrl)/js/pollfunctions/pollfunctions.js"></script>
+        <link rel="stylesheet" href="~/css/poll/poll.css"/>
+    </head>
+    <body>
+        <div id="selectionsPartial">
+            @await Html.PartialAsync("_SelectionsPartial", Model.Selections)
+        </div>
+        <div id="ratingsPartial">
+            @await Html.PartialAsync("_RatingsPartial", Model.Ratings)
+        </div>
+    </body>
+</html>

@@ -11,6 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CFBPoll\CFBPoll.csproj" />
   </ItemGroup>
 
