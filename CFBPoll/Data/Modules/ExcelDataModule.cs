@@ -133,19 +133,14 @@ namespace CFBPoll.Data.Modules
 
             //Convert our dictionary of teams into one for the current season and sort by rating descending
             var seasonTeams = new Dictionary<string, Season>();
-<<<<<<< Updated upstream
-            seasonTeams = teams.Select(kvp => new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.Rating descending select teamSeason;
-=======
             seasonTeams = teams.Select(kvp => kvp.Value.Seasons.ContainsKey(season) 
                                     ? new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])
                                     : new KeyValuePair<string, Season>(kvp.Key, new Season(kvp.Key, season)))
                                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.RatingDetails.Rating descending select teamSeason;
->>>>>>> Stashed changes
 
             //Get the highest ranking
-            var topRating = sortedSeasons.FirstOrDefault().Value.Rating;
+            var topRating = sortedSeasons.FirstOrDefault().Value.RatingDetails.Rating;
             var rank = 1;
 
             //CSV header
@@ -162,21 +157,21 @@ namespace CFBPoll.Data.Modules
                 string nextLine = ""
                     + $"{rank},"
                     + $"{teamName},"
-                    + $"{teamSeason.Rating:0.0000},"
-                    + $"{teamSeason.Rating / topRating:0.0000},"
+                    + $"{teamSeason.RatingDetails.Rating:0.0000},"
+                    + $"{teamSeason.RatingDetails.Rating / topRating:0.0000},"
                     + $"{teamSeason.GetWins(teamName).Count()},"
                     + $"{teamSeason.GetLosses(teamName).Count()},"
                     + $"{teamSeason.GetWins(teamName).Count() / Convert.ToDouble(teamSeason.GetPlayedGames().Count()):0.0000},"
-                    + $"{teamSeason.StrengthOfSchedule:0.0000},"
-                    + $"{teamSeason.WeightedStrengthOfSchedule:0.0000},"
+                    + $"{teamSeason.RatingDetails.StrengthOfSchedule:0.0000},"
+                    + $"{teamSeason.RatingDetails.WeightedStrengthOfSchedule:0.0000},"
                     + $"{teams[teamName].Conference},"
                     + $"{teams[teamName].Division},"
-                    + $"{teamSeason.OffenseStatistics.Points - teamSeason.DefenseStatistics.Points},"
-                    + $"{teamSeason.OffenseStatistics.TotalYards},"
-                    + $"{teamSeason.DefenseStatistics.TotalYards},"
-                    + $"{teamSeason.OffenseStatistics.TotalTO - teamSeason.DefenseStatistics.TotalTO},"
-                    + $"{teamSeason.OffenseStatistics.TotalYards / teamSeason.OffenseStatistics.Plays:0.0000},"
-                    + $"{teamSeason.DefenseStatistics.TotalYards / teamSeason.DefenseStatistics.Plays:0.0000}"
+                    + $"{teamSeason.RatingDetails.OffenseStatistics.Points - teamSeason.RatingDetails.DefenseStatistics.Points},"
+                    + $"{teamSeason.RatingDetails.OffenseStatistics.TotalYards},"
+                    + $"{teamSeason.RatingDetails.DefenseStatistics.TotalYards},"
+                    + $"{teamSeason.RatingDetails.OffenseStatistics.TotalTO - teamSeason.RatingDetails.DefenseStatistics.TotalTO},"
+                    + $"{teamSeason.RatingDetails.OffenseStatistics.TotalYards / teamSeason.RatingDetails.OffenseStatistics.Plays:0.0000},"
+                    + $"{teamSeason.RatingDetails.DefenseStatistics.TotalYards / teamSeason.RatingDetails.DefenseStatistics.Plays:0.0000}"
                     + $"\n";
 
                 //Append to csv output

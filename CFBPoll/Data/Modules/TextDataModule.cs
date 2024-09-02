@@ -134,19 +134,14 @@ namespace CFBPoll.Data.Modules
 
             //Convert our dictionary of teams into one for the current season and sort by rating descending
             var seasonTeams = new Dictionary<string, Season>();
-<<<<<<< Updated upstream
-            seasonTeams = teams.Select(kvp => new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
-            var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.Rating descending select teamSeason;
-=======
             seasonTeams = teams.Select(kvp => kvp.Value.Seasons.ContainsKey(season)
                                     ? new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])
                                     : new KeyValuePair<string, Season>(kvp.Key, new Season(kvp.Key, season)))
                                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.RatingDetails.Rating descending select teamSeason;
->>>>>>> Stashed changes
 
             //Get the highest ranking
-            var topRating = sortedSeasons.FirstOrDefault().Value.Rating;
+            var topRating = sortedSeasons.FirstOrDefault().Value.RatingDetails.Rating;
             var rank = 1;
 
             //Table header
@@ -163,7 +158,7 @@ namespace CFBPoll.Data.Modules
                 string nextLine = ""
                     + $"{rank} | "
                     + $"{sortedSeason.Key} | "
-                    + $"{string.Format("{0:0.0000}", Math.Truncate(teamSeason.Rating / topRating * 10000) / 10000)} | "
+                    + $"{string.Format("{0:0.0000}", Math.Truncate(teamSeason.RatingDetails.Rating / topRating * 10000) / 10000)} | "
                     + $"{teamSeason.GetWins(teamName).Count() + "-" + teamSeason.GetLosses(teamName).Count()}"
                     + $"\n";
 

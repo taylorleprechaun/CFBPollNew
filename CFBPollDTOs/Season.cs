@@ -2,20 +2,12 @@
 {
     public class Season
     {
-        public Statistics DefenseStatistics { get; set; }
         public IEnumerable<Game> Games { get; set; }
-        public Statistics OffenseStatistics { get; set; }
-        public double OpponentStrength { get; set; }
-        public double Rating { get; set; }
-        public double StrengthOfSchedule { get; set; }
-        public double WeightedStrengthOfSchedule { get; set; }
+        public RatingDetails RatingDetails { get; set; }
         public int Year { get; set; }
 
         public Season() { }
 
-<<<<<<< Updated upstream
-        public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double opponentStrength, double rating, double strengthOfSchedule, double weightedStrengthOfSchedule, int year)
-=======
         /// <summary>
         /// Constructor for a Season for a team that hasn't played any games yet
         /// </summary>
@@ -50,15 +42,18 @@
         /// <param name="weightedStrengthOfSchedule">The weighted strength of schedule</param>
         /// <param name="year">The year of the season</param>
         public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double opponentStrength, double rating, double strengthOfSchedule, string teamName, double weightedStrengthOfSchedule, int year)
->>>>>>> Stashed changes
         {
-            DefenseStatistics = defenseStats;
             Games = games;
-            OffenseStatistics = offenseStats;
-            OpponentStrength = opponentStrength;
-            Rating = rating;
-            StrengthOfSchedule = strengthOfSchedule;
-            WeightedStrengthOfSchedule = weightedStrengthOfSchedule;
+            RatingDetails = new RatingDetails()
+            {
+                DefenseStatistics = defenseStats,
+                OffenseStatistics = offenseStats,
+                OpponentStrength = opponentStrength,
+                Rating = rating,
+                StrengthOfSchedule = strengthOfSchedule,
+                TeamName = teamName,
+                WeightedStrengthOfSchedule = weightedStrengthOfSchedule
+            };
             Year = year;
         }
 
