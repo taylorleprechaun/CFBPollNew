@@ -111,9 +111,6 @@ namespace CFBPoll.Utilities
                 var teamName = teamRecord.Key;
                 var team = teamRecord.Value;
 
-                if (!offenseStats[_season].ContainsKey(teamName) && !defenseStats[_season].ContainsKey(teamName))
-                    continue;
-
                 //Add the current season records
                 team.Seasons.Add(_season, new Season()
                 {

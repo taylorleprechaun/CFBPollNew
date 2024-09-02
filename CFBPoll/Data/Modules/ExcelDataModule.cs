@@ -133,10 +133,7 @@ namespace CFBPoll.Data.Modules
 
             //Convert our dictionary of teams into one for the current season and sort by rating descending
             var seasonTeams = new Dictionary<string, Season>();
-            seasonTeams = teams.Select(kvp => kvp.Value.Seasons.ContainsKey(season) 
-                                    ? new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])
-                                    : new KeyValuePair<string, Season>(kvp.Key, new Season(kvp.Key, season)))
-                               .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            seasonTeams = teams.Select(kvp => new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.RatingDetails.Rating descending select teamSeason;
 
             //Get the highest ranking
