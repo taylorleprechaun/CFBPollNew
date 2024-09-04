@@ -1,5 +1,6 @@
 ﻿using CFBPoll.Calculations.Factories;
 using CFBPoll.Data.Modules;
+using CFBPollDTOs.Enums;
 using CFBPoll.Utilities;
 using Microsoft.Extensions.Configuration;
 
@@ -26,33 +27,35 @@ var teamBuilder = new TeamBuilder(config, season, week);
 var teams = teamBuilder.BuildTeams();
 
 //Initialize the rating and prediction modules
-var rater = new RatingFactory().GetRatingModule(season, week);
-var predictor = new PredictionFactory().GetPredictionModule(season, teams);
+var rater = RatingFactory.GetRatingModule(season, week);
+teams = rater.RateTeams(teams);
+var predictor = PredictionFactory.GetPredictionModule(season, teams);
 
 //Running the program
 do
 {
-    var mode = consoleDataModule.GetRunType();
-    switch (mode)
+    var runType = consoleDataModule.GetRunType();
+    switch (runType)
     {
-        case "1":
+        case RunType.Ratings:
             //Print Ratings
-            teams = rater.RateTeams(teams);
             textDataModule.PrintPollTable(teams, season);
-            excelDataModule.PrintPollDetails(teams, season);
+            if (consoleDataModule.PrintDetails(runType))
+                excelDataModule.PrintPollDetails(teams, season);
             break;
-        case "2":
+        case RunType.PredictGames:
             //Print Predictions
             var predictions = predictor.PredictGames();
             textDataModule.PrintPredictionsTable(predictions);
-            excelDataModule.PrintPredictionDetails(predictions);
+            if (consoleDataModule.PrintDetails(runType))
+                excelDataModule.PrintPredictionDetails(predictions);
             break;
-        case "3":
+        case RunType.PredictResults:
             //Get the predictions we made the previous week and print them
             var predictedGames = textDataModule.GetPredictions(season, week);
             textDataModule.PrintPredictionsResultsTable(predictedGames, teams, season);
             break;
-        case "4":
+        case RunType.PredictGame:
             //Specific Predictions
             do
             {

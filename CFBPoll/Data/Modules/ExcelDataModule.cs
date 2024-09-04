@@ -208,8 +208,7 @@ namespace CFBPoll.Data.Modules
                 var winner = prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam;
 
                 var bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.Provider.Equals("Bovada", _scoic));
-                if (bettingInfoToPrint == null)
-                    bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.IsValid());
+                bettingInfoToPrint ??= prediction.Lines.FirstOrDefault(b => b.IsValid());
 
                 //Add info
                 string nextLine = ""

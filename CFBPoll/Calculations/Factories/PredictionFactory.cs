@@ -12,7 +12,7 @@ namespace CFBPoll.Calculations.Factories
         /// <param name="season">The season for the rating module</param>
         /// <param name="teams">The teams to make predictions for</param>
         /// <returns>A module that implements the IPrediction interface</returns>
-        public IPrediction GetPredictionModule(int season, IDictionary<string, Team> teams)
+        public static IPrediction GetPredictionModule(int season, IDictionary<string, Team> teams)
         {
             //No plans for it but if for some reason in the future I want to switch to a new/different prediction module
             //then I'll have to flesh out this code to switch depending on whatever conditions I choose. For now we just

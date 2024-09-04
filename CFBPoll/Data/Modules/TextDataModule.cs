@@ -200,16 +200,32 @@ namespace CFBPoll.Data.Modules
                 //Determine the winner
                 var winner = prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam;
 
+                //Get the betting info to print
+                var bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.Provider.Equals("Bovada", _scoic));
+                bettingInfoToPrint ??= prediction.Lines.FirstOrDefault(b => b.IsValid());
+
+                //Get the spread and make our pick against it
+                var spread = bettingInfoToPrint?.Spread ?? -1.0;
+                var atsPick = !spread.Equals(-1.0)
+                                ? Math.Round(prediction.AwayPoints - prediction.HomePoints, 2) >= spread ? prediction.AwayTeam : prediction.HomeTeam
+                                : string.Empty;
+                //Get the over/under and make our pick against it
+                var overUnder = bettingInfoToPrint?.OverUnder ?? -1.0;
+                var overUnderPick = !overUnder.Equals(-1.0)
+                                    ? Math.Round(prediction.HomePoints + prediction.AwayPoints, 2) >= overUnder ? "Over" : "Under"
+                                    : string.Empty;
+
                 //Add info
                 string nextLine = ""
                     + $"{prediction.HomeTeam} - {prediction.AwayTeam} | "
                     + $"{Math.Round(prediction.HomePoints, 0)} - {Math.Round(prediction.AwayPoints, 0)} | "
                     + $" | "
                     + $"{winner} | "
-                    + $" | "
-                    + $" | "
-                    + $" | "
-                    + $"\n";
+                    + $"{spread} | "
+                    + $"{atsPick} | "
+                    + $"{overUnder} | "
+                    + $"{overUnderPick}"
+                    + "\n";
 
                 //Append to csv output
                 txt.Append(nextLine);
