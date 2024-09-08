@@ -3,6 +3,7 @@ using CFBPollDTOs;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -42,7 +43,7 @@ namespace CFBPoll.Data.Modules
 
             //Get the predictions from the directory
             var predictionFiles = Directory.GetFiles(String.Format($"{_mdPredictionsFilePath}", season));
-            var filePath = predictionFiles.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00"));
+            var filePath = predictionFiles.FirstOrDefault(f => f.Contains($"Week {week?.ToString("00") ?? "00"}"));
 
             if (string.IsNullOrEmpty(filePath)) return predictions;
 
@@ -80,12 +81,22 @@ namespace CFBPoll.Data.Modules
                 //Pick
                 var pick = predictionInfo[3];
                 pick = Regex.Replace(pick, "[^A-Za-z0-9 - &-]", "").Trim(); //Use regex to remove unwanted characters
+                
+                //Betting Provider Lines
                 //Spread
-                var spread = awayScore - homeScore;
+                double.TryParse(predictionInfo[4], out var spread);
                 //OU
-                var ou = awayScore + homeScore;
+                double.TryParse(predictionInfo[6], out var ou);
+                var bettingLine = new Lines(ou, "GameLine", spread, pick);
 
-                var game = new Game(homeTeam, awayTeam, homeScore, awayScore, season, week ?? 0, false, false, new List<Lines> { new Lines(ou, "Taylor", spread, pick) });
+                //My Lines
+                //Spread
+                spread = awayScore - homeScore;
+                //OU
+                ou = awayScore + homeScore;
+                var myLine = new Lines(ou, "Taylor", spread, pick);
+
+                var game = new Game(homeTeam, awayTeam, homeScore, awayScore, season, week ?? 0, false, false, new List<Lines> { bettingLine, myLine });
                 predictions.Add(game);
             }
 
@@ -254,6 +265,11 @@ namespace CFBPoll.Data.Modules
             var txt = new StringBuilder();
             txt.AppendLine("Home - Away | Predicted Score | Actual Score | Pick | Spread | ATS Pick | O/U | O/U Pick\n--- | --- | --- | --- | --- | --- | --- | ---");
 
+            var totalCount = 0;
+            var winnerCount = 0;
+            var spreadCount = 0;
+            var overUnderCount = 0;
+
             foreach (var prediction in predictions)
             {
                 //Get the matching game for the prediction
@@ -261,17 +277,22 @@ namespace CFBPoll.Data.Modules
                                     .Games?.FirstOrDefault(g => g.HomeTeam.Equals(prediction.HomeTeam, _scoic) && g.AwayTeam.Equals(prediction.AwayTeam, _scoic));
                 if (matchingGame == null) continue;
 
-                //Get our lines for the game. Use Bovada for actual ones if it exists otherwise use the first one
-                var gameLine = matchingGame.Lines.FirstOrDefault(l => l.Provider.Equals("Bovada", _scoic));
-                if (gameLine == null)
-                    gameLine = matchingGame.Lines.FirstOrDefault();
-                var predictionLine = prediction.Lines.FirstOrDefault(l => l.Provider.Equals("Taylor", _scoic));
+                //Get the lines for the game that we predicted against
+                var pregameLine = prediction.Lines.FirstOrDefault(l => l.Provider.Equals("GameLine", _scoic));
+                var myLine = prediction.Lines.FirstOrDefault(l => l.Provider.Equals("Taylor", _scoic));
+                var realLine = new Lines()
+                {
+                    OverUnder = matchingGame.HomePoints + matchingGame.AwayPoints,
+                    Provider = "Real",
+                    Spread = matchingGame.AwayPoints - matchingGame.HomePoints,
+                    Winner = matchingGame.HomePoints > matchingGame.AwayPoints ? matchingGame.HomeTeam : matchingGame.AwayTeam,
+                };
 
                 #region winner determination
 
                 //Compare the predicted winner and the real winner
-                var realWinner = matchingGame.HomePoints > matchingGame.AwayPoints ? matchingGame.HomeTeam : matchingGame.AwayTeam;
-                var predictedWinner = predictionLine?.Winner ?? (prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam);
+                var realWinner = realLine.Winner;
+                var predictedWinner = myLine?.Winner ?? (prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam);
                 var winnerResult = predictedWinner.Equals(realWinner, _scoic) ? "✔" : "❌";
 
                 #endregion
@@ -279,40 +300,27 @@ namespace CFBPoll.Data.Modules
                 #region spread determination
 
                 //Get the real and prediction spreads
-                var realSpread = gameLine?.Spread ?? 0.0;
-                var predictedSpread = predictionLine?.Spread ?? 0.0;
-
-                //Build the money line to print in the results using the real spread for the game
-                var realMoneyLine = "EVEN";
-                //If the spread is > 0 then the away team is favored
-                //Print the away team and flip the sign on the spread
-                if (realSpread > 0)
-                    realMoneyLine = $"{prediction.AwayTeam} {realSpread * -1}";
-                //If the spread is < 0 then the home team is favored
-                //Print the home team and the spread
-                else if (realSpread < 0)
-                    realMoneyLine = $"{prediction.HomeTeam} {realSpread}";
-
-                //Result of the game
-                var resultMargin = matchingGame.AwayPoints - matchingGame.HomePoints;
+                var pregameSpread = pregameLine?.Spread ?? 0.0;
+                var mySpread = myLine?.Spread ?? 0.0;
 
                 var realSpreadResult = "";
                 var predictionSpreadResult = "";
-                //If the margin is > 0 then the away team won
-                if (resultMargin > 0)
+                
+                //If the pregame spread is > 0 then the road team is predicted to have won
+                if (pregameSpread > 0)
                 {
-                    //If the away team won by more points than the home team plus the spread (positive) then the away team beat the spread
-                    realSpreadResult = matchingGame.AwayPoints > (matchingGame.HomePoints + realSpread) ? matchingGame.AwayTeam : matchingGame.HomeTeam;
-                    //If the predicted spread is bigger than the real spread then the prediction is that the away team beats the spread
-                    predictionSpreadResult = predictedSpread > realSpread ? prediction.AwayTeam : prediction.HomeTeam;
+                    //If my spread is less than the pregame spread then I predicted the home team to cover
+                    predictionSpreadResult = mySpread < pregameSpread ? matchingGame.HomeTeam : matchingGame.AwayTeam;
+                    //If the home team won by more points than the away team plus the spread then the home team beat the spread
+                    realSpreadResult = matchingGame.HomePoints > (matchingGame.AwayPoints + pregameSpread) ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                 }
-                //If the margin is < 0 then the home team won
-                else if (resultMargin < 0)
+                //If the pregame spread is < 0 then the home team is predicted to have won
+                else if (pregameSpread < 0)
                 {
-                    //If the away team won by more points than the home team plus the spread (negative) then the home team beat the spread
-                    realSpreadResult = (matchingGame.HomePoints + realSpread) > matchingGame.AwayPoints ? matchingGame.HomeTeam : matchingGame.AwayTeam;
-                    //If the predicted spread is smaller than the game real then the prediction is that the home team beats the spread
-                    predictionSpreadResult = predictedSpread < realSpread ? prediction.HomeTeam : prediction.AwayTeam;
+                    //If my spread is greater than the pregame spread then I predicted the away team to cover
+                    predictionSpreadResult = mySpread > pregameSpread ? matchingGame.AwayTeam : matchingGame.HomeTeam;
+                    //If the away team won by more points than the home team plus the spread then the away team beat the spread
+                    realSpreadResult = matchingGame.AwayPoints > (matchingGame.HomePoints + pregameSpread) ? matchingGame.AwayTeam : matchingGame.HomeTeam;
                 }
                 //Compare the prediction vs real
                 var spreadResult = predictionSpreadResult.Equals(realSpreadResult, _scoic) ? "✔" : "❌";
@@ -322,37 +330,51 @@ namespace CFBPoll.Data.Modules
                 #region over under determination
 
                 //Get real and predicted O/U and compare them to see what is predicted
-                var realOverUnder = gameLine?.OverUnder ?? 0.0;
-                var predictedOverUnder = predictionLine?.OverUnder ?? 0.0;
-                var predictionOverUnderResult = predictedOverUnder > realOverUnder
-                                ? "Over" : predictedOverUnder < realOverUnder
+                var realOverUnder = matchingGame.HomePoints + matchingGame.AwayPoints;
+                var myOverUnder = myLine?.OverUnder ?? 0.0;
+                var pregameOverUnder = pregameLine?.OverUnder ?? 0.0;
+
+                var predictedOverUnder = myOverUnder > pregameOverUnder
+                                ? "Over" : myOverUnder < pregameOverUnder
                                     ? "Under" : "Push";
-                //Compare the actual total points to the O/U
-                var combinedScore = matchingGame.HomePoints + matchingGame.AwayPoints;
-                var actualOverUnderResult = combinedScore > realOverUnder
-                                ? "Over" : combinedScore < realOverUnder
+                var actualOverUnder = realOverUnder > pregameOverUnder
+                                ? "Over" : realOverUnder < pregameOverUnder
                                     ? "Under" : "Push";
                 //Compare the predicted O/U to the real-life result
-                var overUnderResult = predictionOverUnderResult.Equals(actualOverUnderResult, _scoic) ? "✔" : "❌";
+                var overUnderResult = predictedOverUnder.Equals(actualOverUnder, _scoic) ? "✔" : "❌";
 
                 #endregion
 
                 //Add info
-                string nextLine = ""
+                var nextLine = ""
                     + $"{prediction.HomeTeam} - {prediction.AwayTeam} | "
                     + $"{prediction.HomePoints} - {prediction.AwayPoints} | "
                     + $"{matchingGame.HomePoints} - {matchingGame.AwayPoints} | "
                     + $"{predictedWinner} {winnerResult} | "
-                    + $"{realMoneyLine} | "
+                    + $"{pregameSpread} | "
                     + $"{predictionSpreadResult} {spreadResult} | "
-                    + $"{realOverUnder} | "
-                    + $"{predictionOverUnderResult} {overUnderResult}"
+                    + $"{pregameOverUnder} | "
+                    + $"{predictedOverUnder} {overUnderResult}"
                     + $"\n"; 
 
 
                 //Append to csv output
                 txt.Append(nextLine);
+
+                //Tally Results
+                if (winnerResult.Equals("✔", _scoic)) winnerCount++;
+                if (spreadResult.Equals("✔", _scoic)) spreadCount++;
+                if (overUnderResult.Equals("✔", _scoic)) overUnderCount++;
+                totalCount++;
             }
+
+            var newLine = "\n\n"
+                + "Results:\n"
+                + $"* Winner: {winnerCount} - {totalCount - winnerCount} ({decimal.Divide(winnerCount, totalCount):P1})\n"
+                + $"* ATS: {spreadCount} - {totalCount - spreadCount} ({decimal.Divide(spreadCount,totalCount):P1})\n"
+                + $"* O/U: {overUnderCount} - {totalCount - overUnderCount} ({decimal.Divide(overUnderCount, totalCount):P1})\n";
+
+            txt.Append(newLine);
 
             //Write to output
             File.WriteAllText(_txtPredictionsResultsFilePath, txt.ToString());

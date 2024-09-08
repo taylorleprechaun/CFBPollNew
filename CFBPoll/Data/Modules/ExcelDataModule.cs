@@ -42,7 +42,7 @@ namespace CFBPoll.Data.Modules
             if (week == null)
                 filePath = files.OrderBy(f => f).LastOrDefault();
             else
-                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00"));
+                filePath = files.FirstOrDefault(f => f.Contains($" - {week?.ToString("00") ?? "00"}"));
 
             if (string.IsNullOrEmpty(filePath)) return allGames;
 
@@ -113,7 +113,7 @@ namespace CFBPoll.Data.Modules
             if (week == null)
                 filePath = files.OrderBy(f => f).LastOrDefault();
             else
-                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00") && f.Contains($"Team{typeString}"));
+                filePath = files.FirstOrDefault(f => f.Contains($" - {week?.ToString("00") ?? "00"}") && f.Contains($"Team{typeString}"));
 
             if (string.IsNullOrEmpty(filePath)) return new Dictionary<string, Statistics>();
 

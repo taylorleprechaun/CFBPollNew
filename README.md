@@ -15,53 +15,59 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 
-### Rankings (Updated 9/3/2024)
+### Rankings (Updated 9/8/2024)
 
-**Week 2 Rankings**
+**Week 3 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Michigan | 1.0000 | 1-0
-2 | Washington | 0.9847 | 1-0
-3 | Georgia | 0.9839 | 1-0
-4 | Alabama | 0.9764 | 1-0
-5 | Texas | 0.9591 | 1-0
-6 | Ohio State | 0.9568 | 1-0
-7 | Mississippi | 0.9548 | 1-0
-8 | Missouri | 0.9527 | 1-0
-9 | Oregon | 0.9421 | 1-0
-10 | Oklahoma | 0.9217 | 1-0
-11 | Penn State | 0.9202 | 1-0
-12 | Louisville | 0.8930 | 1-0
-13 | Liberty | 0.8917 | 1-0
-14 | Arizona | 0.8876 | 1-0
-15 | Iowa | 0.8869 | 1-0
-16 | Tennessee | 0.8819 | 1-0
-17 | James Madison | 0.8811 | 1-0
-18 | Kansas State | 0.8804 | 1-0
-19 | Notre Dame | 0.8802 | 1-0
-20 | SMU | 0.8737 | 2-0
-21 | Oklahoma State | 0.8734 | 1-0
-22 | Kansas | 0.8677 | 1-0
-23 | Memphis | 0.8663 | 1-0
-24 | Tulane | 0.8644 | 1-0
-25 | North Carolina State | 0.8625 | 1-0
+1 | Washington | 1.0000 | 2-0
+2 | Georgia | 0.9959 | 2-0
+3 | Alabama | 0.9892 | 2-0
+4 | Texas | 0.9818 | 2-0
+5 | Ohio State | 0.9776 | 2-0
+6 | Mississippi | 0.9768 | 2-0
+7 | Missouri | 0.9728 | 2-0
+8 | Oregon | 0.9556 | 2-0
+9 | Penn State | 0.9483 | 2-0
+10 | Oklahoma | 0.9361 | 2-0
+11 | Louisville | 0.9212 | 2-0
+12 | Tennessee | 0.9188 | 2-0
+13 | Kansas State | 0.9180 | 2-0
+14 | Arizona | 0.9133 | 2-0
+15 | Oklahoma State | 0.9047 | 2-0
+16 | Liberty | 0.9011 | 2-0
+17 | James Madison | 0.8970 | 2-0
+18 | Utah | 0.8887 | 2-0
+19 | USC | 0.8874 | 2-0
+20 | Duke | 0.8856 | 2-0
+21 | Memphis | 0.8837 | 2-0
+22 | Miami FL | 0.8796 | 2-0
+23 | Oregon State | 0.8788 | 2-0
+24 | Iowa State | 0.8754 | 2-0
+25 | Rutgers | 0.8718 | 2-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2002.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2003.md)
 
-#### Observations and Notes (Updated 9/3/2024)
+#### Observations and Notes (Updated 9/8/2024)
 
-* Here we go new season. Made some slight adjustments to the code to improve my experience when running the poll. Also made some adjustments to the Predictions algorithm... we'll see how it goes.
-* Typical early season "friction" in the poll due to rollover from the previous season. It'll shake out in a couple weeks as we've seen for a few years now.
+* My poll does some adjustments to early season lack of data by adjusting it using the previous season and progressively decreases that adjustment factor as the data points expand. Washington is getting heavily boosted by this it's actually kind of annoying. I've had in my TODO list for a few years something to adjust early season ratings by recruiting, returning production, etc. but maybe I should put some gas on that for next offseason to avoid stuff like this. Not totally sure how I want to approach that yet or if I do at all. Regardless, everything will shake out in the next couple weeks.
 
-#### Predictions (Updated 9/3/2024)
+#### Predictions (Updated 9/8/2024)
 
-Week 2 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2002.md):
+Week 3 Predictions: Coming Soon
+
+Week 2 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2002.md):
+
+Week 2 Results:
+* Winner: 31 - 18 (63.3%)
+* ATS: 25 - 24 (51.0%)
+* O/U: 26 - 23 (53.1%)
 
 Season Results:
-* Winner: 0 - 0 (x%)
-* ATS: 0 - 0 (x%)
-* O/U: 0 - 0 (x%)
+* Winner: 31 - 18 (63.3%)
+* ATS: 25 - 24 (51.0%)
+* O/U: 26 - 23 (53.1%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
