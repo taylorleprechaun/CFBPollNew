@@ -217,6 +217,7 @@ namespace CFBPoll.Data.Modules
 
                 //Get the spread and make our pick against it
                 var spread = bettingInfoToPrint?.Spread ?? -1.0;
+                var spreadPick = spread < 0 ? prediction.HomeTeam : prediction.AwayTeam;
                 var atsPick = !spread.Equals(-1.0)
                                 ? Math.Round(prediction.AwayPoints - prediction.HomePoints, 2) >= spread ? prediction.AwayTeam : prediction.HomeTeam
                                 : string.Empty;
@@ -232,7 +233,7 @@ namespace CFBPoll.Data.Modules
                     + $"{Math.Round(prediction.HomePoints, 0)} - {Math.Round(prediction.AwayPoints, 0)} | "
                     + $" | "
                     + $"{winner} | "
-                    + $"{spread} | "
+                    + $"{spreadPick} {spread} | "
                     + $"{atsPick} | "
                     + $"{overUnder} | "
                     + $"{overUnderPick}"
@@ -303,6 +304,7 @@ namespace CFBPoll.Data.Modules
                 var pregameSpread = pregameLine?.Spread ?? 0.0;
                 var mySpread = myLine?.Spread ?? 0.0;
 
+                var pregameSpreadPick = pregameSpread < 0 ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                 var realSpreadResult = "";
                 var predictionSpreadResult = "";
                 
@@ -351,7 +353,7 @@ namespace CFBPoll.Data.Modules
                     + $"{prediction.HomePoints} - {prediction.AwayPoints} | "
                     + $"{matchingGame.HomePoints} - {matchingGame.AwayPoints} | "
                     + $"{predictedWinner} {winnerResult} | "
-                    + $"{pregameSpread} | "
+                    + $"{pregameSpreadPick} {pregameSpread} | "
                     + $"{predictionSpreadResult} {spreadResult} | "
                     + $"{pregameOverUnder} | "
                     + $"{predictedOverUnder} {overUnderResult}"

@@ -53,11 +53,11 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * My poll does some adjustments to early season lack of data by adjusting it using the previous season and progressively decreases that adjustment factor as the data points expand. Washington is getting heavily boosted by this it's actually kind of annoying. I've had in my TODO list for a few years something to adjust early season ratings by recruiting, returning production, etc. but maybe I should put some gas on that for next offseason to avoid stuff like this. Not totally sure how I want to approach that yet or if I do at all. Regardless, everything will shake out in the next couple weeks.
 
-#### Predictions (Updated 9/8/2024)
+#### Predictions (Updated 9/10/2024)
 
-Week 3 Predictions: Coming Soon
+Week 3 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2003.md)
 
-Week 2 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2002.md):
+Week 2 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2002.md)
 
 Week 2 Results:
 * Winner: 31 - 18 (63.3%)
