@@ -40,9 +40,9 @@ Georgia State|Sun Belt|East
 Georgia Tech|ACC| 
 Hawaii|MWC| 
 Houston|Big 12| 
-Illinois|Big 10|West
-Indiana|Big 10|East
-Iowa|Big 10|West
+Illinois|Big 10| 
+Indiana|Big 10| 
+Iowa|Big 10| 
 Iowa State|Big 12| 
 Jacksonville State|CUSA| 
 James Madison|Sun Belt|East
@@ -58,20 +58,20 @@ Louisiana-Monroe|Sun Belt|West
 Louisville|ACC| 
 Louisiana State|SEC| 
 Marshall|Sun Belt|East
-Maryland|Big 10|East
+Maryland|Big 10| 
 Massachusetts|Indep| 
 Memphis|AAC| 
 Miami FL|ACC| 
 Miami OH|MAC| 
-Michigan|Big 10|East
-Michigan State|Big 10|East
+Michigan|Big 10| 
+Michigan State|Big 10| 
 MTSU|CUSA| 
-Minnesota|Big 10|West
+Minnesota|Big 10| 
 Mississippi|SEC| 
 Mississippi State|SEC| 
 Missouri|SEC| 
 Navy|AAC| 
-Nebraska|Big 10|West
+Nebraska|Big 10| 
 Nevada|MWC| 
 New Mexico|MWC| 
 New Mexico State|CUSA| 
@@ -79,20 +79,20 @@ North Carolina|ACC|
 North Carolina State|ACC| 
 North Texas|AAC| 
 Northern Illinois|MAC| 
-Northwestern|Big 10|West
+Northwestern|Big 10| 
 Notre Dame|Indep| 
 Ohio U.|MAC| 
-Ohio State|Big 10|East
+Ohio State|Big 10| 
 Oklahoma|SEC| 
 Oklahoma State|Big 12| 
 Old Dominion|Sun Belt|East
 Oregon|Big 10| 
 Oregon State|Pac-12| 
-Penn State|Big 10|East
+Penn State|Big 10| 
 Pittsburgh|ACC| 
-Purdue|Big 10|West
+Purdue|Big 10| 
 Rice|AAC| 
-Rutgers|Big 10|East
+Rutgers|Big 10| 
 Sam Houston|CUSA| 
 San Diego State|MWC| 
 San Jose State|MWC| 
@@ -130,5 +130,5 @@ Washington State|Pac-12|
 West Virginia|Big 12| 
 Western Kentucky|CUSA| 
 Western Michigan|MAC| 
-Wisconsin|Big 10|West
+Wisconsin|Big 10| 
 Wyoming|MWC| 

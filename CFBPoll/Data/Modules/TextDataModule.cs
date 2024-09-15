@@ -84,7 +84,7 @@ namespace CFBPoll.Data.Modules
                 
                 //Betting Provider Lines
                 //Spread
-                double.TryParse(predictionInfo[4], out var spread);
+                double.TryParse(predictionInfo[4].Trim().Split(' ').Last(), out var spread);
                 //OU
                 double.TryParse(predictionInfo[6], out var ou);
                 var bettingLine = new Lines(ou, "GameLine", spread, pick);

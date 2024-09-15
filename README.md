@@ -15,59 +15,60 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 
-### Rankings (Updated 9/8/2024)
+### Rankings (Updated 9/15/2024)
 
-**Week 3 Rankings**
+**Week 4 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Washington | 1.0000 | 2-0
-2 | Georgia | 0.9959 | 2-0
-3 | Alabama | 0.9892 | 2-0
-4 | Texas | 0.9818 | 2-0
-5 | Ohio State | 0.9776 | 2-0
-6 | Mississippi | 0.9768 | 2-0
-7 | Missouri | 0.9728 | 2-0
-8 | Oregon | 0.9556 | 2-0
-9 | Penn State | 0.9483 | 2-0
-10 | Oklahoma | 0.9361 | 2-0
-11 | Louisville | 0.9212 | 2-0
-12 | Tennessee | 0.9188 | 2-0
-13 | Kansas State | 0.9180 | 2-0
-14 | Arizona | 0.9133 | 2-0
-15 | Oklahoma State | 0.9047 | 2-0
-16 | Liberty | 0.9011 | 2-0
-17 | James Madison | 0.8970 | 2-0
-18 | Utah | 0.8887 | 2-0
-19 | USC | 0.8874 | 2-0
-20 | Duke | 0.8856 | 2-0
-21 | Memphis | 0.8837 | 2-0
-22 | Miami FL | 0.8796 | 2-0
-23 | Oregon State | 0.8788 | 2-0
-24 | Iowa State | 0.8754 | 2-0
-25 | Rutgers | 0.8718 | 2-0
+1 | Alabama | 1.0000 | 3-0
+2 | Georgia | 0.9883 | 3-0
+3 | Ohio State | 0.9866 | 2-0
+4 | Texas | 0.9842 | 3-0
+5 | Missouri | 0.9782 | 3-0
+6 | Mississippi | 0.9771 | 3-0
+7 | Oregon | 0.9632 | 3-0
+8 | Penn State | 0.9603 | 2-0
+9 | Oklahoma | 0.9427 | 3-0
+10 | Tennessee | 0.9379 | 3-0
+11 | Kansas State | 0.9376 | 3-0
+12 | Louisville | 0.9373 | 2-0
+13 | Oklahoma State | 0.9215 | 3-0
+14 | Miami FL | 0.9161 | 3-0
+15 | USC | 0.9134 | 2-0
+16 | Utah | 0.9131 | 3-0
+17 | Duke | 0.9113 | 3-0
+18 | Iowa State | 0.9107 | 2-0
+19 | Rutgers | 0.9068 | 2-0
+20 | James Madison | 0.9001 | 2-0
+21 | North Carolina | 0.8916 | 3-0
+22 | Liberty | 0.8905 | 3-0
+23 | Memphis | 0.8847 | 3-0
+24 | California | 0.8815 | 3-0
+25 | Michigan State | 0.8759 | 3-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2003.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2004.md)
 
-#### Observations and Notes (Updated 9/8/2024)
+#### Observations and Notes (Updated 9/15/2024)
 
-* My poll does some adjustments to early season lack of data by adjusting it using the previous season and progressively decreases that adjustment factor as the data points expand. Washington is getting heavily boosted by this it's actually kind of annoying. I've had in my TODO list for a few years something to adjust early season ratings by recruiting, returning production, etc. but maybe I should put some gas on that for next offseason to avoid stuff like this. Not totally sure how I want to approach that yet or if I do at all. Regardless, everything will shake out in the next couple weeks.
+* Looking much better than the last couple weeks. The effects of the preseason adjustments are extremely small now compared to the previous polls. Still my #1 takeaway for the offseason is adjusting the early season adjustments.
+* Noticed I forgot to remove the Big 10 divisions from my list of teams. Doesn't effect anything but whoops lol.
 
-#### Predictions (Updated 9/10/2024)
+#### Predictions (Updated 9/15/2024)
 
-Week 3 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2003.md)
+Week 4 Predictions: Coming Soon
 
-Week 2 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2002.md)
+Week 3 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2003.md)
 
-Week 2 Results:
-* Winner: 31 - 18 (63.3%)
-* ATS: 25 - 24 (51.0%)
-* O/U: 26 - 23 (53.1%)
+Week 3 Results:
+* Winner: 36 - 15 (70.6%)
+* ATS: 16 - 35 (31.4%)
+* O/U: 26 - 25 (51.0%)
 
 Season Results:
-* Winner: 31 - 18 (63.3%)
-* ATS: 25 - 24 (51.0%)
-* O/U: 26 - 23 (53.1%)
+* Winner: 67 - 33 (67.0%)
+* ATS: 41 - 59 (41.0%)
+* O/U: 52 - 48 (52.0%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
