@@ -219,12 +219,12 @@ namespace CFBPoll.Data.Modules
                 var spread = bettingInfoToPrint?.Spread ?? -1.0;
                 var spreadPick = spread < 0 ? prediction.HomeTeam : prediction.AwayTeam;
                 var atsPick = !spread.Equals(-1.0)
-                                ? Math.Round(prediction.AwayPoints - prediction.HomePoints, 2) >= spread ? prediction.AwayTeam : prediction.HomeTeam
+                                ? Math.Round(prediction.AwayPoints, 0)  - Math.Round(prediction.HomePoints, 0) >= spread ? prediction.AwayTeam : prediction.HomeTeam
                                 : string.Empty;
                 //Get the over/under and make our pick against it
                 var overUnder = bettingInfoToPrint?.OverUnder ?? -1.0;
                 var overUnderPick = !overUnder.Equals(-1.0)
-                                    ? Math.Round(prediction.HomePoints + prediction.AwayPoints, 2) >= overUnder ? "Over" : "Under"
+                                    ? Math.Round(prediction.HomePoints, 0) + Math.Round(prediction.AwayPoints, 0) >= overUnder ? "Over" : "Under"
                                     : string.Empty;
 
                 //Add info
