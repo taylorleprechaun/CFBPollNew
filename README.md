@@ -54,9 +54,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 * Looking much better than the last couple weeks. The effects of the preseason adjustments are extremely small now compared to the previous polls. Still my #1 takeaway for the offseason is adjusting the early season adjustments.
 * Noticed I forgot to remove the Big 10 divisions from my list of teams. Doesn't effect anything but whoops lol.
 
-#### Predictions (Updated 9/22/2024)
+#### Predictions (Updated 9/24/2024)
 
-Week 5 Predictions: Coming Soon
+Week 5 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2005.md)
 
 Week 4 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2004.md)
 
