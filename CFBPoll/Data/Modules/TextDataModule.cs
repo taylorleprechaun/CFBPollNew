@@ -304,13 +304,16 @@ namespace CFBPoll.Data.Modules
                 var pregameSpread = pregameLine?.Spread ?? 0.0;
                 var mySpread = myLine?.Spread ?? 0.0;
 
-                var pregameSpreadPick = pregameSpread < 0 ? matchingGame.HomeTeam : matchingGame.AwayTeam;
+                var realSpreadPick = pregameSpread < 0 ? matchingGame.HomeTeam : matchingGame.AwayTeam;
+                var pregameSpreadPick = "";
                 var realSpreadResult = "";
                 var predictionSpreadResult = "";
                 
                 //If the pregame spread is > 0 then the road team is predicted to have won
                 if (pregameSpread > 0)
                 {
+                    //Pregame spread pick
+                    pregameSpreadPick = prediction.HomePoints > (prediction.AwayPoints + pregameSpread) ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                     //If my spread is less than the pregame spread then I predicted the home team to cover
                     predictionSpreadResult = mySpread < pregameSpread ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                     //If the home team won by more points than the away team plus the spread then the home team beat the spread
@@ -319,10 +322,12 @@ namespace CFBPoll.Data.Modules
                 //If the pregame spread is < 0 then the home team is predicted to have won
                 else if (pregameSpread < 0)
                 {
+                    //Pregame spread pick
+                    pregameSpreadPick = prediction.AwayPoints >= (prediction.HomePoints + pregameSpread) ? matchingGame.AwayTeam : matchingGame.HomeTeam;
                     //If my spread is greater than the pregame spread then I predicted the away team to cover
-                    predictionSpreadResult = mySpread > pregameSpread ? matchingGame.AwayTeam : matchingGame.HomeTeam;
+                    predictionSpreadResult = mySpread >= pregameSpread ? matchingGame.AwayTeam : matchingGame.HomeTeam;
                     //If the away team won by more points than the home team plus the spread then the away team beat the spread
-                    realSpreadResult = matchingGame.AwayPoints > (matchingGame.HomePoints + pregameSpread) ? matchingGame.AwayTeam : matchingGame.HomeTeam;
+                    realSpreadResult = matchingGame.AwayPoints >= (matchingGame.HomePoints + pregameSpread) ? matchingGame.AwayTeam : matchingGame.HomeTeam;
                 }
                 //Compare the prediction vs real
                 var spreadResult = predictionSpreadResult.Equals(realSpreadResult, _scoic) ? "✔" : "❌";
@@ -353,7 +358,7 @@ namespace CFBPoll.Data.Modules
                     + $"{prediction.HomePoints} - {prediction.AwayPoints} | "
                     + $"{matchingGame.HomePoints} - {matchingGame.AwayPoints} | "
                     + $"{predictedWinner} {winnerResult} | "
-                    + $"{pregameSpreadPick} {pregameSpread} | "
+                    + $"{realSpreadPick} {pregameSpread} | "
                     + $"{predictionSpreadResult} {spreadResult} | "
                     + $"{pregameOverUnder} | "
                     + $"{predictedOverUnder} {overUnderResult}"

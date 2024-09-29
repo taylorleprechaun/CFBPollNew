@@ -15,60 +15,59 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 
-### Rankings (Updated 9/22/2024)
+### Rankings (Updated 9/29/2024)
 
-**Week 5 Rankings**
+**Week 6 Rankings**
 
 Rank | Team | Score | Record
 ---|---|---|---
-1 | Alabama | 1.0000 | 3-0
-2 | Texas | 0.9864 | 4-0
-3 | Georgia | 0.9828 | 3-0
-4 | Ohio State | 0.9772 | 3-0
-5 | Missouri | 0.9762 | 4-0
-6 | Mississippi | 0.9735 | 4-0
-7 | Penn State | 0.9631 | 3-0
-8 | Oregon | 0.9627 | 3-0
-9 | Tennessee | 0.9454 | 4-0
-10 | Louisville | 0.9417 | 3-0
-11 | Iowa State | 0.9408 | 3-0
-12 | Miami FL | 0.9378 | 4-0
-13 | Duke | 0.9286 | 4-0
-14 | Rutgers | 0.9273 | 3-0
-15 | Utah | 0.9267 | 4-0
-16 | James Madison | 0.9003 | 3-0
-17 | Brigham Young | 0.8973 | 4-0
-18 | Illinois | 0.8917 | 4-0
-19 | Indiana | 0.8908 | 4-0
-20 | Central Florida | 0.8886 | 3-0
-21 | Washington State | 0.8859 | 4-0
-22 | UNLV | 0.8854 | 3-0
-23 | Pittsburgh | 0.8842 | 4-0
-24 | Washington | 0.8772 | 3-1
-25 | Liberty | 0.8757 | 4-0
+1 | Alabama | 1.0000 | 4-0
+2 | Missouri | 0.9780 | 4-0
+3 | Ohio State | 0.9778 | 4-0
+4 | Penn State | 0.9706 | 4-0
+5 | Oregon | 0.9639 | 4-0
+6 | Iowa State | 0.9616 | 4-0
+7 | Texas | 0.9603 | 5-0
+8 | Tennessee | 0.9591 | 4-0
+9 | Brigham Young | 0.9518 | 5-0
+10 | Rutgers | 0.9445 | 4-0
+11 | Kansas State | 0.9365 | 4-1
+12 | Duke | 0.9296 | 5-0
+13 | Pittsburgh | 0.9251 | 4-0
+14 | Washington State | 0.9105 | 4-1
+15 | Texas Tech | 0.9041 | 4-1
+16 | Michigan | 0.9025 | 4-1
+17 | James Madison | 0.9023 | 4-0
+18 | UNLV | 0.9020 | 4-0
+19 | Miami FL | 0.9017 | 5-0
+20 | Indiana | 0.8938 | 5-0
+21 | Army | 0.8786 | 4-0
+22 | Boston College | 0.8729 | 4-1
+23 | Liberty | 0.8675 | 4-0
+24 | Colorado | 0.8631 | 4-1
+25 | Navy | 0.8586 | 4-0
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2005.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2006.md)
 
-#### Observations and Notes (Updated 9/15/2024)
+#### Observations and Notes (Updated 9/29/2024)
 
-* Looking much better than the last couple weeks. The effects of the preseason adjustments are extremely small now compared to the previous polls. Still my #1 takeaway for the offseason is adjusting the early season adjustments.
-* Noticed I forgot to remove the Big 10 divisions from my list of teams. Doesn't effect anything but whoops lol.
+* Wow Georgia just plummeted after that loss. From #3 to #27 is kinda crazy. Looking into why, it has to do with the way my poll rates teams. Anyone who's been here since the beginning will know that I reward more than anything else winning your games and doing so against harder competition. Winning your games is basically just straight winning percentage and the other 1-loss teams ahead of them have all played one more game which does make a slight difference. If they were 4-1 instead of 3-1 they'd be around #20-ish but that's still a huge drop. The real difference maker is strength of schedule. They're SoS to this point in the season is significantly lower than the 1-loss teams ahead of them and is killing them in the rankings. This will resolve itself as the season goes on and more data points get made.
 
-#### Predictions (Updated 9/24/2024)
+#### Predictions (Updated 9/29/2024)
 
-Week 5 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2005.md)
+Week 6 Predictions: Coming Soon
 
-Week 4 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2004.md)
+Week 5 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2005.md)
 
-Week 4 Results:
-* Winner: 33 - 21 (61.1%)
-* ATS: 25 - 29 (46.3%)
-* O/U: 26 - 28 (48.2%)
+Week 5 Results:
+* Winner: 38 - 15 (71.7%)
+* ATS: 28 - 25 (52.8%)
+* O/U: 26 - 27 (49.1%)
 
 Season Results:
-* Winner: 100 - 54 (69.4%)
-* ATS: 66 - 88 (42.9%)
-* O/U: 78 - 76 (50.1%)
+* Winner: 138 - 69 (66.7%)
+* ATS: 94 - 113 (45.4%)
+* O/U: 104 - 103 (50.2%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
