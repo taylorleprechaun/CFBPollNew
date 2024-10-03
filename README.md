@@ -53,9 +53,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * Wow Georgia just plummeted after that loss. From #3 to #27 is kinda crazy. Looking into why, it has to do with the way my poll rates teams. Anyone who's been here since the beginning will know that I reward more than anything else winning your games and doing so against harder competition. Winning your games is basically just straight winning percentage and the other 1-loss teams ahead of them have all played one more game which does make a slight difference. If they were 4-1 instead of 3-1 they'd be around #20-ish but that's still a huge drop. The real difference maker is strength of schedule. They're SoS to this point in the season is significantly lower than the 1-loss teams ahead of them and is killing them in the rankings. This will resolve itself as the season goes on and more data points get made.
 
-#### Predictions (Updated 9/29/2024)
+#### Predictions (Updated 10/2/2024)
 
-Week 6 Predictions: Coming Soon
+Week 6 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2006.md)
 
 Week 5 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2005.md)
 
