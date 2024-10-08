@@ -53,9 +53,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * It's a little shocking at first to see the top 10 but being undefeated and playing a hard schedule gets a lot of credit in my rating algorithm. Washington State and Texas Tech may be X-1 but they have two of the hardest schedules played so far (according to my strength of schedule algorithm).
 
-#### Predictions (Updated 10/6/2024)
+#### Predictions (Updated 10/8/2024)
 
-Week 7 Predictions: Coming Soon
+Week 7 Predictions: ~~Coming Soon~~ Had to evac because of Milton. I'll run these when I'm back but it'll be after games start being played.
 
 Week 6 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2006.md)
 
