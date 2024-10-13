@@ -155,13 +155,18 @@ namespace CFBPoll.Data.Modules
             var topRating = sortedSeasons.FirstOrDefault().Value.RatingDetails.Rating;
             var rank = 1;
 
+            //Sort strength of schedule for printing
+            var sosRank = 1;
+            var strengthOfScheduleRankings = sortedSeasons.OrderByDescending(s => s.Value.RatingDetails.WeightedStrengthOfSchedule).ToDictionary(s => s.Key, s => sosRank++);
+
             //Table header
             var txt = new StringBuilder();
-            txt.AppendLine("Rank | Team | Score | Record\n---|---|---|---");
+            txt.AppendLine("Rank | Team | Rating | Record | SoS | SoS Rank\n---|---|---|---|---|---");
 
             //Loop through teams
-            foreach (var sortedSeason in sortedSeasons)
+            for (int ii = 0; ii < sortedSeasons.Count(); ii++)
             {
+                var sortedSeason = sortedSeasons.ElementAt(ii);
                 var teamName = sortedSeason.Key;
                 var teamSeason = sortedSeason.Value;
 
@@ -170,7 +175,9 @@ namespace CFBPoll.Data.Modules
                     + $"{rank} | "
                     + $"{sortedSeason.Key} | "
                     + $"{string.Format("{0:0.0000}", Math.Truncate(teamSeason.RatingDetails.Rating / topRating * 10000) / 10000)} | "
-                    + $"{teamSeason.GetWins(teamName).Count() + "-" + teamSeason.GetLosses(teamName).Count()}"
+                    + $"{teamSeason.GetWins(teamName).Count() + "-" + teamSeason.GetLosses(teamName).Count()} | "
+                    + $"{string.Format("{0:0.0000}", teamSeason.RatingDetails.WeightedStrengthOfSchedule)} | "
+                    + $"{strengthOfScheduleRankings[teamName]}"
                     + $"\n";
 
                 //Append to csv output
@@ -341,9 +348,7 @@ namespace CFBPoll.Data.Modules
                 var myOverUnder = myLine?.OverUnder ?? 0.0;
                 var pregameOverUnder = pregameLine?.OverUnder ?? 0.0;
 
-                var predictedOverUnder = myOverUnder > pregameOverUnder
-                                ? "Over" : myOverUnder < pregameOverUnder
-                                    ? "Under" : "Push";
+                var predictedOverUnder = myOverUnder >= pregameOverUnder ? "Over" : "Under";
                 var actualOverUnder = realOverUnder > pregameOverUnder
                                 ? "Over" : realOverUnder < pregameOverUnder
                                     ? "Under" : "Push";

@@ -14,60 +14,61 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 
 * 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
+* 10/13/2024: Added strength of schedule to the info I post here
 
-### Rankings (Updated 10/6/2024)
+### Rankings (Updated 10/13/2024)
 
-**Week 7 Rankings**
+**Week 8 Rankings**
 
-Rank | Team | Score | Record
----|---|---|---
-1 | Oregon | 1.0000 | 5-0
-2 | Brigham Young | 0.9789 | 5-0
-3 | Texas | 0.9588 | 5-0
-4 | Washington State | 0.9504 | 4-1
-5 | Texas Tech | 0.9477 | 5-1
-6 | Iowa State | 0.9391 | 5-0
-7 | Ohio State | 0.9386 | 5-0
-8 | Miami FL | 0.9383 | 6-0
-9 | Pittsburgh | 0.9364 | 5-0
-10 | Indiana | 0.9359 | 6-0
-11 | Penn State | 0.9269 | 5-0
-12 | Texas A&M | 0.9262 | 5-1
-13 | Missouri | 0.9250 | 4-1
-14 | Kansas State | 0.9241 | 4-1
-15 | Boise State | 0.8999 | 4-1
-16 | Alabama | 0.8906 | 4-1
-17 | Virginia | 0.8880 | 4-1
-18 | Georgia | 0.8840 | 4-1
-19 | Illinois | 0.8826 | 4-1
-20 | Nebraska | 0.8763 | 5-1
-21 | Syracuse | 0.8713 | 4-1
-22 | Colorado | 0.8673 | 4-1
-23 | Liberty | 0.8652 | 4-0
-24 | Mississippi | 0.8643 | 5-1
-25 | Washington | 0.8617 | 4-2
+Rank | Team | Rating | Record | SoS | SoS Rank
+---|---|---|---|---|---
+1 | Oregon | 1.0000 | 6-0 | 0.6081 | 32
+2 | Brigham Young | 0.9806 | 6-0 | 0.5763 | 62
+3 | Texas | 0.9651 | 6-0 | 0.5470 | 85
+4 | Texas Tech | 0.9587 | 5-1 | 0.6778 | 5
+5 | Iowa State | 0.9512 | 6-0 | 0.5326 | 94
+6 | Kansas State | 0.9365 | 5-1 | 0.6467 | 13
+7 | Pittsburgh | 0.9276 | 6-0 | 0.5095 | 108
+8 | Miami FL | 0.9259 | 6-0 | 0.4962 | 114
+9 | Indiana | 0.9219 | 6-0 | 0.4917 | 115
+10 | Washington State | 0.9206 | 5-1 | 0.6503 | 11
+11 | Texas A&M | 0.9163 | 5-1 | 0.6121 | 28
+12 | Penn State | 0.9116 | 6-0 | 0.4849 | 120
+13 | Alabama | 0.9051 | 5-1 | 0.5964 | 43
+14 | Missouri | 0.9014 | 5-1 | 0.5901 | 46
+15 | Boise State | 0.8900 | 5-1 | 0.6032 | 36
+16 | Syracuse | 0.8872 | 5-1 | 0.5810 | 56
+17 | SMU | 0.8852 | 5-1 | 0.5676 | 67
+18 | Ohio State | 0.8807 | 5-1 | 0.5561 | 80
+19 | Georgia | 0.8668 | 5-1 | 0.5516 | 82
+20 | Illinois | 0.8609 | 5-1 | 0.5436 | 89
+21 | Duke | 0.8594 | 5-1 | 0.5434 | 90
+22 | Nebraska | 0.8507 | 5-1 | 0.5230 | 100
+23 | Notre Dame | 0.8505 | 5-1 | 0.5456 | 86
+24 | James Madison | 0.8500 | 5-1 | 0.5606 | 74
+25 | Louisville | 0.8484 | 4-2 | 0.6438 | 15
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2007.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2008.md)
 
-#### Observations and Notes (Updated 10/6/2024)
+#### Observations and Notes (Updated 10/13/2024)
 
-* It's a little shocking at first to see the top 10 but being undefeated and playing a hard schedule gets a lot of credit in my rating algorithm. Washington State and Texas Tech may be X-1 but they have two of the hardest schedules played so far (according to my strength of schedule algorithm).
+* I decided to include my custom strength of schedule calculation in the info I post here because I've realized how much I talk about it and it might be nice for anyone who looks at this to be able to see what I'm talking about when I do. Last week I mentioned how some 1-loss teams were ranked higher than 0-loss teams because of how good their SoS is. And now you can see that too! Look at Texas Tech and Kansas State with the #5 and #13 ranked SoS. That's the biggest reason they're both in the top 6 ahead of teams like Pittsburgh, Miami FL, and Indiana who all have a SoS in the bottom 20.
 
-#### Predictions (Updated 10/12/2024)
+#### Predictions (Updated 10/13/2024)
 
-Week 7 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2006.md). Yeah they're late and some games have already been played but that's hurricanes for ya
+Week 8 Predictions: Coming Soon
 
-Week 6 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2006.md)
+Week 7 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2007.md)
 
-Week 6 Results:
-* Winner: 34 - 15 (69.4%)
-* ATS: 21 - 28 (42.9%)
-* O/U: 26 - 23 (53.1%)
+Results:
+* Winner: 39 - 13 (75.0%)
+* ATS: 30 - 22 (57.7%)
+* O/U: 23 - 29 (44.2%)
 
 Season Results:
-* Winner: 172 - 84 (67.2%)
-* ATS: 115 - 141 (44.9%)
-* O/U: 130 - 126 (50.8%)
+* Winner: 211 - 97 (68.5%)
+* ATS: 145 - 163 (47.1%)
+* O/U: 153 - 155 (49.7%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
