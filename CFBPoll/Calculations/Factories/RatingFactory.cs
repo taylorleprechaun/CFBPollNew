@@ -13,10 +13,18 @@ namespace CFBPoll.Calculations.Factories
         /// <returns>A module that implements the IRating interface</returns>
         public static IRating GetRatingModule(int season, int week)
         {
+            switch (season)
+            {
+                //case var _ when season == 2024:
+                //    return new TestRatingModule(season, week);
+                default:
+                    return new RatingModule(season, week);
+            };
+
             //No plans for it but if for some reason in the future I want to switch to a new/different rating module then
             //I'll have to flesh out this code to switch depending on whatever conditions I choose. For now we just need
             //to return the only existing module that implements IRating
-            return new RatingModule(season, week);
+            //return new RatingModule(season, week);
         }
     }
 }

@@ -20,7 +20,6 @@
             {
                 DefenseStatistics = new Statistics(),
                 OffenseStatistics = new Statistics(),
-                OpponentStrength = 0,
                 Rating = 0,
                 StrengthOfSchedule = 0,
                 TeamName = teamName,
@@ -35,20 +34,18 @@
         /// <param name="defenseStats">The defensive stats</param>
         /// <param name="games">The games on their schedule</param>
         /// <param name="offenseStats">The offensive stats</param>
-        /// <param name="opponentStrength">The strength of opponents</param>
         /// <param name="rating">The team's rating</param>
         /// <param name="strengthOfSchedule">The strength of schedule</param>
         /// <param name="teamName">The name of the team</param>
         /// <param name="weightedStrengthOfSchedule">The weighted strength of schedule</param>
         /// <param name="year">The year of the season</param>
-        public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double opponentStrength, double rating, double strengthOfSchedule, string teamName, double weightedStrengthOfSchedule, int year)
+        public Season(Statistics defenseStats, IEnumerable<Game> games, Statistics offenseStats, double rating, double strengthOfSchedule, string teamName, double weightedStrengthOfSchedule, int year)
         {
             Games = games;
             RatingDetails = new RatingDetails()
             {
                 DefenseStatistics = defenseStats,
                 OffenseStatistics = offenseStats,
-                OpponentStrength = opponentStrength,
                 Rating = rating,
                 StrengthOfSchedule = strengthOfSchedule,
                 TeamName = teamName,
