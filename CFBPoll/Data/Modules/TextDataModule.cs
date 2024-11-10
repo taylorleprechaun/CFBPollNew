@@ -226,7 +226,7 @@ namespace CFBPoll.Data.Modules
                 var spread = bettingInfoToPrint?.Spread ?? -1.0;
                 var spreadPick = spread < 0 ? prediction.HomeTeam : prediction.AwayTeam;
                 var atsPick = !spread.Equals(-1.0)
-                                ? Math.Round(prediction.AwayPoints, 0)  - Math.Round(prediction.HomePoints, 0) >= spread ? prediction.AwayTeam : prediction.HomeTeam
+                                ? Math.Round(prediction.AwayPoints, 0) - Math.Round(prediction.HomePoints, 0) >= spread ? prediction.AwayTeam : prediction.HomeTeam
                                 : string.Empty;
                 //Get the over/under and make our pick against it
                 var overUnder = bettingInfoToPrint?.OverUnder ?? -1.0;
@@ -322,9 +322,9 @@ namespace CFBPoll.Data.Modules
                     //Pregame spread pick
                     pregameSpreadPick = prediction.HomePoints > (prediction.AwayPoints + pregameSpread) ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                     //If my spread is less than the pregame spread then I predicted the home team to cover
-                    predictionSpreadResult = mySpread < pregameSpread ? matchingGame.HomeTeam : matchingGame.AwayTeam;
+                    predictionSpreadResult = mySpread > pregameSpread ? matchingGame.AwayTeam : matchingGame.HomeTeam;
                     //If the home team won by more points than the away team plus the spread then the home team beat the spread
-                    realSpreadResult = matchingGame.HomePoints > (matchingGame.AwayPoints + pregameSpread) ? matchingGame.HomeTeam : matchingGame.AwayTeam;
+                    realSpreadResult = matchingGame.HomePoints > (matchingGame.AwayPoints - pregameSpread) ? matchingGame.HomeTeam : matchingGame.AwayTeam;
                 }
                 //If the pregame spread is < 0 then the home team is predicted to have won
                 else if (pregameSpread < 0)
