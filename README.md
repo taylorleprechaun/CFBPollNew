@@ -16,61 +16,59 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 * 10/13/2024: Added strength of schedule to the info I post here
 
-### Rankings (Updated 11/10/2024)
+### Rankings (Updated 11/17/2024)
 
-**Week 12 Rankings**
+**Week 13 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Oregon | 1.0000 | 10-0 | 0.5652 | 48
-2 | Brigham Young | 0.9631 | 9-0 | 0.5182 | 93
-3 | Indiana | 0.9619 | 10-0 | 0.5076 | 104
-4 | Ohio State | 0.9420 | 8-1 | 0.5663 | 46
-5 | Alabama | 0.9324 | 7-2 | 0.6341 | 5
-6 | SMU | 0.9264 | 8-1 | 0.5530 | 59
-7 | Texas | 0.9207 | 8-1 | 0.5375 | 74
-8 | Penn State | 0.9167 | 8-1 | 0.5380 | 73
-9 | Miami FL | 0.9141 | 9-1 | 0.5233 | 90
-10 | Boise State | 0.9128 | 8-1 | 0.5583 | 52
-11 | Notre Dame | 0.8937 | 8-1 | 0.5236 | 89
-12 | Mississippi | 0.8891 | 8-2 | 0.5569 | 54
-13 | Washington State | 0.8868 | 8-1 | 0.5261 | 87
-14 | Texas A&M | 0.8844 | 7-2 | 0.5812 | 28
-15 | Louisville | 0.8787 | 6-3 | 0.6560 | 1
-16 | Tennessee | 0.8771 | 8-1 | 0.4830 | 117
-17 | Georgia | 0.8748 | 7-2 | 0.5723 | 39
-18 | Colorado | 0.8744 | 7-2 | 0.5676 | 44
-19 | Kansas State | 0.8736 | 7-2 | 0.5682 | 42
-20 | Missouri | 0.8641 | 7-2 | 0.5556 | 58
-21 | Pittsburgh | 0.8632 | 7-2 | 0.5519 | 63
-22 | Iowa State | 0.8524 | 7-2 | 0.5356 | 77
-23 | Army | 0.8504 | 9-0 | 0.4111 | 132
-24 | Clemson | 0.8421 | 7-2 | 0.5191 | 92
-25 | Louisiana-Lafayette | 0.8415 | 8-1 | 0.4861 | 115
+1 | Oregon | 1.0000 | 11-0 | 0.5489 | 58
+2 | Indiana | 0.9583 | 10-0 | 0.4869 | 118
+3 | Alabama | 0.9494 | 8-2 | 0.6217 | 11
+4 | Texas | 0.9466 | 9-1 | 0.5469 | 63
+5 | Ohio State | 0.9436 | 9-1 | 0.5440 | 69
+6 | SMU | 0.9344 | 9-1 | 0.5402 | 73
+7 | Georgia | 0.9251 | 8-2 | 0.6044 | 16
+8 | Boise State | 0.9228 | 9-1 | 0.5466 | 66
+9 | Miami FL | 0.9219 | 9-1 | 0.5178 | 92
+10 | Penn State | 0.9164 | 9-1 | 0.5134 | 99
+11 | Brigham Young | 0.9162 | 9-1 | 0.5155 | 95
+12 | Notre Dame | 0.9128 | 9-1 | 0.5240 | 84
+13 | Mississippi | 0.8981 | 8-2 | 0.5534 | 53
+14 | Texas A&M | 0.8882 | 8-2 | 0.5553 | 49
+15 | Colorado | 0.8864 | 8-2 | 0.5513 | 57
+16 | Iowa State | 0.8773 | 8-2 | 0.5381 | 75
+17 | Clemson | 0.8738 | 8-2 | 0.5303 | 80
+18 | Tennessee | 0.8635 | 8-2 | 0.5183 | 89
+19 | Army | 0.8618 | 9-0 | 0.4114 | 133
+20 | South Carolina | 0.8549 | 7-3 | 0.5830 | 29
+21 | Kansas State | 0.8462 | 7-3 | 0.5763 | 34
+22 | Missouri | 0.8420 | 7-3 | 0.5697 | 37
+23 | Tulane | 0.8407 | 9-2 | 0.5151 | 97
+24 | Washington State | 0.8390 | 8-2 | 0.5135 | 98
+25 | Arizona State | 0.8388 | 8-2 | 0.4907 | 113
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2012.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2013.md)
 
 #### Observations and Notes (Updated 10/13/2024)
 
 * I decided to include my custom strength of schedule calculation in the info I post here because I've realized how much I talk about it and it might be nice for anyone who looks at this to be able to see what I'm talking about when I do. Last week I mentioned how some 1-loss teams were ranked higher than 0-loss teams because of how good their SoS is. And now you can see that too! Look at Texas Tech and Kansas State with the #5 and #13 ranked SoS. That's the biggest reason they're both in the top 6 ahead of teams like Pittsburgh, Miami FL, and Indiana who all have a SoS in the bottom 20.
 
-#### Predictions (Updated 11/11/2024)
+#### Predictions (Updated 11/17/2024)
 
-Week 12 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2012.md)
+Week 13 Predictions: Coming Soon!
 
-Week 11 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2011.md)
+Week 12 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2012.md)
 
 Results:
-* Winner: 38 - 12 (76.0%)
-* ATS: 23 - 27 (46.0%)
-* O/U: 26 - 24 (52.0%)
+* Winner: 35 - 18 (66.0%)
+* ATS: 21 - 32 (39.6%)
+* O/U: 21 - 32 (39.6%)
 
 Season Results:
-* Winner: 349 - 161 (68.4%)
-* ATS: 255 - 265 (49.0%)
-    * **Update**: I found an error with the way my code was checking the results of spread picks so I went back and recalculated all my results
-* O/U: 259 - 261 (49.8%)
-
+* Winner: 384 - 179 (68.2%)
+* ATS: 274 - 299 (47.8%)
+* O/U: 280 - 293 (48.9%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
