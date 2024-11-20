@@ -54,9 +54,9 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * I decided to include my custom strength of schedule calculation in the info I post here because I've realized how much I talk about it and it might be nice for anyone who looks at this to be able to see what I'm talking about when I do. Last week I mentioned how some 1-loss teams were ranked higher than 0-loss teams because of how good their SoS is. And now you can see that too! Look at Texas Tech and Kansas State with the #5 and #13 ranked SoS. That's the biggest reason they're both in the top 6 ahead of teams like Pittsburgh, Miami FL, and Indiana who all have a SoS in the bottom 20.
 
-#### Predictions (Updated 11/17/2024)
+#### Predictions (Updated 11/18/2024)
 
-Week 13 Predictions: Coming Soon!
+Week 13 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2013.md)
 
 Week 12 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2012.md)
 
