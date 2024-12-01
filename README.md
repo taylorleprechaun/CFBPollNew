@@ -16,59 +16,59 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 * 10/13/2024: Added strength of schedule to the info I post here
 
-### Rankings (Updated 11/24/2024)
+### Rankings (Updated 12/1/2024)
 
-**Week 14 Rankings**
+**Week 15 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Oregon | 1.0000 | 11-0 | 0.5492 | 55
-2 | Ohio State | 0.9643 | 10-1 | 0.5641 | 37
-3 | Texas | 0.9458 | 10-1 | 0.5400 | 66
-4 | SMU | 0.9377 | 10-1 | 0.5386 | 68
-5 | Miami FL | 0.9330 | 10-1 | 0.5258 | 80
-6 | Notre Dame | 0.9312 | 10-1 | 0.5408 | 64
-7 | Indiana | 0.9242 | 10-1 | 0.5120 | 97
-8 | Penn State | 0.9238 | 10-1 | 0.5161 | 91
-9 | Georgia | 0.9125 | 9-2 | 0.5734 | 26
-10 | Boise State | 0.9048 | 10-1 | 0.5173 | 89
-11 | Alabama | 0.8984 | 8-3 | 0.6128 | 10
-12 | Iowa State | 0.8817 | 9-2 | 0.5323 | 73
-13 | Clemson | 0.8811 | 9-2 | 0.5259 | 79
-14 | Brigham Young | 0.8803 | 9-2 | 0.5303 | 74
-15 | South Carolina | 0.8612 | 8-3 | 0.5713 | 29
-16 | Mississippi | 0.8597 | 8-3 | 0.5600 | 47
-17 | Louisville | 0.8575 | 7-4 | 0.6339 | 3
-18 | Arizona State | 0.8571 | 9-2 | 0.5017 | 108
-19 | Tennessee | 0.8554 | 9-2 | 0.4926 | 113
-20 | UNLV | 0.8539 | 9-2 | 0.5140 | 94
-21 | Texas A&M | 0.8533 | 8-3 | 0.5638 | 39
-22 | Kansas State | 0.8506 | 8-3 | 0.5616 | 45
-23 | Syracuse | 0.8476 | 8-3 | 0.5624 | 43
-24 | Illinois | 0.8436 | 8-3 | 0.5539 | 51
-25 | Tulane | 0.8421 | 9-2 | 0.5171 | 90
+1 | Oregon | 1.0000 | 12-0 | 0.5437 | 57
+2 | Texas | 0.9550 | 11-1 | 0.5421 | 60
+3 | SMU | 0.9404 | 11-1 | 0.5301 | 70
+4 | Notre Dame | 0.9326 | 11-1 | 0.5344 | 66
+5 | Ohio State | 0.9287 | 10-2 | 0.5696 | 32
+6 | Penn State | 0.9204 | 11-1 | 0.5001 | 102
+7 | Georgia | 0.9204 | 10-2 | 0.5687 | 34
+8 | Indiana | 0.9170 | 11-1 | 0.4882 | 115
+9 | Boise State | 0.9101 | 11-1 | 0.5151 | 86
+10 | Alabama | 0.9021 | 9-3 | 0.5978 | 12
+11 | Miami FL | 0.8982 | 10-2 | 0.5318 | 69
+12 | Iowa State | 0.8964 | 10-2 | 0.5345 | 65
+13 | Brigham Young | 0.8849 | 10-2 | 0.5194 | 83
+14 | South Carolina | 0.8839 | 9-3 | 0.5809 | 24
+15 | Syracuse | 0.8746 | 9-3 | 0.5760 | 28
+16 | Tennessee | 0.8704 | 10-2 | 0.4965 | 105
+17 | Arizona State | 0.8647 | 10-2 | 0.4937 | 109
+18 | Mississippi | 0.8575 | 9-3 | 0.5357 | 64
+19 | Louisville | 0.8519 | 8-4 | 0.5979 | 11
+20 | UNLV | 0.8509 | 10-2 | 0.4946 | 107
+21 | Clemson | 0.8501 | 9-3 | 0.5319 | 68
+22 | Missouri | 0.8501 | 9-3 | 0.5389 | 62
+23 | Illinois | 0.8486 | 9-3 | 0.5385 | 63
+24 | Army | 0.8449 | 10-1 | 0.4554 | 128
+25 | Duke | 0.8377 | 9-3 | 0.5242 | 79
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2014.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2015.md)
 
-#### Observations and Notes (Updated 10/13/2024)
+#### Observations and Notes (Updated 12/1/2024)
 
-* I decided to include my custom strength of schedule calculation in the info I post here because I've realized how much I talk about it and it might be nice for anyone who looks at this to be able to see what I'm talking about when I do. Last week I mentioned how some 1-loss teams were ranked higher than 0-loss teams because of how good their SoS is. And now you can see that too! Look at Texas Tech and Kansas State with the #5 and #13 ranked SoS. That's the biggest reason they're both in the top 6 ahead of teams like Pittsburgh, Miami FL, and Indiana who all have a SoS in the bottom 20.
+* In the past before the conference championships I've done a bunch of scenarios to see who makes the playoff based on CCG results and I don't plan to do that this year. It's a little less interesting when there are 12 teams in play vs 4. Maybe if I get bored during the week I'll mess with it but don't expect anything.
 
-#### Predictions (Updated 11/25/2024)
+#### Predictions (Updated 12/1/2024)
 
-Week 14 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2014.md)
+Week 15 Predictions: Coming Soon!
 
-Week 13 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2013.md)
+Week 13 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2014.md)
 
 Results:
-* Winner: 42 - 20 (67.7%)
-* ATS: 30 - 32 (48.4%)
-* O/U: 37 - 25 (59.7%)
+* Winner: 48 - 19 (71.6%)
+* ATS: 35 - 32 (52.2%)
+* O/U: 29 - 38 (43.3%)
 
 Season Results:
-* Winner: 426 - 199 (68.2%)
-* ATS: 304 - 331 (47.9%)
-* O/U: 317 - 318 (49.9%)
+* Winner: 474 - 218 (68.5%)
+* ATS: 339 - 363 (48.3%)
+* O/U: 346 - 356 (49.3%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
