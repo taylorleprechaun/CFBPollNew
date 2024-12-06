@@ -54,11 +54,11 @@ Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/C
 
 * In the past before the conference championships I've done a bunch of scenarios to see who makes the playoff based on CCG results and I don't plan to do that this year. It's a little less interesting when there are 12 teams in play vs 4. Maybe if I get bored during the week I'll mess with it but don't expect anything.
 
-#### Predictions (Updated 12/1/2024)
+#### Predictions (Updated 12/5/2024)
 
-Week 15 Predictions: Coming Soon!
+Week 15 Predictions: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2015.md)
 
-Week 13 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2014.md)
+Week 14 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2014.md)
 
 Results:
 * Winner: 48 - 19 (71.6%)
