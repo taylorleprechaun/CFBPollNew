@@ -69,13 +69,13 @@ Seed | Rank | Team | Record
 
 #### Observations and Notes (Updated 12/8/2024)
 
-* Well here we are with the field set. Would be an odd year for sure to have a 4 team playoff. The candidates for it all feel flawed in ways that they haven't been in the past and my ranking even shows this under the hood. My poll basically only considers Oregon as an elite team and just barely with the rest of the field trailing way far behind. The gap between #1 Oregon and #2 Georgia is nearly the same as the gap between #2 Georgia and #19 Army
+* Well here we are with the field set. Would be an odd year for sure to have a 4 team playoff. The candidates for it all feel flawed in ways that they haven't been in the past and my ranking even shows this under the hood. My poll basically only considers Oregon as an elite team and just barely with the rest of the field trailing way far behind. The gap between #1 Oregon and #2 Georgia is nearly the same as the gap between #2 Georgia and #19 Army.
 * Speaking of the field being set, The bracket for this one looks pretty good. Don't like Bama being in there but when you reward strength of schedule like my poll does you're going to get a boost from it above teams with better records (on paper).
 * And as a last little note here, I'm not a huge fan of the 12-team system and would have preferred either 8 or 16 and I have a lot of opinions on how those would have worked. I won't ramble on about it but if you're reading this and want my thoughts just shoot me a message on twitter, reddit, etc.
 
-#### Predictions (Updated 12/8/2024)
+#### Predictions (Updated 12/12/2024)
 
-Bowl Predictions: Coming Soon!
+Bowl Predictions (+ Army/Navy): [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2016%20Bowls.md)
 
 Week 15 CCG Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2015%20CCG.md)
 
