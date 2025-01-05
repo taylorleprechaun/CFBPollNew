@@ -1,7 +1,7 @@
 ﻿using CFBPoll.Calculations.Factories;
 using CFBPoll.Data.Modules;
-using CFBPollDTOs.Enums;
 using CFBPoll.Utilities;
+using CFBPollDTOs.Enums;
 using Microsoft.Extensions.Configuration;
 
 //Set up application settings config

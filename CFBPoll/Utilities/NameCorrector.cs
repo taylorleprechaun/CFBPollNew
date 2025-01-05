@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace CFBPoll.Utilities
+﻿namespace CFBPoll.Utilities
 {
     public class NameCorrector
     {

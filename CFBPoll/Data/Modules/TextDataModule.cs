@@ -1,9 +1,7 @@
 ﻿using CFBPoll.Utilities;
 using CFBPollDTOs;
-using DocumentFormat.OpenXml.Wordprocessing;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
-using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
