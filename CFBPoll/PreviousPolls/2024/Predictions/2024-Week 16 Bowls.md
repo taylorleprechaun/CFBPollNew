@@ -36,10 +36,10 @@ West Virginia - Memphis | 22 - 35 | 37 - 42 | Memphis ✔ | Memphis 4.5 | Memphi
 Minnesota - Virginia Tech | 23 - 22 | 24 - 10 | Minnesota ✔ | Minnesota -5.5 | Virginia Tech ❌ | 42.5 | Over ❌
 Navy - Oklahoma | 25 - 22 | 21 - 20 | Navy ✔ | Oklahoma  8.5 | Navy ✔ | 43.5 | Over ❌
 North Texas - Texas State | 28 - 38 | 28 - 30 | Texas State ✔ | Texas State 10 | North Texas ✔ | 68.5 | Under ✔
-Texas - Ohio State | 22 - 26 |  | Ohio State | Ohio State 6 | Texas | 53.5 | Under
+Texas - Ohio State | 22 - 26 | 14 - 28 | Ohio State ✔ | Ohio State 6 | Texas ❌ | 53.5 | Under ✔
 Ohio State - Tennessee | 28 - 21 | 42 - 17 | Ohio State ✔ | Ohio State -7.5 | Tennessee ❌ | 47.5 | Over ✔
 Oregon - Ohio State | 23 - 26 | 21 - 41 | Ohio State ✔ | Ohio State 3.5 | Ohio State ✔ | 54.5 | Under ❌
-Penn State - Notre Dame | 22 - 28 |  | Notre Dame | Notre Dame 2 | Notre Dame | 45.5 | Over
+Penn State - Notre Dame | 22 - 28 | 27 - 24 | Notre Dame ✔ | Notre Dame 2 | Notre Dame ✔ | 45.5 | Over ✔
 Penn State - SMU | 30 - 28 | 38 - 10 | Penn State ✔ | Penn State -9 | SMU ❌ | 53.5 | Over ❌
 Pittsburgh - Toledo | 27 - 23 | 46 - 48 | Pittsburgh ❌ | Pittsburgh -7 | Toledo ✔ | 51.5 | Under ❌
 San Jose State - South Florida | 28 - 27 | 39 - 41 | San Jose State ❌ | San Jose State -4 | South Florida ✔ | 62.5 | Under ❌
@@ -48,6 +48,6 @@ Syracuse - Washington State | 33 - 30 | 52 - 35 | Syracuse ✔ | Syracuse -8 | W
 USC - Texas A&M | 23 - 29 | 35 - 31 | Texas A&M ❌ | USC -3 | Texas A&M ❌ | 51.5 | Over ✔
 
 Results:
-* Winner: 28 - 16 (63.6%)
-* ATS: 20 - 24 (45.5%)
-* O/U: 20 - 24 (45.5%)
+* Winner: 30 - 16 (65.2%)
+* ATS: 21 - 25 (45.7%)
+* O/U: 22 - 24 (47.8%)
