@@ -15,60 +15,57 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
 * 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
 * 10/13/2024: Added strength of schedule to the info I post here
+* 1/21/2025: Final Poll 2024-25 + BOAT and WOAT Update
 
-### Rankings (Updated 1/12/2025)
+### Rankings (Updated 1/21/2025)
 
-**Week 17 Rankings**
+**Week 18 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Oregon | 1.0000 | 13-1 | 0.5917 | 17
-2 | Ohio State | 0.9847 | 13-2 | 0.6119 | 8
-3 | Notre Dame | 0.9821 | 14-1 | 0.5844 | 25
-4 | Texas | 0.9364 | 13-3 | 0.5931 | 16
-5 | Penn State | 0.9287 | 13-3 | 0.5816 | 28
-6 | Georgia | 0.9250 | 11-3 | 0.6048 | 9
-7 | Indiana | 0.9136 | 11-2 | 0.5318 | 80
-8 | Boise State | 0.9025 | 12-2 | 0.5458 | 67
-9 | Brigham Young | 0.9005 | 11-2 | 0.5261 | 84
-10 | Iowa State | 0.8870 | 11-3 | 0.5553 | 57
-11 | SMU | 0.8866 | 11-3 | 0.5546 | 61
-12 | Syracuse | 0.8803 | 10-3 | 0.5635 | 40
-13 | Mississippi | 0.8796 | 10-3 | 0.5448 | 68
-14 | Illinois | 0.8773 | 10-3 | 0.5578 | 52
-15 | Arizona State | 0.8746 | 11-3 | 0.5349 | 78
-16 | Miami FL | 0.8741 | 10-3 | 0.5443 | 69
-17 | Alabama | 0.8701 | 9-4 | 0.5954 | 14
-18 | Missouri | 0.8643 | 10-3 | 0.5380 | 76
-19 | South Carolina | 0.8625 | 9-4 | 0.5902 | 18
-20 | Tennessee | 0.8593 | 10-3 | 0.5258 | 85
-21 | Louisville | 0.8572 | 9-4 | 0.5819 | 27
-22 | Louisiana State | 0.8534 | 9-4 | 0.5851 | 23
-23 | Clemson | 0.8533 | 10-4 | 0.5580 | 51
-24 | Army | 0.8510 | 12-2 | 0.4986 | 114
-25 | Navy | 0.8429 | 10-3 | 0.5551 | 60
+1 | Oregon | 1.0000 | 13-1 | 0.5962 | 15
+2 | Ohio State | 0.9959 | 14-2 | 0.6257 | 6
+3 | Notre Dame | 0.9578 | 14-2 | 0.5999 | 13
+4 | Texas | 0.9343 | 13-3 | 0.5948 | 18
+5 | Penn State | 0.9259 | 13-3 | 0.5823 | 27
+6 | Georgia | 0.9205 | 11-3 | 0.6033 | 11
+7 | Indiana | 0.9117 | 11-2 | 0.5336 | 79
+8 | Boise State | 0.8993 | 12-2 | 0.5460 | 67
+9 | Brigham Young | 0.8972 | 11-2 | 0.5261 | 85
+10 | Iowa State | 0.8839 | 11-3 | 0.5554 | 56
+11 | SMU | 0.8831 | 11-3 | 0.5542 | 61
+12 | Syracuse | 0.8770 | 10-3 | 0.5633 | 40
+13 | Mississippi | 0.8764 | 10-3 | 0.5447 | 68
+14 | Illinois | 0.8744 | 10-3 | 0.5582 | 49
+15 | Arizona State | 0.8715 | 11-3 | 0.5349 | 78
+16 | Miami FL | 0.8707 | 10-3 | 0.5440 | 70
+17 | Alabama | 0.8670 | 9-4 | 0.5955 | 16
+18 | Missouri | 0.8612 | 10-3 | 0.5380 | 76
+19 | South Carolina | 0.8593 | 9-4 | 0.5902 | 20
+20 | Tennessee | 0.8584 | 10-3 | 0.5287 | 82
+21 | Louisville | 0.8526 | 9-4 | 0.5800 | 28
+22 | Louisiana State | 0.8502 | 9-4 | 0.5849 | 23
+23 | Clemson | 0.8499 | 10-4 | 0.5576 | 52
+24 | Army | 0.8471 | 12-2 | 0.4975 | 116
+25 | Navy | 0.8386 | 10-3 | 0.5536 | 63
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2017%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2018%20NCG.md)
 
-#### Observations and Notes (Updated 1/12/2025)
+#### Observations and Notes (Updated 1/21/2025)
 
-* It looks like regardless of the result of the national championship game my poll is going to rank Oregon #1. I spent some time playing with plugging in hypothetical winners/losers and Oregon stays on top just barely. If you've read my BOAT/WOAT section you'll know that the top teams in my poll have a rating over 40 and no one this season is over that rating (Oregon is currently closest at 39.818). The poll doesn't perceive any team as "elite" and Oregon just happens to be the best of a bunch of "great" teams.
+* And your National Champion is........... Oregon. Yeah idk it's kind of weird how they're still #1. From what I can tell looking at the code that rates the teams the main difference comes from the winning percentage component of the ranking.  13-1 with the #15 strength of schedule is perceived as better than 14-2 with the #6 strength of schedule. I don't *love* it but that's what we're going with. Maybe I'll adjust it a little for next season to reward teams that go further in the playoff. 
 
-#### Predictions (Updated 1/12/2025)
+#### Predictions (Updated 1/21/2025)
 
-National Championship Prediction: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2017%20NCG.md)
+National Championship Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2017%20NCG.md)
 
-Bowls + Playoff Rounds 1-3 Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2016%20Bowls.md)
+Retrospective:
+I came into this season with a goal of >70% for Winner and >50% for both ATS and O/U. I had re-run the entirety of 2023 multiple times while testing my changes for 2024 and I hit those marks. But as the season went on I noticed my Winner and O/U predictions were not where I wanted them to be. Around week 8 (ish) I made some adjustments which improved the O/U predictions by a decent amount but the ATS predictions fell off the rest of the way through the season. I have ideas for how to adjust things so next year though I'll have more changes and improvements so I can hit that goal.
 
-Results:
-* Winner: 30 - 16 (65.2%)
-* ATS: 21 - 25 (45.7%)
-* O/U: 22 - 24 (47.8%)
-
-Season Results:
-* Winner: 509 - 238 (68.1%)
-* ATS: 364 - 393 (48.1%)
-* O/U: 373 - 384 (49.3%)
+2024 Season Results:
+* Winner: 510 - 238 (68.2%)
+* ATS: 364 - 394 (48.0%)
+* O/U: 374 - 384 (49.3%)
 
 2023 Season Results:
 * Winner: 507 - 232 (68.6%)
@@ -101,12 +98,12 @@ My poll, as of this update, has been run across every season from 2000 through 2
 Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them [here]( https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/Resources/BOAT%20and%20WOAT.xlsx).
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
-I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me
+I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me. As of right now I'm not going to split into 4 vs 12 but maybe in the future I will
 
-*New additions for the 2023 season!*
+*New additions for the 2024 season!*
 
-* This year Michigan clocks in with a 42.244 in my poll, placing them at #3 in the Playoff Era
-* This year Kent State clocks in with a 15.812 in my poll, placing them at 11th worst in the Playoff Era
+* No one cracked 40 points so no one is making it into the BOAT section for 2024. Oregon came closest at 39.962 and Ohio State was a little behind at 39.802
+* Kent State repeats this year as worst team in FBS. They finished with a rating of 15.735, placing them at 9th worst in the Playoff Era
 
 **The top 5 Best of all Time (pre-CFP era)**
 
@@ -124,7 +121,7 @@ Rank | Year | Team | Rating | Record
 ---|---|---|---|---
 1 | 2018 | Clemson | 42.445 | 15-0
 2 | 2019 | LSU | 42.374 | 15-0
-3 | 2022 | Michigan | 42.244 | 15-0
+3 | 2023 | Michigan | 42.244 | 15-0
 4 | 2022 | Georgia | 42.124 | 15-0
 5 | 2015 | Alabama | 41.615 | 14-1
 
