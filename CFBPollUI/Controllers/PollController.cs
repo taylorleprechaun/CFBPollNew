@@ -76,7 +76,7 @@ namespace CFBPollUI.Controllers
             var teams = teamBuilder.BuildTeams();
 
             //Rate the teams
-            var rater = new RatingFactory().GetRatingModule(season, week);
+            var rater = RatingFactory.GetRatingModule(season, week);
             teams = rater.RateTeams(teams);
             
             //Return the rating details

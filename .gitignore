@@ -17,3 +17,4 @@ CFBPollUI/bin
 CFBPollUI/obj
 CFBPollUI/wwwroot/lib
 CFBPollUI/appsettings-private.json
+/CFBPoll/Calculations/Modules/TestRatingModule.cs

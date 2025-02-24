@@ -12,68 +12,65 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 
 ### Recent changes
 
-* 9/9/2023: Conversion to .Net 6 + a little bit of re-architecting the project to make application layers more distinct
-* 9/23/2023: Automate game prediction results
+* 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
+* 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
+* 10/13/2024: Added strength of schedule to the info I post here
+* 1/21/2025: Final Poll 2024-25 + BOAT and WOAT Update
 
-### Rankings (Updated 1/9/2024)
+### Rankings (Updated 1/21/2025)
 
-**Week 17 Rankings**
+**Week 18 Rankings**
 
-Rank | Team | Score | Record
----|---|---|---
-1 | Michigan | 1.0000 | 15-0
-2 | Washington | 0.9663 | 14-1
-3 | Georgia | 0.9595 | 13-1
-4 | Alabama | 0.9486 | 12-2
-5 | Florida State | 0.9388 | 13-1
-6 | Texas | 0.9287 | 12-2
-7 | Oregon | 0.9203 | 12-2
-8 | Ohio State | 0.9188 | 11-2
-9 | Missouri | 0.9148 | 11-2
-10 | Mississippi | 0.9085 | 11-2
-11 | Penn State | 0.8859 | 10-3
-12 | Louisiana State | 0.8830 | 10-3
-13 | Oklahoma | 0.8590 | 10-3
-14 | Liberty | 0.8541 | 13-1
-15 | James Madison | 0.8365 | 11-2
-16 | Arizona | 0.8362 | 10-3
-17 | Notre Dame | 0.8357 | 10-3
-18 | Kansas State | 0.8348 | 9-4
-19 | Tennessee | 0.8179 | 9-4
-20 | Louisville | 0.8178 | 10-4
-21 | Clemson | 0.8155 | 9-4
-22 | Troy | 0.8118 | 11-3
-23 | Oklahoma State | 0.8101 | 10-4
-24 | Memphis | 0.8078 | 10-3
-25 | Tulane | 0.8065 | 11-3
+Rank | Team | Rating | Record | SoS | SoS Rank
+---|---|---|---|---|---
+1 | Oregon | 1.0000 | 13-1 | 0.5962 | 15
+2 | Ohio State | 0.9959 | 14-2 | 0.6257 | 6
+3 | Notre Dame | 0.9578 | 14-2 | 0.5999 | 13
+4 | Texas | 0.9343 | 13-3 | 0.5948 | 18
+5 | Penn State | 0.9259 | 13-3 | 0.5823 | 27
+6 | Georgia | 0.9205 | 11-3 | 0.6033 | 11
+7 | Indiana | 0.9117 | 11-2 | 0.5336 | 79
+8 | Boise State | 0.8993 | 12-2 | 0.5460 | 67
+9 | Brigham Young | 0.8972 | 11-2 | 0.5261 | 85
+10 | Iowa State | 0.8839 | 11-3 | 0.5554 | 56
+11 | SMU | 0.8831 | 11-3 | 0.5542 | 61
+12 | Syracuse | 0.8770 | 10-3 | 0.5633 | 40
+13 | Mississippi | 0.8764 | 10-3 | 0.5447 | 68
+14 | Illinois | 0.8744 | 10-3 | 0.5582 | 49
+15 | Arizona State | 0.8715 | 11-3 | 0.5349 | 78
+16 | Miami FL | 0.8707 | 10-3 | 0.5440 | 70
+17 | Alabama | 0.8670 | 9-4 | 0.5955 | 16
+18 | Missouri | 0.8612 | 10-3 | 0.5380 | 76
+19 | South Carolina | 0.8593 | 9-4 | 0.5902 | 20
+20 | Tennessee | 0.8584 | 10-3 | 0.5287 | 82
+21 | Louisville | 0.8526 | 9-4 | 0.5800 | 28
+22 | Louisiana State | 0.8502 | 9-4 | 0.5849 | 23
+23 | Clemson | 0.8499 | 10-4 | 0.5576 | 52
+24 | Army | 0.8471 | 12-2 | 0.4975 | 116
+25 | Navy | 0.8386 | 10-3 | 0.5536 | 63
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/2023-Week%2017%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2018%20NCG.md)
 
-#### Observations and Notes (Updated 1/9/2024)
+#### Observations and Notes (Updated 1/21/2025)
 
-* Another season in the wraps has given me a number of things I want to update in both the rating and prediction algorithms. I have some good ideas for both I'm excited to try out (if I can ever get a good chunk of free time to mess with)
+* And your National Champion is........... Oregon. Yeah idk it's kind of weird how they're still #1. From what I can tell looking at the code that rates the teams the main difference comes from the winning percentage component of the ranking.  13-1 with the #15 strength of schedule is perceived as better than 14-2 with the #6 strength of schedule. I don't *love* it but that's what we're going with. Maybe I'll adjust it a little for next season to reward teams that go further in the playoff. 
 
-#### Predictions (Updated 1/9/2024)
+#### Predictions (Updated 1/21/2025)
 
-National Championship Result: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2023/Predictions/2023-Week%2016%20NCG.md):
-* Winner: 1 - 0 (100.0%)
-* ATS: 1 - 0 (100.0%)
-* O/U: 1 - 0 (100.0%)
+National Championship Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2017%20NCG.md)
 
-Season Results:
+Retrospective:
+I came into this season with a goal of >70% for Winner and >50% for both ATS and O/U. I had re-run the entirety of 2023 multiple times while testing my changes for 2024 and I hit those marks. But as the season went on I noticed my Winner and O/U predictions were not where I wanted them to be. Around week 8 (ish) I made some adjustments which improved the O/U predictions by a decent amount but the ATS predictions fell off the rest of the way through the season. I have ideas for how to adjust things so next year though I'll have more changes and improvements so I can hit that goal.
+
+2024 Season Results:
+* Winner: 510 - 238 (68.2%)
+* ATS: 364 - 394 (48.0%)
+* O/U: 374 - 384 (49.3%)
+
+2023 Season Results:
 * Winner: 507 - 232 (68.6%)
 * ATS: 365 - 374 (49.4%)
 * O/U: 366 - 373 (49.5%)
-
-Retrospective:
-* Two seasons in the books on my predictions algorithm running for the full season. In between the 2022 and 2023 seasons I made some very very very minor changes to the algorithm but nothing that I would expect to produce meaningful differences in the results. I've identified a number of changes I want to make in it which I hope to get done before next season
-* What went well?
-    * It's automated now (except for the bowl games for some reason) which is fantastic.
-    * Not something that can be seen but the code that runs this is just so much easier to understand than it used to be. The way it was written before was really weird and impossible to understand without some of the giant summary blocks in the code (which is excluded from this repo) and now it's actually super straight forward.
-* What didn't go well?
-    * Even though on the surface the results look fine (68% picks, 49% spread and o/u) the way the results look up close is way off. The score predictions are usually way off the mark giving huge error margins compared to actual results. This is something I have plans to address.
-* Takeaways
-    * A heck of a lot man.
 
 2022 Season Results:
 * Winner: 485 - 240 (66.9%)
@@ -101,12 +98,12 @@ My poll, as of this update, has been run across every season from 2000 through 2
 Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them [here]( https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/Resources/BOAT%20and%20WOAT.xlsx).
 
 I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
-I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me
+I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me. As of right now I'm not going to split into 4 vs 12 but maybe in the future I will
 
-*New additions for the 2023 season!*
+*New additions for the 2024 season!*
 
-* This year Michigan clocks in with a 42.244 in my poll, placing them at #3 in the Playoff Era
-* This year Kent State clocks in with a 15.812 in my poll, placing them at 11th worst in the Playoff Era
+* No one cracked 40 points so no one is making it into the BOAT section for 2024. Oregon came closest at 39.962 and Ohio State was a little behind at 39.802
+* Kent State repeats this year as worst team in FBS. They finished with a rating of 15.735, placing them at 9th worst in the Playoff Era
 
 **The top 5 Best of all Time (pre-CFP era)**
 
@@ -124,7 +121,7 @@ Rank | Year | Team | Rating | Record
 ---|---|---|---|---
 1 | 2018 | Clemson | 42.445 | 15-0
 2 | 2019 | LSU | 42.374 | 15-0
-3 | 2022 | Michigan | 42.244 | 15-0
+3 | 2023 | Michigan | 42.244 | 15-0
 4 | 2022 | Georgia | 42.124 | 15-0
 5 | 2015 | Alabama | 41.615 | 14-1
 

@@ -42,7 +42,7 @@ namespace CFBPoll.Data.Modules
             if (week == null)
                 filePath = files.OrderBy(f => f).LastOrDefault();
             else
-                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00"));
+                filePath = files.FirstOrDefault(f => f.Contains($" - {week?.ToString("00") ?? "00"}"));
 
             if (string.IsNullOrEmpty(filePath)) return allGames;
 
@@ -113,7 +113,7 @@ namespace CFBPoll.Data.Modules
             if (week == null)
                 filePath = files.OrderBy(f => f).LastOrDefault();
             else
-                filePath = files.FirstOrDefault(f => f.Contains(week?.ToString("00") ?? "00") && f.Contains($"Team{typeString}"));
+                filePath = files.FirstOrDefault(f => f.Contains($" - {week?.ToString("00") ?? "00"}") && f.Contains($"Team{typeString}"));
 
             if (string.IsNullOrEmpty(filePath)) return new Dictionary<string, Statistics>();
 
@@ -133,7 +133,10 @@ namespace CFBPoll.Data.Modules
 
             //Convert our dictionary of teams into one for the current season and sort by rating descending
             var seasonTeams = new Dictionary<string, Season>();
-            seasonTeams = teams.Select(kvp => new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+            seasonTeams = teams.Select(kvp => kvp.Value.Seasons.ContainsKey(season) 
+                                    ? new KeyValuePair<string, Season>(kvp.Key, kvp.Value.Seasons[season])
+                                    : new KeyValuePair<string, Season>(kvp.Key, new Season(kvp.Key, season)))
+                               .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
             var sortedSeasons = from teamSeason in seasonTeams orderby teamSeason.Value.RatingDetails.Rating descending select teamSeason;
 
             //Get the highest ranking
@@ -205,8 +208,7 @@ namespace CFBPoll.Data.Modules
                 var winner = prediction.HomePoints > prediction.AwayPoints ? prediction.HomeTeam : prediction.AwayTeam;
 
                 var bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.Provider.Equals("Bovada", _scoic));
-                if (bettingInfoToPrint == null)
-                    bettingInfoToPrint = prediction.Lines.FirstOrDefault(b => b.IsValid());
+                bettingInfoToPrint ??= prediction.Lines.FirstOrDefault(b => b.IsValid());
 
                 //Add info
                 string nextLine = ""

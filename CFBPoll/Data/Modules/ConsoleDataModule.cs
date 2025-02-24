@@ -1,4 +1,6 @@
-﻿using CFBPollDTOs;
+﻿using CFBPoll.Utilities;
+using CFBPollDTOs;
+using CFBPollDTOs.Enums;
 using Microsoft.Extensions.Configuration;
 
 namespace CFBPoll.Data.Modules
@@ -60,7 +62,7 @@ namespace CFBPoll.Data.Modules
         /// Gets the run type for the program
         /// </summary>
         /// <returns>The run type for the program</returns>
-        public string GetRunType()
+        public RunType GetRunType()
         {
             while (true)
             {
@@ -71,10 +73,10 @@ namespace CFBPoll.Data.Modules
                 Console.WriteLine("4 - Predict Individual Games");
                 var input = GetInput();
 
-                if (!input.Equals("1") && !input.Equals("2") && !input.Equals("3") && !input.Equals("4"))
-                    Console.WriteLine("Invalid input");
+                if (Enum.TryParse(typeof(RunType), input, out var runType))
+                    return (RunType)runType;
                 else
-                    return input;
+                    Console.WriteLine("Invalid input");
             }
         }
 
@@ -135,7 +137,25 @@ namespace CFBPoll.Data.Modules
             }
         }
 
-
+        /// <summary>
+        /// Gets the user input for if they would like to print out the details for the given run type
+        /// </summary>
+        /// <param name="runType">The run type of the program</param>
+        /// <returns>True if they do, False if they don't</returns>
+        public bool PrintDetails(RunType runType)
+        {
+            while (true)
+            {
+                Console.WriteLine($"\nWould you like to see the details for {EnumHelper.GetDescription(runType)}? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", _scoic))
+                    return true;
+                else if (input.Equals("N", _scoic))
+                    return false;
+                else
+                    Console.WriteLine("Invalid input");
+            }
+        }
 
         /// <summary>
         /// Prints the result of a specific game
