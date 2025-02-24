@@ -6,6 +6,7 @@ CFBPoll/appsettings-private.json
 CFBPoll/bin/
 CFBPoll/Calculations/Modules/PredictionModule.cs
 CFBPoll/Calculations/Modules/RatingModule.cs
+CFBPoll/Calculations/Modules/TestRatingModule.cs
 CFBPoll/obj/
 CFBPoll/PollOutput/
 CFBPoll/Resources/RankHistory
@@ -17,4 +18,19 @@ CFBPollUI/bin
 CFBPollUI/obj
 CFBPollUI/wwwroot/lib
 CFBPollUI/appsettings-private.json
-/CFBPoll/Calculations/Modules/TestRatingModule.cs
+
+CFBPoll.Application/bin/
+CFBPoll.Application/obj/
+CFBPoll.Domain/bin/
+CFBPoll.Domain/obj/
+CFBPoll.Infrastructure/bin/
+CFBPoll.Infrastructure/obj/
+CFBPoll.Infrastructure/Repository/BOAT and WOAT.xlsx
+CFBPoll.Infrastructure/Repository/RankHistory
+CFBPoll.Infrastructure/Repository/Scores
+CFBPoll.Infrastructure/Repository/Stats
+CFBPoll.Infrastructure/Repository/Teams
+CFBPoll.UI/bin/
+CFBPoll.UI/obj/
+CFBPoll.UI/wwwroot/lib
+CFBPoll.UI/appsettings-private.json
