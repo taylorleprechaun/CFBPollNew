@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="jQuery" Version="3.7.1" />
     <PackageReference Include="jQuery.Validation" Version="1.21.0" />
-    <PackageReference Include="NonFactors.Grid.Mvc6" Version="7.2.0" />
+    <PackageReference Include="NonFactors.Grid.Mvc6" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

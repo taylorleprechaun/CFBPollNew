@@ -2,20 +2,19 @@
 @using CFBPoll.UI.ViewModels.Shared.Grid.Helpers
 @using NonFactors.Mvc.Grid;
 @using System.Reflection;
-@model CFBPoll.UI.ViewModels.Poll.RatingsViewModel
-
+@model CFBPoll.UI.ViewModels.Poll.RankingsViewModel
 @{
-    Layout = null;
     var request = Context.Request;
     var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
 }
 
-<div id="ratingsGridDiv">
+<div id="rankingsGridDiv">
     @(
-        Html.Grid(Model.Data).Build(columns =>
+        Html
+        .Grid(Model.RankingDetails.OrderBy(r => r.Rank))
+        .Build(columns =>
         {
-            //var sortedData = Model.Data.OrderBy(o => o.Rating);
-            var firstItem = Model.Data.FirstOrDefault();
+            var firstItem = Model.RankingDetails.FirstOrDefault();
             if (firstItem != null && (Model.DynamicColumns != null && Model.DynamicColumns.Any()))
             {
                 PropertyInfo[] properties = firstItem.GetType().GetProperties();
@@ -31,6 +30,9 @@
 
                     if (dynamicColumn.IsHidden) 
                         columnBuilder.Css("mvc-grid-hidden-column");
+
+                    if (dynamicColumn.IsHtmlColumn)
+                        columnBuilder.RenderedAs(model => Html.Raw(property.GetValue(model)));
 
                     if (!string.IsNullOrEmpty(dynamicColumn.Format)) 
                         columnBuilder.Formatted(dynamicColumn.Format);

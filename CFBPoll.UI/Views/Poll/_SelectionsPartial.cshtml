@@ -20,7 +20,7 @@
                     @Html.Label("Week:")
                 </td>
                 <td>
-                    @Html.DropDownListFor(w => w.SelectedWeek, Model.Weeks, "Select Week", new { id = "ddlWeeks", onchange = "FillRatingsGrid()", @class="selectDropdown" })
+                    @Html.DropDownListFor(w => w.SelectedWeek, Model.Weeks, "Select Week", new { id = "ddlWeeks", onchange = "FillRankingsGrid()", @class="selectDropdown" })
                 </td>
             </tr>
         </table>

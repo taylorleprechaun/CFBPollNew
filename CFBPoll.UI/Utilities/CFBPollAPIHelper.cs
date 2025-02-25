@@ -5,8 +5,10 @@
  */
 
 
+using CFBPoll.Application.Features.RankingsFeatures.Get;
 using CFBPoll.Application.Features.SeasonsFeatures.Get;
 using CFBPoll.Application.Features.WeeksFeatures.Get;
+using CFBPoll.Domain.Entities;
 using MediatR;
 
 namespace CFBPoll.UI.Utilities
@@ -34,6 +36,14 @@ namespace CFBPoll.UI.Utilities
             
             if (getAllWeeksResponse == null) return new List<int>();
             return getAllWeeksResponse.WeekDetails.Select(w => w.Number);
+        }
+
+        public async Task<IEnumerable<RankingDetail>> GetRankings(int season, int week)
+        {
+            var getRankingsResponse = await _mediator.Send(new GetRankingsRequest() { Season = season, Week = week });
+            
+            if (getRankingsResponse == null) return new List<RankingDetail>();
+            return getRankingsResponse.RankingDetails;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace CFBPoll.Persistence.Repository.SeasonsRepository
 
         public async Task<Seasons> GetAllSeasons(CancellationToken cancellationToken)
         {
-            var GetSeasonsTask = Task.Run(() => {
+            var getSeasonsTask = Task.Run(() => {
                 var seasons = new List<int>();
 
                 var files = Directory.GetDirectories(_filesPath);
@@ -30,7 +30,7 @@ namespace CFBPoll.Persistence.Repository.SeasonsRepository
 
                 return seasons;
             }, cancellationToken);
-            var seasons = await GetSeasonsTask;
+            var seasons = await getSeasonsTask;
 
             return new Seasons() { Years = seasons };
         }

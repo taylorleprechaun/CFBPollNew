@@ -2,12 +2,12 @@
 {
     public class CFBPollViewModel
     {
-        public RatingsViewModel Ratings { get; set; }
+        public RankingsViewModel Rankings { get; set; }
         public SelectionsViewModel Selections { get; set; }
 
         public CFBPollViewModel()
         {
-            Ratings = new RatingsViewModel();
+            Rankings = new RankingsViewModel();
             Selections = new SelectionsViewModel();
         }
     }

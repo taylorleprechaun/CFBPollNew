@@ -16,7 +16,7 @@ namespace CFBPoll.Persistence.Repository.WeeksRepository
 
         public async Task<Weeks> GetAllWeeks(GetAllWeeksRequest request, CancellationToken cancellationToken)
         {
-            var GetWeeks = Task.Run(() =>
+            var getWeeksTask = Task.Run(() =>
             {
                 var weeks = new List<Week>();
                 var newFilePath = Path.Join(_filesPath, request.Season.ToString());
@@ -43,7 +43,7 @@ namespace CFBPoll.Persistence.Repository.WeeksRepository
                 return weeks;
             }, cancellationToken);
             
-            var weeks = await GetWeeks;
+            var weeks = await getWeeksTask;
 
             return new Weeks() { WeekDetails = weeks };
         }

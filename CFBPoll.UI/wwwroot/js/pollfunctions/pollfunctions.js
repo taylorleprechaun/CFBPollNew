@@ -13,14 +13,14 @@ function FillWeeks() {
     );
 }
 
-function FillRatingsGrid() {
+function FillRankingsGrid() {
     var seasonID = document.getElementById('ddlSeasons').value;
     var weekID = document.getElementById('ddlWeeks').value;
-    var urlString = $('#BaseURL').val() + '/Poll/FillRatingsGrid?season=' + seasonID + '&week=' + weekID;
+    var urlString = $('#BaseURL').val() + '/Poll/FillRankingsGrid?season=' + seasonID + '&week=' + weekID;
 
     getWithHTMLReturn(urlString,
         function (response) {
-            $('#ratingsGridDiv').html(response);
+            $('#rankingsPartial').html(response);
         },
         function (error) {
             console.error(error);

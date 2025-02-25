@@ -27,6 +27,7 @@ CFBPoll.Infrastructure/bin/
 CFBPoll.Infrastructure/obj/
 CFBPoll.Infrastructure/Repository/BOAT and WOAT.xlsx
 CFBPoll.Infrastructure/Repository/RankHistory
+CFBPoll.Infrastructure/Repository/Rankings
 CFBPoll.Infrastructure/Repository/Scores
 CFBPoll.Infrastructure/Repository/Stats
 CFBPoll.Infrastructure/Repository/Teams
