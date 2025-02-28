@@ -10,7 +10,6 @@ namespace CFBPoll.UI.Controllers
     public class PollController : BaseController
     {
         private SortCriteria DefaultSortCriteria { get { return new SortCriteria() { SortColumn = "Rank", SortDirection = "Desc" }; } }
-
         public PollController(IMediator mediator) : base(mediator) { }
 
         #region Public Methods
@@ -56,10 +55,10 @@ namespace CFBPoll.UI.Controllers
         {
             var dynamicColumnsList = new List<DynamicColumn>()
             {
-                new DynamicColumn() { PropertyName = "Rank", Position = 1, Title = "", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
-                new DynamicColumn() { PropertyName = "TeamName", Position = 2, Title = "", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
-                new DynamicColumn() { PropertyName = "Rating", Position = 3, Title = "", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
-                new DynamicColumn() { PropertyName = "Record", Position = 4, Title = "", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
+                new DynamicColumn() { PropertyName = "Rank", Position = 1, Title = "Rank", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
+                new DynamicColumn() { PropertyName = "TeamName", Position = 2, Title = "Team Name", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
+                new DynamicColumn() { PropertyName = "Rating", Position = 3, Title = "Rating", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
+                new DynamicColumn() { PropertyName = "Record", Position = 4, Title = "Record", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
             };
 
             return dynamicColumnsList;

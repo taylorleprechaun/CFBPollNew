@@ -44,7 +44,7 @@ namespace CFBPoll.Persistence.Repository.RankingsRepository
                 var rankingDetail = new RankingDetail()
                 {
                     Rank = ranking,
-                    Team = lineParts[1],
+                    TeamName = lineParts[1],
                     Rating = decimal.Parse(lineParts[2]),
                     Record = lineParts[3]
                 };

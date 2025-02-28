@@ -5,10 +5,11 @@ function FillWeeks() {
 
     getWithHTMLReturn(urlString,
         function (response) {
-            $('#selectionsPartial').html(response);
+            $('#selectionsContainer').html(response);
         },
-        function (error) {
-            console.error(error);
+        function (xhr, status, error) {
+            console.log('Error status:', status);
+            console.log('Error message:', error);
         }
     );
 }
@@ -20,10 +21,11 @@ function FillRankingsGrid() {
 
     getWithHTMLReturn(urlString,
         function (response) {
-            $('#rankingsPartial').html(response);
+            $('#rankingsContainer').html(response);
         },
-        function (error) {
-            console.error(error);
+        function (xhr, status, error) {
+            console.log('Error status:', status);
+            console.log('Error message:', error);
         }
     );
 }

@@ -8,50 +8,60 @@
     var baseUrl = $"{request.Scheme}://{request.Host}{request.PathBase}";
 }
 
-<div id="rankingsGridDiv">
-    @(
-        Html
-        .Grid(Model.RankingDetails.OrderBy(r => r.Rank))
-        .Build(columns =>
-        {
-            var firstItem = Model.RankingDetails.FirstOrDefault();
-            if (firstItem != null && (Model.DynamicColumns != null && Model.DynamicColumns.Any()))
-            {
-                PropertyInfo[] properties = firstItem.GetType().GetProperties();
+<html>
+    <head>
+    </head>
+    <body>
+        @*<script type="text/javascript">
+            document.querySelectorAll(".mvc-grid").forEach(element => new MvcGrid(element));
+        </script> *@
 
-                foreach (DynamicColumn dynamicColumn in Model.DynamicColumns.OrderBy(c => c.Position))
+        <div id="rankingsGridDiv">
+            @(
+                Html
+                .Grid(Model.RankingDetails.OrderBy(r => r.Rank))
+                .Build(columns =>
                 {
-                    PropertyInfo? property = properties.FirstOrDefault(p => p.Name.Equals(dynamicColumn.PropertyName, StringComparison.OrdinalIgnoreCase));
-                    if (property == null)
-                        continue;
+                    var firstItem = Model.RankingDetails.FirstOrDefault();
+                    if (firstItem != null && (Model.DynamicColumns != null && Model.DynamicColumns.Any()))
+                    {
+                        PropertyInfo[] properties = firstItem.GetType().GetProperties();
 
-                    var columnBuilder = columns.Add(model => property.GetValue(model)).Titled(dynamicColumn.Title);
-                    columnBuilder.Name = property.Name;
+                        foreach (DynamicColumn dynamicColumn in Model.DynamicColumns.OrderBy(c => c.Position))
+                        {
+                            PropertyInfo? property = properties.FirstOrDefault(p => p.Name.Equals(dynamicColumn.PropertyName, StringComparison.OrdinalIgnoreCase));
+                            if (property == null)
+                                continue;
 
-                    if (dynamicColumn.IsHidden) 
-                        columnBuilder.Css("mvc-grid-hidden-column");
+                            var columnBuilder = columns.Add(model => property.GetValue(model)).Titled(dynamicColumn.Title);
+                            columnBuilder.Name = property.Name;
 
-                    if (dynamicColumn.IsHtmlColumn)
-                        columnBuilder.RenderedAs(model => Html.Raw(property.GetValue(model)));
+                            if (dynamicColumn.IsHidden) 
+                                columnBuilder.Css("mvc-grid-hidden-column");
 
-                    if (!string.IsNullOrEmpty(dynamicColumn.Format)) 
-                        columnBuilder.Formatted(dynamicColumn.Format);
+                            if (dynamicColumn.IsHtmlColumn)
+                                columnBuilder.RenderedAs(model => Html.Raw(property.GetValue(model)));
 
-                    if (dynamicColumn.Filterable)
-                        columnBuilder.Filterable(true);
-                    else
-                        columnBuilder.Filterable(false);
+                            if (!string.IsNullOrEmpty(dynamicColumn.Format)) 
+                                columnBuilder.Formatted(dynamicColumn.Format);
 
-                    if (dynamicColumn.Sortable)
-                        columnBuilder.Sortable(true);
-                    else
-                        columnBuilder.Sortable(false);
-                }
-            }
-        })
-        .Empty("No data found")
-        .Filterable()
-        .Sortable()
-        .Named("ratings")
-    )
-</div>
+                            if (dynamicColumn.Filterable)
+                                columnBuilder.Filterable(true);
+                            else
+                                columnBuilder.Filterable(false);
+
+                            if (dynamicColumn.Sortable)
+                                columnBuilder.Sortable(true);
+                            else
+                                columnBuilder.Sortable(false);
+                        }
+                    }
+                })
+                .Empty("No data found")
+                .Filterable()
+                .Sortable()
+                .Named("rankings")
+            )
+        </div>
+    </body>
+</html>

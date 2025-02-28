@@ -12,10 +12,11 @@
         <link rel="stylesheet" href="~/css/poll/poll.css"/>
     </head>
     <body>
-        <div id="selectionsPartial">
+        <div id="selectionsContainer">
             @await Html.PartialAsync("_SelectionsPartial", Model.Selections)
         </div>
-        <div id="rankingsPartial">
+        <br />
+        <div id="rankingsContainer">
             @await Html.PartialAsync("_RankingsPartial", Model.Rankings)
         </div>
     </body>

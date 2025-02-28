@@ -5,6 +5,6 @@
         public int Rank { get; init; }
         public decimal Rating { get; init; }
         public string Record { get; init; }
-        public string Team { get; init; }
+        public string TeamName { get; init; }
     }
 }
