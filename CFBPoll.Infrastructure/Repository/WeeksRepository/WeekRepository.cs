@@ -36,7 +36,9 @@ namespace CFBPoll.Persistence.Repository.WeeksRepository
                         weeks.Add(new Week()
                         {
                             Name = name,
-                            Number = weekInt
+                            //Have to increment by 1 because the rankings are post-week
+                            //ex: Week 1 -> Week 2 rankings
+                            Number = weekInt + 1
                         });
                 }
 

@@ -39,10 +39,16 @@ namespace CFBPoll.UI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> FillRankingsGrid(int season, int week)
+        public async Task<IActionResult> FillRankingsGrid(int season, int week, bool useArchivedRankings = true)
         {
-            var rankingDetails = await CFBPollAPIHelper.GetRankings(season, week);
-            var dynamicColumns = ConfigureGridColumns();
+            var rankingDetails = await CFBPollAPIHelper.GetRankings(season, week, useArchivedRankings: useArchivedRankings);
+            
+            //If useArchivedRankings is false but there are no archived rankings then attempt to re-calculate the rankings
+            if (!useArchivedRankings && (rankingDetails?.Any() ?? false))
+                rankingDetails = await CFBPollAPIHelper.GetRankings(season, week, useArchivedRankings: false);
+
+            var sosIncluded = rankingDetails?.All(r => r?.StrengthOfSchedule != null && r?.StrengthOfScheduleRank != null) ?? false;
+            var dynamicColumns = ConfigureGridColumns(sosIncluded);
 
             return PartialView("_RankingsPartial", new RankingsViewModel(rankingDetails, dynamicColumns, DefaultSortCriteria));
         }
@@ -51,7 +57,7 @@ namespace CFBPoll.UI.Controllers
 
         #region Private Methods
 
-        private IEnumerable<DynamicColumn> ConfigureGridColumns()
+        private IEnumerable<DynamicColumn> ConfigureGridColumns(bool sosIncluded)
         {
             var dynamicColumnsList = new List<DynamicColumn>()
             {
@@ -60,6 +66,12 @@ namespace CFBPoll.UI.Controllers
                 new DynamicColumn() { PropertyName = "Rating", Position = 3, Title = "Rating", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
                 new DynamicColumn() { PropertyName = "Record", Position = 4, Title = "Record", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false },
             };
+
+            if (sosIncluded)
+            {
+                dynamicColumnsList.Add(new DynamicColumn() { PropertyName = "StrengthOfSchedule", Position = 5, Title = "Strength of Schedule", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false });
+                dynamicColumnsList.Add(new DynamicColumn() { PropertyName = "StrengthOfScheduleRank", Position = 6, Title = "Strength of Schedule Rank", Filterable = false, Sortable = true, Format = "", IsCheckboxColumn = false });
+            }
 
             return dynamicColumnsList;
         }

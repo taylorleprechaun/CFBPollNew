@@ -5,6 +5,7 @@ namespace CFBPoll.Application.Repository.RankingsRepository
 {
     public interface IRankingsRepository
     {
+        Task<Rankings> GetRankings(GetArchivedRankingsRequest request, CancellationToken cancellationToken);
         Task<Rankings> GetRankings(GetRankingsRequest request, CancellationToken cancellationToken);
     }
 }

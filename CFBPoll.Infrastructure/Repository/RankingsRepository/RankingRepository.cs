@@ -16,7 +16,7 @@ namespace CFBPoll.Persistence.Repository.RankingsRepository
 
         #region Public Methods
 
-        public async Task<Rankings> GetRankings(GetRankingsRequest request, CancellationToken cancellationToken)
+        public async Task<Rankings> GetRankings(GetArchivedRankingsRequest request, CancellationToken cancellationToken)
         {
             var rankingFile = await GetRankingFile(request, cancellationToken);
             if (string.IsNullOrEmpty(rankingFile)) return new Rankings() { RankingDetails = new List<RankingDetail>() };
@@ -25,6 +25,12 @@ namespace CFBPoll.Persistence.Repository.RankingsRepository
             if (rankings == null) return new Rankings() { RankingDetails = new List<RankingDetail>() };
 
             return rankings;
+        }
+
+        public async Task<Rankings> GetRankings(GetRankingsRequest request, CancellationToken cancellationToken)
+        {
+            //TODO: Pull data from xlsx files for stats/scores and assemble team info to dynamically calculate ratings
+            return new Rankings();
         }
 
         #endregion
@@ -41,12 +47,17 @@ namespace CFBPoll.Persistence.Repository.RankingsRepository
             {
                 var lineParts = line.Split('|');
                 if (!int.TryParse(lineParts[0], out var ranking)) return;
+                decimal? strengthOfSchedule = lineParts.Length >= 5 && decimal.TryParse(lineParts[4], out var sos) ? sos : null;
+                int? strengthOfScheduleRank = lineParts.Length >= 5 && int.TryParse(lineParts[5], out var sosRank) ? sosRank : null;
+
                 var rankingDetail = new RankingDetail()
                 {
                     Rank = ranking,
-                    TeamName = lineParts[1],
                     Rating = decimal.Parse(lineParts[2]),
-                    Record = lineParts[3]
+                    Record = lineParts[3],
+                    StrengthOfSchedule = strengthOfSchedule,
+                    StrengthOfScheduleRank = strengthOfScheduleRank,
+                    TeamName = lineParts[1],
                 };
                 rankingDetails.Add(rankingDetail);
             });
@@ -54,7 +65,7 @@ namespace CFBPoll.Persistence.Repository.RankingsRepository
             return new Rankings() { RankingDetails = rankingDetails };
         }
 
-        private async Task<string> GetRankingFile(GetRankingsRequest request, CancellationToken cancellationToken)
+        private async Task<string> GetRankingFile(GetArchivedRankingsRequest request, CancellationToken cancellationToken)
         {
             var rankingFileName = string.Empty;
             var newFilePath = Path.Join(_filesPath, request.Season.ToString());

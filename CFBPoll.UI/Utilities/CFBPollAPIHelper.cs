@@ -38,12 +38,23 @@ namespace CFBPoll.UI.Utilities
             return getAllWeeksResponse.WeekDetails.Select(w => w.Number);
         }
 
-        public async Task<IEnumerable<RankingDetail>> GetRankings(int season, int week)
+        public async Task<IEnumerable<RankingDetail>> GetRankings(int season, int week, bool useArchivedRankings = true)
         {
-            var getRankingsResponse = await _mediator.Send(new GetRankingsRequest() { Season = season, Week = week });
-            
-            if (getRankingsResponse == null) return new List<RankingDetail>();
-            return getRankingsResponse.RankingDetails;
+            IEnumerable<RankingDetail> result = new List<RankingDetail>();
+
+            if (useArchivedRankings)
+            {
+                var getArchivedRankingsResponse = await _mediator.Send(new GetArchivedRankingsRequest() { Season = season, Week = week });
+                if (getArchivedRankingsResponse != null)
+                    result = getArchivedRankingsResponse.RankingDetails;
+            }
+            else
+            {
+                var getRankingsResponse = await _mediator.Send(new GetRankingsRequest() { Season = season, Week = week });
+                if (getRankingsResponse != null)
+                    result = getRankingsResponse.RankingDetails;
+            }
+            return result;
         }
     }
 }
