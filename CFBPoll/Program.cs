@@ -1,7 +1,9 @@
-﻿using CFBPoll.Calculations.Factories;
-using CFBPoll.Data.Modules;
-using CFBPoll.Utilities;
-using CFBPollDTOs.Enums;
+﻿using CFBPoll.Data.Console;
+using CFBPoll.DTOs.Enums;
+using CFBPoll.System.Data.Modules;
+using CFBPoll.System.Data.Text;
+using CFBPoll.System.Modules.Factories;
+using CFBPoll.System.Utilities;
 using Microsoft.Extensions.Configuration;
 
 //Set up application settings config
@@ -14,9 +16,9 @@ var config = configurationBuilder.Build();
 var nameCorrector = new NameCorrector();
 
 //Set up data modules
-var textDataModule = new TextDataModule(config, nameCorrector);
-var excelDataModule = new ExcelDataModule(config, nameCorrector);
-var consoleDataModule = new ConsoleDataModule(config);
+var textDataModule = new TextData(config, nameCorrector);
+var excelDataModule = new ExcelData(config, nameCorrector);
+var consoleDataModule = new ConsoleData(config);
 
 //Program startup needs the season and week
 var season = consoleDataModule.GetSeason();

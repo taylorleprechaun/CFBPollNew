@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>CFBPoll.DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ee1ce740-38d3-4cfe-9cc2-4cffbd7b6f4d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>CFBPollDB</RootNamespace>
+    <AssemblyName>CFBPollDB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultSchema>Poll</DefaultSchema>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Poll" />
+    <Folder Include="Poll\Data" />
+    <Folder Include="Poll\Tables" />
+    <Folder Include="Poll\Schemas" />
+    <Folder Include="Poll\Stored Procedures" />
+    <Folder Include="Poll\User Defined Types" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CFBPollDB.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Poll\Data\INSERT_Conference.sql" />
+    <None Include="Poll\Data\INSERT_Division.sql" />
+    <None Include="Poll\Data\INSERT_League.sql" />
+    <None Include="Poll\Data\INSERT_Season.sql" />
+    <None Include="Poll\Data\INSERT_StatType.sql" />
+    <None Include="Poll\Data\INSERT_Team.sql" />
+    <None Include="Poll\Data\INSERT_TeamVersion_2025.sql" />
+    <Build Include="Poll\Tables\Conference.sql" />
+    <Build Include="Poll\Tables\Division.sql" />
+    <Build Include="Poll\Tables\League.sql" />
+    <Build Include="Poll\Tables\Season.sql" />
+    <Build Include="Poll\Tables\StatType.sql" />
+    <Build Include="Poll\Tables\Team.sql" />
+    <Build Include="Poll\Tables\TeamStat.sql" />
+    <Build Include="Poll\Tables\TeamVersion.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Poll\Schemas\Poll.sql" />
+    <Build Include="Poll\Tables\TeamAlias.sql" />
+    <Build Include="Poll\Stored Procedures\TeamStat_Insert.sql" />
+    <Build Include="Poll\User Defined Types\udtTeamStat.sql" />
+  </ItemGroup>
+</Project>

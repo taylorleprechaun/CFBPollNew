@@ -1,20 +1,19 @@
 CFBPoll_old
 .vs/
 packages/
+*/bin/
+*/obj/
 
 CFBPoll/appsettings-private.json
-CFBPoll/bin/
-CFBPoll/Calculations/Modules/PredictionModule.cs
-CFBPoll/Calculations/Modules/RatingModule.cs
-CFBPoll/obj/
 CFBPoll/PollOutput/
-CFBPoll/Resources/RankHistory
+CFBPoll/Resources/RankHistory/
 
-CFBPollDTOs/bin/
-CFBPollDTOs/obj/
+CFBPoll.DB/Poll/Queries/
+CFBPoll.DB/*.dbmdl
+CFBPoll.DB/*.jfm
 
-CFBPollUI/bin
-CFBPollUI/obj
-CFBPollUI/wwwroot/lib
-CFBPollUI/appsettings-private.json
-/CFBPoll/Calculations/Modules/TestRatingModule.cs
+CFBPoll.System/Modules/Default/DefaultRatingModule.cs
+CFBPoll.System/Modules/Default/DefaultPredictionModule.cs
+CFBPoll.System/Modules/Test/TestRatingModule.cs
+
+*.user

@@ -12,10 +12,8 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 
 ### Recent changes
 
-* 9/2/2024: Merged in start of some UI changes which I haven't worked on in idk like 8 months. Also made some fixes to typical early season issues due to incomplete/missing data.
-* 9/3/2024: Slight adjustments to Predictions algorithm. Small code adjustments to improve the experience of running everything.
-* 10/13/2024: Added strength of schedule to the info I post here
 * 1/21/2025: Final Poll 2024-25 + BOAT and WOAT Update
+* 8/16/2025: Summer cleaning. Rearranged a lot of code and started moving towards a more moduler and DB-driven design.
 
 ### Rankings (Updated 1/21/2025)
 
