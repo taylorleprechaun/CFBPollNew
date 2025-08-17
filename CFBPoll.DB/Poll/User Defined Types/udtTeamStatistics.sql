@@ -1,7 +1,7 @@
-CREATE TYPE Poll.udtTeamStat AS TABLE
+CREATE TYPE Poll.udtTeamStatistics AS TABLE
 (
 	TeamName VARCHAR(50) NOT NULL,
-	StatType VARCHAR(50) NOT NULL,
+	StatisticsType VARCHAR(50) NOT NULL,
 	Season INT NOT NULL,
 	[Week] INT NOT NULL,
 	Games INT NOT NULL,

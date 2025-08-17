@@ -1,0 +1,11 @@
+CREATE TYPE Poll.udtTeamScores AS TABLE
+(
+	Season INT NOT NULL,
+	[Week] INT NOT NULL,
+	Date DATETIME NOT NULL,
+	HomeTeam VARCHAR(50) NOT NULL,
+	HomeScore INT NOT NULL,
+	AwayTeam VARCHAR(50) NOT NULL,
+	AwayScore INT NOT NULL,
+	IsNeutralSite BIT NOT NULL DEFAULT 0
+);

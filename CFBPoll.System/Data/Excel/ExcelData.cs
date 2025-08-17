@@ -1,6 +1,7 @@
 ﻿using CFBPoll.DTOs;
 using CFBPoll.DTOs.Enums;
 using CFBPoll.System.Utilities;
+using CFBPoll.Utilities.ExtensionMethods;
 using ClosedXML.Excel;
 using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
@@ -41,7 +42,7 @@ namespace CFBPoll.System.Data.Modules
         /// <returns>A list of Game objects.</returns>
         public IEnumerable<Game> GetGames(int season, int? week)
         {
-            var allGames = new List<Game>();
+            var result = new List<Game>();
             var files = Directory.GetFiles($"{_scoresPath}{season}");
             var filePath = string.Empty;
             if (week == null)
@@ -49,56 +50,26 @@ namespace CFBPoll.System.Data.Modules
             else
                 filePath = files.FirstOrDefault(f => f.Contains($" - {week?.ToString("00") ?? "00"}"));
 
-            if (string.IsNullOrEmpty(filePath)) return allGames;
+            if (string.IsNullOrEmpty(filePath)) return result;
 
             var scoresTable = GetTableFromExcelFile(filePath, "Sheet2");
+            return BuildGames(season, scoresTable);
+        }
 
-            foreach (var scoreRow in scoresTable.Rows())
-            {
-                //Get the team names
-                var team1Name = _nameCorrector.FixName(_nameCorrector.RemoveRank(scoreRow.Cell(5).Value.ToString()));
-                var team2Name = _nameCorrector.FixName(_nameCorrector.RemoveRank(scoreRow.Cell(8).Value.ToString()));
+        /// <summary>
+        /// Gets a list of games from the given Excel file and season.
+        /// </summary>
+        /// <param name="filePath">The path to the Excel file.</param>
+        /// <returns>A list of games.</returns>
+        public IEnumerable<Game> GetGames(string filePath)
+        {
+            var fileName = Path.GetFileName(filePath);
+            var fileNameParts = fileName.Split('-');
+            //0 is the season
+            var season = int.Parse(fileNameParts[0].CleanNumericString());
 
-                //If the team names are Winner and Loser then skip because this is the header row
-                if (team1Name.Equals("Winner") && team2Name.Equals("Loser")) continue;
-
-                //Get the week
-                int gameWeek;
-                if (int.TryParse(scoreRow.Cell(2).Value.ToString(), out var wk))
-                    gameWeek = wk;
-                else
-                    continue;
-
-                //Get the location
-                Location team1Location, team2Location;
-                var locationValue = scoreRow.Cell(7).Value.ToString();
-                if (locationValue.Equals("@"))
-                {
-                    team1Location = Location.Road;
-                    team2Location = Location.Home;
-                }
-                else if (locationValue.Equals("N"))
-                {
-                    team1Location = Location.Neutral;
-                    team2Location = Location.Neutral;
-                }
-                else
-                {
-                    team1Location = Location.Home;
-                    team2Location = Location.Road;
-                }
-
-                //Get scores
-                int.TryParse(scoreRow.Cell(6).Value.ToString(), out int team1Score);
-                int.TryParse(scoreRow.Cell(9).Value.ToString(), out int team2Score);
-
-                if (team1Location.Equals(Location.Home))
-                    allGames.Add(new Game(team1Name, team2Name, team1Score, team2Score, season, gameWeek, false, team1Score == 0 && team2Score == 0, new List<Lines>()));
-                else
-                    allGames.Add(new Game(team2Name, team1Name, team2Score, team1Score, season, gameWeek, team1Location.Equals(Location.Neutral), team1Score == 0 && team2Score == 0, new List<Lines>()));
-            }
-
-            return allGames;
+            var scoresTable = GetTableFromExcelFile(filePath, "Sheet2");
+            return BuildGames(season, scoresTable);
         }
 
         /// <summary>
@@ -251,6 +222,67 @@ namespace CFBPoll.System.Data.Modules
         #endregion
 
         #region private methods
+
+        /// <summary>
+        /// Builds a list of games from the given table of scores.
+        /// </summary>
+        /// <param name="season">The season.</param>
+        /// <param name="scoresTable">The scores table.</param>
+        /// <returns>A list of games.</returns>
+        private IEnumerable<Game> BuildGames(int season, IXLTable scoresTable)
+        {
+            var allGames = new List<Game>();
+
+            foreach (var scoreRow in scoresTable.Rows())
+            {
+                //Get the team names
+                var team1Name = _nameCorrector.FixName(_nameCorrector.RemoveRank(scoreRow.Cell(5).Value.ToString()));
+                var team2Name = _nameCorrector.FixName(_nameCorrector.RemoveRank(scoreRow.Cell(8).Value.ToString()));
+
+                //If the team names are Winner and Loser then skip because this is the header row
+                if (team1Name.Equals("Winner") && team2Name.Equals("Loser")) continue;
+
+                //Get the week
+                int gameWeek;
+                if (int.TryParse(scoreRow.Cell(2).Value.ToString(), out var wk))
+                    gameWeek = wk;
+                else
+                    continue;
+
+                //Get the date
+                var gameDate = DateTime.TryParse(scoreRow.Cell(3).Value.ToString(), out var date) ? date : DateTime.MinValue;
+
+                //Get the location
+                Location team1Location, team2Location;
+                var locationValue = scoreRow.Cell(7).Value.ToString();
+                if (locationValue.Equals("@"))
+                {
+                    team1Location = Location.Road;
+                    team2Location = Location.Home;
+                }
+                else if (locationValue.Equals("N"))
+                {
+                    team1Location = Location.Neutral;
+                    team2Location = Location.Neutral;
+                }
+                else
+                {
+                    team1Location = Location.Home;
+                    team2Location = Location.Road;
+                }
+
+                //Get scores
+                int.TryParse(scoreRow.Cell(6).Value.ToString(), out int team1Score);
+                int.TryParse(scoreRow.Cell(9).Value.ToString(), out int team2Score);
+
+                if (team1Location.Equals(Location.Home))
+                    allGames.Add(new Game(team1Name, team2Name, team1Score, team2Score, season, gameWeek, false, team1Score == 0 && team2Score == 0, new List<Lines>(), gameDate));
+                else
+                    allGames.Add(new Game(team2Name, team1Name, team2Score, team1Score, season, gameWeek, team1Location.Equals(Location.Neutral), team1Score == 0 && team2Score == 0, new List<Lines>(), gameDate));
+            }
+
+            return allGames;
+        }
 
         /// <summary>
         /// Builds a dictionary of statistics from the given statistics table.

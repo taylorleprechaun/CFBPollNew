@@ -1,5 +1,3 @@
-USE CFBPoll
-GO
 DROP TABLE IF EXISTS #TempTeams;
 CREATE TABLE #TempTeams (Name VARCHAR(50));
 INSERT INTO #TempTeams (Name) 
@@ -98,7 +96,7 @@ VALUES ('Air Force'),
     ('Purdue'),
     ('Rice'),
     ('Rutgers'),
-    ('Sam Houston State'),
+    ('Sam Houston'),
     ('San Diego State'),
     ('San Jose State'),
     ('SMU'),

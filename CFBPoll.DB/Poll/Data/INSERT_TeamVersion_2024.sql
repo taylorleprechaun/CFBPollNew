@@ -1,7 +1,5 @@
-USE CFBPoll
-GO
 --Year
-DECLARE @Year INT = 2025
+DECLARE @Year INT = 2024
 IF NOT EXISTS (SELECT TOP 1 ID FROM Poll.Season WHERE [Year] = @Year)
 BEGIN
 	INSERT INTO Poll.Season ([Year]) VALUES (@Year);
@@ -39,7 +37,6 @@ VALUES ('Air Force','Mountain West',NULL),
 	('Colorado','Big 12',NULL),
 	('Colorado State','Mountain West',NULL),
 	('Connecticut','FBS Independents',NULL),
-	('Delaware','Conference USA',NULL),
 	('Duke','Atlantic Coast',NULL),
 	('East Carolina','American',NULL),
 	('Eastern Michigan','Mid-American',NULL),
@@ -73,7 +70,7 @@ VALUES ('Air Force','Mountain West',NULL),
 	('Louisiana State','Southeastern',NULL),
 	('Marshall','Sun Belt','East'),
 	('Maryland','Big Ten',NULL),
-	('Massachusetts','Mid-American',NULL),
+	('Massachusetts','FBS Independents',NULL),
 	('Memphis','American',NULL),
 	('Miami FL','Atlantic Coast',NULL),
 	('Miami OH','Mid-American',NULL),
@@ -84,7 +81,6 @@ VALUES ('Air Force','Mountain West',NULL),
 	('Mississippi','Southeastern',NULL),
 	('Mississippi State','Southeastern',NULL),
 	('Missouri','Southeastern',NULL),
-	('Missouri State','Conference USA',NULL),
 	('Navy','American',NULL),
 	('Nebraska','Big Ten',NULL),
 	('Nevada','Mountain West',NULL),
@@ -157,7 +153,7 @@ INSERT INTO Poll.Team (Name)
         FROM Poll.Team
     );
 
---2025 FBS TeamVersion
+--FBS TeamVersion
 DECLARE @FBSID INT = (
 	SELECT TOP 1 ID 
 	FROM Poll.League 

@@ -13,9 +13,9 @@ namespace CFBPoll.System.Data.SQL
 
         public async Task<string> Statistics_Insert(string statisticsType, int season, int week, IDictionary<string, Statistics> teamStatistics)
         {
-            const string storedProcedure = "Poll.TeamStat_Insert";
+            const string storedProcedure = "Poll.TeamStatistics_Insert";
             var parameters = new DynamicParameters();
-            parameters.Add("@TeamStatData", ToTeamStatDataTable(statisticsType, season, week, teamStatistics).AsTableValuedParameter("Poll.udtTeamStat"));
+            parameters.Add("@TeamStatData", ToTeamStatDataTable(statisticsType, season, week, teamStatistics).AsTableValuedParameter("Poll.udtTeamStatistics"));
             
             var result = await _dapperExecutor.ExecuteStoredProcedureAsync<string>(
                 storedProcedure,
@@ -40,7 +40,7 @@ namespace CFBPoll.System.Data.SQL
         {
             var table = new DataTable();
             table.Columns.Add("TeamName", typeof(string));
-            table.Columns.Add("StatType", typeof(string));
+            table.Columns.Add("StatisticsType", typeof(string));
             table.Columns.Add("Season", typeof(int));
             table.Columns.Add("Week", typeof(int));
             table.Columns.Add("Games", typeof(int));

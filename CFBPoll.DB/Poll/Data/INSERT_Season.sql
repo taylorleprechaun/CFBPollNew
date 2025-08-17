@@ -1,5 +1,3 @@
-USE CFBPoll
-GO
 DROP TABLE IF EXISTS #TempSeasons;
 CREATE TABLE #TempSeasons ([Year] INT);
 INSERT INTO #TempSeasons ([Year]) 

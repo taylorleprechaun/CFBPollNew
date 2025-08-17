@@ -4,4 +4,5 @@ CREATE TABLE Poll.TeamAlias
 	TeamID INT NOT NULL,
 	Alias VARCHAR(50) NOT NULL,
 	CONSTRAINT FK_TeamAlias_Team FOREIGN KEY (TeamID) REFERENCES Poll.Team(ID),
+	CONSTRAINT UC_TeamAlias_Alias UNIQUE (TeamID, Alias),
 );

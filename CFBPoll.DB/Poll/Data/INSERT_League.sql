@@ -1,5 +1,3 @@
-USE CFBPoll
-GO
 DROP TABLE IF EXISTS #TempLeagues;
 CREATE TABLE #TempLeagues (Name VARCHAR(50));
 INSERT INTO #TempLeagues (Name) 

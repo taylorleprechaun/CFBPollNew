@@ -1,5 +1,3 @@
-USE CFBPoll
-GO
 DROP TABLE IF EXISTS #TempConferences;
 CREATE TABLE #TempConferences (Name VARCHAR(50), Abbreviation VARCHAR(10));
 INSERT INTO #TempConferences (Name, Abbreviation) 

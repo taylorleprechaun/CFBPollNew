@@ -57,9 +57,16 @@ namespace CFBPoll.DB.DataLoader
         /// <param name="file">The file to process.</param>
         private void ProcessScoreFile(string file)
         {
+            var fileName = Path.GetFileName(file);
+            var fileNameParts = fileName.Split('-');
+            
+            var season = int.Parse(fileNameParts[0].CleanNumericString()); //0 is the season
+            var teamScores = _excelData.GetGames(file);
+
             var scoresDataProvider = DataFactory.GetDataProvider<IScoresData>();
-            //var teamScores = _excelData.GetScores(file);
-            //var result = scoresDataProvider.Scores_Insert(teamScores);
+            var scoresTask = scoresDataProvider.Scores_Insert(season, teamScores);
+            Task.WaitAll(scoresTask);
+            var result = scoresTask.Result;
         }
 
         /// <summary>
@@ -68,22 +75,17 @@ namespace CFBPoll.DB.DataLoader
         /// <param name="file">The file to process.</param>
         private void ProcessStatisticsFile(string file)
         {
-            var statisticsDataProvider = DataFactory.GetDataProvider<IStatisticsData>();
-            var teamStatistics = _excelData.GetStatistics(file);
-            
             var fileName = Path.GetFileName(file);
             var fileNameParts = fileName.Split('-');
-            //0 is the type of file
-            var statisticsType = fileNameParts[0].StartsWith("TeamO", _scoic) ? "Offense" : "Defense";
-            //1 is the season
-            var season = int.Parse(fileNameParts[1].CleanNumericString());
-            //2 is the week
-            var week = int.Parse(fileNameParts[2].CleanNumericString());
+            
+            var statisticsType = fileNameParts[0].StartsWith("TeamO", _scoic) ? "Offense" : "Defense"; //0 is the type of file
+            var season = int.Parse(fileNameParts[1].CleanNumericString()); //1 is the season
+            var week = int.Parse(fileNameParts[2].CleanNumericString()); //2 is the week
+            var teamStatistics = _excelData.GetStatistics(file);
 
+            var statisticsDataProvider = DataFactory.GetDataProvider<IStatisticsData>();
             var statTask = statisticsDataProvider.Statistics_Insert(statisticsType, season, week, teamStatistics);
-
             Task.WaitAll(statTask);
-
             var result = statTask.Result;
         }
 

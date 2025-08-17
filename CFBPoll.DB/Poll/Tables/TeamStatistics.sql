@@ -1,8 +1,8 @@
-CREATE TABLE Poll.TeamStat
+CREATE TABLE Poll.TeamStatistics
 (
 	ID INT NOT NULL PRIMARY KEY IDENTITY (1,1),
 	TeamVersionID INT NOT NULL,
-	StatTypeID INT NOT NULL,
+	StatisticsTypeID INT NOT NULL,
 	[Week] INT NOT NULL,
 	Games INT NOT NULL,
 	Points DECIMAL(10,2),
@@ -27,5 +27,6 @@ CREATE TABLE Poll.TeamStat
 	TurnoversInterception DECIMAL(10,2),
 	TurnoversTotal DECIMAL(10,2)
 	CONSTRAINT FK_TeamVersion_TeamVersion FOREIGN KEY (TeamVersionID) REFERENCES Poll.TeamVersion(ID),
-	CONSTRAINT FK_TeamVersion_StatType FOREIGN KEY (StatTypeID) REFERENCES Poll.StatType(ID),
+	CONSTRAINT FK_TeamVersion_StatisticsType FOREIGN KEY (StatisticsTypeID) REFERENCES Poll.StatisticsType(ID),
+	CONSTRAINT UC_TeamStatistics UNIQUE (TeamVersionID, StatisticsTypeID, [Week])
 );

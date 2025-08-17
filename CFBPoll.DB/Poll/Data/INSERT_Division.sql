@@ -1,5 +1,3 @@
-USE CFBPoll
-GO
 DROP TABLE IF EXISTS #TempDivisions;
 CREATE TABLE #TempDivisions (Name VARCHAR(50));
 INSERT INTO #TempDivisions (Name) 

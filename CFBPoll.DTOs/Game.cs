@@ -4,6 +4,7 @@
     {
         public double AwayPoints { get; set; }
         public string AwayTeam { get; set; }
+        public DateTime? Date { get; set; }
         public bool FutureGame { get; set; }
         public double HomePoints { get; set; }
         public string HomeTeam { get; set; }
@@ -16,6 +17,7 @@
         {
             AwayPoints = game.AwayPoints;
             AwayTeam = game.AwayTeam;
+            Date = game.Date;
             FutureGame = game.FutureGame;
             HomePoints = game.HomePoints;
             HomeTeam = game.HomeTeam;
@@ -25,7 +27,7 @@
             Week = game.Week;
         }
 
-        public Game(string homeTeam, string awayTeam, double homePoints, double awayPoints, int season, int week, bool neutralSite, bool futureGame, IEnumerable<Lines> lines)
+        public Game(string homeTeam, string awayTeam, double homePoints, double awayPoints, int season, int week, bool neutralSite, bool futureGame, IEnumerable<Lines> lines, DateTime? date = null)
         {
             AwayPoints = awayPoints;
             AwayTeam = awayTeam;
@@ -36,6 +38,7 @@
             NeutralSite = neutralSite;
             Season = season;
             Week = week;
+            Date = date;
         }
     }
 }
