@@ -36,7 +36,7 @@ namespace CFBPoll.System.Data.SQL
         /// <param name="week">The week.</param>
         /// <param name="teamStatistics">The team statistics.</param>
         /// <returns>A DataTable containing the team statistics to insert into the database.</returns>
-        private DataTable ToTeamStatDataTable(string statisticsType, int season, int week, IDictionary<string, Statistics> teamstatistics)
+        private DataTable ToTeamStatDataTable(string statisticsType, int season, int week, IDictionary<string, Statistics> teamStatistics)
         {
             var table = new DataTable();
             table.Columns.Add("TeamName", typeof(string));
@@ -66,7 +66,7 @@ namespace CFBPoll.System.Data.SQL
 	        table.Columns.Add("TurnoversInterception", typeof(decimal));
             table.Columns.Add("TurnoversTotal", typeof(decimal));
 
-            foreach (var kvp in teamstatistics)
+            foreach (var kvp in teamStatistics)
             {
                 var teamName = kvp.Key;
                 var statistics = kvp.Value;

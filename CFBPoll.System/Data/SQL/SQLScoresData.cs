@@ -1,7 +1,6 @@
 ﻿using CFBPoll.DTOs;
 using CFBPoll.System.Data.Interfaces;
 using Dapper;
-using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
 using System.Data;
 
 namespace CFBPoll.System.Data.SQL

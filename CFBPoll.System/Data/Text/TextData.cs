@@ -10,12 +10,17 @@ namespace CFBPoll.System.Data.Text
     public class TextData
     {
         private readonly NameCorrector _nameCorrector;
-        private readonly string _mdPredictionsFilePath;
+        private readonly string _mdPredictionsFilePath = string.Empty;
         private readonly StringComparison _scoic = StringComparison.OrdinalIgnoreCase;
-        private readonly string _teamsPath;
-        private readonly string _txtPollFilePath;
-        private readonly string _txtPredictionsFilePath;
-        private readonly string _txtPredictionsResultsFilePath;
+        private readonly string _teamsPath = string.Empty;
+        private readonly string _txtPollFilePath = string.Empty;
+        private readonly string _txtPredictionsFilePath = string.Empty;
+        private readonly string _txtPredictionsResultsFilePath = string.Empty;
+
+        public TextData(NameCorrector nameCorrector)
+        {
+            _nameCorrector = nameCorrector;
+        }
 
         public TextData(IConfiguration config, NameCorrector nameCorrector)
         {
@@ -107,11 +112,21 @@ namespace CFBPoll.System.Data.Text
         /// <returns>A dictionary of teams.</returns>
         public IDictionary<string, Team> GetTeams(int season)
         {
-            var teamDictionary = new Dictionary<string, Team>();
-
-            //Get the array of teams from the txt file
+            //Build the path to the file data
             var filePath = _teamsPath + "FBS-CONF-" + season + ".txt";
+
+            return GetTeams(filePath);
+        }
+
+        /// <summary>
+        /// Gets a dictionary of teams from a file.
+        /// </summary>
+        /// <param name="filePath">The path to the file of team information.</param>
+        /// <returns>A dictionary of teams.</returns>
+        public IDictionary<string, Team> GetTeams(string filePath)
+        {
             var lines = File.ReadAllLines(filePath);
+            var teamDictionary = new Dictionary<string, Team>();
 
             //Loop through the array
             foreach (var line in lines)

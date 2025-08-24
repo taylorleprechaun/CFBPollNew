@@ -71,10 +71,8 @@
     <None Include="Poll\Data\INSERT_Conference.sql" />
     <None Include="Poll\Data\INSERT_Division.sql" />
     <None Include="Poll\Data\INSERT_League.sql" />
-    <None Include="Poll\Data\INSERT_Season.sql" />
     <None Include="Poll\Data\INSERT_StatisticsType.sql" />
     <None Include="Poll\Data\INSERT_Team.sql" />
-    <None Include="Poll\Data\INSERT_TeamVersion_2025.sql" />
     <Build Include="Poll\Tables\Conference.sql" />
     <Build Include="Poll\Tables\Division.sql" />
     <Build Include="Poll\Tables\League.sql" />
@@ -86,14 +84,13 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Poll\Schemas\Poll.sql" />
-    <Build Include="Poll\Tables\TeamAlias.sql" />
     <Build Include="Poll\Stored Procedures\TeamStatistics_Insert.sql" />
     <Build Include="Poll\User Defined Types\udtTeamStatistics.sql" />
     <PostDeploy Include="PostDeployment.sql" />
-    <None Include="Poll\Data\INSERT_TeamVersion_2024.sql" />
-    <None Include="Poll\Data\INSERT_TeamAlias.sql" />
     <Build Include="Poll\Tables\TeamScores.sql" />
     <Build Include="Poll\User Defined Types\udtTeamScores.sql" />
     <Build Include="Poll\Stored Procedures\TeamScores_Insert.sql" />
+    <Build Include="Poll\Stored Procedures\TeamVersion_Insert.sql" />
+    <Build Include="Poll\User Defined Types\udtTeamVersion.sql" />
   </ItemGroup>
 </Project>

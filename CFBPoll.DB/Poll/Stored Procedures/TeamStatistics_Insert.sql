@@ -2,7 +2,47 @@ CREATE PROCEDURE Poll.TeamStatistics_Insert @TeamStatData Poll.udtTeamStatistics
 AS
 BEGIN
 	DROP TABLE IF EXISTS #StatInsertData;
+	DROP TABLE IF EXISTS #TeamStatsDataModified;
 
+	--Copy the input data to a temp table to allow for modifications
+	SELECT tsd.TeamName,
+		tsd.StatisticsType,
+		tsd.Season,
+		tsd.[Week],
+		tsd.Games,
+		tsd.Points,
+		tsd.PassCompletions,
+		tsd.PassAttempts,
+		tsd.PassPercent,
+		tsd.PassYards,
+		tsd.PassTDs,
+		tsd.RushAttempts,
+		tsd.RushYards,
+		tsd.RushAverage,
+		tsd.RushTDs,
+		tsd.TotalPlays,
+		tsd.TotalYards,
+		tsd.FirstDownsPass,
+		tsd.FirstDownsRush,
+		tsd.FirstDownsPenalty,
+		tsd.FirstDownsTotal,
+		tsd.PenaltiesNumber,
+		tsd.PenaltiesYards,
+		tsd.TurnoversFumble,
+		tsd.TurnoversInterception,
+		tsd.TurnoversTotal
+	INTO #TeamStatsDataModified
+	FROM @TeamStatData tsd;
+
+	--Replace all FCS team names with the generic catch-all "FCS Team" name
+	UPDATE tsd
+	SET tsd.TeamName = 'FCS Team'
+	FROM #TeamStatsDataModified tsd
+	LEFT JOIN Poll.Team t
+		ON tsd.TeamName = t.Name
+	WHERE t.ID IS NULL;
+
+	--Insert the TeamStatistics data into a temp table to prepare for the merge
 	SELECT TeamVersionID = tv.ID,
 		StatisticsTypeID = st.ID,
 		td.[Week],
@@ -29,19 +69,18 @@ BEGIN
 		td.TurnoversInterception,
 		td.TurnoversTotal
 	INTO #StatInsertData
-	FROM @TeamStatData td
-	LEFT JOIN Poll.Team t
+	FROM #TeamStatsDataModified td
+	JOIN Poll.Team t
 		ON td.TeamName = t.Name
-	LEFT JOIN Poll.TeamAlias ta
-		ON td.TeamName = ta.Alias
 	JOIN Poll.Season s
 		ON td.Season = s.[Year]
 	JOIN Poll.TeamVersion tv
-		ON tv.TeamID = ISNULL(t.ID, ta.TeamID)
+		ON tv.TeamID = t.ID
 			AND tv.SeasonID = s.ID
 	JOIN Poll.StatisticsType st
 		ON td.StatisticsType = st.Type;
 
+	--Perform the merge to insert or update the TeamStatistics table
 	MERGE INTO Poll.TeamStatistics WITH (HOLDLOCK) AS target
 	USING #StatInsertData AS source
 		ON target.TeamVersionID = source.TeamVersionID

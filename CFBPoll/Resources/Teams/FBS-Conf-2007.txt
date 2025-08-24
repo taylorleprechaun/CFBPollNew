@@ -26,6 +26,7 @@ Connecticut|Big East|
 Duke|ACC|Coastal
 East Carolina|CUSA|East
 Eastern Michigan|MAC|West
+FCS Team|FCS| 
 Florida|SEC|East
 Florida Atlantic|Sun Belt| 
 Florida Int'l|Sun Belt| 
@@ -36,9 +37,9 @@ Georgia Tech|ACC|Coastal
 Hawaii|WAC| 
 Houston|CUSA|West
 Idaho|WAC| 
-Illinois|Big 10| 
-Indiana|Big 10| 
-Iowa|Big 10| 
+Illinois|Big Ten| 
+Indiana|Big Ten| 
+Iowa|Big Ten| 
 Iowa State|Big 12|North
 Kansas|Big 12|North
 Kansas State|Big 12|North
@@ -54,10 +55,10 @@ Maryland|ACC|Atlantic
 Memphis|CUSA|East
 Miami FL|ACC|Coastal
 Miami OH|MAC|East
-Michigan|Big 10| 
-Michigan State|Big 10| 
+Michigan|Big Ten| 
+Michigan State|Big Ten| 
 MTSU|Sun Belt| 
-Minnesota|Big 10| 
+Minnesota|Big Ten| 
 Mississippi|SEC|West
 Mississippi State|SEC|West
 Missouri|Big 12|North
@@ -70,17 +71,17 @@ North Carolina|ACC|Coastal
 North Carolina State|ACC|Atlantic
 North Texas|Sun Belt| 
 Northern Illinois|MAC|West
-Northwestern|Big 10| 
+Northwestern|Big Ten| 
 Notre Dame|Indep| 
 Ohio U.|MAC|East
-Ohio State|Big 10| 
+Ohio State|Big Ten| 
 Oklahoma|Big 12|South
 Oklahoma State|Big 12|South
 Oregon|Pac-10| 
 Oregon State|Pac-10| 
-Penn State|Big 10| 
+Penn State|Big Ten| 
 Pittsburgh|Big East| 
-Purdue|Big 10| 
+Purdue|Big Ten| 
 Rice|CUSA|West
 Rutgers|Big East| 
 San Diego State|MWC| 
@@ -116,5 +117,5 @@ Washington State|Pac-10|
 West Virginia|Big East| 
 Western Kentucky|Indep| 
 Western Michigan|MAC|West
-Wisconsin|Big 10| 
+Wisconsin|Big Ten| 
 Wyoming|MWC| 

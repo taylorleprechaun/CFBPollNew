@@ -347,7 +347,9 @@ namespace CFBPoll.System.Data.Modules
             var fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var excelFile = new XLWorkbook(fileStream);
             var excelSheet = excelFile.Worksheets.Worksheet(worksheetName);
-            return excelSheet.Table(0);
+            var result = excelSheet.Table(0);
+            fileStream.Close();
+            return result;
         }
 
         /// <summary>

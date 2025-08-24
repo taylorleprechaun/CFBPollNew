@@ -15,6 +15,7 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 1/21/2025: Final Poll 2024-25 + BOAT and WOAT Update
 * 8/16/2025: Summer cleaning Part 1. Rearranged a lot of code and started moving towards a more modular and DB-driven design.
 * 8/17/2025: Summer cleaning Part 2. More work towards DB-driven design and loading data into the system.
+* 8/24/2025: Summer cleaning Part 3. Even more work towards DB-driven design and loading data into the system.
 
 ### Rankings (Updated 1/21/2025)
 

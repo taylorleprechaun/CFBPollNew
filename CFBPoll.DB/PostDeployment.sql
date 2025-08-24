@@ -10,12 +10,7 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 :r .\Poll\Data\INSERT_League.sql
-:r .\Poll\Data\INSERT_Season.sql
 :r .\Poll\Data\INSERT_Conference.sql
 :r .\Poll\Data\INSERT_Division.sql
 :r .\Poll\Data\INSERT_StatisticsType.sql
 :r .\Poll\Data\INSERT_Team.sql
-:r .\Poll\Data\INSERT_TeamAlias.sql
-
-:r .\Poll\Data\INSERT_TeamVersion_2024.sql
---:r .\Poll\Data\INSERT_TeamVersion_2025.sql

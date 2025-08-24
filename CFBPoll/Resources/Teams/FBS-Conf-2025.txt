@@ -30,6 +30,7 @@ Delaware|CUSA|
 Duke|ACC| 
 East Carolina|American| 
 Eastern Michigan|MAC| 
+FCS Team|FCS| 
 Florida|SEC| 
 Florida Atlantic|American| 
 Florida Int'l|CUSA| 
@@ -41,9 +42,9 @@ Georgia State|Sun Belt|East
 Georgia Tech|ACC| 
 Hawaii|MWC| 
 Houston|Big 12| 
-Illinois|Big 10| 
-Indiana|Big 10| 
-Iowa|Big 10| 
+Illinois|Big Ten| 
+Indiana|Big Ten| 
+Iowa|Big Ten| 
 Iowa State|Big 12| 
 Jacksonville State|CUSA| 
 James Madison|Sun Belt|East
@@ -59,21 +60,21 @@ Louisiana-Monroe|Sun Belt|West
 Louisville|ACC| 
 Louisiana State|SEC| 
 Marshall|Sun Belt|East
-Maryland|Big 10| 
+Maryland|Big Ten| 
 Massachusetts|MAC| 
 Memphis|American| 
 Miami FL|ACC| 
 Miami OH|MAC| 
-Michigan|Big 10| 
-Michigan State|Big 10| 
+Michigan|Big Ten| 
+Michigan State|Big Ten| 
 MTSU|CUSA| 
-Minnesota|Big 10| 
+Minnesota|Big Ten| 
 Mississippi|SEC| 
 Mississippi State|SEC| 
 Missouri|SEC| 
 Missouri State|CUSA| 
 Navy|American| 
-Nebraska|Big 10| 
+Nebraska|Big Ten| 
 Nevada|MWC| 
 New Mexico|MWC| 
 New Mexico State|CUSA| 
@@ -81,21 +82,21 @@ North Carolina|ACC|
 North Carolina State|ACC| 
 North Texas|American| 
 Northern Illinois|MAC| 
-Northwestern|Big 10| 
+Northwestern|Big Ten| 
 Notre Dame|Indep| 
 Ohio U.|MAC| 
-Ohio State|Big 10| 
+Ohio State|Big Ten| 
 Oklahoma|SEC| 
 Oklahoma State|Big 12| 
 Old Dominion|Sun Belt|East
-Oregon|Big 10| 
+Oregon|Big Ten| 
 Oregon State|Pac-12| 
-Penn State|Big 10| 
+Penn State|Big Ten| 
 Pittsburgh|ACC| 
-Purdue|Big 10| 
+Purdue|Big Ten| 
 Rice|American| 
-Rutgers|Big 10| 
-Sam Houston|CUSA| 
+Rutgers|Big Ten| 
+Sam Houston State|CUSA| 
 San Diego State|MWC| 
 San Jose State|MWC| 
 SMU|ACC| 
@@ -116,9 +117,9 @@ Toledo|MAC|
 Troy|Sun Belt|West
 Tulane|American| 
 Tulsa|American| 
-UCLA|Big 10| 
+UCLA|Big Ten| 
 UNLV|MWC| 
-USC|Big 10| 
+USC|Big Ten| 
 Utah|Big 12| 
 Utah State|MWC| 
 UTEP|CUSA| 
@@ -127,10 +128,10 @@ Vanderbilt|SEC|
 Virginia|ACC| 
 Virginia Tech|ACC| 
 Wake Forest|ACC| 
-Washington|Big 10| 
+Washington|Big Ten| 
 Washington State|Pac-12| 
 West Virginia|Big 12| 
 Western Kentucky|CUSA| 
 Western Michigan|MAC| 
-Wisconsin|Big 10| 
+Wisconsin|Big Ten| 
 Wyoming|MWC| 
