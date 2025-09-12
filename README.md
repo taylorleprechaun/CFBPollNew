@@ -12,55 +12,51 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 
 ### Recent changes
 
-* 1/21/2025: Final Poll 2024-25 + BOAT and WOAT Update
 * 8/16/2025: Summer cleaning Part 1. Rearranged a lot of code and started moving towards a more modular and DB-driven design.
 * 8/17/2025: Summer cleaning Part 2. More work towards DB-driven design and loading data into the system.
 * 8/24/2025: Summer cleaning Part 3. Even more work towards DB-driven design and loading data into the system.
 
-### Rankings (Updated 1/21/2025)
+### Rankings (Updated 9/11/2025)
 
-**Week 18 Rankings**
+**Week 3 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Oregon | 1.0000 | 13-1 | 0.5962 | 15
-2 | Ohio State | 0.9959 | 14-2 | 0.6257 | 6
-3 | Notre Dame | 0.9578 | 14-2 | 0.5999 | 13
-4 | Texas | 0.9343 | 13-3 | 0.5948 | 18
-5 | Penn State | 0.9259 | 13-3 | 0.5823 | 27
-6 | Georgia | 0.9205 | 11-3 | 0.6033 | 11
-7 | Indiana | 0.9117 | 11-2 | 0.5336 | 79
-8 | Boise State | 0.8993 | 12-2 | 0.5460 | 67
-9 | Brigham Young | 0.8972 | 11-2 | 0.5261 | 85
-10 | Iowa State | 0.8839 | 11-3 | 0.5554 | 56
-11 | SMU | 0.8831 | 11-3 | 0.5542 | 61
-12 | Syracuse | 0.8770 | 10-3 | 0.5633 | 40
-13 | Mississippi | 0.8764 | 10-3 | 0.5447 | 68
-14 | Illinois | 0.8744 | 10-3 | 0.5582 | 49
-15 | Arizona State | 0.8715 | 11-3 | 0.5349 | 78
-16 | Miami FL | 0.8707 | 10-3 | 0.5440 | 70
-17 | Alabama | 0.8670 | 9-4 | 0.5955 | 16
-18 | Missouri | 0.8612 | 10-3 | 0.5380 | 76
-19 | South Carolina | 0.8593 | 9-4 | 0.5902 | 20
-20 | Tennessee | 0.8584 | 10-3 | 0.5287 | 82
-21 | Louisville | 0.8526 | 9-4 | 0.5800 | 28
-22 | Louisiana State | 0.8502 | 9-4 | 0.5849 | 23
-23 | Clemson | 0.8499 | 10-4 | 0.5576 | 52
-24 | Army | 0.8471 | 12-2 | 0.4975 | 116
-25 | Navy | 0.8386 | 10-3 | 0.5536 | 63
+1 | Oregon | 1.0000 | 2-0 | 0.5957 | 16
+2 | Ohio State | 0.9946 | 2-0 | 0.6247 | 6
+3 | Penn State | 0.9548 | 2-0 | 0.5816 | 29
+4 | Georgia | 0.9459 | 2-0 | 0.5988 | 13
+5 | Brigham Young | 0.9362 | 2-0 | 0.5219 | 89
+6 | Indiana | 0.9347 | 2-0 | 0.5298 | 82
+7 | Illinois | 0.9301 | 2-0 | 0.5580 | 55
+8 | Iowa State | 0.9206 | 3-0 | 0.5529 | 64
+9 | Missouri | 0.9166 | 2-0 | 0.5401 | 76
+10 | Miami FL | 0.9163 | 2-0 | 0.5419 | 72
+11 | South Carolina | 0.9113 | 2-0 | 0.5854 | 22
+12 | Tennessee | 0.9071 | 2-0 | 0.5288 | 83
+13 | Mississippi | 0.9063 | 2-0 | 0.5405 | 75
+14 | Louisville | 0.9046 | 2-0 | 0.5794 | 33
+15 | Louisiana State | 0.9029 | 2-0 | 0.5837 | 25
+16 | Navy | 0.8854 | 2-0 | 0.5533 | 63
+17 | Texas Tech | 0.8830 | 2-0 | 0.5550 | 60
+18 | Texas A&M | 0.8824 | 2-0 | 0.5794 | 32
+19 | Texas Christian | 0.8777 | 1-0 | 0.5054 | 108
+20 | UNLV | 0.8768 | 3-0 | 0.5037 | 110
+21 | Minnesota | 0.8753 | 2-0 | 0.5424 | 71
+22 | USC | 0.8683 | 2-0 | 0.5720 | 35
+23 | Memphis | 0.8643 | 2-0 | 0.4741 | 131
+24 | Vanderbilt | 0.8595 | 2-0 | 0.5664 | 40
+25 | Arkansas | 0.8576 | 2-0 | 0.5569 | 58
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/2024-Week%2018%20NCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2003.md)
 
-#### Observations and Notes (Updated 1/21/2025)
+#### Observations and Notes (Updated 9/11/2025)
 
-* And your National Champion is........... Oregon. Yeah idk it's kind of weird how they're still #1. From what I can tell looking at the code that rates the teams the main difference comes from the winning percentage component of the ranking.  13-1 with the #15 strength of schedule is perceived as better than 14-2 with the #6 strength of schedule. I don't *love* it but that's what we're going with. Maybe I'll adjust it a little for next season to reward teams that go further in the playoff. 
+* First poll of the season is out. As usual it's got some junk in it that will clear up as we get additional data points over time. I would have had this out Tuesday night but something came up and I couldn't do anything for a few days.
 
-#### Predictions (Updated 1/21/2025)
+#### Predictions (Updated 9/11/2025)
 
-National Championship Results: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2024/Predictions/2024-Week%2017%20NCG.md)
-
-Retrospective:
-I came into this season with a goal of >70% for Winner and >50% for both ATS and O/U. I had re-run the entirety of 2023 multiple times while testing my changes for 2024 and I hit those marks. But as the season went on I noticed my Winner and O/U predictions were not where I wanted them to be. Around week 8 (ish) I made some adjustments which improved the O/U predictions by a decent amount but the ATS predictions fell off the rest of the way through the season. I have ideas for how to adjust things so next year though I'll have more changes and improvements so I can hit that goal.
+I've decided not to generate game predictions this season unless I get a huge amount of sudden free time. I didn't have the time in the offseason that I wanted to to make the changes I had planned and won't have time to make them for a while due to work and life stuff. Around the playoffs I'll probably run everything through my current algorithm just to do something, but that's about all you can expect.
 
 2024 Season Results:
 * Winner: 510 - 238 (68.2%)
@@ -77,17 +73,21 @@ I came into this season with a goal of >70% for Winner and >50% for both ATS and
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
 
-### TODO List (Updated 12/5/2023)
+### TODO List (Updated 9/11/2025)
 
-1. Tweak/improve/adjust prediction algorithm to a point where I'm happy with it. I found a [site](https://www.thepredictiontracker.com/ncaaresults.php) posted on r/CFB with the results of a bunch of predictive algorithms so I'll definitely use this as some benchmarks when updating my algorithm. As of writing this my outright picks are on the low end, my ATS picks are middle of the pack, and my RMSE is really really bad lol.
+1. Finish data source conversion. I am partially through changing my data source from Excel files exported from sports-reference to using a database to hold the data and query it for everything. As of writing this, I can upload data from those Excel files into the DB and wrote a tool which will do that automatically from all my old data. Next steps are roughly: upload the rest of the data, extensive validation to make sure the imported data is correct, build code/procs to pull the data, use that code to run the poll, run previous polls with the new data source to validate the rating output is the same.
 
-2. More print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+2. Improve early season ratings (recruiting info, returning production stats, etc.).
 
-3. Add a UI.  This is currently a command line project.  I want to add a UI with dropdowns for the season and sections for outputs and stuff.
-	
-4. Add improvements for early season ratings (recruiting info, returning production stats, etc. (not sure where to get this data though))
+3. Improve prediction algorithm. The goal of this is: Winner >70%, ATS >50%, OU >50%, and minimizing the RMSE of my score predictions. No idea how realistic these numbers are. I have [this site](https://www.thepredictiontracker.com/ncaaresults.php) bookmarked that someone mentioned to me on r/CFB with the results of a bunch of predictive algorithms that I will use to benchmark my performance.
 
-5. ????
+4. Improve the console app for running the poll to make it a little friendlier to use. I may also skip this and go directly to #5.
+
+5. Build a basic UI for the poll. The UI would give me all the functionality from my current console app plus more. Depending on how this goes I may look into getting a real website to host this instead of just using GitHub out of convenience.
+
+6. Add more data print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
+
+7. ????
 
 ### Misc.
 

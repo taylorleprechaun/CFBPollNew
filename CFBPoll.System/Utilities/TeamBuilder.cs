@@ -32,6 +32,10 @@ namespace CFBPoll.System.Utilities
         {
             var teams = _textReader.GetTeams(_season);
 
+            //Remove FCS teams
+            if (teams != null && teams.ContainsKey("FCS Team"))
+                teams.Remove("FCS Team");
+
             //Current Season
             var currentSeasonGames = _excelReader.GetGames(_season, _week);
             var currentSeasonOffenseStats = _excelReader.GetStatistics("offense", _season, _week);
