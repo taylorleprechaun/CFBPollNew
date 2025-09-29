@@ -16,43 +16,44 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 8/17/2025: Summer cleaning Part 2. More work towards DB-driven design and loading data into the system.
 * 8/24/2025: Summer cleaning Part 3. Even more work towards DB-driven design and loading data into the system.
 
-### Rankings (Updated 9/23/2025)
+### Rankings (Updated 9/29/2025)
 
-**Week 5 Rankings**
+**Week 6 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Ohio State | 1.0000 | 3-0 | 0.6249 | 6
-2 | Oregon | 0.9832 | 4-0 | 0.5832 | 26
-3 | Penn State | 0.9657 | 3-0 | 0.5776 | 33
-4 | Georgia | 0.9636 | 3-0 | 0.6039 | 12
-5 | Indiana | 0.9468 | 4-0 | 0.5398 | 81
-6 | Louisiana State | 0.9383 | 4-0 | 0.5784 | 31
-7 | Louisville | 0.9376 | 3-0 | 0.5796 | 30
-8 | Brigham Young | 0.9341 | 3-0 | 0.5224 | 95
-9 | Washington | 0.9313 | 3-0 | 0.5986 | 16
-10 | Iowa State | 0.9301 | 4-0 | 0.5500 | 70
-11 | Miami FL | 0.9280 | 4-0 | 0.5419 | 78
-12 | Texas A&M | 0.9276 | 3-0 | 0.5832 | 27
-13 | Oklahoma | 0.9274 | 4-0 | 0.6174 | 8
-14 | Missouri | 0.9255 | 4-0 | 0.5382 | 83
-15 | Mississippi | 0.9253 | 4-0 | 0.5464 | 73
-16 | USC | 0.9245 | 4-0 | 0.5766 | 34
-17 | Texas Tech | 0.9179 | 4-0 | 0.5460 | 74
-18 | Vanderbilt | 0.9155 | 4-0 | 0.5612 | 52
-19 | Georgia Tech | 0.9139 | 4-0 | 0.5781 | 32
-20 | Central Florida | 0.9084 | 3-0 | 0.5913 | 19
-21 | Mississippi State | 0.9053 | 4-0 | 0.6254 | 5
-22 | Florida State | 0.9053 | 3-0 | 0.6203 | 7
-23 | Maryland | 0.9025 | 4-0 | 0.5895 | 20
-24 | Navy | 0.8966 | 3-0 | 0.5521 | 68
-25 | Houston | 0.8958 | 3-0 | 0.5742 | 35
+1 | Indiana | 1.0000 | 5-0 | 0.6571 | 12
+2 | Ohio State | 0.9744 | 4-0 | 0.6268 | 21
+3 | Mississippi | 0.9413 | 5-0 | 0.5990 | 40
+4 | Oklahoma | 0.9315 | 4-0 | 0.6153 | 28
+5 | Louisville | 0.9272 | 4-0 | 0.5778 | 63
+6 | Texas A&M | 0.9201 | 4-0 | 0.5829 | 55
+7 | Vanderbilt | 0.9179 | 5-0 | 0.5693 | 67
+8 | Maryland | 0.9138 | 4-0 | 0.5848 | 49
+9 | Miami FL | 0.9110 | 4-0 | 0.5437 | 93
+10 | Texas Tech | 0.9109 | 4-0 | 0.5457 | 89
+11 | Illinois | 0.9092 | 4-1 | 0.6930 | 4
+12 | Iowa State | 0.9084 | 5-0 | 0.5458 | 88
+13 | Brigham Young | 0.9080 | 4-0 | 0.5252 | 103
+14 | Arizona State | 0.8985 | 4-1 | 0.6742 | 7
+15 | Houston | 0.8949 | 4-0 | 0.5605 | 77
+16 | Missouri | 0.8872 | 5-0 | 0.5076 | 119
+17 | Oregon | 0.8834 | 5-0 | 0.4814 | 130
+18 | Tennessee | 0.8815 | 4-1 | 0.6515 | 15
+19 | Delaware | 0.8782 | 3-1 | 0.5556 | 79
+20 | Georgia Tech | 0.8772 | 5-0 | 0.5294 | 97
+21 | Navy | 0.8768 | 4-0 | 0.5512 | 83
+22 | Louisiana State | 0.8579 | 4-1 | 0.6236 | 26
+23 | UNLV | 0.8572 | 4-0 | 0.4958 | 124
+24 | Mississippi State | 0.8533 | 4-1 | 0.6563 | 13
+25 | Memphis | 0.8425 | 5-0 | 0.4921 | 126
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2005.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2006.md)
 
-#### Observations and Notes (Updated 9/11/2025)
+#### Observations and Notes (Updated 9/29/2025)
 
-* First poll of the season is out. As usual it's got some junk in it that will clear up as we get additional data points over time. I would have had this out Tuesday night but something came up and I couldn't do anything for a few days.
+* I'm absolutely here for #1 Indiana.
+* I was very surprised by this ranking, especially compared to the previous week. It's actually kind of crazy looking in a few spots. The ones that stood out to me the most were Oregon and Penn State. Previous #2 Oregon beat previous #3 Penn State and then they both dropped to #17 and #31, respectively, and Oregon's strength of schedule fell from 26 to 130. The logic to help stabilize early season rating volatility phases out as the season goes on and there is barely any of it left still propping teams up. The sudden shift in strength of schedule I might need to look at. It is supposed to balance out proportionally, but it is possible it was giving Oregon too much strength of schedule credit for the previous season. Added to my TODO list down below.
 
 #### Predictions (Updated 9/11/2025)
 
@@ -73,11 +74,11 @@ I've decided not to generate game predictions this season unless I get a huge am
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
 
-### TODO List (Updated 9/11/2025)
+### TODO List (Updated 9/29/2025)
 
 1. Finish data source conversion. I am partially through changing my data source from Excel files exported from sports-reference to using a database to hold the data and query it for everything. As of writing this, I can upload data from those Excel files into the DB and wrote a tool which will do that automatically from all my old data. Next steps are roughly: upload the rest of the data, extensive validation to make sure the imported data is correct, build code/procs to pull the data, use that code to run the poll, run previous polls with the new data source to validate the rating output is the same.
 
-2. Improve early season ratings (recruiting info, returning production stats, etc.).
+2. Improve early season ratings (recruiting info, returning production stats, etc.). Look into the way Strength of Schedule is calculated and weighted in the early season to make sure it is not giving too much credit to the previous season's data.
 
 3. Improve prediction algorithm. The goal of this is: Winner >70%, ATS >50%, OU >50%, and minimizing the RMSE of my score predictions. No idea how realistic these numbers are. I have [this site](https://www.thepredictiontracker.com/ncaaresults.php) bookmarked that someone mentioned to me on r/CFB with the results of a bunch of predictive algorithms that I will use to benchmark my performance.
 
