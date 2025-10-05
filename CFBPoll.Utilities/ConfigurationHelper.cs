@@ -37,6 +37,7 @@ namespace CFBPoll.Utilities
         {
             var configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.AddJsonFile($"appsettings.json");
+            configurationBuilder.AddJsonFile($"appsettings-private.json");
             return configurationBuilder.Build();
         }
 
