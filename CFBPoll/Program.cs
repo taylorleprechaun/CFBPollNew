@@ -1,41 +1,48 @@
-﻿using CFBPoll.System.Modules.Default;
-using Microsoft.Extensions.Configuration;
+﻿using CFBPoll.Data.Console;
+using CFBPoll.DTOs.Enums;
+using CFBPoll.DTOs.Rating;
+using CFBPoll.System.Data.SpreadsheetData;
+using CFBPoll.System.Data.Text;
+using CFBPoll.System.Modules.Default;
+using CFBPoll.System.Modules.Factories;
 
-//Set up application settings config
-var configurationBuilder = new ConfigurationBuilder();
-configurationBuilder.AddJsonFile($"appsettings.json");
-configurationBuilder.AddJsonFile($"appsettings-private.json");
-var config = configurationBuilder.Build();
+var consoleData = new ConsoleData();
+var spreadsheetData = new SpreadsheetData();
+var textData = new TextData();
 
-var season = 2025;
+var season = consoleData.GetSeason();
+var week = consoleData.GetWeek();
+
 var cfbModule = new DefaultCFBModule();
 
-var teams = await cfbModule.GetTeams(season);
+var teamDetails = await cfbModule.GetTeamDetails(season, week);
 
-var games = await cfbModule.GetGames(season);
+var ratingRequest = new RatingRequest
+{
+    Season = season,
+    TeamDetails = teamDetails,
+    Week = week
+};
+var rater = RatingFactory.GetRatingModule(season);
+var ratings = rater.RateTeams(ratingRequest);
 
-var teamStats = await cfbModule.GetTeamStats(season);
+do
+{
+    var runType = consoleData.GetRunType();
+    switch (runType)
+    {
+        case RunType.Ratings:
+            //Print Ratings
+            textData.PrintPollTable(teamDetails, ratings);
+            if (consoleData.PrintDetails(runType))
+                spreadsheetData.PrintPollDetails(teamDetails, ratings);
+            break;
+        //case RunType.PredictGames:
+        //case RunType.PredictResults:
+        //case RunType.PredictGame:
+        default:
+            break;
+    }
+}
+while (!consoleData.DoExit());
 
-var gameStats = await cfbModule.GetGameStats(season);
-
-//foreach (var team in teams.Values)
-//{
-//    if (team == null || string.IsNullOrEmpty(team.School))
-//        continue;
-
-//    games.TryGetValue(team.School, out var teamGames);
-//    Console.WriteLine($"{team.School} - Games: {teamGames?.Count() ?? 0}");
-
-//    if (teamGames == null || !teamGames.Any())
-//        continue;
-
-//    foreach (var game in teamGames)
-//    {
-//        if (game == null)
-//            continue;
-
-//        Console.WriteLine($"\tWeek {game.Week}: {game.AwayTeam} {(game.NeutralSite ?? false ? "vs" : "at")} {game.HomeTeam}");
-//        Console.WriteLine($"\t\t{game.AwayTeam} - {game.AwayPoints}");
-//        Console.WriteLine($"\t\t{game.HomeTeam} - {game.HomePoints}");
-//    }
-//}

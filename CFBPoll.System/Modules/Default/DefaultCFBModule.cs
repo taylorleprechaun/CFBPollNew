@@ -1,5 +1,5 @@
-﻿using CFBPoll.System.Data.CollegeFootballData;
-using CollegeFootballData.Models;
+﻿using CFBPoll.DTOs;
+using CFBPoll.System.Data.CollegeFootballData;
 
 namespace CFBPoll.System.Modules.Default
 {
@@ -12,24 +12,9 @@ namespace CFBPoll.System.Modules.Default
             _cfbData = new CollegeFootballDataData();
         }
 
-        public async Task<IDictionary<string, IEnumerable<Game>>> GetGames(int season)
+        public async Task<IDictionary<string, TeamDetail>> GetTeamDetails(int season, int week)
         {
-            return await _cfbData.GetGames(season);
-        }
-
-        public async Task<IDictionary<string, IEnumerable<AdvancedGameStat>>> GetGameStats(int season)
-        {
-            return await _cfbData.GetGameStats(season);
-        }
-
-        public async Task<IDictionary<string, Team>> GetTeams(int season)
-        {
-            return await _cfbData.GetTeams(season);
-        }
-
-        public async Task<IDictionary<string, IEnumerable<TeamStat>>> GetTeamStats(int season)
-        {
-            return await _cfbData.GetTeamStats(season);
+            return await _cfbData.GetTeamDetails(season, week);
         }
     }
 }

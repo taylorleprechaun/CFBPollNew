@@ -14,12 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CFBPoll.DTOs\CFBPoll.DTOs.csproj" />
     <ProjectReference Include="..\CFBPoll.Utilities\CFBPoll.Utilities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Modules\Factories\" />
-    <Folder Include="Modules\Interfaces\" />
   </ItemGroup>
 
 </Project>
