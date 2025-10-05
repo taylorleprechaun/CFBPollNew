@@ -16,39 +16,39 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 * 8/17/2025: Summer cleaning Part 2. More work towards DB-driven design and loading data into the system.
 * 8/24/2025: Summer cleaning Part 3. Even more work towards DB-driven design and loading data into the system.
 
-### Rankings (Updated 9/29/2025)
+### Rankings (Updated 10/5/2025)
 
-**Week 6 Rankings**
+**Week 7 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 5-0 | 0.6571 | 12
-2 | Ohio State | 0.9744 | 4-0 | 0.6268 | 21
-3 | Mississippi | 0.9413 | 5-0 | 0.5990 | 40
-4 | Oklahoma | 0.9315 | 4-0 | 0.6153 | 28
-5 | Louisville | 0.9272 | 4-0 | 0.5778 | 63
-6 | Texas A&M | 0.9201 | 4-0 | 0.5829 | 55
-7 | Vanderbilt | 0.9179 | 5-0 | 0.5693 | 67
-8 | Maryland | 0.9138 | 4-0 | 0.5848 | 49
-9 | Miami FL | 0.9110 | 4-0 | 0.5437 | 93
-10 | Texas Tech | 0.9109 | 4-0 | 0.5457 | 89
-11 | Illinois | 0.9092 | 4-1 | 0.6930 | 4
-12 | Iowa State | 0.9084 | 5-0 | 0.5458 | 88
-13 | Brigham Young | 0.9080 | 4-0 | 0.5252 | 103
-14 | Arizona State | 0.8985 | 4-1 | 0.6742 | 7
-15 | Houston | 0.8949 | 4-0 | 0.5605 | 77
-16 | Missouri | 0.8872 | 5-0 | 0.5076 | 119
-17 | Oregon | 0.8834 | 5-0 | 0.4814 | 130
-18 | Tennessee | 0.8815 | 4-1 | 0.6515 | 15
-19 | Delaware | 0.8782 | 3-1 | 0.5556 | 79
-20 | Georgia Tech | 0.8772 | 5-0 | 0.5294 | 97
-21 | Navy | 0.8768 | 4-0 | 0.5512 | 83
-22 | Louisiana State | 0.8579 | 4-1 | 0.6236 | 26
-23 | UNLV | 0.8572 | 4-0 | 0.4958 | 124
-24 | Mississippi State | 0.8533 | 4-1 | 0.6563 | 13
-25 | Memphis | 0.8425 | 5-0 | 0.4921 | 126
+1 | Indiana | 1.0000 | 5-0 | 0.6688 | 7
+2 | Miami FL | 0.9641 | 5-0 | 0.6287 | 29
+3 | Ohio State | 0.9439 | 5-0 | 0.5991 | 51
+4 | Texas A&M | 0.9345 | 5-0 | 0.5965 | 54
+5 | Oklahoma | 0.9282 | 5-0 | 0.5865 | 64
+6 | Mississippi | 0.9166 | 5-0 | 0.5727 | 76
+7 | Illinois | 0.8954 | 5-1 | 0.6585 | 13
+8 | Georgia Tech | 0.8917 | 5-0 | 0.5420 | 96
+9 | Texas Tech | 0.8794 | 5-0 | 0.4988 | 116
+10 | Cincinnati | 0.8760 | 4-1 | 0.6594 | 12
+11 | Brigham Young | 0.8758 | 5-0 | 0.5013 | 113
+12 | Missouri | 0.8703 | 5-0 | 0.4959 | 118
+13 | Washington | 0.8662 | 4-1 | 0.6350 | 23
+14 | Louisiana State | 0.8661 | 4-1 | 0.6421 | 20
+15 | Alabama | 0.8642 | 4-1 | 0.6276 | 30
+16 | Arizona State | 0.8595 | 4-1 | 0.6319 | 26
+17 | Nebraska | 0.8562 | 4-1 | 0.6162 | 42
+18 | Michigan | 0.8533 | 4-1 | 0.6158 | 43
+19 | Virginia | 0.8532 | 5-1 | 0.5975 | 53
+20 | Louisville | 0.8454 | 4-1 | 0.6130 | 45
+21 | Tennessee | 0.8401 | 4-1 | 0.6054 | 49
+22 | Oregon | 0.8392 | 5-0 | 0.4456 | 134
+23 | Iowa State | 0.8365 | 5-1 | 0.5777 | 71
+24 | Memphis | 0.8322 | 6-0 | 0.4941 | 120
+25 | Vanderbilt | 0.8322 | 5-1 | 0.5650 | 79
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2006.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2007.md)
 
 #### Observations and Notes (Updated 9/29/2025)
 
