@@ -11,14 +11,14 @@ namespace CFBPoll.System.Modules.Factories
         /// <param name="season">The season for the rating module</param>
         /// <param name="week">The week for the rating module</param>
         /// <returns>A module that implements the IRating interface</returns>
-        public static IRatingModule GetRatingModule(int season, int week)
+        public static IRatingModule GetRatingModule(int season)
         {
             switch (season)
             {
                 //case var _ when season == 2024:
                 //    return new TestRatingModule(season, week);
                 default:
-                    return new DefaultRatingModule(season, week);
+                    return new DefaultRatingModule();
             };
 
             //No plans for it but if for some reason in the future I want to switch to a new/different rating module then

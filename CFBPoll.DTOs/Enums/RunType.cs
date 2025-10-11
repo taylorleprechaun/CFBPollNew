@@ -8,11 +8,11 @@ namespace CFBPoll.DTOs.Enums
         None = 0,
         [Description("Ratings")]
         Ratings = 1,
-        [Description("Game Predictions")]
-        PredictGames = 2,
-        [Description("Prediction Results")]
-        PredictResults = 3,
-        [Description("Predict Individual Game")]
-        PredictGame = 4
+        //[Description("Game Predictions")]
+        //PredictGames = 2,
+        //[Description("Prediction Results")]
+        //PredictResults = 3,
+        //[Description("Predict Individual Game")]
+        //PredictGame = 4
     }
 }
