@@ -24,19 +24,25 @@ namespace CFBPoll.System.Data.CollegeFootballData
         /// Get the team details in a dictionary where the key is the school's name.
         /// </summary>
         /// <param name="season">The season.</param>
+        /// <param name="seasonType">Regular or Postseason.</param>
         /// <param name="week">The week.</param>
         /// <returns>A dictionary with the school's name as the key and all their relevant information as the value.</returns>
-        public async Task<IDictionary<string, DTOs.TeamDetail>> GetTeamDetails(int season, int week)
+        public async Task<IDictionary<string, DTOs.TeamDetail>> GetTeamDetails(int season, string seasonType, int week)
         {
+            var teamDetails = new Dictionary<string, DTOs.TeamDetail>();
+            if (string.IsNullOrEmpty(seasonType))
+                return teamDetails;
+
+            var seasonTypeEnum = seasonType.Equals("Regular", StringComparison.OrdinalIgnoreCase) ? SeasonType.Regular : SeasonType.Both;
+
             //Do all the API calls asynchronously
             var teams = GetTeams(season);
-            var games = GetGames(season);
-            var teamStats = GetTeamStats(season, week);
-            var gameStats = GetGameStats(season);
+            var games = GetGames(season, seasonTypeEnum);
+            var teamStats = GetTeamStats(season, seasonTypeEnum, week);
+            var gameStats = GetGameStats(season, seasonTypeEnum);
             await Task.WhenAll(teams, games, teamStats, gameStats);
 
             //If the teams result is null then stop
-            var teamDetails = new Dictionary<string, DTOs.TeamDetail>();
             if (teams.Result == null || !teams.Result.Any())
                 return teamDetails;
 
@@ -84,13 +90,15 @@ namespace CFBPoll.System.Data.CollegeFootballData
         /// Get all games for a given season in a dictionary where the key is the school's name.
         /// </summary>
         /// <param name="season">The season.</param>
+        /// <param name="seasonType">The season type.</param>
         /// <returns>A dictionary with the school's name as the key and a collection of games as the value.</returns>
-        public async Task<IDictionary<string, IEnumerable<Game>>> GetGames(int season)
+        public async Task<IDictionary<string, IEnumerable<Game>>> GetGames(int season, SeasonType seasonType)
         {
             var games = await _apiClient.Games.GetAsync(requestConfiguration =>
             {
                 requestConfiguration.QueryParameters.Year = season;
                 requestConfiguration.QueryParameters.ClassificationAsDivisionClassification = DivisionClassification.Fbs;
+                requestConfiguration.QueryParameters.SeasonTypeAsSeasonType = seasonType;
             });
 
             if (games == null || !games.Any())
@@ -111,12 +119,14 @@ namespace CFBPoll.System.Data.CollegeFootballData
         /// Get all game stats for a given season in a dictionary where the key is the school's name.
         /// </summary>
         /// <param name="season">The season.</param>
+        /// <param name="seasonType">The season type.</param>
         /// <returns>A dictionary with the school's name as the key and a collection of game stats as the value.</returns>
-        public async Task<IDictionary<string, IEnumerable<AdvancedGameStat>>> GetGameStats(int season)
+        public async Task<IDictionary<string, IEnumerable<AdvancedGameStat>>> GetGameStats(int season, SeasonType seasonType)
         {
             var gameStats = await _apiClient.Stats.Game.Advanced.GetAsync(requestConfiguration =>
             {
                 requestConfiguration.QueryParameters.Year = season;
+                requestConfiguration.QueryParameters.SeasonTypeAsSeasonType = seasonType;
             });
 
             if (gameStats == null || !gameStats.Any())
@@ -154,14 +164,15 @@ namespace CFBPoll.System.Data.CollegeFootballData
         /// Get all team stats for a given season in a dictionary where the key is the school's name.
         /// </summary>
         /// <param name="season">The season.</param>
+        /// <param name="seasonType">The season type.</param>
         /// <param name="week">The week to get the team stats up until.</param>
         /// <returns>A dictionary with the school's name as the key and their team stats as the value.</returns>
-        public async Task<IDictionary<string, IEnumerable<TeamStat>>> GetTeamStats(int season, int week)
+        public async Task<IDictionary<string, IEnumerable<TeamStat>>> GetTeamStats(int season, SeasonType seasonType, int week)
         {
             var teamStats = await _apiClient.Stats.Season.GetAsync(requestConfiguration =>
             {
                 requestConfiguration.QueryParameters.Year = season;
-                requestConfiguration.QueryParameters.EndWeek = week;
+                requestConfiguration.QueryParameters.EndWeek = seasonType.Equals(SeasonType.Both) ? null : week;
             });
 
             if (teamStats == null || !teamStats.Any())

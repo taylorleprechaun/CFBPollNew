@@ -13,25 +13,6 @@ namespace CFBPoll.Data.Console
         #region public methods
 
         /// <summary>
-        /// Checks if the user would like to exit the program.
-        /// </summary>
-        /// <returns>True if yes, False if no.</returns>
-        public bool DoExit()
-        {
-            while (true)
-            {
-                SysConsole.WriteLine("\nDo you want to exit? (Y/N)");
-                var input = GetInput();
-                if (input.Equals("Y", _scoic))
-                    return true;
-                else if (input.Equals("N", _scoic))
-                    return false;
-                else
-                    SysConsole.WriteLine("Invalid input");
-            }
-        }
-
-        /// <summary>
         /// Gets the run type for the program.
         /// </summary>
         /// <returns>The run type for the program.</returns>
@@ -59,12 +40,26 @@ namespace CFBPoll.Data.Console
         /// <returns>The string year entered by the user.</returns>
         public int GetSeason()
         {
-            SysConsole.WriteLine("Enter a season (e.g. 2025):");
-            SysConsole.WriteLine();
+            SysConsole.WriteLine("\nEnter a season (e.g. 2025):");
             if (int.TryParse(GetInput(), out var season))
                 return season;
             else
                 return DateTime.Now.Year;
+        }
+
+        public bool IsPostseason()
+        {
+            while (true)
+            { 
+                SysConsole.WriteLine("\nIs this for the Postseason? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", _scoic))
+                    return true;
+                else if (input.Equals("N", _scoic))
+                    return false;
+                else
+                    SysConsole.WriteLine("Invalid input");
+            }
         }
 
         /// <summary>
@@ -74,7 +69,6 @@ namespace CFBPoll.Data.Console
         public int GetWeek()
         {
             SysConsole.WriteLine("\nEnter a Week (e.g. 10):");
-            SysConsole.WriteLine();
             return int.TryParse(GetInput(), out var week) ? week : 0;
         }
 
@@ -88,6 +82,44 @@ namespace CFBPoll.Data.Console
             while (true)
             {
                 SysConsole.WriteLine($"\nWould you like to see the details for {runType.GetDescription()}? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", _scoic))
+                    return true;
+                else if (input.Equals("N", _scoic))
+                    return false;
+                else
+                    SysConsole.WriteLine("Invalid input");
+            }
+        }
+
+        /// <summary>
+        /// Checks if the user would like run the program again for a different season or week.
+        /// </summary>
+        /// <returns>True if yes, False if no.</returns>
+        public bool RunAgain()
+        {
+            while (true)
+            {
+                SysConsole.WriteLine("\nDo you want to choose a different season or week? (Y/N)");
+                var input = GetInput();
+                if (input.Equals("Y", _scoic))
+                    return true;
+                else if (input.Equals("N", _scoic))
+                    return false;
+                else
+                    SysConsole.WriteLine("Invalid input");
+            }
+        }
+
+        /// <summary>
+        /// Checks if the user would like to run the current ratings for another run type.
+        /// </summary>
+        /// <returns>True if yes, False if no.</returns>
+        public bool RunAnotherType()
+        {
+            while (true)
+            {
+                SysConsole.WriteLine("\nDo you want to pick another run type? (Y/N)");
                 var input = GetInput();
                 if (input.Equals("Y", _scoic))
                     return true;

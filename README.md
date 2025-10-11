@@ -13,6 +13,7 @@ Made for fun.  Part of the Massey Composite (Steinberg/TSS)
 ### Recent changes
 
 * 10/5/2025: Summer cleaning Part 4. Pivoted from my in-progress shift to a DB-driven design to entirely using the CFBDataAPI. More work is needed on this still.
+* 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
 
 ### Rankings (Updated 10/5/2025)
 
@@ -72,10 +73,9 @@ I've decided not to generate game predictions this season unless I get a huge am
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
 
-### TODO List (Updated 10/5/2025)
+### TODO List (Updated 10/11/2025)
 
-1. Finish data source conversion. I pivoted from my switch to a DB-driven design to now using the CFBDataAPI. There are a few things not working correctly with my changes right now. The main two being that I can't re-run a previous week and I need to make a change to handle regular season vs bowl season since the way the API counts weeks is different than my old code used to be.
-Also, I did not convert the code which handles early season rating adjustments nor any of the prediction code. Which leads directly into points #2 and #3, where I wanted to make changes to those anyway.
+1. Finish data source conversion. I pivoted from my switch to a DB-driven design to now using the CFBDataAPI. I did not convert the code which handles early season rating adjustments nor any of the prediction code. Which leads directly into points #2 and #3, where I wanted to make changes to those anyway.
 
 2. Improve early season ratings (recruiting info, returning production stats, etc.). Look into the way Strength of Schedule is calculated and weighted in the early season to make sure it is not giving too much credit to the previous season's data.
 

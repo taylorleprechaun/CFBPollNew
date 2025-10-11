@@ -12,9 +12,9 @@ namespace CFBPoll.System.Modules.Default
             _cfbData = new CollegeFootballDataData();
         }
 
-        public async Task<IDictionary<string, TeamDetail>> GetTeamDetails(int season, int week)
+        public async Task<IDictionary<string, TeamDetail>> GetTeamDetails(int season, string seasonType, int week)
         {
-            return await _cfbData.GetTeamDetails(season, week);
+            return await _cfbData.GetTeamDetails(season, seasonType, week);
         }
     }
 }
