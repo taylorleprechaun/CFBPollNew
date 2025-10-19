@@ -49,6 +49,6 @@ do
                 break;
         }
     }
-    while (!consoleData.RunAnotherType());
+    while (consoleData.RunAnotherType());
 }
-while (!consoleData.RunAgain());
+while (consoleData.RunAgain());
