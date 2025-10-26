@@ -13,44 +13,44 @@ Part of the Massey Composite (Steinberg/TSS).
 * 10/5/2025: Summer cleaning Part 4. Pivoted from my in-progress shift to a DB-driven design to entirely using the CFBDataAPI. More work is needed on this still.
 * 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
 
-### Rankings (Updated 10/19/2025)
+### Rankings (Updated 10/26/2025)
 
-**Week 9 Rankings**
+**Week 10 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 7-0 | 0.6297 | 16
-2 | Ohio State | 0.9779 | 7-0 | 0.6046 | 33
-3 | BYU | 0.9369 | 7-0 | 0.5518 | 76
-4 | Louisville | 0.9321 | 5-1 | 0.6686 | 4
-5 | Texas A&M | 0.9276 | 7-0 | 0.5469 | 82
-6 | Miami | 0.9219 | 5-1 | 0.6541 | 8
-7 | Georgia Tech | 0.9189 | 7-0 | 0.5383 | 88
-8 | Alabama | 0.9085 | 6-1 | 0.6153 | 25
-9 | Georgia | 0.9025 | 6-1 | 0.6171 | 24
-10 | Texas Tech | 0.8731 | 6-1 | 0.5612 | 65
-11 | Virginia | 0.8725 | 6-1 | 0.5706 | 59
-12 | Illinois | 0.8630 | 5-2 | 0.6652 | 5
-13 | Ole Miss | 0.8626 | 6-1 | 0.5646 | 62
-14 | Vanderbilt | 0.8598 | 6-1 | 0.5499 | 78
-15 | Cincinnati | 0.8577 | 6-1 | 0.5524 | 75
-16 | Oklahoma | 0.8508 | 6-1 | 0.5455 | 83
-17 | Oregon | 0.8476 | 6-1 | 0.5262 | 93
-18 | South Florida | 0.8457 | 6-1 | 0.5787 | 49
-19 | Navy | 0.8369 | 6-0 | 0.4689 | 124
-20 | Arizona State | 0.8263 | 5-2 | 0.6143 | 26
-21 | Michigan | 0.8242 | 5-2 | 0.6025 | 36
-22 | Notre Dame | 0.8221 | 5-2 | 0.6225 | 22
-23 | Utah | 0.8214 | 5-2 | 0.6043 | 34
-24 | Missouri | 0.8213 | 6-1 | 0.5000 | 112
-25 | LSU | 0.8209 | 5-2 | 0.6068 | 31
+1 | Indiana | 1.0000 | 8-0 | 0.6050 | 26
+2 | Ohio State | 0.9885 | 7-0 | 0.5937 | 34
+3 | BYU | 0.9543 | 8-0 | 0.5518 | 71
+4 | Texas A&M | 0.9419 | 8-0 | 0.5449 | 78
+5 | Georgia Tech | 0.9348 | 8-0 | 0.5368 | 85
+6 | Miami | 0.9201 | 6-1 | 0.6097 | 24
+7 | Georgia | 0.9198 | 6-1 | 0.6187 | 20
+8 | Alabama | 0.9120 | 7-1 | 0.5873 | 43
+9 | Louisville | 0.9066 | 6-1 | 0.5957 | 31
+10 | Ole Miss | 0.8874 | 7-1 | 0.5642 | 60
+11 | Vanderbilt | 0.8839 | 7-1 | 0.5500 | 74
+12 | Virginia | 0.8771 | 7-1 | 0.5433 | 79
+13 | Texas Tech | 0.8699 | 7-1 | 0.5235 | 91
+14 | Cincinnati | 0.8674 | 7-1 | 0.5306 | 88
+15 | Navy | 0.8579 | 7-0 | 0.4765 | 122
+16 | Houston | 0.8556 | 7-1 | 0.5181 | 95
+17 | Oregon | 0.8546 | 7-1 | 0.5033 | 103
+18 | Washington | 0.8534 | 6-2 | 0.6011 | 29
+19 | Michigan | 0.8460 | 6-2 | 0.5878 | 40
+20 | Utah | 0.8422 | 6-2 | 0.5836 | 47
+21 | Oklahoma | 0.8378 | 6-2 | 0.5865 | 44
+22 | Nebraska | 0.8350 | 6-2 | 0.5769 | 52
+23 | Notre Dame | 0.8233 | 5-2 | 0.6040 | 27
+24 | Tulane | 0.8229 | 6-1 | 0.5352 | 86
+25 | Tennessee | 0.8197 | 6-2 | 0.5556 | 66
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2009.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2010.md)
 
-#### Observations and Notes (Updated 10/12/2025)
+#### Observations and Notes (Updated 10/26/2025)
 
-* This week is the first run with my new changes using the CFBDataAPI for everything. I ran the old version of my rankings again just to be sure nothing is totally messed up. The only differences are because the numbers I use now are slightly 
-different (more precision) causing a few teams flip positions (ex: James Madison and FSU switch between #44 and #45 on the new code). Really happy I made this change because now running this is much easier now that I don't have to use my script I had to refresh the Excel files I was pulling from sports-reference.
+* We're at a point in the season where I start to feel like my rankings are actually good and not just alright. The rating algorithm has enough information to work with that it doesn't wildly overreact week to week because my data points are becoming less volatile. And it means the the actual ranking of teams is defensible (for the most part) relative to some weeks where you look at it and just wonder what's going on.
+* After a few weeks now running on my new data source I gotta say this is way more convenient to run and I should have done it sooner.
 
 #### Predictions (Updated 9/11/2025)
 
