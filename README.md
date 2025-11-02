@@ -12,8 +12,9 @@ Part of the Massey Composite (Steinberg/TSS).
 
 * 10/5/2025: Summer cleaning Part 4. Pivoted from my in-progress shift to a DB-driven design to entirely using the CFBDataAPI. More work is needed on this still.
 * 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
+* 11/2/2025: Update data output format.
 
-### Rankings (Updated 11/1/2025)
+### Rankings (Updated 11/2/2025)
 
 **Week 11 Rankings**
 
@@ -71,7 +72,7 @@ I've decided not to generate game predictions this season unless I get a huge am
 * ATS: 341 - 383 (47.1%)
 * O/U: 372 - 352 (51.4%)
 
-### TODO List (Updated 10/11/2025)
+### TODO List (Updated 11/2/2025)
 
 1. Finish data source conversion. I pivoted from my switch to a DB-driven design to now using the CFBDataAPI. I did not convert the code which handles early season rating adjustments nor any of the prediction code. Which leads directly into points #2 and #3, where I wanted to make changes to those anyway.
 
@@ -83,9 +84,7 @@ I've decided not to generate game predictions this season unless I get a huge am
 
 5. Build a basic UI for the poll. The UI would give me all the functionality from my current console app plus more. Depending on how this goes I may look into getting a real website to host this instead of just using GitHub out of convenience.
 
-6. Add more data print-outs: conference average rating, conference top to bottom rating+ranking, conference ranking, division ranking, etc.
-
-7. ????
+6. ????
 
 ### Misc.
 
