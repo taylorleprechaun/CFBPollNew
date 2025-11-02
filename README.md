@@ -13,39 +13,39 @@ Part of the Massey Composite (Steinberg/TSS).
 * 10/5/2025: Summer cleaning Part 4. Pivoted from my in-progress shift to a DB-driven design to entirely using the CFBDataAPI. More work is needed on this still.
 * 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
 
-### Rankings (Updated 10/26/2025)
+### Rankings (Updated 11/1/2025)
 
-**Week 10 Rankings**
+**Week 11 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 8-0 | 0.6050 | 26
-2 | Ohio State | 0.9885 | 7-0 | 0.5937 | 34
-3 | BYU | 0.9543 | 8-0 | 0.5518 | 71
-4 | Texas A&M | 0.9419 | 8-0 | 0.5449 | 78
-5 | Georgia Tech | 0.9348 | 8-0 | 0.5368 | 85
-6 | Miami | 0.9201 | 6-1 | 0.6097 | 24
-7 | Georgia | 0.9198 | 6-1 | 0.6187 | 20
-8 | Alabama | 0.9120 | 7-1 | 0.5873 | 43
-9 | Louisville | 0.9066 | 6-1 | 0.5957 | 31
-10 | Ole Miss | 0.8874 | 7-1 | 0.5642 | 60
-11 | Vanderbilt | 0.8839 | 7-1 | 0.5500 | 74
-12 | Virginia | 0.8771 | 7-1 | 0.5433 | 79
-13 | Texas Tech | 0.8699 | 7-1 | 0.5235 | 91
-14 | Cincinnati | 0.8674 | 7-1 | 0.5306 | 88
-15 | Navy | 0.8579 | 7-0 | 0.4765 | 122
-16 | Houston | 0.8556 | 7-1 | 0.5181 | 95
-17 | Oregon | 0.8546 | 7-1 | 0.5033 | 103
-18 | Washington | 0.8534 | 6-2 | 0.6011 | 29
-19 | Michigan | 0.8460 | 6-2 | 0.5878 | 40
-20 | Utah | 0.8422 | 6-2 | 0.5836 | 47
-21 | Oklahoma | 0.8378 | 6-2 | 0.5865 | 44
-22 | Nebraska | 0.8350 | 6-2 | 0.5769 | 52
-23 | Notre Dame | 0.8233 | 5-2 | 0.6040 | 27
-24 | Tulane | 0.8229 | 6-1 | 0.5352 | 86
-25 | Tennessee | 0.8197 | 6-2 | 0.5556 | 66
+1 | Indiana | 1.0000 | 9-0 | 0.5953 | 25
+2 | Ohio State | 0.9884 | 8-0 | 0.5864 | 33
+3 | BYU | 0.9595 | 8-0 | 0.5515 | 69
+4 | Texas A&M | 0.9392 | 8-0 | 0.5343 | 85
+5 | Georgia | 0.9091 | 7-1 | 0.5861 | 34
+6 | Alabama | 0.9064 | 7-1 | 0.5729 | 44
+7 | Louisville | 0.8994 | 7-1 | 0.5673 | 50
+8 | Virginia | 0.8971 | 8-1 | 0.5526 | 67
+9 | Ole Miss | 0.8848 | 8-1 | 0.5426 | 77
+10 | Texas Tech | 0.8847 | 8-1 | 0.5261 | 94
+11 | Utah | 0.8719 | 7-2 | 0.5971 | 24
+12 | Miami | 0.8622 | 6-2 | 0.6053 | 19
+13 | Georgia Tech | 0.8615 | 8-1 | 0.5137 | 104
+14 | Oklahoma | 0.8569 | 7-2 | 0.5860 | 35
+15 | Oregon | 0.8556 | 7-1 | 0.4983 | 115
+16 | Washington | 0.8513 | 6-2 | 0.5919 | 26
+17 | Michigan | 0.8435 | 7-2 | 0.5600 | 56
+18 | Vanderbilt | 0.8381 | 7-2 | 0.5550 | 65
+19 | North Texas | 0.8363 | 8-1 | 0.5141 | 103
+20 | Illinois | 0.8342 | 6-3 | 0.6371 | 7
+21 | USC | 0.8301 | 6-2 | 0.5636 | 52
+22 | Texas | 0.8244 | 7-2 | 0.5355 | 82
+23 | Arizona State | 0.8220 | 6-3 | 0.6199 | 11
+24 | Cincinnati | 0.8210 | 7-2 | 0.5350 | 83
+25 | James Madison | 0.8185 | 7-1 | 0.5032 | 112
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2010.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2011.md)
 
 #### Observations and Notes (Updated 10/26/2025)
 
