@@ -40,7 +40,7 @@ do
                 //Print Ratings
                 textData.PrintPollTable(teamDetails, ratings);
                 if (consoleData.PrintDetails(runType))
-                    spreadsheetData.PrintPollDetails(teamDetails, ratings);
+                    spreadsheetData.PrintPollDetails(teamDetails, ratings, season, ratingWeek);
                 break;
             //case RunType.PredictGames:
             //case RunType.PredictResults:

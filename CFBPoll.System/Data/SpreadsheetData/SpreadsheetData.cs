@@ -1,6 +1,7 @@
 ﻿using CFBPoll.DTOs;
 using CFBPoll.DTOs.Rating;
 using CFBPoll.Utilities;
+using CollegeFootballData.Models;
 using OfficeOpenXml;
 using System.Diagnostics;
 
@@ -23,7 +24,9 @@ namespace CFBPoll.System.Data.SpreadsheetData
         /// </summary>
         /// <param name="teamInfo">Team information.</param>
         /// <param name="ratingDetails">The rating details to print.</param>
-        public void PrintPollDetails(IDictionary<string, TeamDetail> teamInfo, IDictionary<string, RatingDetail> ratingDetails)
+        /// <param name="season">The season.</param>
+        /// <param name="week">The week.</param>
+        public void PrintPollDetails(IDictionary<string, TeamDetail> teamInfo, IDictionary<string, RatingDetail> ratingDetails, int season, int week)
         {
             //Delete output file if it exists
             if (File.Exists(_xlsxPollFilePath))
@@ -34,6 +37,7 @@ namespace CFBPoll.System.Data.SpreadsheetData
             {
                 BuildRatingDetails(workbook, teamInfo, ratingDetails);
                 BuildConferenceDetails(workbook, teamInfo, ratingDetails);
+                BuildTeamWinDetails(workbook, teamInfo, ratingDetails, season, week);
 
                 var newFile = new FileInfo(_xlsxPollFilePath);
                 workbook.SaveAs(_xlsxPollFilePath);
@@ -55,7 +59,14 @@ namespace CFBPoll.System.Data.SpreadsheetData
         private void BuildConferenceDetails(ExcelPackage workbook, IDictionary<string, TeamDetail> teamInfo, IDictionary<string, RatingDetail> ratingDetails)
         {
             var sheet = workbook.Workbook.Worksheets.Add("Conference Details");
-            var conferences = teamInfo.Values.Select(t => t.TeamInfo.Conference).Distinct().OrderBy(c => c);
+
+            //Data to print in the conference details
+            var conferences = teamInfo.Values.Where(t => !string.IsNullOrEmpty(t?.TeamInfo?.Conference)).Select(t => t.TeamInfo.Conference).Distinct().OrderBy(c => c);
+            var ratings = ratingDetails.ToDictionary(r => r.Key, r => r.Value.Rating);
+            var rankings = ratings.OrderByDescending(r => r.Value)
+                                    .Select((r, index) => new { r.Key, Rank = index + 1 })
+                                    .ToDictionary(r => r.Key, r => r.Rank);
+            var strengthsOfSchedule = ratingDetails.ToDictionary(r => r.Key, r => r.Value.StrengthOfSchedule?.WeightedStrength ?? 0.0);
 
             //Set the worksheet headers
             var headers = new List<string>
@@ -74,45 +85,46 @@ namespace CFBPoll.System.Data.SpreadsheetData
             //Fill in the worksheet data
             col = 1;
             int row = 2;
-            var ratingDetailsKeys = ratingDetails.Keys.ToList();
             foreach (var conference in conferences)
             {
-                var conferenceTeams = teamInfo.Values.Where(t => t?.TeamInfo?.Conference?.Equals(conference, _scoic) == true).Select(t => t.TeamInfo.School);
+                var conferenceTeams = teamInfo.Values.Where(t => t?.TeamInfo?.Conference?.Equals(conference, _scoic) == true && !string.IsNullOrEmpty(t?.TeamInfo?.School)).Select(t => t.TeamInfo.School);
                 if (conferenceTeams == null || !conferenceTeams.Any())
                     continue;
 
-                var conferenceRatings = ratingDetails.Where(r => conferenceTeams.Contains(r.Key)).OrderByDescending(r => r.Value.Rating);
+                var conferenceRatings = ratings.Where(r => conferenceTeams.Contains(r.Key)).OrderBy(r => r.Value);
+                var conferenceRankings = rankings.Where(r => conferenceTeams.Contains(r.Key)).OrderBy(r => r.Value);
+                var conferenceStrengthsOfSchedule = strengthsOfSchedule.Where(r => conferenceTeams.Contains(r.Key)).OrderBy(r => r.Value);
 
                 //Excel formulas for stats rather than doing the calculations in code
                 //Conference Name
                 sheet.Cells[row, col++].Value = conference;
                 //Number of Teams
-                sheet.Cells[row, col++].Formula = $"COUNTIFS('Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceTeams.Count();
                 //Highest Rank (lowest number)
-                sheet.Cells[row, col++].Formula = $"MINIFS('Rating Details'!$A:$A,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRankings.Min(r => r.Value);
                 //Lowest Rank (highest number)
-                sheet.Cells[row, col++].Formula = $"MAXIFS('Rating Details'!$A:$A,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRankings.Max(r => r.Value);
                 //Average Rank
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.00";
-                sheet.Cells[row, col++].Formula = $"AVERAGEIFS('Rating Details'!$A:$A,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRankings.Average(r => r.Value);
                 //Highest Rating (largest number)
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"MAXIFS('Rating Details'!$C:$C,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRatings.Max(r => r.Value);
                 //Lowest Rating (smallest number)
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"MINIFS('Rating Details'!$C:$C,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRatings.Min(r => r.Value);
                 //Average Rating
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"AVERAGEIFS('Rating Details'!$C:$C,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceRatings.Average(r => r.Value);
                 //Highest Weighted SoS (largest number)
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"MAXIFS('Rating Details'!$I:$I,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceStrengthsOfSchedule.Max(s => s.Value);
                 //Lowest Weighted SoS (smallest number)
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"MINIFS('Rating Details'!$I:$I,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceStrengthsOfSchedule.Min(s => s.Value);
                 //Average Weighted SoS
                 sheet.Cells[row, col].Style.Numberformat.Format = "0.0000";
-                sheet.Cells[row, col++].Formula = $"AVERAGEIFS('Rating Details'!$I:$I,'Rating Details'!$J:$J,'Conference Details'!$A{row})";
+                sheet.Cells[row, col++].Value = conferenceStrengthsOfSchedule.Average(s => s.Value);
 
                 //Reset the column to the start and increment the row
                 col = 1;
@@ -199,6 +211,145 @@ namespace CFBPoll.System.Data.SpreadsheetData
                 col = 1;
                 row++;
                 rank++;
+            }
+
+            //Auto fit column width
+            for (int ii = 1; ii <= sheet.Dimension.End.Column; ii++)
+            {
+                sheet.Column(ii).AutoFit();
+            }
+        }
+
+
+        /// <summary>
+        /// Build the Team Win Details tab of the workbook.
+        /// </summary>
+        /// <param name="workbook">The workbook to add the Win Details tab to.</param>
+        /// <param name="teamInfo">Team information.</param>
+        /// <param name="ratingDetails">The rating details to print.</param>
+        /// <param name="season">The season.</param>
+        /// <param name="week">The week.</param>
+        private void BuildTeamWinDetails(ExcelPackage workbook, IDictionary<string, TeamDetail> teamInfo, IDictionary<string, RatingDetail> ratingDetails, int season, int week)
+        {
+            var sheet = workbook.Workbook.Worksheets.Add("Win Details");
+
+            //Data to print in the win details
+            var conferences = teamInfo.Values.Select(t => t.TeamInfo.Conference).Distinct().OrderBy(c => c);
+            var rankings = ratingDetails.ToDictionary(r => r.Key, r => r.Value.Rating)
+                                    .OrderByDescending(r => r.Value)
+                                    .Select((r, index) => new { r.Key, Rank = index + 1 })
+                                    .ToDictionary(r => r.Key, r => r.Rank);
+
+            //Calculate a team's wins and losses
+            Func<string, Game, string> GetOpponent = (teamName, game) =>
+            {
+                if (string.IsNullOrEmpty(teamName) || string.IsNullOrEmpty(game?.HomeTeam) || string.IsNullOrEmpty(game?.AwayTeam))
+                    return string.Empty;
+                return (game!.HomeTeam!.Equals(teamName, _scoic) ? game.AwayTeam : game.HomeTeam) ?? string.Empty;
+            };
+            Func<string, Game, int> GetPointsFor = (teamName, game) =>
+            {
+                if (string.IsNullOrEmpty(teamName) || string.IsNullOrEmpty(game?.HomeTeam) || string.IsNullOrEmpty(game?.AwayTeam))
+                    return 0;
+                return (game!.HomeTeam!.Equals(teamName, _scoic) ? game.HomePoints : game.AwayPoints) ?? 0;
+            };
+            //Calculate a team's record vs a range of ranks
+            Func<string, IEnumerable<Game>, int, int, string> GetRecordVsRankRange = (teamName, games, minRank, maxRank) =>
+            {
+                if (string.IsNullOrEmpty(teamName) || games == null || !games.Any() || minRank > maxRank)
+                    return "0-0";
+
+                int wins = 0, losses = 0;
+                foreach (var game in games)
+                {
+                    if (game == null)
+                        continue;
+
+                    var opponent = GetOpponent(teamName, game);
+                    if (string.IsNullOrEmpty(opponent) || !rankings.ContainsKey(opponent))
+                        continue;
+
+                    var opponentRank = rankings[opponent];
+                    if (opponentRank < minRank || opponentRank > maxRank)
+                        continue;
+
+                    int teamPoints = GetPointsFor(teamName, game);
+                    int opponentPoints = GetPointsFor(opponent, game);
+
+                    if (teamPoints > opponentPoints)
+                        wins++;
+                    else if (teamPoints < opponentPoints)
+                        losses++;
+                }
+                return $"{wins}-{losses}";
+            };
+            //Calculate a team's record vs non-FBS opponents
+            Func<string, IEnumerable<Game>, string> GetRecordVsNonFBS = (teamName, games) =>
+            {
+                if (string.IsNullOrEmpty(teamName) || games == null || !games.Any())
+                    return "0-0";
+
+                int wins = 0, losses = 0;
+                foreach (var game in games)
+                {
+                    if (game == null)
+                        continue;
+
+                    var opponent = GetOpponent(teamName, game);
+                    if (string.IsNullOrEmpty(opponent) || game.AwayTeam?.Equals(opponent, _scoic) == true && game.AwayClassification?.Equals(DivisionClassification.Fbs) == true
+                        || game.HomeTeam?.Equals(opponent, _scoic) == true && game.HomeClassification?.Equals(DivisionClassification.Fbs) == true)
+                        continue;
+
+                    int teamPoints = GetPointsFor(teamName, game);
+                    int opponentPoints = GetPointsFor(opponent, game);
+
+                    if (teamPoints > opponentPoints)
+                        wins++;
+                    else if (teamPoints < opponentPoints)
+                        losses++;
+                }
+                return $"{wins}-{losses}";
+            };
+
+            //Set the worksheet headers
+            var headers = new List<string>
+            {
+                "Rank", "Team Name", "vs 1-25", "vs 26-50", "vs 50-100", $"vs 100-{teamInfo.Count}", "vs FCS/Other"
+            };
+            int col = 1;
+            foreach (var header in headers)
+            {
+                sheet.Cells[1, col++].Value = header;
+            }
+
+            //Fill in the worksheet data
+            col = 1;
+            int row = 2;
+            foreach (var ranking in rankings)
+            {
+                var teamName = ranking.Key;
+                var rank = ranking.Value;
+
+                var teamGames = teamInfo[teamName].Games.Where(g => g != null && g.Season == season && g.Week <= week && g.Completed == true);
+
+                //Ranking
+                sheet.Cells[row, col++].Value = rank;
+                //Team Name
+                sheet.Cells[row, col++].Value = teamName;
+                //Wins vs 1-25
+                sheet.Cells[row, col++].Value = GetRecordVsRankRange(teamName, teamGames, 1, 25);
+                //Wins vs 26-50
+                sheet.Cells[row, col++].Value = GetRecordVsRankRange(teamName, teamGames, 26, 50);
+                //Wins vs 51-100
+                sheet.Cells[row, col++].Value = GetRecordVsRankRange(teamName, teamGames, 51, 100);
+                //Wins vs 101+
+                sheet.Cells[row, col++].Value = GetRecordVsRankRange(teamName, teamGames, 101, rankings.Count);
+                //Wins vs FCS
+                sheet.Cells[row, col++].Value = GetRecordVsNonFBS(teamName, teamGames);
+
+                //Reset the column to the start and increment the row and rank
+                col = 1;
+                row++;
             }
 
             //Auto fit column width
