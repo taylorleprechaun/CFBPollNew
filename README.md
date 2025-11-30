@@ -14,44 +14,43 @@ Part of the Massey Composite (Steinberg/TSS).
 * 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
 * 11/2/2025: Update data output format.
 
-### Rankings (Updated 11/23/2025)
+### Rankings (Updated 11/30/2025)
 
-**Week 14 Rankings**
+**Week 15 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 11-0 | 0.5519 | 51
-2 | Ohio State | 0.9772 | 11-0 | 0.5278 | 82
-3 | Texas A&M | 0.9710 | 11-0 | 0.5333 | 71
-4 | BYU | 0.9695 | 10-1 | 0.5903 | 19
-5 | Georgia | 0.9344 | 10-1 | 0.5501 | 55
-6 | Texas Tech | 0.9308 | 10-1 | 0.5294 | 78
-7 | Ole Miss | 0.9302 | 10-1 | 0.5447 | 61
-8 | Oregon | 0.9282 | 10-1 | 0.5309 | 75
-9 | Oklahoma | 0.9232 | 9-2 | 0.6019 | 13
-10 | Alabama | 0.9231 | 9-2 | 0.5953 | 15
-11 | Utah | 0.8889 | 9-2 | 0.5519 | 52
-12 | Michigan | 0.8854 | 9-2 | 0.5500 | 56
-13 | Miami | 0.8839 | 9-2 | 0.5419 | 63
-14 | Notre Dame | 0.8817 | 9-2 | 0.5586 | 46
-15 | Vanderbilt | 0.8740 | 9-2 | 0.5341 | 69
-16 | North Texas | 0.8731 | 10-1 | 0.5075 | 97
-17 | Virginia | 0.8727 | 9-2 | 0.5340 | 70
-18 | USC | 0.8594 | 8-3 | 0.5820 | 29
-19 | James Madison | 0.8549 | 10-1 | 0.4897 | 119
-20 | Arizona State | 0.8467 | 8-3 | 0.5723 | 33
-21 | Tulane | 0.8382 | 9-2 | 0.5391 | 66
-22 | Georgia Tech | 0.8366 | 9-2 | 0.4963 | 110
-23 | Arizona | 0.8312 | 8-3 | 0.5404 | 65
-24 | SMU | 0.8244 | 8-3 | 0.5341 | 68
-25 | Wake Forest | 0.8238 | 8-3 | 0.5410 | 64
+1 | Indiana | 1.0000 | 12-0 | 0.5367 | 65
+2 | Ohio State | 0.9990 | 12-0 | 0.5427 | 61
+3 | BYU | 0.9731 | 11-1 | 0.5753 | 26
+4 | Georgia | 0.9514 | 11-1 | 0.5539 | 47
+5 | Oregon | 0.9458 | 11-1 | 0.5352 | 70
+6 | Texas Tech | 0.9369 | 11-1 | 0.5187 | 86
+7 | Ole Miss | 0.9364 | 11-1 | 0.5338 | 71
+8 | Oklahoma | 0.9357 | 10-2 | 0.5952 | 13
+9 | Texas A&M | 0.9330 | 11-1 | 0.5330 | 73
+10 | Alabama | 0.9236 | 10-2 | 0.5728 | 28
+11 | Miami | 0.9031 | 10-2 | 0.5434 | 60
+12 | Utah | 0.8918 | 10-2 | 0.5323 | 75
+13 | Vanderbilt | 0.8889 | 10-2 | 0.5310 | 77
+14 | Notre Dame | 0.8883 | 10-2 | 0.5437 | 59
+15 | North Texas | 0.8869 | 11-1 | 0.5083 | 95
+16 | Virginia | 0.8795 | 10-2 | 0.5186 | 87
+17 | James Madison | 0.8723 | 11-1 | 0.4936 | 108
+18 | USC | 0.8679 | 9-3 | 0.5646 | 35
+19 | Michigan | 0.8666 | 9-3 | 0.5643 | 36
+20 | Arizona | 0.8578 | 9-3 | 0.5450 | 58
+21 | Texas | 0.8544 | 9-3 | 0.5459 | 54
+22 | Navy | 0.8432 | 9-2 | 0.5358 | 68
+23 | Tulane | 0.8318 | 10-2 | 0.5072 | 98
+24 | Illinois | 0.8286 | 8-4 | 0.5790 | 25
+25 | Arizona State | 0.8250 | 8-4 | 0.5793 | 22
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2014.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2015.md)
 
-#### Observations and Notes (Updated 10/26/2025)
+#### Observations and Notes (Updated 11/30/2025)
 
-* We're at a point in the season where I start to feel like my rankings are actually good and not just alright. The rating algorithm has enough information to work with that it doesn't wildly overreact week to week because my data points are becoming less volatile. And it means the the actual ranking of teams is defensible (for the most part) relative to some weeks where you look at it and just wonder what's going on.
-* After a few weeks now running on my new data source I gotta say this is way more convenient to run and I should have done it sooner.
+* Going into the conference championship games there's a lot of teams vying for the at-large bids. In past years I've done something where I make a matrix of winners/losers in the conference championship games and use that to determine really rough odds of who is in/out and how they get there. When I rewrote my code I hadn't really thought about how I'd handle this tbh. I want to do it again but not sure if I will get it out in time. Maybe if I get bored during the week. We'll see.
 
 #### Predictions (Updated 9/11/2025)
 
