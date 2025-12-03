@@ -14,5 +14,7 @@ namespace CFBPoll.DTOs.Enums
         //PredictResults = 3,
         //[Description("Predict Individual Game")]
         //PredictGame = 4
+        [Description("Scenarios")]
+        Scenarios = 5
     }
 }

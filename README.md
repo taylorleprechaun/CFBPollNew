@@ -13,6 +13,7 @@ Part of the Massey Composite (Steinberg/TSS).
 * 10/5/2025: Summer cleaning Part 4. Pivoted from my in-progress shift to a DB-driven design to entirely using the CFBDataAPI. More work is needed on this still.
 * 10/11/2025: Summer cleaning Part 5. Finished the conversion to use the CFBDataAPI as the primary data provider for this computer poll.
 * 11/2/2025: Update data output format.
+* 12/2/2025: Added the ability to run the poll for future game scenarios.
 
 ### Rankings (Updated 11/30/2025)
 

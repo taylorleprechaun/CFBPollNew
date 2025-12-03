@@ -1,5 +1,6 @@
 ﻿using CFBPoll.DTOs;
 using CFBPoll.DTOs.Rating;
+using CFBPoll.DTOs.Scenarios;
 using CFBPoll.Utilities;
 using CollegeFootballData.Models;
 using OfficeOpenXml;
@@ -11,10 +12,13 @@ namespace CFBPoll.System.Data.SpreadsheetData
     {
         private readonly StringComparison _scoic = StringComparison.OrdinalIgnoreCase;
         private readonly string _xlsxPollFilePath;
+        private readonly string _xlsxScenariosFilePath;
         
         public SpreadsheetData()
         {
             _xlsxPollFilePath = ConfigurationHelper.GetConfiguration("PollOutputPath_xlsx");
+            _xlsxScenariosFilePath = ConfigurationHelper.GetConfiguration("ScenarioOutputPath_xlsx");
+            ExcelPackage.License.SetNonCommercialPersonal("Taylor Steinberg");
         }
 
         #region public methods
@@ -32,7 +36,6 @@ namespace CFBPoll.System.Data.SpreadsheetData
             if (File.Exists(_xlsxPollFilePath))
                 File.Delete(_xlsxPollFilePath);
 
-            ExcelPackage.License.SetNonCommercialPersonal("Taylor Steinberg");
             using (var workbook = new ExcelPackage(_xlsxPollFilePath))
             {
                 BuildRatingDetails(workbook, teamInfo, ratingDetails);
@@ -46,9 +49,31 @@ namespace CFBPoll.System.Data.SpreadsheetData
             TryOpenSpreadsheetFile(_xlsxPollFilePath);
         }
 
+        /// <summary>
+        /// Print the scenario details to a workbook file.
+        /// </summary>
+        /// <param name="scenarios">The scenarios to print.</param>
+        /// <param name="teamDetails">Team information.</param>
+        public void PrintScenarioDetails(IEnumerable<ScenarioResult> scenarios, IDictionary<string, TeamDetail> teamInfo)
+        {
+            //Delete output file if it exists
+            if (File.Exists(_xlsxScenariosFilePath))
+                File.Delete(_xlsxScenariosFilePath);
+
+            using (var workbook = new ExcelPackage(_xlsxScenariosFilePath))
+            {
+                BuildScenarioDetails(workbook, scenarios, teamInfo);
+
+                var newFile = new FileInfo(_xlsxScenariosFilePath);
+                workbook.SaveAs(_xlsxScenariosFilePath);
+            }
+
+            TryOpenSpreadsheetFile(_xlsxScenariosFilePath);
+        }
+
         #endregion
 
-        #region private methods
+        #region private poll methods
 
         /// <summary>
         /// Build the Conference Details tab of the workbook.
@@ -358,6 +383,106 @@ namespace CFBPoll.System.Data.SpreadsheetData
                 sheet.Column(ii).AutoFit();
             }
         }
+
+        #endregion
+
+        #region private scenario methods
+
+        /// <summary>
+        /// Build the Scenario Details tab of the workbook.
+        /// </summary>
+        /// <param name="workbook">The workbook to add the Scenario Details tab to.</param>
+        /// <param name="scenarios">The scenarios to print.</param>
+        /// <param name="teamInfo">Team information.</param>
+        private void BuildScenarioDetails(ExcelPackage workbook, IEnumerable<ScenarioResult> scenarios, IDictionary<string, TeamDetail> teamInfo)
+        {
+            var sheet = workbook.Workbook.Worksheets.Add("Scenario Details");
+            if (scenarios?.Any() != true || teamInfo?.Any() != true)
+                return;
+
+            //Get the scenario details to print
+            var gameIDs = scenarios?.FirstOrDefault()?.GameIDs ?? new List<int?>();
+            var gameDictionary = teamInfo?.Values?.SelectMany(t => t?.Games ?? new List<Game>())?
+                                                .Where(g => !string.IsNullOrEmpty(g?.HomeTeam) && !string.IsNullOrEmpty(g?.AwayTeam) && g?.Id != null && gameIDs.Contains(g.Id))?
+                                                .DistinctBy(g => g.Id)?
+                                                .ToDictionary(g => g!.Id!.Value, g => g) ?? new Dictionary<int, Game>();
+            var scenarioGames = new SortedDictionary<int, Game>(gameDictionary);
+            if (scenarioGames?.Any() != true)
+                return;
+
+            //Set the worksheet header as each matchup
+            int col = 1;
+            foreach (var scenarioGame in scenarioGames.Values)
+            {
+                if (string.IsNullOrEmpty(scenarioGame?.AwayTeam) || string.IsNullOrEmpty(scenarioGame?.HomeTeam) || scenarioGame?.NeutralSite == null)
+                    continue;
+
+                sheet.Cells[1, col].Style.Font.Bold = true;
+                sheet.Cells[1, col++].Value = $"{scenarioGame.AwayTeam} {(scenarioGame.NeutralSite == true ? "vs" : "@")} {scenarioGame.HomeTeam}";
+            }
+            //Add the rankings to the header as well
+            int rank = 1;
+            while (rank <= teamInfo!.Count)
+            {
+                sheet.Cells[1, col].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Left;
+                sheet.Cells[1, col].Style.Font.Bold = true;
+                sheet.Cells[1, col++].Value = rank++;
+            }
+
+            //Fill in the worksheet data
+            col = 1;
+            int row = 2;
+            foreach (var scenario in scenarios!)
+            {
+                if (scenario?.Scenario?.Any() != true)
+                    continue;
+
+                //Print the winner of each scenario following the same order as the sorted games
+                var isScenarioValid = false;
+                foreach (var scenarioGame in scenarioGames.Values)
+                {
+                    //Find who the scenario used as the winner for that game
+                    var winner = scenario.Scenario.FirstOrDefault(s => s.Equals(scenarioGame.HomeTeam, _scoic) || s.Equals(scenarioGame.AwayTeam, _scoic));
+                    //If the winner is not found then this scenario is invalid
+                    if (string.IsNullOrEmpty(winner))
+                    {
+                        isScenarioValid = true;
+                        break;
+                    }
+
+                    sheet.Cells[row, col++].Value = winner;
+                }
+
+                //If the scenario is valid then print the sorted ranked teams
+                //If it is not valid then nothing is printed
+                if (isScenarioValid)
+                {
+
+                    //Print the rankings horizontally
+                    var sortedScenarioRankings = from teamRating in scenario.RatingDetails
+                                                 orderby teamRating.Value.Rating descending
+                                                 select teamRating.Key;
+                    foreach (var team in sortedScenarioRankings)
+                    {
+                        sheet.Cells[row, col++].Value = team;
+                    }
+                }
+
+                //Reset the column to the start and increment the row
+                col = 1;
+                row++;
+            }
+
+            //Auto fit column width
+            for (int ii = 1; ii <= sheet.Dimension.End.Column; ii++)
+            {
+                sheet.Column(ii).AutoFit();
+            }
+        }
+
+        #endregion
+
+        #region private utility methods
 
         /// <summary>
         /// Tries to open a spreadsheet file in Excel.
