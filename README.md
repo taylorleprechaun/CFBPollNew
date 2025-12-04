@@ -49,9 +49,29 @@ Rank | Team | Rating | Record | SoS | SoS Rank
 
 Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2015.md)
 
-#### Observations and Notes (Updated 11/30/2025)
+#### Observations and Notes (Updated 12/3/2025)
 
-* Going into the conference championship games there's a lot of teams vying for the at-large bids. In past years I've done something where I make a matrix of winners/losers in the conference championship games and use that to determine really rough odds of who is in/out and how they get there. When I rewrote my code I hadn't really thought about how I'd handle this tbh. I want to do it again but not sure if I will get it out in time. Maybe if I get bored during the week. We'll see.
+* Going into the conference championship games there's a lot of teams vying for the at-large bids. I ran some rough CCG scenarios by using dummy scores and simulating the conference championship game winners for the American, ACC, Big Ten, Big 12, MWC, SEC, and Sun Belt (128 combinations). A breakdown is below. You can view the raw data [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2015%20Scenarios.xlsx)
+
+Team | In | Out | Scenarios
+---|---|---|---
+Indiana | 128 | 0 | 🔒
+Ohio State | 128 | 0 | 🔒
+BYU | 128 | 0 | 🔒
+Georgia | 128 | 0 | 🔒
+Oregon | 128 | 0 | 🔒
+Texas Tech | 128 | 0 | 🔒
+Ole Miss | 128 | 0 | 🔒
+Oklahoma | 128 | 0 | 🔒
+Texas A&M | 128 | 0 | 🔒
+Alabama | 128 | 0 | 🔒
+North Texas | 64 | 64 | Win and In
+Virginia | 64 | 64 | Win and In
+James Madison | 48 | 80 | Win and either North Texas or Virginia lose
+Tulane | 48 | 80 | Win and either James Madison or Virginia lose
+Miami | 16 | 112 | James Madison, UNLV, and Virginia all lose results in only four top-25 ranked conference champions and the 5th converting into another at-large bid. If we allow non-top 25 champions then this opens the door for 8 scenarios each for Duke and Boise State
+UNLV | 16 | 112 | Win and both James Madison and Virginia lose
+
 
 #### Predictions (Updated 9/11/2025)
 
