@@ -15,63 +15,58 @@ Part of the Massey Composite (Steinberg/TSS).
 * 11/2/2025: Update data output format.
 * 12/2/2025: Added the ability to run the poll for future game scenarios.
 
-### Rankings (Updated 11/30/2025)
+### Rankings (Updated 12/7/2025)
 
-**Week 15 Rankings**
+**Week 16 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 12-0 | 0.5367 | 65
-2 | Ohio State | 0.9990 | 12-0 | 0.5427 | 61
-3 | BYU | 0.9731 | 11-1 | 0.5753 | 26
-4 | Georgia | 0.9514 | 11-1 | 0.5539 | 47
-5 | Oregon | 0.9458 | 11-1 | 0.5352 | 70
-6 | Texas Tech | 0.9369 | 11-1 | 0.5187 | 86
-7 | Ole Miss | 0.9364 | 11-1 | 0.5338 | 71
-8 | Oklahoma | 0.9357 | 10-2 | 0.5952 | 13
-9 | Texas A&M | 0.9330 | 11-1 | 0.5330 | 73
-10 | Alabama | 0.9236 | 10-2 | 0.5728 | 28
-11 | Miami | 0.9031 | 10-2 | 0.5434 | 60
-12 | Utah | 0.8918 | 10-2 | 0.5323 | 75
-13 | Vanderbilt | 0.8889 | 10-2 | 0.5310 | 77
-14 | Notre Dame | 0.8883 | 10-2 | 0.5437 | 59
-15 | North Texas | 0.8869 | 11-1 | 0.5083 | 95
-16 | Virginia | 0.8795 | 10-2 | 0.5186 | 87
-17 | James Madison | 0.8723 | 11-1 | 0.4936 | 108
-18 | USC | 0.8679 | 9-3 | 0.5646 | 35
-19 | Michigan | 0.8666 | 9-3 | 0.5643 | 36
-20 | Arizona | 0.8578 | 9-3 | 0.5450 | 58
-21 | Texas | 0.8544 | 9-3 | 0.5459 | 54
-22 | Navy | 0.8432 | 9-2 | 0.5358 | 68
-23 | Tulane | 0.8318 | 10-2 | 0.5072 | 98
-24 | Illinois | 0.8286 | 8-4 | 0.5790 | 25
-25 | Arizona State | 0.8250 | 8-4 | 0.5793 | 22
+1 | Indiana | 1.0000 | 13-0 | 0.5630 | 41
+2 | Ohio State | 0.9573 | 12-1 | 0.5693 | 32
+3 | Georgia | 0.9481 | 12-1 | 0.5674 | 34
+4 | Texas Tech | 0.9405 | 12-1 | 0.5403 | 66
+5 | Oregon | 0.9306 | 11-1 | 0.5382 | 69
+6 | BYU | 0.9291 | 11-2 | 0.5961 | 13
+7 | Ole Miss | 0.9233 | 11-1 | 0.5395 | 68
+8 | Oklahoma | 0.9165 | 10-2 | 0.5930 | 17
+9 | Texas A&M | 0.9154 | 11-1 | 0.5327 | 76
+10 | Alabama | 0.8860 | 10-3 | 0.5942 | 16
+11 | Miami | 0.8859 | 10-2 | 0.5429 | 62
+12 | Utah | 0.8762 | 10-2 | 0.5336 | 75
+13 | Notre Dame | 0.8735 | 10-2 | 0.5459 | 59
+14 | Vanderbilt | 0.8707 | 10-2 | 0.5289 | 84
+15 | James Madison | 0.8651 | 12-1 | 0.5017 | 103
+16 | USC | 0.8521 | 9-3 | 0.5651 | 37
+17 | Michigan | 0.8493 | 9-3 | 0.5628 | 42
+18 | North Texas | 0.8466 | 11-2 | 0.5304 | 80
+19 | Tulane | 0.8409 | 11-2 | 0.5293 | 83
+20 | Arizona | 0.8406 | 9-3 | 0.5434 | 61
+21 | Texas | 0.8393 | 9-3 | 0.5469 | 56
+22 | Virginia | 0.8353 | 10-3 | 0.5298 | 81
+23 | Navy | 0.8261 | 9-2 | 0.5339 | 73
+24 | Illinois | 0.8172 | 8-4 | 0.5843 | 22
+25 | Georgia Tech | 0.8132 | 9-3 | 0.5233 | 88
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2015.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2016%20CCG.md)
 
-#### Observations and Notes (Updated 12/3/2025)
+#### Observations and Notes (Updated 12/7/2025)
 
-* Going into the conference championship games there's a lot of teams vying for the at-large bids. I ran some rough CCG scenarios by using dummy scores and simulating the conference championship game winners for the American, ACC, Big Ten, Big 12, MWC, SEC, and Sun Belt (128 combinations). A breakdown is below. You can view the raw data [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2015%20Scenarios.xlsx)
+* The playoff teams (according to my computer) are:
 
-Team | In | Out | Scenarios
----|---|---|---
-Indiana | 128 | 0 | 🔒
-Ohio State | 128 | 0 | 🔒
-BYU | 128 | 0 | 🔒
-Georgia | 128 | 0 | 🔒
-Oregon | 128 | 0 | 🔒
-Texas Tech | 128 | 0 | 🔒
-Ole Miss | 128 | 0 | 🔒
-Oklahoma | 128 | 0 | 🔒
-Texas A&M | 128 | 0 | 🔒
-Alabama | 128 | 0 | 🔒
-North Texas | 64 | 64 | Win and In
-Virginia | 64 | 64 | Win and In
-James Madison | 48 | 80 | Win and either North Texas or Virginia lose
-Tulane | 48 | 80 | Win and either James Madison or Virginia lose
-Miami | 16 | 112 | James Madison, UNLV, and Virginia all lose results in only four top-25 ranked conference champions and the 5th converting into another at-large bid. If we allow non-top 25 champions then this opens the door for 8 scenarios each for Duke and Boise State
-UNLV | 16 | 112 | Win and both James Madison and Virginia lose
-
+Seed | Team | Qualification
+---|---|---
+1 | Indiana | Big Ten Champ
+2 | Ohio State | At-Large
+3 | Georgia | SEC Champ
+4 | Texas Tech | Big 12 Champ
+5 | Oregon | At-Large
+6 | BYU | At-Large
+7 | Ole Miss | At-Large
+8 | Oklahoma | At-Large
+9 | Texas A&M | At-Large
+10 | Alabama | At-Large
+11 | James Madison | Sun Belt Champ
+12 | Tulane | American Champ
 
 #### Predictions (Updated 9/11/2025)
 
