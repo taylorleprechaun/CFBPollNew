@@ -100,7 +100,7 @@ I'm probably going to have to split the CFP era into 4 and 12 team sections as w
 *New additions for the 2025 season!*
 
 * Indiana not only finished #1 this season, they recorded the best ever rating my poll has handed out! Their 42.487 dethrones 2018 Clemson from the spot they've held for seven years.
-* Massachussets is the only team to finish with a rating below 16 this season with a 14.134. This is the 2nd worst rating of the playoff era and 4th worst of all time.
+* Massachussets is the only team to finish with a rating below 16 this season with a 14.134. This is the 2nd worst rating of the playoff era and 5th worst of all time.
 
 **The top 5 Best of all Time (pre-CFP era)**
 
