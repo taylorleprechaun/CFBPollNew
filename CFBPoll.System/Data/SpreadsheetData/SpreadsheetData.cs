@@ -438,7 +438,7 @@ namespace CFBPoll.System.Data.SpreadsheetData
                     continue;
 
                 //Print the winner of each scenario following the same order as the sorted games
-                var isScenarioValid = false;
+                var isScenarioValid = true;
                 foreach (var scenarioGame in scenarioGames.Values)
                 {
                     //Find who the scenario used as the winner for that game
@@ -446,7 +446,7 @@ namespace CFBPoll.System.Data.SpreadsheetData
                     //If the winner is not found then this scenario is invalid
                     if (string.IsNullOrEmpty(winner))
                     {
-                        isScenarioValid = true;
+                        isScenarioValid = false;
                         break;
                     }
 

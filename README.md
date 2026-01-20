@@ -15,58 +15,43 @@ Part of the Massey Composite (Steinberg/TSS).
 * 11/2/2025: Update data output format.
 * 12/2/2025: Added the ability to run the poll for future game scenarios.
 
-### Rankings (Updated 12/7/2025)
+### Rankings (Updated 1/20/2026)
 
-**Week 16 Rankings**
+**Week 17 Rankings**
 
 Rank | Team | Rating | Record | SoS | SoS Rank
 ---|---|---|---|---|---
-1 | Indiana | 1.0000 | 13-0 | 0.5630 | 41
-2 | Ohio State | 0.9573 | 12-1 | 0.5693 | 32
-3 | Georgia | 0.9481 | 12-1 | 0.5674 | 34
-4 | Texas Tech | 0.9405 | 12-1 | 0.5403 | 66
-5 | Oregon | 0.9306 | 11-1 | 0.5382 | 69
-6 | BYU | 0.9291 | 11-2 | 0.5961 | 13
-7 | Ole Miss | 0.9233 | 11-1 | 0.5395 | 68
-8 | Oklahoma | 0.9165 | 10-2 | 0.5930 | 17
-9 | Texas A&M | 0.9154 | 11-1 | 0.5327 | 76
-10 | Alabama | 0.8860 | 10-3 | 0.5942 | 16
-11 | Miami | 0.8859 | 10-2 | 0.5429 | 62
-12 | Utah | 0.8762 | 10-2 | 0.5336 | 75
-13 | Notre Dame | 0.8735 | 10-2 | 0.5459 | 59
-14 | Vanderbilt | 0.8707 | 10-2 | 0.5289 | 84
-15 | James Madison | 0.8651 | 12-1 | 0.5017 | 103
-16 | USC | 0.8521 | 9-3 | 0.5651 | 37
-17 | Michigan | 0.8493 | 9-3 | 0.5628 | 42
-18 | North Texas | 0.8466 | 11-2 | 0.5304 | 80
-19 | Tulane | 0.8409 | 11-2 | 0.5293 | 83
-20 | Arizona | 0.8406 | 9-3 | 0.5434 | 61
-21 | Texas | 0.8393 | 9-3 | 0.5469 | 56
-22 | Virginia | 0.8353 | 10-3 | 0.5298 | 81
-23 | Navy | 0.8261 | 9-2 | 0.5339 | 73
-24 | Illinois | 0.8172 | 8-4 | 0.5843 | 22
-25 | Georgia Tech | 0.8132 | 9-3 | 0.5233 | 88
+1 | Indiana | 1.0000 | 16-0 | 0.6137 | 9
+2 | Oregon | 0.9229 | 13-2 | 0.6142 | 8
+3 | Ohio State | 0.9104 | 12-2 | 0.6026 | 15
+4 | BYU | 0.9015 | 12-2 | 0.5977 | 18
+5 | Miami | 0.8963 | 13-3 | 0.6191 | 6
+6 | Ole Miss | 0.8927 | 13-2 | 0.5792 | 33
+7 | Texas Tech | 0.8883 | 12-2 | 0.5674 | 42
+8 | Georgia | 0.8878 | 12-2 | 0.5813 | 29
+9 | Texas A&M | 0.8541 | 11-2 | 0.5474 | 66
+10 | Oklahoma | 0.8497 | 10-3 | 0.5951 | 21
+11 | Utah | 0.8493 | 11-2 | 0.5312 | 87
+12 | Alabama | 0.8457 | 11-4 | 0.6119 | 10
+13 | Notre Dame | 0.8442 | 10-2 | 0.5498 | 63
+14 | North Texas | 0.8297 | 12-2 | 0.5432 | 71
+15 | Virginia | 0.8226 | 11-3 | 0.5428 | 74
+16 | James Madison | 0.8180 | 12-2 | 0.5281 | 91
+17 | Texas | 0.8164 | 10-3 | 0.5432 | 70
+18 | Illinois | 0.8096 | 9-4 | 0.5958 | 20
+19 | Navy | 0.8086 | 11-2 | 0.5315 | 86
+20 | Vanderbilt | 0.8060 | 10-3 | 0.5311 | 88
+21 | Iowa | 0.8003 | 9-4 | 0.5823 | 28
+22 | Tulane | 0.7988 | 11-3 | 0.5592 | 51
+23 | USC | 0.7983 | 9-4 | 0.5772 | 35
+24 | Michigan | 0.7876 | 9-4 | 0.5653 | 46
+25 | Arizona | 0.7861 | 9-4 | 0.5533 | 58
 
-Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2016%20CCG.md)
+Full Rankings: [here](https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/PreviousPolls/2025/2025-Week%2017%20NCG.md)
 
-#### Observations and Notes (Updated 12/7/2025)
+#### Observations and Notes (Updated 1/20/2026)
 
-* The playoff teams (according to my computer) are:
-
-Seed | Team | Qualification
----|---|---
-1 | Indiana | Big Ten Champ
-2 | Ohio State | At-Large
-3 | Georgia | SEC Champ
-4 | Texas Tech | Big 12 Champ
-5 | Oregon | At-Large
-6 | BYU | At-Large
-7 | Ole Miss | At-Large
-8 | Oklahoma | At-Large
-9 | Texas A&M | At-Large
-10 | Alabama | At-Large
-11 | James Madison | Sun Belt Champ
-12 | Tulane | American Champ
+* Congrats to Indiana for winning their first national title! I simulated the possible results from the semifinals on and they were destined to finish #1 no matter what (like Oregon was last year). Maybe something to think about with the ideas I have for improving my rating algorithm.
 
 #### Predictions (Updated 9/11/2025)
 
@@ -105,17 +90,17 @@ I've decided not to generate game predictions this season unless I get a huge am
 
 **The Best and Worst of all Time!**
 
-My poll, as of this update, has been run across every season from 2000 through 2024.
+My poll, as of this update, has been run across every season from 2000 through 2025.
 
 Something I noticed across these seasons is that the best teams had a rating above 40 and the worst teams were below 16, so I made a list of them [here]( https://github.com/taylorleprechaun/CFBPollNew/blob/main/CFBPoll/Resources/BOAT%20and%20WOAT.xlsx).
 
-I decided to split up the rankings between pre-CFP and CFP eras.  This was because the teams in the CFP would get little bumps from playing an extra game against an elite-level team.
-I'm probably going to have to split the CFP era into 4 and 12 team sections but that's a problem for future me. As of right now I'm not going to split into 4 vs 12 but maybe in the future I will.
+The rankings are split between pre-CFP and CFP eras. This was because the teams in the CFP get small bumps from playing extra games against other high quality teams.
+I'm probably going to have to split the CFP era into 4 and 12 team sections as well due to teams getting ever more possible bumps, but not yet.
 
-*New additions for the 2024 season!*
+*New additions for the 2025 season!*
 
-* No one cracked 40 points so no one is making it into the BOAT section for 2024. Oregon came closest at 39.962 and Ohio State was a little behind at 39.802
-* Kent State repeats this year as worst team in FBS. They finished with a rating of 15.735, placing them at 9th worst in the Playoff Era
+* Indiana not only finished #1 this season, they recorded the best ever rating my poll has handed out! Their 42.487 dethrones 2018 Clemson from the spot they've held for seven years.
+* Massachussets is the only team to finish with a rating below 16 this season with a 14.134. This is the 2nd worst rating of the playoff era and 4th worst of all time.
 
 **The top 5 Best of all Time (pre-CFP era)**
 
@@ -131,11 +116,11 @@ Rank | Year | Team | Rating | Record
 
 Rank | Year | Team | Rating | Record
 ---|---|---|---|---
-1 | 2018 | Clemson | 42.445 | 15-0
-2 | 2019 | LSU | 42.374 | 15-0
-3 | 2023 | Michigan | 42.244 | 15-0
-4 | 2022 | Georgia | 42.124 | 15-0
-5 | 2015 | Alabama | 41.615 | 14-1
+1 | 2025 | Indiana | 42.487 | 16-0
+2 | 2018 | Clemson | 42.445 | 15-0
+3 | 2019 | LSU | 42.374 | 15-0
+4 | 2023 | Michigan | 42.244 | 15-0
+5 | 2022 | Georgia | 42.124 | 15-0
 
 **The bottom 5 Worst of all Time**
 
@@ -145,4 +130,4 @@ Rank | Year | Team | Rating | Record
 2 | 2009 | EMU | 13.809 | 0-12
 3 | 2004 | UCF | 13.954 | 0-11
 4 | 2013 | Miami OH | 13.973 | 0-12
-5 | 2006 | FIU | 14.394 | 0-12
+5 | 2025 | UMass | 14.134 | 0-12

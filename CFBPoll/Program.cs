@@ -53,7 +53,7 @@ do
             //case RunType.PredictGame:
             case RunType.Scenarios:
                 var scenarioModule = new DefaultScenariosModule();
-                var games = scenarioModule.GetGames(season, ratingWeek+1, teamDetails!);
+                var games = scenarioModule.GetGames(season, ratingWeek+1, seasonType, teamDetails!);
                 var scenarioGames = consoleData.GetScenarioGamesToRun(games);
                 var scenarioRequest = new ScenarioRequest
                 {

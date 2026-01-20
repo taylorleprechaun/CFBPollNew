@@ -1,5 +1,4 @@
 ﻿using CFBPoll.DTOs;
-using CFBPoll.DTOs.Rating;
 using CFBPoll.DTOs.Scenarios;
 using CFBPoll.System.Modules.Factories;
 using CollegeFootballData.Models;
@@ -17,13 +16,16 @@ namespace CFBPoll.System.Modules.Default
         /// </summary>
         /// <param name="season">The season.</param>
         /// <param name="week">The week.</param>
+        /// <param name="seasonType">Regular or Postseason.</param>
         /// <param name="teamDetails">The collection of team data to get the games from.</param>
         /// <returns>A collection of games that can be used for scenario analysis.</returns>
-        public IEnumerable<Game> GetGames(int season, int week, IDictionary<string, TeamDetail> teamDetails)
+        public IEnumerable<Game> GetGames(int season, int week, string seasonType, IDictionary<string, TeamDetail> teamDetails)
         {
+            var seasonTypeEnum = seasonType.Equals("Regular", StringComparison.OrdinalIgnoreCase) ? SeasonType.Regular : SeasonType.Both;
+
             //Return all of the games for the given season and week that have not been played yet
             return teamDetails?.Values?.Where(t => t?.Games != null && t.Games.Any())?.SelectMany(t => t.Games)?
-                                        .Where(game => game != null && game.Season == season && game.Week == week && game.Completed == false)?
+                                        .Where(game => game != null && game.Season == season && (game.Week == week || seasonTypeEnum.Equals(SeasonType.Both)) && game.Completed == false)?
                                         .DistinctBy(g => g.Id)
                 ?? new List<Game>();
         }
